@@ -6,14 +6,29 @@ public class ReelMovement : MonoBehaviour
 {
     [SerializeField] float reelSpeed = 3f;
     [SerializeField] Transform[] Reels;
+    [SerializeField] SlotMachineData slotMachineData;
     float counter = 3f;
     float elapsedTime = 0;
+    float delayTime;
+
+    bool isRolling;
 
 
-    private float offset = 70f;
+    private float offset = -70f;
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Debug.Log("G");
+            isRolling = false;
+        }    
+    }
 
     public void StartReelRollCoroutine()
     {
+        isRolling = true;
         StartCoroutine(ReelRoll(Reels));
     }
 
@@ -21,14 +36,14 @@ public class ReelMovement : MonoBehaviour
     IEnumerator ReelRoll(Transform[] reels)
     {
         elapsedTime = 0;
-        while (elapsedTime < counter)
+        while (isRolling)
         {
             elapsedTime += Time.deltaTime;
-            ReelRotation(reels[0]);
-            yield return new WaitForSeconds(0.2f);
-            ReelRotation(reels[1]);
-            yield return new WaitForSeconds(0.2f);
-            ReelRotation(reels[2]);
+            ReelRotation(reels[0], 0);
+            //yield return new WaitForSeconds(0.2f);
+            ReelRotation(reels[1], 0.2f);
+            //yield return new WaitForSeconds(0.2f);
+            ReelRotation(reels[2], 0.4f);
 
             yield return null;
         }
@@ -36,16 +51,22 @@ public class ReelMovement : MonoBehaviour
         yield return null;
     }
 
-    void ReelRotation(Transform reel)
+    void ReelRotation(Transform reel, float delayTime)
     {
         Vector3 rotationVector = new Vector3(
             reel.transform.eulerAngles.x,
             reel.transform.eulerAngles.y,
-            reel.transform.eulerAngles.z + offset 
+            reel.transform.eulerAngles.z + offset * Time.deltaTime * reelSpeed
          );
 
         Quaternion reelRotation = Quaternion.Euler(rotationVector);
 
-        reel.transform.rotation = Quaternion.Lerp(reel.transform.rotation, reelRotation, (elapsedTime / counter));
+        if(elapsedTime > delayTime)
+        reel.transform.rotation = reelRotation;
+    }
+
+    void ReelStop()
+    {
+
     }
 }
