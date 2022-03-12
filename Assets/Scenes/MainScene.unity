@@ -472,6 +472,7 @@ MonoBehaviour:
   - {fileID: 482904686821526650}
   - {fileID: 992603410}
   - {fileID: 1140543300}
+  slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
 --- !u!4 &628843441
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ReelMovement : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class ReelMovement : MonoBehaviour
         {
             Debug.Log("G");
             isRolling = false;
+            ReelStop();
         }    
     }
 
@@ -67,6 +69,14 @@ public class ReelMovement : MonoBehaviour
 
     void ReelStop()
     {
-
+        for(int i = 0; i <= 2; i++)
+        {
+            Vector3 rotationVector = new Vector3(
+            Reels[i].transform.eulerAngles.x,
+            Reels[i].transform.eulerAngles.y,
+            slotMachineData.slotResults[i] * offset
+            );
+            Reels[i].DORotate(rotationVector, i + 1.2f, RotateMode.FastBeyond360);
+        }
     }
 }
