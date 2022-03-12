@@ -5,18 +5,18 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private VoidEvent TimerIsEnded;
+    [SerializeField] float duration;
     private float counter = 0f;
 
 
     public void StartCountDown()
     {
-        StartCoroutine(CountDown(counter));
+        StartCoroutine(CountDown(duration, counter));
     }
 
-    IEnumerator CountDown(float counter)
+    IEnumerator CountDown(float duration, float counter)
     {
-        float rand = Random.Range(0.5f, 1f);
-        counter = rand;
+        counter = duration;
         yield return new WaitForSeconds(counter);
         TimerIsEnded.Raise();
 

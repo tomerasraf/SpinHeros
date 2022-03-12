@@ -5,51 +5,47 @@ using UnityEngine;
 public class ReelMovement : MonoBehaviour
 {
     [SerializeField] float reelSpeed = 3f;
-    private bool reelIsMoving;
+    [SerializeField] Transform[] Reels;
+    float counter = 3f;
+    float elapsedTime = 0;
+
+
     private float offset = 70f;
 
-    public void ReelIsMoving()
+    public void StartReelRollCoroutine()
     {
-        reelIsMoving = true;
+        StartCoroutine(ReelRoll(Reels));
     }
 
-    public void ReelIsStoped()
+
+    IEnumerator ReelRoll(Transform[] reels)
     {
-        reelIsMoving = false;
-    }
-
-    private void Start()
-    {
-        reelIsMoving = false;
-
-        Vector3 startRotationVector = new Vector3(
-            transform.eulerAngles.x,
-            transform.eulerAngles.y,
-            10
-            );
-
-        Quaternion startRotation = Quaternion.Euler(startRotationVector);
-        transform.rotation = startRotation;
-    }
-
-    private void Update()
-    {
-        if (reelIsMoving)
+        elapsedTime = 0;
+        while (elapsedTime < counter)
         {
-            ReelSpin();
+            elapsedTime += Time.deltaTime;
+            ReelRotation(reels[0]);
+            yield return new WaitForSeconds(0.2f);
+            ReelRotation(reels[1]);
+            yield return new WaitForSeconds(0.2f);
+            ReelRotation(reels[2]);
+
+            yield return null;
         }
+
+        yield return null;
     }
 
-    public void ReelSpin()
+    void ReelRotation(Transform reel)
     {
         Vector3 rotationVector = new Vector3(
-        transform.eulerAngles.x,
-        transform.eulerAngles.y,
-        transform.eulerAngles.z + offset * reelSpeed * Time.deltaTime
-        );
+            reel.transform.eulerAngles.x,
+            reel.transform.eulerAngles.y,
+            reel.transform.eulerAngles.z + offset 
+         );
 
-        Quaternion rotation = Quaternion.Euler(rotationVector);
+        Quaternion reelRotation = Quaternion.Euler(rotationVector);
 
-        transform.rotation = rotation;
+        reel.transform.rotation = Quaternion.Lerp(reel.transform.rotation, reelRotation, (elapsedTime / counter));
     }
 }
