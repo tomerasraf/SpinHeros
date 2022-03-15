@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public abstract class BaseGameEvent<T> : ScriptableObject
 {
     private readonly List<IGameEventListener<T>> eventListeners = new List<IGameEventListener<T>>();
