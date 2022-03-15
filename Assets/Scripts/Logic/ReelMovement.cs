@@ -8,7 +8,6 @@ public class ReelMovement : MonoBehaviour
 {
     [Header("Variables")]
     [SerializeField] private float reelSpeed = 3f;
-    [SerializeField] private float stopRotationSpeed = 0.6f;
 
     [Header("Transform")]
     [SerializeField] Transform[] Reels;
@@ -17,14 +16,12 @@ public class ReelMovement : MonoBehaviour
     [SerializeField] private SlotMachineData slotMachineData;
 
     [Header("Events")]
-
     [SerializeField] private VoidEvent SpinIsEnded;
     public Button spinButton;
 
 
     private float elapsedTime = 0;
     private bool isRolling = false;
-    private bool canPressAgain = true;
     private float SymbolOffset = -70f;
 
     #region eventListeners 
@@ -34,7 +31,6 @@ public class ReelMovement : MonoBehaviour
     {
         isRolling = true;
         spinButton.enabled = false;
-        canPressAgain = false;
         StartCoroutine(ReelRoll(Reels));
 
 
@@ -62,7 +58,7 @@ public class ReelMovement : MonoBehaviour
 
         ReelStop();
 
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(2f);
         spinButton.enabled = true;
         SpinIsEnded.Raise();
 
@@ -85,7 +81,7 @@ public class ReelMovement : MonoBehaviour
 
     void ReelStop()
     {
-        float deltaStopSpeed = 0.7f;
+        float deltaStopSpeed = 0.5f;
         for (int i = 0; i <= 2; i++)
         {
             Vector3 rotationVector = new Vector3(
@@ -97,7 +93,5 @@ public class ReelMovement : MonoBehaviour
 
             Reels[i].DORotate(rotationVector, deltaStopSpeed++, RotateMode.FastBeyond360).SetEase(Ease.OutBack);
         }
-
-
     }
 }

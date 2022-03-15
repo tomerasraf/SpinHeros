@@ -5,7 +5,7 @@ public class SpinInput : MonoBehaviour
 {
     [SerializeField] private VoidEvent SpinButtonPressed;
 
-    public void SpinInputHandler()
+    public void SpinInputEventCall()
     {
         SpinButtonPressed.Raise();
     }
