@@ -21,7 +21,7 @@ public class PrizeLogic : MonoBehaviour
           && _slotMachineData.slotResults[2] == 2)
         {
             // Coin Prize
-            _playerData.coins += _slotMachineData.coinJackpotPrize;
+            _playerData.coins += _slotMachineData.coinJackpotPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
 
@@ -31,7 +31,7 @@ public class PrizeLogic : MonoBehaviour
           && _slotMachineData.slotResults[2] == 0)
         {
             // Stash Of Coins Prize
-            _playerData.coins += _slotMachineData.StashJackpotPrize;
+            _playerData.coins += _slotMachineData.StashJackpotPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
 
@@ -74,7 +74,7 @@ public class PrizeLogic : MonoBehaviour
              && _slotMachineData.slotResults[0] != 2)
         {
             // 2 Coins Prize
-            _playerData.coins += _slotMachineData.twoCoinsPrize;
+            _playerData.coins += _slotMachineData.twoCoinsPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
 
@@ -87,7 +87,7 @@ public class PrizeLogic : MonoBehaviour
              && _slotMachineData.slotResults[0] != 0)
         {
             // 2 Stash Prize
-            _playerData.coins += _slotMachineData.twoStashPrize;
+            _playerData.coins += _slotMachineData.twoStashPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
     }
