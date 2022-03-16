@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1682928, g: 0.44849396, b: 0.7511063, a: 1}
+  m_IndirectSpecularColor: {r: 0.3242888, g: 0.26244965, b: 0.63604325, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1032,7 +1032,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469562743
 GameObject:
@@ -1386,8 +1386,10 @@ GameObject:
   - component: {fileID: 602958310}
   - component: {fileID: 602958312}
   - component: {fileID: 602958311}
+  - component: {fileID: 602958314}
+  - component: {fileID: 602958313}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1450,6 +1452,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602958309}
   m_CullTransparentMesh: 1
+--- !u!114 &602958313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602958309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: d7c16d124dc6c464d9844160f602d2f3, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 602958314}
+        m_TargetAssemblyTypeName: SpinBarUI, Assembly-CSharp
+        m_MethodName: SpinBarUI_Updater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &602958314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602958309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc48d0ca85eee04686a0c7d5197614d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinBarImage: {fileID: 602958311}
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  spinsText: {fileID: 1695022669}
 --- !u!1 &643219644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,7 +2038,7 @@ RectTransform:
   - {fileID: 2103399705}
   - {fileID: 1624982954}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2431,7 +2476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &934161881
 GameObject:
@@ -2461,7 +2506,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &992603409
 PrefabInstance:
@@ -3324,7 +3369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1569601867
 GameObject:
@@ -4193,7 +4238,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792268558
 GameObject:
@@ -7574,7 +7619,7 @@ Transform:
   - {fileID: 1140543300}
   - {fileID: 712571292}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 173.572, z: 0}
 --- !u!1 &4325525137652924449
 GameObject:
@@ -7662,7 +7707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5576304913028467292, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
       propertyPath: unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PressButton
+      value: Spin
       objectReference: {fileID: 0}
     - target: {fileID: 5576304913028467292, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
       propertyPath: unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -7677,7 +7722,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1222374113}
     - target: {fileID: 5576304913028467293, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
+      propertyPath: _playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+    - target: {fileID: 5576304913028467293, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
       propertyPath: slotMachineData
+      value: 
+      objectReference: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
+    - target: {fileID: 5576304913028467293, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
+      propertyPath: _slotMachineData
       value: 
       objectReference: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
     - target: {fileID: 5576304913028467294, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}

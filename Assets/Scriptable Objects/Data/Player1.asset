@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   spins: 50
+  maxSpins: 50
   bet: 1
   hearts: 3
