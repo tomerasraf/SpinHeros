@@ -20,6 +20,11 @@ public class SpinLogic : MonoBehaviour
         RanomizeSpin(_slotMachineData.slot1, out _slotMachineData.slotResults[0]);
         RanomizeSpin(_slotMachineData.slot2, out _slotMachineData.slotResults[1]);
         RanomizeSpin(_slotMachineData.slot3, out _slotMachineData.slotResults[2]);
+
+        if (_playerData.spins <= 0)
+        {
+            _playerData.spins = 0;
+        }
     }
 
     // Randomize the slot machine reel symbol number

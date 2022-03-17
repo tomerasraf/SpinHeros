@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6593dd04253f9844984b965e5e56d09, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
-  coins: 0
-  spins: 50
+  coins: 600
+  spins: 46
   maxSpins: 50
   bet: 1
   hearts: 3
