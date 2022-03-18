@@ -10,13 +10,18 @@ public class SpinBarUI : MonoBehaviour
 
     public void SpinBarUI_Updater()
     {
-        if (_playerData.spins != 0)
+        if (_playerData.spins > 0)
         {
             spinsText.text = $"{_playerData.spins - 1}/{_playerData.maxSpins}";
         }
         else
         {
-            spinsText.text = $"{_playerData.spins}/{_playerData.maxSpins}";
+            spinsText.text = $"0/{_playerData.maxSpins}";
+        }
+
+        if (_playerData.spins >= _playerData.maxSpins)
+        {
+            spinsText.text = $"50/{_playerData.maxSpins}";
         }
 
 

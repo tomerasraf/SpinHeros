@@ -14,6 +14,7 @@ public class ReelMovement : MonoBehaviour
 
     [Header("Data")]
     [SerializeField] private SlotMachineData slotMachineData;
+    [SerializeField] private PlayerData _playerData;
 
     [Header("Events")]
     [SerializeField] private VoidEvent SpinIsEnded;
@@ -29,11 +30,14 @@ public class ReelMovement : MonoBehaviour
 
     public void StartRollReelCoroutine()
     {
-        isRolling = true;
-        spinButton.enabled = false;
-        StartCoroutine(ReelRoll(Reels));
+        if (_playerData.spins < 0) { return; }
 
-
+        if (_playerData.spins >= 0)
+        {
+            isRolling = true;
+            spinButton.enabled = false;
+            StartCoroutine(ReelRoll(Reels));
+        }
     }
     #endregion
 

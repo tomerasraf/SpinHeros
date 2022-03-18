@@ -7,6 +7,7 @@ public class PrizeLogic : MonoBehaviour
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] PlayerData _playerData;
     [SerializeField] VoidEvent prizeIsEarned;
+    [SerializeField] VoidEvent heartIsEarned;
 
     public void CheckResultsCaller()
     {
@@ -41,8 +42,12 @@ public class PrizeLogic : MonoBehaviour
          && _slotMachineData.slotResults[2] == 4)
         {
             // Hearts Prize
-            Debug.Log("Hearts");
-            prizeIsEarned.Raise();
+            _playerData.hearts += 3 * _playerData.bet;
+            if (_playerData.hearts > 3)
+            {
+                _playerData.hearts = 3;
+            }
+            heartIsEarned.Raise();
         }
 
         // Spins Check
@@ -51,7 +56,16 @@ public class PrizeLogic : MonoBehaviour
          && _slotMachineData.slotResults[2] == 3)
         {
             // Spin Prize 
-            Debug.Log("3 Spins");
+            if (_playerData.spins < _playerData.maxSpins)
+            {
+                _playerData.spins += 3 * _playerData.bet;
+            }
+            else
+            {
+                _playerData.spins = _playerData.maxSpins;
+                _playerData.extraSpins += 3;
+            }
+
             prizeIsEarned.Raise();
         }
 
@@ -91,7 +105,4 @@ public class PrizeLogic : MonoBehaviour
             prizeIsEarned.Raise();
         }
     }
-
-
-
 }

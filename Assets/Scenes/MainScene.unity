@@ -891,7 +891,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392689173}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1388,6 +1388,7 @@ GameObject:
   - component: {fileID: 602958311}
   - component: {fileID: 602958314}
   - component: {fileID: 602958313}
+  - component: {fileID: 602958315}
   m_Layer: 5
   m_Name: BarFill
   m_TagString: Untagged
@@ -1495,6 +1496,34 @@ MonoBehaviour:
   spinBarImage: {fileID: 602958311}
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   spinsText: {fileID: 1695022669}
+--- !u!114 &602958315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602958309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 66d56a12d56311e478fd26d0924299c2, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 602958314}
+        m_TargetAssemblyTypeName: SpinBarUI, Assembly-CSharp
+        m_MethodName: SpinBarUI_Updater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &643219644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1568,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643219644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3139,7 +3168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269802229}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3559,6 +3588,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1624982954}
+  - component: {fileID: 1624982956}
+  - component: {fileID: 1624982955}
   m_Layer: 5
   m_Name: Hearts
   m_TagString: Untagged
@@ -3589,6 +3620,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0.00038146973, y: 0.0023804}
   m_SizeDelta: {x: 978.59, y: 2119}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1624982955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624982953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f7a71a088b33b354b802715be0411fbf, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1624982956}
+        m_TargetAssemblyTypeName: HeartsUI, Assembly-CSharp
+        m_MethodName: HeartUI_Updater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1624982956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624982953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b1a30b72d575542952fae49d41a1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  heartImages:
+  - {fileID: 643219646}
+  - {fileID: 392689175}
+  - {fileID: 1269802231}
 --- !u!1 &1671354310
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,6 +4474,8 @@ GameObject:
   - component: {fileID: 1808904164}
   - component: {fileID: 1808904166}
   - component: {fileID: 1808904165}
+  - component: {fileID: 1808904168}
+  - component: {fileID: 1808904167}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4444,7 +4522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EXTRA
+  m_text: extra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4521,6 +4599,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808904163}
   m_CullTransparentMesh: 1
+--- !u!114 &1808904167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808904163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 66d56a12d56311e478fd26d0924299c2, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1808904168}
+        m_TargetAssemblyTypeName: ExtraSpinsUI, Assembly-CSharp
+        m_MethodName: ExtraSpinsUI_Updater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1808904168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808904163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4285e5f9e3bf704c870a4e45b403ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  extraSpinsText: {fileID: 1808904165}
 --- !u!1 &1842590170
 GameObject:
   m_ObjectHideFlags: 0
@@ -7696,6 +7816,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
     - target: {fileID: 5576304913028467293, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
+      propertyPath: reciveSpins
+      value: 
+      objectReference: {fileID: 11400000, guid: 66d56a12d56311e478fd26d0924299c2, type: 2}
+    - target: {fileID: 5576304913028467293, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
       propertyPath: slotMachineData
       value: 
       objectReference: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
@@ -7756,6 +7880,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5886693519128164461, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
+      propertyPath: heartIsEarned
+      value: 
+      objectReference: {fileID: 11400000, guid: f7a71a088b33b354b802715be0411fbf, type: 2}
     - target: {fileID: 5886693519128164462, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -7897,6 +8025,10 @@ PrefabInstance:
       propertyPath: SpinIsEnded
       value: 
       objectReference: {fileID: 11400000, guid: 49dfb1bdbfa738340825d51a980e5181, type: 2}
+    - target: {fileID: 8929924662871021999, guid: 05f289557e2841b42b5bebcbfbeca1c6, type: 3}
+      propertyPath: _playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
     - target: {fileID: 8929924662871021999, guid: 05f289557e2841b42b5bebcbfbeca1c6, type: 3}
       propertyPath: CheckResults
       value: 
