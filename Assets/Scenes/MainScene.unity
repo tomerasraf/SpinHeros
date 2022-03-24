@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.27946705, g: 1.4673054, b: 3.8641756, a: 1}
+  m_IndirectSpecularColor: {r: 0.23925366, g: 1.2556504, b: 3.8618965, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4211,6 +4211,18 @@ PrefabInstance:
       objectReference: {fileID: 6426448320209171538}
     - target: {fileID: 8929924662871021999, guid: 05f289557e2841b42b5bebcbfbeca1c6, type: 3}
       propertyPath: Reels.Array.data[2]
+      value: 
+      objectReference: {fileID: 3732820751373535152}
+    - target: {fileID: 8929924662871021999, guid: 05f289557e2841b42b5bebcbfbeca1c6, type: 3}
+      propertyPath: reels.Array.data[0]
+      value: 
+      objectReference: {fileID: 3924232457930515780}
+    - target: {fileID: 8929924662871021999, guid: 05f289557e2841b42b5bebcbfbeca1c6, type: 3}
+      propertyPath: reels.Array.data[1]
+      value: 
+      objectReference: {fileID: 6426448320209171538}
+    - target: {fileID: 8929924662871021999, guid: 05f289557e2841b42b5bebcbfbeca1c6, type: 3}
+      propertyPath: reels.Array.data[2]
       value: 
       objectReference: {fileID: 3732820751373535152}
     - target: {fileID: 8929924662871022000, guid: 05f289557e2841b42b5bebcbfbeca1c6, type: 3}

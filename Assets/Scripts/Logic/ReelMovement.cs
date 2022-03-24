@@ -10,7 +10,7 @@ public class ReelMovement : MonoBehaviour
     [SerializeField] private float reelSpeed = 3f;
 
     [Header("Transform")]
-    [SerializeField] Transform[] Reels;
+    [SerializeField] Transform[] reels;
 
     [Header("Data")]
     [SerializeField] private SlotMachineData slotMachineData;
@@ -36,7 +36,7 @@ public class ReelMovement : MonoBehaviour
         {
             isRolling = true;
             spinButton.enabled = false;
-            StartCoroutine(ReelRoll(Reels));
+            StartCoroutine(ReelRoll(reels));
         }
     }
     #endregion
@@ -48,9 +48,17 @@ public class ReelMovement : MonoBehaviour
         while (isRolling)
         {
             elapsedTime += Time.deltaTime;
-            ReelRotation(reels[0], 0);
-            ReelRotation(reels[1], 0.2f);
-            ReelRotation(reels[2], 0.4f);
+            if (reels.Length == 1)
+            {
+                ReelRotation(reels[0], 0);
+            }
+            else
+            {
+                ReelRotation(reels[0], 0);
+                ReelRotation(reels[1], 0.2f);
+                ReelRotation(reels[2], 0.4f);
+            }
+
 
             if (elapsedTime >= rand)
             {
@@ -86,16 +94,16 @@ public class ReelMovement : MonoBehaviour
     void ReelStop()
     {
         float deltaStopSpeed = 0.5f;
-        for (int i = 0; i <= 2; i++)
+        for (int i = 0; i <= reels.Length - 1; i++)
         {
             Vector3 rotationVector = new Vector3(
-            Reels[i].transform.eulerAngles.x,
-            Reels[i].transform.eulerAngles.y,
+            reels[i].transform.eulerAngles.x,
+            reels[i].transform.eulerAngles.y,
             // Fixes the issue with the sack of coins texure by adding +10 to the z rotaion axais.
             slotMachineData.slotResults[i] != 0 ? slotMachineData.slotResults[i] * SymbolOffset : slotMachineData.slotResults[i] + 10
             );
 
-            Reels[i].DORotate(rotationVector, deltaStopSpeed++, RotateMode.FastBeyond360).SetEase(Ease.OutBack);
+            reels[i].DORotate(rotationVector, deltaStopSpeed++, RotateMode.FastBeyond360).SetEase(Ease.OutBack);
         }
     }
 }

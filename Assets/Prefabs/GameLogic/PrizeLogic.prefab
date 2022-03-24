@@ -47,6 +47,7 @@ MonoBehaviour:
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   prizeIsEarned: {fileID: 11400000, guid: 80545e0179804a34c9de0a580a48cce6, type: 2}
+  heartIsEarned: {fileID: 0}
 --- !u!114 &5886693519128164460
 MonoBehaviour:
   m_ObjectHideFlags: 0

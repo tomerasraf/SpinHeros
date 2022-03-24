@@ -9,6 +9,7 @@ public class PrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent prizeIsEarned;
     [SerializeField] VoidEvent heartIsEarned;
 
+
     public void CheckResultsCaller()
     {
         CheckResults(_slotMachineData.slotResults);

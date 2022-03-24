@@ -46,12 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reelSpeed: 20
-  stopRotationSpeed: 1
-  Reels:
+  reels:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
+  _playerData: {fileID: 0}
+  SpinIsEnded: {fileID: 0}
   spinButton: {fileID: 0}
 --- !u!114 &8929924662871021997
 MonoBehaviour:
