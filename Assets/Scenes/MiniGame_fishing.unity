@@ -11995,7 +11995,7 @@ MonoBehaviour:
   _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   wheel: {fileID: 1009291781}
   symbolOffset: -45
-  wheelSpeed: 50
+  wheelSpeed: 30
   timeOfWheelSpin: 1
 --- !u!114 &1070225446
 MonoBehaviour:
