@@ -7,9 +7,14 @@ public class SpinWheelLogic : MonoBehaviour
     [Header("Data")]
     [SerializeField] SpiningWheelData _spiningWheelData;
 
+    [Header("Events")]
+    [SerializeField] VoidEvent spinIsEnded;
+
     [Header("Transform")]
     [SerializeField] Transform wheel;
+
     [Header("Var")]
+    [SerializeField] float stopSpinTime = 1;
     [SerializeField] float symbolOffset = 45;
     [SerializeField] float wheelSpeed = 20;
     [SerializeField] float timeOfWheelSpin;
@@ -41,9 +46,11 @@ public class SpinWheelLogic : MonoBehaviour
                         wheel.rotation.y,
                         _spiningWheelData.result * symbolOffset
                       );
-        Debug.Log(_spiningWheelData.result);
 
-        wheel.DORotate(endValue, 2f, RotateMode.FastBeyond360).SetEase(Ease.OutBack); ;
+        wheel.DORotate(endValue, stopSpinTime, RotateMode.FastBeyond360).SetEase(Ease.OutBack).OnComplete(() =>
+        {
+            spinIsEnded.Raise();
+        });
     }
 
     private void RamdomSpin()
