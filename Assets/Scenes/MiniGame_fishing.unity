@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.23931429, g: 1.2557223, b: 3.8618848, a: 1}
+  m_IndirectSpecularColor: {r: 0.23876461, g: 1.2552677, b: 3.8619635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11190,12 +11190,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1017650162}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: WheelPrizeLogic, Assembly-CSharp
+        m_MethodName: CheckWheelResult
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11213,7 +11213,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9626d0b19cd628468108a745fa5bcfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spiningWheelData: {fileID: 0}
+  _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  shark: {fileID: 11400000, guid: 3037f0ffec0bc4c4c9707f57911d25ca, type: 2}
+  kraken: {fileID: 11400000, guid: 58da89bf82533f04c9952fa848a7cbcc, type: 2}
+  anchor: {fileID: 11400000, guid: 3ae1546bab4d5c04687b1b8c8ed788b1, type: 2}
+  replace: {fileID: 11400000, guid: 82c5df36b76e3564a942c5bb749d483a, type: 2}
 --- !u!4 &1017650163
 Transform:
   m_ObjectHideFlags: 0

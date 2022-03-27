@@ -5,11 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Player Data", menuName = "Player Data")]
 public class PlayerData : ScriptableObject
 {
+    // Slot Machine Player Data
     public int coins = 0;
     public int spins = 50;
     public int maxSpins = 50;
     public int extraSpins = 0;
     public float moreSpinsTimer = 60;
     public int bet = 1;
+
+    // Mini Game Player Data
     public int hearts;
+    public int playerPlace = 4;
+    public float playerProgress = 0;
+    public int score = 0;
+    public int maxScore = 300;
 }
