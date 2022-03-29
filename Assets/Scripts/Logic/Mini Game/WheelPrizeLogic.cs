@@ -6,7 +6,7 @@ public class WheelPrizeLogic : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] SpiningWheelData _spiningWheelData;
-    [SerializeField] PlayerData _playerData;
+    [SerializeField] PlayerData[] _playerData;
 
     [Header("Events")]
     [SerializeField] private VoidEvent shark;
@@ -17,32 +17,36 @@ public class WheelPrizeLogic : MonoBehaviour
 
     public void CheckWheelResult()
     {
-        switch (_spiningWheelData.result)
+        for (int i = 0; i < _spiningWheelData.results.Length; i++)
         {
-            case 0:
-                replace.Raise();
-                break;
-            case 1:
-                shark.Raise();
-                break;
-            case 2:
-                anchor.Raise();
-                break;
-            case 3:
-                _playerData.score += _spiningWheelData.legnderyFishPrize;
-                break;
-            case 4:
-                _playerData.score += _spiningWheelData.fishPrize;
-                break;
-            case 5:
-                _playerData.score += _spiningWheelData.shoePrize;
-                break;
-            case 6:
-                kraken.Raise();
-                break;
-            case 7:
-                _playerData.score += _spiningWheelData.rareFishPrize;
-                break;
+            switch (_spiningWheelData.results[i])
+            {
+                case 0:
+                    replace.Raise();
+                    break;
+                case 1:
+                    shark.Raise();
+                    break;
+                case 2:
+                    anchor.Raise();
+                    break;
+                case 3:
+                    _playerData[i].score += _spiningWheelData.legnderyFishPrize;
+                    break;
+                case 4:
+                    _playerData[i].score += _spiningWheelData.fishPrize;
+                    break;
+                case 5:
+                    _playerData[i].score += _spiningWheelData.shoePrize;
+                    break;
+                case 6:
+                    kraken.Raise();
+                    break;
+                case 7:
+                    _playerData[i].score += _spiningWheelData.rareFishPrize;
+                    break;
+            }
         }
+
     }
 }

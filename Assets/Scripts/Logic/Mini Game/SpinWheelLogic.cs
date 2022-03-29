@@ -3,7 +3,6 @@ using DG.Tweening;
 
 public class SpinWheelLogic : MonoBehaviour
 {
-
     [Header("Data")]
     [SerializeField] SpiningWheelData _spiningWheelData;
 
@@ -44,9 +43,9 @@ public class SpinWheelLogic : MonoBehaviour
         Vector3 endValue = new Vector3(
                         wheel.rotation.x,
                         wheel.rotation.y,
-                        _spiningWheelData.result * symbolOffset
+                        _spiningWheelData.results[0] * symbolOffset
                       );
-
+        // NEED TO FIX THE ROTATION GOING TO THE LEFT SOME TIMES.
         wheel.DORotate(endValue, stopSpinTime, RotateMode.FastBeyond360).SetEase(Ease.OutBack).OnComplete(() =>
         {
             spinIsEnded.Raise();
@@ -55,7 +54,11 @@ public class SpinWheelLogic : MonoBehaviour
 
     private void RamdomSpin()
     {
-        int rand = Random.Range(0, 100);
-        _spiningWheelData.result = _spiningWheelData.wheelSlots[rand];
+        for (int i = 0; i < _spiningWheelData.results.Length; i++)
+        {
+            int rand = 0;
+            rand = Random.Range(0, 100);
+            _spiningWheelData.results[i] = _spiningWheelData.wheelsSlots[rand];
+        }
     }
 }
