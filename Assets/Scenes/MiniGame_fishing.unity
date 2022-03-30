@@ -12554,7 +12554,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
+<<<<<<< Updated upstream
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+=======
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
+>>>>>>> Stashed changes
   m_Intensity: 328.36
   m_Range: 16.854591
   m_SpotAngle: 102.860756
@@ -25205,8 +25209,13 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
+<<<<<<< Updated upstream
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.28
+=======
+  m_Color: {r: 0.9339623, g: 0.77209634, b: 0.5594963, a: 1}
+  m_Intensity: 1
+>>>>>>> Stashed changes
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
