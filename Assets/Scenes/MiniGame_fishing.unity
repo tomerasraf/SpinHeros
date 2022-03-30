@@ -2112,7 +2112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.4, y: 3.4}
+  m_AnchoredPosition: {x: -1, y: 6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307403608
@@ -7686,7 +7686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.4, y: 3.4}
+  m_AnchoredPosition: {x: -1, y: 6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449832761
@@ -9350,6 +9350,7 @@ MonoBehaviour:
   joker: {fileID: 11400000, guid: 69f2587211a7aec46a363488d8dccf9e, type: 2}
   kraken: {fileID: 11400000, guid: 58da89bf82533f04c9952fa848a7cbcc, type: 2}
   replace: {fileID: 11400000, guid: 82c5df36b76e3564a942c5bb749d483a, type: 2}
+  endOfChoice: {fileID: 11400000, guid: 2ecdd597a1950bd4c970c4991f43728d, type: 2}
 --- !u!4 &697361630
 Transform:
   m_ObjectHideFlags: 0
@@ -12839,6 +12840,8 @@ GameObject:
   - component: {fileID: 1222374114}
   - component: {fileID: 1222374113}
   - component: {fileID: 1222374116}
+  - component: {fileID: 1222374117}
+  - component: {fileID: 1222374118}
   m_Layer: 5
   m_Name: SpinButton
   m_TagString: Untagged
@@ -12973,6 +12976,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpinButtonPressed: {fileID: 11400000, guid: d7c16d124dc6c464d9844160f602d2f3, type: 2}
+--- !u!114 &1222374117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222374111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f64efc9edb8a282438ded20af4bbe166, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1222374113}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1222374118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222374111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2ecdd597a1950bd4c970c4991f43728d, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1222374113}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1229533589
 GameObject:
   m_ObjectHideFlags: 0
@@ -13516,7 +13575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.4, y: 3.4}
+  m_AnchoredPosition: {x: -1, y: 6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327266299
@@ -20945,7 +21004,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a98c79fd35ad7149aea1b7ef7aa40db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  _playerData:
+  - {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  - {fileID: 11400000, guid: a2f511fb07a29974e890b64e3e5f4782, type: 2}
+  - {fileID: 11400000, guid: 21fb31fba8dc2df4cb8b572e6c6ccf93, type: 2}
+  - {fileID: 11400000, guid: a0bd69e78bfa0074d89599f2550b9762, type: 2}
 --- !u!4 &1736225326
 Transform:
   m_ObjectHideFlags: 0
@@ -21429,7 +21492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.4, y: 3.4}
+  m_AnchoredPosition: {x: -1, y: 6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1858735410

@@ -12,6 +12,7 @@ public class ChoosePlayerLogic : MonoBehaviour
     [SerializeField] VoidEvent joker;
     [SerializeField] VoidEvent kraken;
     [SerializeField] VoidEvent replace;
+    [SerializeField] VoidEvent endOfChoice;
 
     private bool playerIsChoosing = true;
 
@@ -28,6 +29,7 @@ public class ChoosePlayerLogic : MonoBehaviour
         {
             if (Input.touchCount > 0)
             {
+                // Geting the position of the finger on the screen.
                 Touch touch = Input.GetTouch(0);
                 Vector3 touchPosFar = new Vector3(touch.position.x, touch.position.y, Camera.main.farClipPlane);
                 Vector3 touchPosNear = new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane);
@@ -36,12 +38,17 @@ public class ChoosePlayerLogic : MonoBehaviour
 
                 RaycastHit hit;
 
+                // Shooting a ray from the camera to the world
                 if (Physics.Raycast(touchPosN, touchPosF - touchPosN, out hit))
                 {
-                    if (hit.transform.name == "Player_" && hit.transform.name != "Player_1")
+                    if (hit.transform.name == "Player_2" ||
+                     hit.transform.name == "Player_3" ||
+                      hit.transform.name == "Player_4" &&
+                       hit.transform.name != "Player_1")
                     {
                         CheckWheelResultAfterChoosing();
                         playerIsChoosing = false;
+                        endOfChoice.Raise();
                     }
                 }
 

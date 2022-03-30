@@ -14,19 +14,26 @@ public class WheelPrizeLogic : MonoBehaviour
 
     public void CheckWheelResult()
     {
+        switch (_spiningWheelData.results[0])
+        {
+            case 0:
+                ChooseCharacter.Raise();
+                break;
+            case 1:
+                ChooseCharacter.Raise();
+                break;
+            case 2:
+                ChooseCharacter.Raise();
+                break;
+            case 6:
+                ChooseCharacter.Raise();
+                break;
+        }
+
         for (int i = 0; i < _spiningWheelData.results.Length; i++)
         {
             switch (_spiningWheelData.results[i])
             {
-                case 0:
-                    ChooseCharacter.Raise();
-                    break;
-                case 1:
-                    ChooseCharacter.Raise();
-                    break;
-                case 2:
-                    ChooseCharacter.Raise();
-                    break;
                 case 3:
                     _playerData[i].score += _spiningWheelData.legnderyFishPrize;
                     break;
@@ -36,14 +43,10 @@ public class WheelPrizeLogic : MonoBehaviour
                 case 5:
                     _playerData[i].score += _spiningWheelData.shoePrize;
                     break;
-                case 6:
-                    ChooseCharacter.Raise();
-                    break;
                 case 7:
                     _playerData[i].score += _spiningWheelData.rareFishPrize;
                     break;
             }
         }
-
     }
 }
