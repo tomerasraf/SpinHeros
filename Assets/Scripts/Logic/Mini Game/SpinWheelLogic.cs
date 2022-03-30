@@ -18,8 +18,12 @@ public class SpinWheelLogic : MonoBehaviour
     [SerializeField] float wheelSpeed = 20;
     [SerializeField] float timeOfWheelSpin;
 
+    private bool wheelIsSpining;
+
     public void WheelSpinLogic()
     {
+        if (wheelIsSpining) { return; }
+        wheelIsSpining = true;
         RamdomSpin();
         SpinWheel();
     }
@@ -49,6 +53,7 @@ public class SpinWheelLogic : MonoBehaviour
         wheel.DORotate(endValue, stopSpinTime, RotateMode.FastBeyond360).SetEase(Ease.OutBack).OnComplete(() =>
         {
             spinIsEnded.Raise();
+            wheelIsSpining = false;
         });
     }
 

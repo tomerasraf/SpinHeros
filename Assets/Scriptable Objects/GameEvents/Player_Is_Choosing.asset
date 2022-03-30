@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a3bcad93970df24a84decc0681997ec, type: 3}
-  m_Name: Timer_Is_Ended
+  m_Name: Player_Is_Choosing
   m_EditorClassIdentifier: 

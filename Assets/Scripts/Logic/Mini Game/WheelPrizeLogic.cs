@@ -9,10 +9,7 @@ public class WheelPrizeLogic : MonoBehaviour
     [SerializeField] PlayerData[] _playerData;
 
     [Header("Events")]
-    [SerializeField] private VoidEvent shark;
-    [SerializeField] private VoidEvent kraken;
-    [SerializeField] private VoidEvent anchor;
-    [SerializeField] private VoidEvent replace;
+    [SerializeField] VoidEvent ChooseCharacter;
 
 
     public void CheckWheelResult()
@@ -22,13 +19,13 @@ public class WheelPrizeLogic : MonoBehaviour
             switch (_spiningWheelData.results[i])
             {
                 case 0:
-                    replace.Raise();
+                    ChooseCharacter.Raise();
                     break;
                 case 1:
-                    shark.Raise();
+                    ChooseCharacter.Raise();
                     break;
                 case 2:
-                    anchor.Raise();
+                    ChooseCharacter.Raise();
                     break;
                 case 3:
                     _playerData[i].score += _spiningWheelData.legnderyFishPrize;
@@ -40,7 +37,7 @@ public class WheelPrizeLogic : MonoBehaviour
                     _playerData[i].score += _spiningWheelData.shoePrize;
                     break;
                 case 6:
-                    kraken.Raise();
+                    ChooseCharacter.Raise();
                     break;
                 case 7:
                     _playerData[i].score += _spiningWheelData.rareFishPrize;

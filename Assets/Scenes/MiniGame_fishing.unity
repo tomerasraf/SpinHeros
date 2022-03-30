@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.24614626, g: 1.2777748, b: 4.130216, a: 1}
+  m_IndirectSpecularColor: {r: 0.24928607, g: 1.286172, b: 4.2326727, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9315,6 +9315,83 @@ Transform:
   m_Father: {fileID: 1515832127}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &697361628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 697361630}
+  - component: {fileID: 697361629}
+  - component: {fileID: 697361631}
+  m_Layer: 0
+  m_Name: Choose_Player_Logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &697361629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697361628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbadd5ec1390a442bbe12b1377aca4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
+  shark: {fileID: 11400000, guid: 3037f0ffec0bc4c4c9707f57911d25ca, type: 2}
+  joker: {fileID: 11400000, guid: 69f2587211a7aec46a363488d8dccf9e, type: 2}
+  kraken: {fileID: 11400000, guid: 58da89bf82533f04c9952fa848a7cbcc, type: 2}
+  replace: {fileID: 11400000, guid: 82c5df36b76e3564a942c5bb749d483a, type: 2}
+--- !u!4 &697361630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697361628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.268662, y: 2.1316319, z: -57.33874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697361631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697361628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f64efc9edb8a282438ded20af4bbe166, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 697361629}
+        m_TargetAssemblyTypeName: ChoosePlayerLogic, Assembly-CSharp
+        m_MethodName: StartPlayerChoiceCourotine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &712196490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4965641646292128, guid: f767d7e170e12ce4994585c4535cb5e8, type: 3}
@@ -10763,7 +10840,7 @@ Transform:
   - {fileID: 977912252}
   - {fileID: 2032813184}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -161.781, z: 0}
 --- !u!1 &969148406
 GameObject:
@@ -11214,11 +11291,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
-  _playerData: []
-  shark: {fileID: 11400000, guid: 3037f0ffec0bc4c4c9707f57911d25ca, type: 2}
-  kraken: {fileID: 11400000, guid: 58da89bf82533f04c9952fa848a7cbcc, type: 2}
-  anchor: {fileID: 11400000, guid: 3ae1546bab4d5c04687b1b8c8ed788b1, type: 2}
-  replace: {fileID: 11400000, guid: 82c5df36b76e3564a942c5bb749d483a, type: 2}
+  _playerData:
+  - {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  - {fileID: 11400000, guid: a2f511fb07a29974e890b64e3e5f4782, type: 2}
+  - {fileID: 11400000, guid: 21fb31fba8dc2df4cb8b572e6c6ccf93, type: 2}
+  - {fileID: 11400000, guid: a0bd69e78bfa0074d89599f2550b9762, type: 2}
+  ChooseCharacter: {fileID: 11400000, guid: f64efc9edb8a282438ded20af4bbe166, type: 2}
 --- !u!4 &1017650163
 Transform:
   m_ObjectHideFlags: 0
@@ -13871,7 +13949,7 @@ Transform:
   - {fileID: 1091046953}
   - {fileID: 1605399946}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: -167.781, z: 0}
 --- !u!1 &1371382854
 GameObject:
@@ -22241,7 +22319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1982539529
 GameObject:
@@ -22802,7 +22880,7 @@ Transform:
   - {fileID: 361904358}
   - {fileID: 1706200478}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -167.562, z: 0}
 --- !u!1 &2071807460
 GameObject:
@@ -24132,7 +24210,7 @@ Transform:
   - {fileID: 4814446499325354}
   - {fileID: 4375018060052732}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: -168.41, z: 0}
 --- !u!4 &4451374256924902
 Transform:
