@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ChoosePlayerLogic : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] PlayerData[] _playersData;
     [SerializeField] SpiningWheelData _spiningWheelData;
 
     [Header("Events")]
@@ -36,49 +37,48 @@ public class ChoosePlayerLogic : MonoBehaviour
                 Vector3 touchPosF = Camera.main.ScreenToWorldPoint(touchPosFar);
                 Vector3 touchPosN = Camera.main.ScreenToWorldPoint(touchPosNear);
 
+                // Info about the hit object.
                 RaycastHit hit;
 
-                // Shooting a ray from the camera to the world
+                // Shooting a ray from the camera to the desire player.
                 if (Physics.Raycast(touchPosN, touchPosF - touchPosN, out hit))
                 {
-                    if (hit.transform.name == "Player_2" ||
-                     hit.transform.name == "Player_3" ||
-                      hit.transform.name == "Player_4" &&
-                       hit.transform.name != "Player_1")
-                    {
-                        CheckWheelResultAfterChoosing();
-                        playerIsChoosing = false;
-                        endOfChoice.Raise();
-                    }
+                    SelectPlayer(hit);
                 }
-
             }
             yield return null;
         }
         yield return null;
     }
 
-    public void CheckWheelResultAfterChoosing()
+    private void SelectPlayer(RaycastHit hit)
     {
-        switch (_spiningWheelData.results[0])
+        if (hit.transform.name == "Player_2")
         {
-            case 0:
-                replace.Raise();
-                Debug.Log("Replace");
-                break;
-            case 1:
-                shark.Raise();
-                Debug.Log("shark");
-                break;
-            case 2:
-                joker.Raise();
-                Debug.Log("joker");
-                break;
-            case 6:
-                kraken.Raise();
-                Debug.Log("kraken");
-                break;
+            _spiningWheelData.choosenPlayer = 1;
+            attackChoosenPlayer();
+            playerIsChoosing = false;
+            endOfChoice.Raise();
+        }
+        if (hit.transform.name == "Player_3")
+        {
+            _spiningWheelData.choosenPlayer = 2;
+            attackChoosenPlayer();
+            playerIsChoosing = false;
+            endOfChoice.Raise();
+        }
+        if (hit.transform.name == "Player_4")
+        {
+            _spiningWheelData.choosenPlayer = 3;
+            attackChoosenPlayer();
+            playerIsChoosing = false;
+            endOfChoice.Raise();
         }
     }
 
+    public void attackChoosenPlayer()
+    {
+        // Shark attack
+        _playersData[_spiningWheelData.choosenPlayer].hearts--;
+    }
 }

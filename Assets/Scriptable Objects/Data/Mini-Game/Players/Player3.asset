@@ -18,8 +18,8 @@ MonoBehaviour:
   extraSpins: 0
   moreSpinsTimer: 60
   bet: 1
-  hearts: 3
-  playerPlace: 4
+  hearts: 2
+  playerPlace: 2
   playerProgress: 0
-  score: 2570
+  score: 230
   maxScore: 300

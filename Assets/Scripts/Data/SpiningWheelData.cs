@@ -9,4 +9,5 @@ public class SpiningWheelData : ScriptableObject
     public int rareFishPrize = 20;
     public int legnderyFishPrize = 50;
     public int shoePrize = -10;
+    public int choosenPlayer;
 }
