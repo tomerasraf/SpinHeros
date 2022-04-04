@@ -25,7 +25,6 @@ public class ChoosePlayerLogic : MonoBehaviour
 
     IEnumerator ChoosePlayerCourotine()
     {
-        Debug.Log("Nice");
         while (playerIsChoosing)
         {
             if (Input.touchCount > 0)

@@ -10,6 +10,7 @@ public class WheelPrizeLogic : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] VoidEvent ChooseCharacter;
+    [SerializeField] VoidEvent Score_Update;
 
 
     public void CheckWheelResult()
@@ -21,6 +22,7 @@ public class WheelPrizeLogic : MonoBehaviour
                 break;
             case 6:
                 KrakenAttack();
+                Score_Update.Raise();
                 break;
         }
 
@@ -33,18 +35,27 @@ public class WheelPrizeLogic : MonoBehaviour
                     break;
                 case 2:
                     _playersData[i].score = _playersData[0].maxScore;
+                    Score_Update.Raise();
                     break;
                 case 3:
                     _playersData[i].score += _spiningWheelData.legnderyFishPrize;
+                    Score_Update.Raise();
+
                     break;
                 case 4:
                     _playersData[i].score += _spiningWheelData.fishPrize;
+                    Score_Update.Raise();
+
                     break;
                 case 5:
                     _playersData[i].score += _spiningWheelData.shoePrize;
+                    Score_Update.Raise();
+
                     break;
                 case 7:
                     _playersData[i].score += _spiningWheelData.rareFishPrize;
+                    Score_Update.Raise();
+
                     break;
             }
         }
@@ -64,13 +75,11 @@ public class WheelPrizeLogic : MonoBehaviour
     {
         int rand = Random.Range(1, 4);
         int tempPlace = _playersData[playerNum].playerPlace;
-        Debug.Log(tempPlace + "first");
         _playersData[playerNum].playerPlace = rand;
         for (int i = 0; i < _playersData.Length; i++)
         {
             if (_playersData[i].playerPlace == rand)
             {
-                Debug.Log(_playersData[i].playerPlace + "second");
                 _playersData[i].playerPlace = tempPlace;
             }
         }
