@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.24928607, g: 1.286172, b: 4.2326727, a: 1}
+  m_IndirectSpecularColor: {r: 0.77326417, g: 3.2883623, b: 10.194504, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8226,10 +8226,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1982539530}
     m_Modifications:
+    - target: {fileID: 4439974052726008984, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6747b9752b1ddba4b879d64e5a1c6220, type: 2}
+    - target: {fileID: 4439974053318899894, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6747b9752b1ddba4b879d64e5a1c6220, type: 2}
+    - target: {fileID: 4439974054022053010, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6747b9752b1ddba4b879d64e5a1c6220, type: 2}
     - target: {fileID: 4439974054485732754, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
       propertyPath: m_Name
       value: Rocks
       objectReference: {fileID: 0}
+    - target: {fileID: 4439974054485732756, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6747b9752b1ddba4b879d64e5a1c6220, type: 2}
     - target: {fileID: 4439974054485732757, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -12898,9 +12914,9 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9245283, g: 0.606152, b: 0.082858644, a: 1}
   m_Intensity: 328.36
-  m_Range: 16.854591
+  m_Range: 19.77
   m_SpotAngle: 102.860756
   m_InnerSpotAngle: 102.518
   m_CookieSize: 10
@@ -12957,7 +12973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220184955}
   m_LocalRotation: {x: 0.67748827, y: -0, z: -0, w: 0.7355336}
-  m_LocalPosition: {x: 10.38, y: 14.97, z: -45.19}
+  m_LocalPosition: {x: 10.38, y: 13.69, z: -45.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15092,10 +15108,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1982539530}
     m_Modifications:
+    - target: {fileID: 4439974052726008984, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6747b9752b1ddba4b879d64e5a1c6220, type: 2}
+    - target: {fileID: 4439974053318899894, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6747b9752b1ddba4b879d64e5a1c6220, type: 2}
+    - target: {fileID: 4439974054022053010, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6747b9752b1ddba4b879d64e5a1c6220, type: 2}
     - target: {fileID: 4439974054485732754, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
       propertyPath: m_Name
       value: Rocks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4439974054485732756, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6747b9752b1ddba4b879d64e5a1c6220, type: 2}
     - target: {fileID: 4439974054485732757, guid: e59e19855ac10ed4bba747cb75eef8c7, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -22741,7 +22773,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 32b82be195690804b918c403073333a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 478bd9e5e1b5a8c45bc1d0e50089e9e6, type: 2}
+      objectReference: {fileID: 2100000, guid: 062297d9a491aa443b804eb80f32ddcc, type: 2}
     - target: {fileID: 919132149155446097, guid: 32b82be195690804b918c403073333a9, type: 3}
       propertyPath: m_Name
       value: Laguna2
@@ -25879,7 +25911,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8962264, g: 0.65447813, b: 0.38470095, a: 1}
   m_Intensity: 1.28
   m_Range: 10
   m_SpotAngle: 30
