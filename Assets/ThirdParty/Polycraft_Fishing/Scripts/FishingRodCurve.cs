@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishingRodCurve : MonoBehaviour {
+public class FishingRodCurve : MonoBehaviour
+{
     public bool debugRay;
     public float animPower = 1f;
     public GameObject fishingPole;
@@ -12,17 +13,19 @@ public class FishingRodCurve : MonoBehaviour {
     Animator anim;
     public float poleVertical;
     public float poleHorizontal;
-    
-    void Start () {
+
+    void Start()
+    {
         if (!phyTip)
         {
             print("You will need the tip of the fishing rod.");
         }
         anim = fishingPole.transform.GetComponent<Animator>();
     }
-	
-	
-	void Update () {
+
+
+    void Update()
+    {
         if (!phyTip)
         {
             return;
