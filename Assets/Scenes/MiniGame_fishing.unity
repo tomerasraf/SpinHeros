@@ -713,6 +713,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4109352040616796, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.40557978
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109352040616796, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.40557978
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109352040616796, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.579228
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109352040616796, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.579228
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508352295099396, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.976296
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508352295099396, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000027322246
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508352295099396, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.21643962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508352295099396, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000034155345
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555038405325428, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.97437006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555038405325428, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000006704064
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555038405325428, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.22495106
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555038405325428, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000002903849
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665897560198248, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -6.991501e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665897560198248, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 3.973385e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665897560198248, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000021852083
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
 --- !u!1 &176079922
@@ -2131,14 +2191,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330251139}
-  m_LocalRotation: {x: 0.7050771, y: -0.0026551238, z: -0.0026246044, w: -0.70912087}
+  m_LocalRotation: {x: 0.89006174, y: -0.0017112441, z: -0.0033181182, w: -0.45582473}
   m_LocalPosition: {x: -0.098834895, y: 0, z: 0.000052945958}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
   - {fileID: 1572823841}
   m_Father: {fileID: 1929898250}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -125.764, y: 0.42599487, z: 0.0019989014}
 --- !u!1 &334413965
 GameObject:
   m_ObjectHideFlags: 0
@@ -8348,7 +8408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516766088}
   m_LocalRotation: {x: -0.3078812, y: 0.8399564, z: 0.40425348, w: 0.19042501}
-  m_LocalPosition: {x: -0.047, y: 0.098, z: 0.078}
+  m_LocalPosition: {x: 0.032, y: 0.137, z: 0.139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1154636589}
@@ -11376,7 +11436,9 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Bip001 Spine1'\n\tFrom animation clip 'Cach_fish'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -11388,7 +11450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968405387}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 14.509999, y: 0.96, z: -56.829998}
+  m_LocalPosition: {x: 14.51, y: 0.96, z: -56.83}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 145200771}
@@ -11462,7 +11524,9 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Bip001 Spine1'\n\tFrom animation clip 'Cach_fish'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -14237,7 +14301,9 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Bip001 Spine1'\n\tFrom animation clip 'Cach_fish'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -14709,7 +14775,9 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Bip001 Spine1'\n\tFrom animation clip 'Cach_fish'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
