@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.77326417, g: 3.2883623, b: 10.194504, a: 1}
+  m_IndirectSpecularColor: {r: 0.7732058, g: 3.431341, b: 10.6516285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1536,17 +1536,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 281558809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e12c709089252a468b47547a39f4521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: d7c16d124dc6c464d9844160f602d2f3, type: 2}
+  gameEvent: {fileID: 11400000, guid: d9246a6dc78a2ee44ad33e4897052109, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 281558812}
         m_TargetAssemblyTypeName: Fish, Assembly-CSharp
         m_MethodName: ThrowAnim
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1582,20 +1582,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 281558809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e12c709089252a468b47547a39f4521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 49dfb1bdbfa738340825d51a980e5181, type: 2}
+  gameEvent: {fileID: 11400000, guid: d9246a6dc78a2ee44ad33e4897052109, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 281558812}
-        m_TargetAssemblyTypeName: Fish, Assembly-CSharp
-        m_MethodName: StopThrowAnim
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11869,6 +11869,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0bd69e78bfa0074d89599f2550b9762, type: 2}
   ChooseCharacter: {fileID: 11400000, guid: f64efc9edb8a282438ded20af4bbe166, type: 2}
   Score_Update: {fileID: 11400000, guid: ef218766fc92d734bb4bbc8e89c9e94c, type: 2}
+  PlayerID_Anim_FishPrize: {fileID: 11400000, guid: d9246a6dc78a2ee44ad33e4897052109, type: 2}
+  PlayerID_Anim_RareFishPrize: {fileID: 0}
+  PlayerID_Anim_LegndaryFishPrize: {fileID: 0}
+  PlayerID_Anim_JokerPrize: {fileID: 0}
+  PlayerID_Anim_ShoePrize: {fileID: 0}
 --- !u!4 &1017650163
 Transform:
   m_ObjectHideFlags: 0

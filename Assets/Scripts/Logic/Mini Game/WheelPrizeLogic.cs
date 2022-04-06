@@ -11,6 +11,11 @@ public class WheelPrizeLogic : MonoBehaviour
     [Header("Events")]
     [SerializeField] VoidEvent ChooseCharacter;
     [SerializeField] VoidEvent Score_Update;
+    [SerializeField] IntEvent PlayerID_Anim_FishPrize;
+    [SerializeField] IntEvent PlayerID_Anim_RareFishPrize;
+    [SerializeField] IntEvent PlayerID_Anim_LegndaryFishPrize;
+    [SerializeField] IntEvent PlayerID_Anim_JokerPrize;
+    [SerializeField] IntEvent PlayerID_Anim_ShoePrize;
 
 
     public void CheckWheelResult()
@@ -44,6 +49,7 @@ public class WheelPrizeLogic : MonoBehaviour
                     break;
                 case 4:
                     _playersData[i].score += _spiningWheelData.fishPrize;
+                    PlayerID_Anim_FishPrize.Raise(i);
                     Score_Update.Raise();
 
                     break;
@@ -55,7 +61,6 @@ public class WheelPrizeLogic : MonoBehaviour
                 case 7:
                     _playersData[i].score += _spiningWheelData.rareFishPrize;
                     Score_Update.Raise();
-
                     break;
             }
         }
