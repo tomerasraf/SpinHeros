@@ -1544,7 +1544,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 281558812}
         m_TargetAssemblyTypeName: Fish, Assembly-CSharp
-        m_MethodName: CatchFish_Anim
+        m_MethodName: startCatchFish_Coroutine
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
