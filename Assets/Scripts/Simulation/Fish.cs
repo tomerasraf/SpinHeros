@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public class Fish : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Fish : MonoBehaviour
     IEnumerator CatchFish_Anim(int playerID)
     {
         players[playerID].SetBool("isSpining", true);
+
+
         yield return new WaitForSeconds(animDuration);
         players[playerID].SetBool("isSpining", false);
         yield return null;
