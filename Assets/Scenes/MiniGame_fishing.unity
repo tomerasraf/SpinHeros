@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.7732058, g: 3.431341, b: 10.6516285, a: 1}
+  m_IndirectSpecularColor: {r: 0.77326417, g: 3.2883623, b: 10.194504, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24379,35 +24379,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.94
+      value: 13.92
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39
+      value: -0.976
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -64.73
+      value: -66.25
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.69731027
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7167695
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -91.576
       objectReference: {fileID: 0}
     - target: {fileID: 4813915844032200, guid: 939dbc155a7d8bc49930f8370363dc7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -24698,7 +24698,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   delay: 0
-  duration: 1
+  duration: 4
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -24728,9 +24728,9 @@ MonoBehaviour:
   id: 
   loopType: 0
   orientType: 1
-  lookAtTransform: {fileID: 0}
+  lookAtTransform: {fileID: 1494963045}
   lookAtPosition: {x: 0, y: 0, z: 0}
-  lookAhead: 0.38
+  lookAhead: 1
   autoPlay: 1
   autoKill: 1
   relative: 0
@@ -24738,39 +24738,39 @@ MonoBehaviour:
   isClosedPath: 0
   pathResolution: 11
   pathMode: 1
-  lockRotation: 2
+  lockRotation: 8
   assignForwardAndUp: 0
   forwardDirection: {x: 0, y: 0, z: 1}
   upDirection: {x: 0, y: 1, z: 0}
   tweenRigidbody: 0
   wps:
-  - {x: 14.224632, y: 0.46670967, z: -63.672703}
-  - {x: 14.237261, y: 4.468151, z: -61.453037}
-  - {x: 14.383426, y: 5.584106, z: -54.47836}
-  - {x: 14.351403, y: 1.8808453, z: -51.493935}
+  - {x: 13.389142, y: 2.1953125, z: -62.11577}
+  - {x: 12.98058, y: 4.90625, z: -57.965813}
+  - {x: 13.787488, y: 4.96875, z: -52.94448}
+  - {x: 14.826576, y: 1.5160093, z: -51.496677}
   fullWps: []
   path:
     wpLengths:
     - 0
-    - 1.2748082
-    - 4.6732473
-    - 7.1645136
-    - 4.886468
+    - 5.237911
+    - 5.005231
+    - 5.179102
+    - 3.982835
     wps:
-    - {x: 13.94, y: 0.39, z: -64.73}
-    - {x: 14.224632, y: 0.46670967, z: -63.672703}
-    - {x: 14.237261, y: 4.468151, z: -61.453037}
-    - {x: 14.383426, y: 5.584106, z: -54.47836}
-    - {x: 14.351403, y: 1.8808453, z: -51.493935}
+    - {x: 13.92, y: -0.976, z: -66.25}
+    - {x: 13.389142, y: 2.1953125, z: -62.11577}
+    - {x: 12.98058, y: 4.90625, z: -57.965813}
+    - {x: 13.787488, y: 4.96875, z: -52.94448}
+    - {x: 14.826576, y: 1.5160093, z: -51.496677}
     type: 1
     subdivisionsXSegment: 10
     subdivisions: 50
     controlPoints:
-    - a: {x: 14.224632, y: 0.46670967, z: -63.672703}
+    - a: {x: 13.389142, y: 2.1953125, z: -62.11577}
       b: {x: 0, y: 0, z: 0}
-    - a: {x: 14.319381, y: -1.8224154, z: -48.50951}
+    - a: {x: 15.8656645, y: -1.9367313, z: -50.048874}
       b: {x: 0, y: 0, z: 0}
-    length: 18.002872
+    length: 19.406788
     isFinalized: 1
     timesTable:
     - 0.02
@@ -24824,56 +24824,56 @@ MonoBehaviour:
     - 0.97999996
     - 1
     lengthsTable:
-    - 0.01492037
-    - 0.05611331
-    - 0.1183977
-    - 0.19696906
-    - 0.28754246
-    - 0.3866351
-    - 0.4919722
-    - 0.6030067
-    - 0.7215086
-    - 0.8518313
-    - 1.0005667
-    - 1.1756473
-    - 1.3858322
-    - 1.6412889
-    - 1.9418435
-    - 2.2816947
-    - 2.6531951
-    - 3.0481362
-    - 3.4584317
-    - 3.8766239
-    - 4.296429
-    - 4.7134013
-    - 5.125809
-    - 5.535729
-    - 5.950116
-    - 6.405735
-    - 6.9244227
-    - 7.4949584
-    - 8.105203
-    - 8.742586
-    - 9.394337
-    - 10.047616
-    - 10.68964
-    - 11.307834
-    - 11.88997
-    - 12.424516
-    - 12.901203
-    - 13.316907
-    - 13.702792
-    - 14.07716
-    - 14.450666
-    - 14.829793
-    - 15.217301
-    - 15.613103
-    - 16.015163
-    - 16.420292
-    - 16.824797
-    - 17.225082
-    - 17.618269
-    - 18.002872
+    - 0.065190926
+    - 0.24973872
+    - 0.53712165
+    - 0.91081274
+    - 1.3542979
+    - 1.8510468
+    - 2.384543
+    - 2.93827
+    - 3.495719
+    - 4.0403786
+    - 4.55576
+    - 5.0253935
+    - 5.4422936
+    - 5.8526216
+    - 6.264281
+    - 6.6761613
+    - 7.087044
+    - 7.495703
+    - 7.9010215
+    - 8.302091
+    - 8.698347
+    - 9.089685
+    - 9.476629
+    - 9.860468
+    - 10.24339
+    - 10.64091
+    - 11.062571
+    - 11.502359
+    - 11.954087
+    - 12.411475
+    - 12.868243
+    - 13.3181925
+    - 13.755278
+    - 14.173733
+    - 14.568242
+    - 14.934237
+    - 15.268388
+    - 15.57144
+    - 15.861431
+    - 16.15152
+    - 16.44916
+    - 16.757912
+    - 17.078297
+    - 17.408718
+    - 17.74623
+    - 18.087107
+    - 18.427303
+    - 18.762836
+    - 19.090187
+    - 19.406788
   inspectorMode: 0
   pathType: 1
   handlesType: 0
@@ -24883,8 +24883,8 @@ MonoBehaviour:
   showIndexes: 1
   showWpLength: 0
   pathColor: {r: 0, g: 0, b: 0, a: 1}
-  lastSrcPosition: {x: 13.94, y: 0.39, z: -64.73}
-  lastSrcRotation: {x: 0, y: 0, z: 0, w: 1}
+  lastSrcPosition: {x: 13.92, y: -0.976, z: -66.25}
+  lastSrcRotation: {x: -0.7167695, y: -0, z: -0, w: 0.69731027}
   wpsDropdown: 0
   dropToFloorOffset: 0
 --- !u!1 &1855394013
