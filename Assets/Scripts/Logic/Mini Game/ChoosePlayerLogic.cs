@@ -25,10 +25,13 @@ public class ChoosePlayerLogic : MonoBehaviour
 
     IEnumerator ChoosePlayerCourotine()
     {
+
         while (playerIsChoosing)
         {
+
             if (Input.touchCount > 0)
             {
+
                 // Geting the position of the finger on the screen.
                 Touch touch = Input.GetTouch(0);
                 Vector3 touchPosFar = new Vector3(touch.position.x, touch.position.y, Camera.main.farClipPlane);
@@ -54,6 +57,7 @@ public class ChoosePlayerLogic : MonoBehaviour
     {
         if (hit.transform.name == "Player_2")
         {
+            Debug.Log("s");
             _spiningWheelData.choosenPlayer = 1;
             attackChoosenPlayer();
             playerIsChoosing = false;
