@@ -6,7 +6,7 @@ public class DataManager : MonoBehaviour
 {
     public PlayerData[] _playerData;
 
-    private void Start()
+    private void Awake()
     {
         for (int i = 0; i < _playerData.Length; i++)
         {

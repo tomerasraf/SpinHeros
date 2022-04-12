@@ -10,9 +10,6 @@ public class ChoosePlayerLogic : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] VoidEvent shark;
-    [SerializeField] VoidEvent joker;
-    [SerializeField] VoidEvent kraken;
-    [SerializeField] VoidEvent replace;
     [SerializeField] VoidEvent endOfChoice;
 
     private bool playerIsChoosing = true;
@@ -28,51 +25,58 @@ public class ChoosePlayerLogic : MonoBehaviour
 
         while (playerIsChoosing)
         {
-
-            if (Input.touchCount > 0)
-            {
-
-                // Geting the position of the finger on the screen.
-                Touch touch = Input.GetTouch(0);
-                Vector3 touchPosFar = new Vector3(touch.position.x, touch.position.y, Camera.main.farClipPlane);
-                Vector3 touchPosNear = new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane);
-                Vector3 touchPosF = Camera.main.ScreenToWorldPoint(touchPosFar);
-                Vector3 touchPosN = Camera.main.ScreenToWorldPoint(touchPosNear);
-
-                // Info about the hit object.
-                RaycastHit hit;
-
-                // Shooting a ray from the camera to the desire player.
-                if (Physics.Raycast(touchPosN, touchPosF - touchPosN, out hit))
-                {
-                    SelectPlayer(hit);
-                }
-            }
+            ChoosePlayer();
             yield return null;
         }
         yield return null;
     }
 
+    private void ChoosePlayer()
+    {
+        if (Input.touchCount > 0)
+        {
+
+            // Geting the position of the finger on the screen.
+            Touch touch = Input.GetTouch(0);
+            Vector3 touchPosFar = new Vector3(touch.position.x, touch.position.y, Camera.main.farClipPlane);
+            Vector3 touchPosNear = new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane);
+            Vector3 touchPosF = Camera.main.ScreenToWorldPoint(touchPosFar);
+            Vector3 touchPosN = Camera.main.ScreenToWorldPoint(touchPosNear);
+
+            // Info about the hit object.
+            RaycastHit hit;
+
+            // Shooting a ray from the camera to the desire player.
+            if (Physics.Raycast(touchPosN, touchPosF - touchPosN, out hit))
+            {
+                SelectPlayer(hit);
+            }
+        }
+    }
+
     private void SelectPlayer(RaycastHit hit)
     {
+
         if (hit.transform.name == "Player_2")
         {
-            Debug.Log("s");
-            _spiningWheelData.choosenPlayer = 1;
+            _spiningWheelData.choosenPlayer = 0;
+            shark.Raise();
             attackChoosenPlayer();
             playerIsChoosing = false;
             endOfChoice.Raise();
         }
         if (hit.transform.name == "Player_3")
         {
-            _spiningWheelData.choosenPlayer = 2;
+            _spiningWheelData.choosenPlayer = 1;
+            shark.Raise();
             attackChoosenPlayer();
             playerIsChoosing = false;
             endOfChoice.Raise();
         }
         if (hit.transform.name == "Player_4")
         {
-            _spiningWheelData.choosenPlayer = 3;
+            _spiningWheelData.choosenPlayer = 2;
+            shark.Raise();
             attackChoosenPlayer();
             playerIsChoosing = false;
             endOfChoice.Raise();

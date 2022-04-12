@@ -12,10 +12,7 @@ public class WheelPrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent ChooseCharacter;
     [SerializeField] VoidEvent Score_Update;
     [SerializeField] IntEvent PlayerID_Anim_FishPrize;
-    [SerializeField] IntEvent PlayerID_Anim_RareFishPrize;
-    [SerializeField] IntEvent PlayerID_Anim_LegndaryFishPrize;
-    [SerializeField] IntEvent PlayerID_Anim_JokerPrize;
-    [SerializeField] IntEvent PlayerID_Anim_ShoePrize;
+    [SerializeField] IntEvent CreateFish_Prefab;
 
 
     public void CheckWheelResult()
@@ -31,40 +28,48 @@ public class WheelPrizeLogic : MonoBehaviour
                 break;
         }
 
-        for (int i = 0; i < _spiningWheelData.results.Length; i++)
+        for (int id = 0; id < _spiningWheelData.results.Length; id++)
         {
-            switch (_spiningWheelData.results[i])
-            {
-                case 0:
-                    Replace(i);
-                    break;
-                case 2:
-                    _playersData[i].score = _playersData[0].maxScore;
-                    Score_Update.Raise();
-                    break;
-                case 3:
-                    _playersData[i].score += _spiningWheelData.legnderyFishPrize;
-                    Score_Update.Raise();
-
-                    break;
-                case 4:
-                    _playersData[i].score += _spiningWheelData.fishPrize;
-                    PlayerID_Anim_FishPrize.Raise(i);
-                    Score_Update.Raise();
-
-                    break;
-                case 5:
-                    _playersData[i].score += _spiningWheelData.shoePrize;
-                    Score_Update.Raise();
-
-                    break;
-                case 7:
-                    _playersData[i].score += _spiningWheelData.rareFishPrize;
-                    Score_Update.Raise();
-                    break;
-            }
+            CheckPrize(id);
         }
     }
+
+    private void CheckPrize(int id)
+    {
+        switch (_spiningWheelData.results[id])
+        {
+            case 1:
+                Replace(id);
+                break;
+            case 2:
+                _playersData[id].score = _playersData[0].maxScore;
+                Score_Update.Raise();
+                break;
+            case 3:
+                _playersData[id].score += _spiningWheelData.legnderyFishPrize;
+
+                PlayerID_Anim_FishPrize.Raise(id);
+                Score_Update.Raise();
+
+                break;
+            case 4:
+                _playersData[id].score += _spiningWheelData.fishPrize;
+                PlayerID_Anim_FishPrize.Raise(id);
+                Score_Update.Raise();
+
+                break;
+            case 5:
+                _playersData[id].score += _spiningWheelData.shoePrize;
+                Score_Update.Raise();
+                break;
+            case 7:
+                _playersData[id].score += _spiningWheelData.rareFishPrize;
+                PlayerID_Anim_FishPrize.Raise(id);
+                Score_Update.Raise();
+                break;
+        }
+    }
+
     public void KrakenAttack()
     {
         for (int i = 0; i < _playersData.Length; i++)
