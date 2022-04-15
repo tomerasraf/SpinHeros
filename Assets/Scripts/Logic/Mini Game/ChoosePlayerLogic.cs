@@ -59,7 +59,7 @@ public class ChoosePlayerLogic : MonoBehaviour
 
         if (hit.transform.name == "Player_2")
         {
-            _spiningWheelData.choosenPlayer = 0;
+            _spiningWheelData.choosenPlayer = 1;
             shark.Raise();
             attackChoosenPlayer();
             playerIsChoosing = false;
@@ -67,7 +67,7 @@ public class ChoosePlayerLogic : MonoBehaviour
         }
         if (hit.transform.name == "Player_3")
         {
-            _spiningWheelData.choosenPlayer = 1;
+            _spiningWheelData.choosenPlayer = 2;
             shark.Raise();
             attackChoosenPlayer();
             playerIsChoosing = false;
@@ -75,7 +75,7 @@ public class ChoosePlayerLogic : MonoBehaviour
         }
         if (hit.transform.name == "Player_4")
         {
-            _spiningWheelData.choosenPlayer = 2;
+            _spiningWheelData.choosenPlayer = 3;
             shark.Raise();
             attackChoosenPlayer();
             playerIsChoosing = false;
