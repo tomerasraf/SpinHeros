@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class ProgressBarUI : MonoBehaviour
 {
     [SerializeField] PlayerData[] _playersData;
+    [SerializeField] MiniGameData _miniGameData;
     [SerializeField] Image[] progressBars;
 
     private void Start()
@@ -15,7 +16,7 @@ public class ProgressBarUI : MonoBehaviour
     {
         for (int i = 0; i < _playersData.Length; i++)
         {
-            progressBars[i].fillAmount = (float)_playersData[i].score / _playersData[0].maxScore;
+            progressBars[i].fillAmount = (float)_playersData[i].score / _miniGameData.playersGoal;
         }
     }
 }

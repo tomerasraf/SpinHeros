@@ -7,6 +7,7 @@ public class WheelPrizeLogic : MonoBehaviour
     [Header("Data")]
     [SerializeField] SpiningWheelData _spiningWheelData;
     [SerializeField] PlayerData[] _playersData;
+    [SerializeField] MiniGameData _miniGameData;
 
     [Header("Events")]
     [SerializeField] VoidEvent ChooseCharacter;
@@ -42,7 +43,7 @@ public class WheelPrizeLogic : MonoBehaviour
                 Replace(id);
                 break;
             case 2:
-                _playersData[id].score = _playersData[0].maxScore;
+                _playersData[id].score = _miniGameData.playersGoal;
                 Score_Update.Raise();
                 break;
             case 3:
