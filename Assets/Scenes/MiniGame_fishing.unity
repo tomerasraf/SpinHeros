@@ -27648,6 +27648,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 220162155}
     - target: {fileID: 6352411031479509452, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: _miniGameData
+      value: 
+      objectReference: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
+    - target: {fileID: 6352411031479509452, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
       propertyPath: progressBars.Array.data[0]
       value: 
       objectReference: {fileID: 502265174}
