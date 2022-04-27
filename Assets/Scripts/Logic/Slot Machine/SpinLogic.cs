@@ -8,7 +8,8 @@ public class SpinLogic : MonoBehaviour
     [SerializeField] private PlayerData _playerData;
 
     [Header("Events")]
-    [SerializeField] private VoidEvent reciveSpins;
+    [SerializeField] VoidEvent reciveSpins;
+    [SerializeField] VoidEvent spinBar_Updater;
 
     private void Start()
     {
@@ -37,9 +38,11 @@ public class SpinLogic : MonoBehaviour
 
     public void Spin()
     {
-        if (_playerData.spins >= 0)
+        if (_playerData.spins > 0)
         {
             _playerData.spins -= _playerData.bet;
+
+            spinBar_Updater.Raise();
 
             RanomizeSpin(_slotMachineData.slot1, out _slotMachineData.slotResults[0]);
             RanomizeSpin(_slotMachineData.slot2, out _slotMachineData.slotResults[1]);

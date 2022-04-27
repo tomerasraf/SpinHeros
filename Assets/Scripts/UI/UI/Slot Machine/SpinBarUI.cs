@@ -12,7 +12,7 @@ public class SpinBarUI : MonoBehaviour
     {
         if (_playerData.spins > 0)
         {
-            spinsText.text = $"{_playerData.spins - 1}/{_playerData.maxSpins}";
+            spinsText.text = $"{_playerData.spins}/{_playerData.maxSpins}";
         }
         else
         {

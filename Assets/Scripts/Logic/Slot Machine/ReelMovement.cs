@@ -8,6 +8,7 @@ public class ReelMovement : MonoBehaviour
 {
     [Header("Variables")]
     [SerializeField] private float reelSpeed = 3f;
+    [SerializeField] float SymbolOffset = -45f;
 
     [Header("Transform")]
     [SerializeField] Transform[] reels;
@@ -23,7 +24,6 @@ public class ReelMovement : MonoBehaviour
 
     private float elapsedTime = 0;
     private bool isRolling = false;
-    private float SymbolOffset = -70f;
 
     #region eventListeners 
 
@@ -81,8 +81,8 @@ public class ReelMovement : MonoBehaviour
     {
         Vector3 rotationVector = new Vector3(
             reel.transform.eulerAngles.x,
-            reel.transform.eulerAngles.y,
-            reel.transform.eulerAngles.z + SymbolOffset * Time.deltaTime * reelSpeed
+            reel.transform.eulerAngles.y + SymbolOffset * Time.deltaTime * reelSpeed,
+            reel.transform.eulerAngles.z
          );
 
         Quaternion reelRotation = Quaternion.Euler(rotationVector);
@@ -98,9 +98,8 @@ public class ReelMovement : MonoBehaviour
         {
             Vector3 rotationVector = new Vector3(
             reels[i].transform.eulerAngles.x,
-            reels[i].transform.eulerAngles.y,
-            // Fixes the issue with the sack of coins texure by adding +10 to the z rotaion axais.
-            slotMachineData.slotResults[i] != 0 ? slotMachineData.slotResults[i] * SymbolOffset : slotMachineData.slotResults[i] + 10
+            slotMachineData.slotResults[i] * SymbolOffset - 3.245f,
+            reels[i].transform.eulerAngles.z
             );
 
             reels[i].DORotate(rotationVector, deltaStopSpeed++, RotateMode.FastBeyond360).SetEase(Ease.OutBack);

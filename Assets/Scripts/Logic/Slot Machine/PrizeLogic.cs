@@ -7,6 +7,7 @@ public class PrizeLogic : MonoBehaviour
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] PlayerData _playerData;
     [SerializeField] VoidEvent prizeIsEarned;
+    [SerializeField] VoidEvent spinIsEarned;
     [SerializeField] VoidEvent heartIsEarned;
 
 
@@ -18,9 +19,9 @@ public class PrizeLogic : MonoBehaviour
     void CheckResults(int[] results)
     {
         // Coin Jackpot Check
-        if (_slotMachineData.slotResults[0] == 2
-         && _slotMachineData.slotResults[1] == 2
-          && _slotMachineData.slotResults[2] == 2)
+        if (_slotMachineData.slotResults[0] == 1
+         && _slotMachineData.slotResults[1] == 1
+          && _slotMachineData.slotResults[2] == 1)
         {
             // Coin Prize
             _playerData.coins += _slotMachineData.coinJackpotPrize * _playerData.bet;
@@ -67,13 +68,13 @@ public class PrizeLogic : MonoBehaviour
                 _playerData.extraSpins += 3;
             }
 
-            prizeIsEarned.Raise();
+            spinIsEarned.Raise();
         }
 
         // Mini Game Check
-        if (_slotMachineData.slotResults[0] == 1
-            && _slotMachineData.slotResults[1] == 1
-            && _slotMachineData.slotResults[2] == 1)
+        if (_slotMachineData.slotResults[0] == 2
+            && _slotMachineData.slotResults[1] == 2
+            && _slotMachineData.slotResults[2] == 2)
         {
             // Mini Game Prize
             Debug.Log("Mini Game");
@@ -81,12 +82,12 @@ public class PrizeLogic : MonoBehaviour
         }
 
         // 2 Coins Check
-        if (_slotMachineData.slotResults[0] == 2
-         && _slotMachineData.slotResults[1] == 2
-          && _slotMachineData.slotResults[2] != 2
-           || _slotMachineData.slotResults[1] == 2
-            && _slotMachineData.slotResults[2] == 2
-             && _slotMachineData.slotResults[0] != 2)
+        if (_slotMachineData.slotResults[0] == 1
+         && _slotMachineData.slotResults[1] == 1
+          && _slotMachineData.slotResults[2] != 1
+           || _slotMachineData.slotResults[1] == 1
+            && _slotMachineData.slotResults[2] == 1
+             && _slotMachineData.slotResults[0] != 1)
         {
             // 2 Coins Prize
             _playerData.coins += _slotMachineData.twoCoinsPrize * _playerData.bet;
