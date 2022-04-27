@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.773705, g: 3.2890706, b: 10.194409, a: 1}
+  m_IndirectSpecularColor: {r: 0.773612, g: 3.2887285, b: 10.194322, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27509,6 +27509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game_Rules_Logic
       objectReference: {fileID: 0}
+    - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
+      propertyPath: PlayerWonEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 9e7ede2f06ebf124d9f657956e16477a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
 --- !u!1001 &4645804196656901638
@@ -27897,6 +27901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wheel_Prize_Logic
       objectReference: {fileID: 0}
+    - target: {fileID: 9184043881078324202, guid: 4fbb156961b4401428f8e39437a8772a, type: 3}
+      propertyPath: _miniGameData
+      value: 
+      objectReference: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
     - target: {fileID: 9184043881078324203, guid: 4fbb156961b4401428f8e39437a8772a, type: 3}
       propertyPath: m_RootOrder
       value: 1
