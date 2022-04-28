@@ -9,6 +9,7 @@ public class CameraMove : MonoBehaviour
     //5. move the position of the camera to diffrence.
 
     [SerializeField] float cameraSensitivity;
+    [SerializeField] GameObject cameraTarget;
     private Vector3 startTouchPos;
     private Vector3 currentTouchPos;
     private Vector3 difference;
@@ -16,19 +17,24 @@ public class CameraMove : MonoBehaviour
 
     private void LateUpdate()
     {
+        Camera.main.transform.LookAt(cameraTarget.transform);
+        CameraMovement();
+    }
+
+    private void CameraMovement()
+    {
         if (Input.touchCount > 0)
         {
             Touch finger = Input.GetTouch(0);
             if (finger.phase == TouchPhase.Began)
             {
-                startTouchPos = (Vector3)finger.position;
+                startTouchPos = finger.position;
             }
 
             if (finger.phase == TouchPhase.Moved)
             {
                 currentTouchPos = finger.position;
                 difference = (startTouchPos + currentCameraPosition) - currentTouchPos;
-                Debug.Log($"Difference: {difference.x}");
                 Camera.main.transform.position = new Vector3(difference.x * cameraSensitivity * Time.fixedDeltaTime,
                 Camera.main.transform.position.y,
                 Camera.main.transform.position.z);
