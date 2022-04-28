@@ -12,6 +12,7 @@ public class CameraMove : MonoBehaviour
     private Vector3 startTouchPos;
     private Vector3 currentTouchPos;
     private Vector3 difference;
+    private Vector3 currentCameraPosition;
 
     private void LateUpdate()
     {
@@ -20,19 +21,22 @@ public class CameraMove : MonoBehaviour
             Touch finger = Input.GetTouch(0);
             if (finger.phase == TouchPhase.Began)
             {
-                startTouchPos = finger.position;
+                startTouchPos = (Vector3)finger.position;
             }
 
             if (finger.phase == TouchPhase.Moved)
             {
                 currentTouchPos = finger.position;
-                difference = startTouchPos - currentTouchPos;
-                Camera.main.transform.position = difference * cameraSensitivity * Time.fixedDeltaTime;
+                difference = (startTouchPos + currentCameraPosition) - currentTouchPos;
+                Debug.Log($"Difference: {difference.x}");
+                Camera.main.transform.position = new Vector3(difference.x * cameraSensitivity * Time.fixedDeltaTime,
+                Camera.main.transform.position.y,
+                Camera.main.transform.position.z);
             }
 
             if (finger.phase == TouchPhase.Ended || finger.phase == TouchPhase.Canceled)
             {
-                startTouchPos = Camera.main.transform.position;
+                currentCameraPosition = difference;
             }
         }
     }
