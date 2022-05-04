@@ -37,17 +37,21 @@ public class CameraMove : MonoBehaviour
 
     public void CameraFocus_ToWheel()
     {
-        StartCoroutine(cameraFocusCoroutine());
-    }
-
-    IEnumerator cameraFocusCoroutine()
-    {
-        cinemachine.GetComponent<CinemachineBrain>().enabled = true;
-        yield return new WaitForSeconds(0.1f);
         wheelCamera.SetActive(true);
-
-        yield return null;
     }
+    public void CameraFocus_ToWorld()
+    {
+        wheelCamera.SetActive(false);
+    }
+
+    public void CameraFocus_BuildMode()
+    {
+        wheelCamera.SetActive(false);
+        difference = Vector3.zero;
+        Vector3 worldCameraStartPosition = new Vector3(0, worldCamera.transform.position.y, worldCamera.transform.position.z);
+        worldCamera.transform.position = worldCameraStartPosition;
+    }
+
 
     private void CameraMovement()
     {

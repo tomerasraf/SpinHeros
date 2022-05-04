@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Loading_screen.unity
+    guid: 7314909da17b32c4f9ecba0a5658f97d
+  - enabled: 1
+    path: Assets/Scenes/Open_screen.unity
+    guid: 12b1cbc9c1e99a442833c4d7fa7cda18
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/MiniGame_fishing.unity
+    guid: 50ec5de360fac1d41804ca9880b2dbee
   m_configObjects: {}
