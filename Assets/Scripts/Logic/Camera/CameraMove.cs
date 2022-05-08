@@ -9,6 +9,8 @@ public class CameraMove : MonoBehaviour
     //3. Store the current position of the touch.
     //4. calculate the diffrence bettwen the origin to the curent postion of the touch.
     //5. move the position of the camera to diffrence.
+    [Header("Data")]
+    [SerializeField] WorldData _worldData;
 
     [Header("Cameras")]
     [SerializeField] GameObject wheelCamera;
@@ -32,6 +34,7 @@ public class CameraMove : MonoBehaviour
     private void LateUpdate()
     {
         worldCamera.transform.LookAt(cameraTarget.transform);
+        if (_worldData.buldingModeIsOn) { return; }
         CameraMovement();
     }
 

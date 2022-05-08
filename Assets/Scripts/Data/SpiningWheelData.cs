@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpiningWheelData", menuName = "SpiningWheel")]
+[CreateAssetMenu(fileName = "SpiningWheelData", menuName = "Data/SpiningWheel")]
 public class SpiningWheelData : ScriptableObject
 {
     public int[] wheelsSlots;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.7664896, g: 3.8551445, b: 12.024385, a: 1}
+  m_IndirectSpecularColor: {r: 0.81301963, g: 3.6922872, b: 11.959027, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10501,6 +10501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e09583888e4b7e46b0434a71d3181ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
   wheelCamera: {fileID: 1593261795}
   worldCamera: {fileID: 1300706896}
   cinemachine: {fileID: 1671784625}

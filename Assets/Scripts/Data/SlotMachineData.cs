@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Slot Machine Data", menuName = "Slot Machine Data")]
+[CreateAssetMenu(fileName = "New Slot Machine Data", menuName = "Data/Slot Machine Data")]
 public class SlotMachineData : ScriptableObject
 {
     [Header("Mechine Symbols")]
