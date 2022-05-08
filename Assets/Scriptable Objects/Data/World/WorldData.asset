@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28c10d83ce3fb54aa362c4289ce10e5, type: 3}
   m_Name: WorldData
   m_EditorClassIdentifier: 
-  buldingModeIsOn: 1
+  buldingModeIsOn: 0
   curentBuildingData: 0000000000000000000000000000000000000000
   satisfactionBar: 0

@@ -25,17 +25,18 @@ public class CameraMove : MonoBehaviour
     [SerializeField] float smoothSpeed;
     [SerializeField] float minLimitedValue = -22.875f;
     [SerializeField] float maxLimitedValue = 17.875f;
-    private Vector3 startTouchPos;
-    private Vector3 currentTouchPos;
-    private Vector3 difference;
-    private Vector3 currentCameraPosition;
+
+    private Vector3 endTouchPosition;
+
 
 
     private void LateUpdate()
     {
+        endTouchPosition = TouchInput.DetectTouchInput(minLimitedValue, maxLimitedValue);
         worldCamera.transform.LookAt(cameraTarget.transform);
+
         if (_worldData.buldingModeIsOn) { return; }
-        CameraMovement();
+        MoveCamera();
     }
 
     public void CameraFocus_ToWheel()
@@ -50,48 +51,19 @@ public class CameraMove : MonoBehaviour
     public void CameraFocus_BuildMode()
     {
         wheelCamera.SetActive(false);
-        difference = Vector3.zero;
+        endTouchPosition = Vector3.zero;
         Vector3 worldCameraStartPosition = new Vector3(0, worldCamera.transform.position.y, worldCamera.transform.position.z);
         worldCamera.transform.position = worldCameraStartPosition;
     }
 
-
-    private void CameraMovement()
-    {
-        if (Input.touchCount > 0)
-        {
-            Touch finger = Input.GetTouch(0);
-            if (finger.phase == TouchPhase.Began)
-            {
-                startTouchPos = finger.position;
-            }
-
-            if (finger.phase == TouchPhase.Moved)
-            {
-                currentTouchPos = finger.position;
-
-                difference = (startTouchPos + currentCameraPosition) - currentTouchPos;
-
-                difference = new Vector3(Mathf.Clamp(difference.x, minLimitedValue, maxLimitedValue), difference.y, difference.z);
-
-                MoveCamera();
-
-            }
-
-            if (finger.phase == TouchPhase.Ended || finger.phase == TouchPhase.Canceled)
-            {
-                currentCameraPosition = difference;
-            }
-        }
-    }
-
     private void MoveCamera()
     {
-        Vector3 smoothedPosition = Vector3.Lerp(worldCamera.transform.position, difference, smoothSpeed);
+        Vector3 smoothedPosition = Vector3.Lerp(worldCamera.transform.position, endTouchPosition, smoothSpeed);
 
         Vector3 newCameraPosition = new Vector3(smoothedPosition.x * cameraSensitivity * Time.fixedDeltaTime,
         worldCamera.transform.position.y,
         worldCamera.transform.position.z);
+        
         worldCamera.transform.position = newCameraPosition;
     }
 }
