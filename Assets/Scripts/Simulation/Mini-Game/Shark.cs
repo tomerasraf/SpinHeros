@@ -26,19 +26,19 @@ public class Shark : MonoBehaviour
 
     private void SpawnShark()
     {
-        cloneShark = Instantiate(sharkPrefab, paths[_spiningWheelData.choosenPlayer].transform.position, Quaternion.identity);
-        cloneShark.transform.parent = paths[_spiningWheelData.choosenPlayer].transform;
+        cloneShark = Instantiate(sharkPrefab, paths[_spiningWheelData.choosenPlayer - 1].transform.position, Quaternion.identity);
+        cloneShark.transform.parent = paths[_spiningWheelData.choosenPlayer - 1].transform;
     }
 
     IEnumerator SimoulationCoroutine()
     {
         players[0].SetBool("isSpining", true);
         SpawnShark();
-        paths[_spiningWheelData.choosenPlayer].DOPlay();
+        paths[_spiningWheelData.choosenPlayer - 1].DOPlay();
 
         yield return new WaitForSeconds(animDuration);
 
-        paths[_spiningWheelData.choosenPlayer].DORewind();
+        paths[_spiningWheelData.choosenPlayer - 1].DORewind();
         Destroy(cloneShark);
 
         players[0].SetBool("isSpining", false);

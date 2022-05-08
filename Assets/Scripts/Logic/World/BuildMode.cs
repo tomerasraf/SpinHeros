@@ -12,6 +12,6 @@ public class BuildMode : MonoBehaviour
 
     private void Building_UI_TouchInput()
     {
-        
+
     }
 }
