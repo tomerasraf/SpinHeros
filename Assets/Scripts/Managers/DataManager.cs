@@ -4,9 +4,26 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    [Header("Data")]
+    [SerializeField] WorldData _worldData;
     public PlayerData[] _playerData;
 
     private void Awake()
+    {
+        ResetWorldData();
+        ResetMiniGameData();
+    }
+
+    private void ResetWorldData()
+    {
+        _worldData.priceToBuild[0] = _worldData.house_1_Price;
+        _worldData.priceToBuild[1] = _worldData.house_2_Price;
+        _worldData.priceToBuild[2] = _worldData.house_3_Price;
+        _worldData.priceToBuild[3] = _worldData.house_4_Price;
+        _worldData.priceToBuild[4] = _worldData.house_5_Price;
+    }
+
+    private void ResetMiniGameData()
     {
         for (int i = 0; i < _playerData.Length; i++)
         {
@@ -15,6 +32,5 @@ public class DataManager : MonoBehaviour
             _playerData[i].playerProgress = 0;
             _playerData[i].score = 0;
         }
-
     }
 }

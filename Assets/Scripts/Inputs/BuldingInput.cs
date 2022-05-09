@@ -2,9 +2,21 @@ using UnityEngine;
 
 public class BuldingInput : MonoBehaviour
 {
-    [SerializeField] VoidEvent bulding_Mode;
+    [SerializeField] VoidEvent buldingModeIsOn;
+    [SerializeField] VoidEvent buldingModeIsOff;
+    [SerializeField] IntEvent Build;
     public void BuildingModeOn()
     {
-        bulding_Mode.Raise();
+        buldingModeIsOn.Raise();
+    }
+
+    public void BuildingModeOff()
+    {
+        buldingModeIsOff.Raise();
+    }
+
+    public void BuildingInProgress(int id)
+    {
+        Build.Raise(id);
     }
 }

@@ -9,17 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6593dd04253f9844984b965e5e56d09, type: 3}
-  m_Name: Player1
+  m_Script: {fileID: 11500000, guid: c109fe85e3645b9439c4ab8dc2ac735f, type: 3}
+  m_Name: Build_ID
   m_EditorClassIdentifier: 
-  coins: 20000
-  spins: 50
-  maxSpins: 50
-  extraSpins: 15
-  moreSpinsTimer: 56.69937
-  bet: 3
-  hearts: 3
-  playerPlace: 4
-  playerProgress: 0
-  score: 0
-  maxScore: 300

@@ -23,9 +23,10 @@ public class TouchInput
                 //Debug.Log(currentTouchPos + "Current");
 
                 difference = (startTouchPosition + endTouchPosition) - currentTouchPos;
-                //Debug.Log(difference + "Diff");
+
 
                 difference = new Vector3(Mathf.Clamp(difference.x, minLimitedValue, maxLimitedValue), difference.y, difference.z);
+                //Debug.Log(difference + "Diff");
             }
 
             if (finger.phase == TouchPhase.Ended || finger.phase == TouchPhase.Canceled)
@@ -34,7 +35,6 @@ public class TouchInput
                 //Debug.Log(endTouchPosition + "End");
             }
         }
-
         return difference;
     }
 }

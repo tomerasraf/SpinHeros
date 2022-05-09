@@ -26,13 +26,13 @@ public class CameraMove : MonoBehaviour
     [SerializeField] float minLimitedValue = -22.875f;
     [SerializeField] float maxLimitedValue = 17.875f;
 
-    private Vector3 endTouchPosition;
+    private Vector3 EndTouchPosition;
 
 
 
     private void LateUpdate()
     {
-        endTouchPosition = TouchInput.DetectTouchInput(minLimitedValue, maxLimitedValue);
+        EndTouchPosition = TouchInput.DetectTouchInput(minLimitedValue, maxLimitedValue);
         worldCamera.transform.LookAt(cameraTarget.transform);
 
         if (_worldData.buldingModeIsOn) { return; }
@@ -51,19 +51,18 @@ public class CameraMove : MonoBehaviour
     public void CameraFocus_BuildMode()
     {
         wheelCamera.SetActive(false);
-        endTouchPosition = Vector3.zero;
+        EndTouchPosition = Vector3.zero;
         Vector3 worldCameraStartPosition = new Vector3(0, worldCamera.transform.position.y, worldCamera.transform.position.z);
         worldCamera.transform.position = worldCameraStartPosition;
     }
 
     private void MoveCamera()
     {
-        Vector3 smoothedPosition = Vector3.Lerp(worldCamera.transform.position, endTouchPosition, smoothSpeed);
+        Vector3 smoothedPosition = Vector3.Lerp(worldCamera.transform.position, EndTouchPosition, smoothSpeed);
 
         Vector3 newCameraPosition = new Vector3(smoothedPosition.x * cameraSensitivity * Time.fixedDeltaTime,
         worldCamera.transform.position.y,
         worldCamera.transform.position.z);
-        
         worldCamera.transform.position = newCameraPosition;
     }
 }

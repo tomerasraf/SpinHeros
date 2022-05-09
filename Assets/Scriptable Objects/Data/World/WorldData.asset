@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: WorldData
   m_EditorClassIdentifier: 
   buldingModeIsOn: 0
-  curentBuildingData: 0000000000000000000000000000000000000000
   satisfactionBar: 0
+  house_1_Price: 25000
+  house_2_Price: 10000
+  house_3_Price: 40000
+  house_4_Price: 75000
+  house_5_Price: 100000
+  ids: 0000000001000000020000000300000004000000
+  priceToBuild: a861000010270000409c0000f8240100a0860100
+  isBuilded: 
