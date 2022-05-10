@@ -19,25 +19,27 @@ public class BuildMode : MonoBehaviour
     [SerializeField] float slideSensitivity;
     [SerializeField] float smoothSpeed;
 
-    [Header("Buildings Buttons")]
-    [SerializeField] Button[] buildingsButtons;
-
     [Header("Buildings Gameobjects")]
     [SerializeField] GameObject[] buildingGameobjects;
 
     [Header("Events")]
     [SerializeField] VoidEvent playerSpentCoins;
 
+    [Header("Triggers")]
+    [SerializeField] GameObject exitBuildModeButton;
+
     private Vector3 endTouchPosition;
 
     public void BuildingModeIsOn()
     {
         _worldData.buldingModeIsOn = true;
+        exitBuildModeButton.SetActive(true);
     }
 
     public void BuildingModeIsOff()
     {
         _worldData.buldingModeIsOn = false;
+        exitBuildModeButton.SetActive(false);
     }
 
     public void BuildListener(int id)
@@ -56,6 +58,7 @@ public class BuildMode : MonoBehaviour
         if (_playerData.coins > _worldData.priceToBuild[buttonID])
         {
             _playerData.coins -= _worldData.priceToBuild[buttonID];
+            _playerData.crowns++;
             playerSpentCoins.Raise();
             Build(buttonID);
         }
@@ -68,6 +71,8 @@ public class BuildMode : MonoBehaviour
     private void Build(int buttonID)
     {
         buildingGameobjects[buttonID].SetActive(true);
+        _worldData.isBuilded[buttonID] = true;
+
     }
 
     private void UI_TouchMovement()

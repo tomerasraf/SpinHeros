@@ -21,6 +21,12 @@ public class DataManager : MonoBehaviour
         _worldData.priceToBuild[2] = _worldData.house_3_Price;
         _worldData.priceToBuild[3] = _worldData.house_4_Price;
         _worldData.priceToBuild[4] = _worldData.house_5_Price;
+
+        for (int i = 0; i < _worldData.isBuilded.Length; i++)
+        {
+            _worldData.isBuilded[i] = false;
+        }
+
     }
 
     private void ResetMiniGameData()
