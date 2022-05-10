@@ -72,7 +72,6 @@ public class BuildMode : MonoBehaviour
     {
         buildingGameobjects[buttonID].SetActive(true);
         _worldData.isBuilded[buttonID] = true;
-
     }
 
     private void UI_TouchMovement()
@@ -84,7 +83,5 @@ public class BuildMode : MonoBehaviour
 
         buildingsUI_Slider.transform.position = newUIPosition;
     }
-
-
 
 }
