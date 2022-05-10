@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6593dd04253f9844984b965e5e56d09, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
-  coins: 75000
-  crowns: 5
+  coins: 400000
+  crowns: 10
   spins: 50
   maxSpins: 50
   extraSpins: 15
