@@ -55,7 +55,7 @@ public class BuildMode : MonoBehaviour
 
     private void BuilderPriceCheck(int buttonID)
     {
-        if (_playerData.coins > _worldData.priceToBuild[buttonID])
+        if (_playerData.coins >= _worldData.priceToBuild[buttonID])
         {
             _playerData.coins -= _worldData.priceToBuild[buttonID];
             _playerData.crowns++;
