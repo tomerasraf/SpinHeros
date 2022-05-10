@@ -7,6 +7,7 @@ public class PlayerData : ScriptableObject
 {
     // Slot Machine Player Data
     public int coins = 0;
+    public int crowns = 0;
     public int spins = 50;
     public int maxSpins = 50;
     public int extraSpins = 0;

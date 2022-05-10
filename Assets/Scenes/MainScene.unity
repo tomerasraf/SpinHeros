@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.7664896, g: 3.8551445, b: 12.024385, a: 1}
+  m_IndirectSpecularColor: {r: 0.81301963, g: 3.6922872, b: 11.959027, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 157846163}
   - component: {fileID: 157846162}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CrownScore_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
   m_sharedMaterial: {fileID: 2830636965969884548, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 239842142}
   - component: {fileID: 239842141}
   m_Layer: 5
-  m_Name: Build_Done
+  m_Name: Build_Done_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1520,6 +1520,8 @@ GameObject:
   - component: {fileID: 299629298}
   - component: {fileID: 299629300}
   - component: {fileID: 299629299}
+  - component: {fileID: 299629301}
+  - component: {fileID: 299629302}
   m_Layer: 5
   m_Name: Rating
   m_TagString: Untagged
@@ -1586,6 +1588,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299629297}
   m_CullTransparentMesh: 1
+--- !u!114 &299629301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299629297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f623c48e3d212ec4680931620a9d1e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  corwnsScoreText: {fileID: 157846162}
+--- !u!114 &299629302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299629297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e579152a5580a98439a10577e7b4b753, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 299629301}
+        m_TargetAssemblyTypeName: CrownUI, Assembly-CSharp
+        m_MethodName: crown_UI_Updater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &299898195
 Animator:
   serializedVersion: 4
@@ -1618,7 +1662,7 @@ GameObject:
   - component: {fileID: 312778901}
   - component: {fileID: 312778900}
   m_Layer: 5
-  m_Name: Build_Done
+  m_Name: Build_Done_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5293,7 +5337,7 @@ GameObject:
   - component: {fileID: 760224930}
   - component: {fileID: 760224929}
   m_Layer: 5
-  m_Name: Build_Done
+  m_Name: Build_Done_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5874,6 +5918,7 @@ GameObject:
   - component: {fileID: 842744993}
   - component: {fileID: 842744992}
   - component: {fileID: 842744994}
+  - component: {fileID: 842744995}
   m_Layer: 5
   m_Name: Bilding_UI
   m_TagString: Untagged
@@ -5943,10 +5988,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11bdb683065d424785302908017bf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
   builderUI: {fileID: 216526810}
   spinButtonUI: {fileID: 1222374111}
   miniGameButtonUI: {fileID: 1628984821}
-  buildButtonUI: {fileID: 924693145}
+  buildModeButtonUI: {fileID: 924693145}
+  successUI:
+  - {fileID: 1093015798}
+  - {fileID: 312778898}
+  - {fileID: 1240299179}
+  - {fileID: 760224927}
+  - {fileID: 239842139}
+  buildButtonsUI:
+  - {fileID: 9027433483868793129}
+  - {fileID: 1102209260}
+  - {fileID: 2038201589}
+  - {fileID: 1154620552}
+  - {fileID: 1219809820}
 --- !u!114 &842744994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5967,6 +6025,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BuildingWorldUI, Assembly-CSharp
         m_MethodName: DisplayWorldUI
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &842744995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842744990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e12c709089252a468b47547a39f4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 14b687f7c7fe7e34cbfb1bc8fd89e414, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 842744993}
+        m_TargetAssemblyTypeName: BuildingWorldUI, Assembly-CSharp
+        m_MethodName: BuildIsDone
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6541,7 +6627,7 @@ GameObject:
   - component: {fileID: 924693147}
   - component: {fileID: 924693150}
   m_Layer: 5
-  m_Name: Build_system
+  m_Name: BuildMode_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7076,7 +7162,7 @@ GameObject:
   - component: {fileID: 1093015801}
   - component: {fileID: 1093015800}
   m_Layer: 5
-  m_Name: Build_Done
+  m_Name: Build_Done_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7884,7 +7970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1200792613
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8724,7 +8810,7 @@ GameObject:
   - component: {fileID: 1240299182}
   - component: {fileID: 1240299181}
   m_Layer: 5
-  m_Name: Build_Done
+  m_Name: Build_Done_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11706,7 +11792,7 @@ GameObject:
   - component: {fileID: 1628984824}
   - component: {fileID: 1628984823}
   m_Layer: 5
-  m_Name: MiniGame_System
+  m_Name: MiniGame_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13403,12 +13489,6 @@ MonoBehaviour:
   buildingsUI_Slider: {fileID: 729693727}
   slideSensitivity: 55
   smoothSpeed: 10
-  buildingsButtons:
-  - {fileID: 9027433483868793131}
-  - {fileID: 1102209262}
-  - {fileID: 2038201591}
-  - {fileID: 1154620554}
-  - {fileID: 1219809822}
   buildingGameobjects:
   - {fileID: 767120117}
   - {fileID: 92633015}
@@ -13416,6 +13496,7 @@ MonoBehaviour:
   - {fileID: 1008775239}
   - {fileID: 2061083033}
   playerSpentCoins: {fileID: 11400000, guid: e579152a5580a98439a10577e7b4b753, type: 2}
+  exitBuildModeButton: {fileID: 1200792612}
 --- !u!4 &1888672839
 Transform:
   m_ObjectHideFlags: 0
