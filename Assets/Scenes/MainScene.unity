@@ -3596,6 +3596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinText: {fileID: 571531436}
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  smoothVelocity: 15
+  smoothSpeed: 15
 --- !u!114 &571531439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3614,7 +3616,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 571531438}
         m_TargetAssemblyTypeName: CoinsUI, Assembly-CSharp
-        m_MethodName: CoinUI_Updater
+        m_MethodName: GainCoinUI_Updater
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3642,7 +3644,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 571531438}
         m_TargetAssemblyTypeName: CoinsUI, Assembly-CSharp
-        m_MethodName: CoinUI_Updater
+        m_MethodName: SpendCoinUI_Updater
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
