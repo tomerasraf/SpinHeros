@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.7664896, g: 3.8551445, b: 12.024385, a: 1}
+  m_IndirectSpecularColor: {r: 0.81301963, g: 3.6922872, b: 11.959027, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11174,6 +11174,7 @@ GameObject:
   - component: {fileID: 1621236400}
   - component: {fileID: 1621236402}
   - component: {fileID: 1621236403}
+  - component: {fileID: 1621236404}
   m_Layer: 0
   m_Name: Camera_Manager
   m_TagString: Untagged
@@ -11197,6 +11198,7 @@ MonoBehaviour:
   wheelCamera: {fileID: 1593261795}
   worldCamera: {fileID: 1300706896}
   cinemachine: {fileID: 1671784625}
+  buildCamera: {fileID: 889347394}
   cameraTarget: {fileID: 878899341}
   cameraSensitivity: 2
   smoothSpeed: 100
@@ -11264,6 +11266,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1621236400}
         m_TargetAssemblyTypeName: CameraMove, Assembly-CSharp
         m_MethodName: CameraFocus_BuildMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1621236404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621236399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: fc58c6abcd1686345b607ee9997820b6, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1621236400}
+        m_TargetAssemblyTypeName: CameraMove, Assembly-CSharp
+        m_MethodName: CameraFocus_ToWorld
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -16,6 +16,7 @@ public class CameraMove : MonoBehaviour
     [SerializeField] GameObject wheelCamera;
     [SerializeField] GameObject worldCamera;
     [SerializeField] GameObject cinemachine;
+    [SerializeField] GameObject buildCamera;
 
     [Header("Camera Look at Target")]
     [SerializeField] GameObject cameraTarget;
@@ -41,19 +42,22 @@ public class CameraMove : MonoBehaviour
 
     public void CameraFocus_ToWheel()
     {
+        buildCamera.SetActive(false);
         wheelCamera.SetActive(true);
+        worldCamera.SetActive(false);
     }
     public void CameraFocus_ToWorld()
     {
+        buildCamera.SetActive(false);
         wheelCamera.SetActive(false);
+        worldCamera.SetActive(true);
     }
 
     public void CameraFocus_BuildMode()
     {
         wheelCamera.SetActive(false);
-        EndTouchPosition = Vector3.zero;
-        Vector3 worldCameraStartPosition = new Vector3(0, worldCamera.transform.position.y, worldCamera.transform.position.z);
-        worldCamera.transform.position = worldCameraStartPosition;
+        worldCamera.SetActive(false);
+        buildCamera.SetActive(true);
     }
 
     private void MoveCamera()

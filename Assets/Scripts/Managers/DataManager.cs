@@ -37,6 +37,7 @@ public class DataManager : MonoBehaviour
             _playerData[i].playerPlace = 4;
             _playerData[i].playerProgress = 0;
             _playerData[i].score = 0;
+            _playerData[i].crowns = 0;
         }
     }
 }

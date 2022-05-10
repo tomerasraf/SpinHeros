@@ -21,6 +21,8 @@ public class SpinLogic : MonoBehaviour
 
     private void Update()
     {
+        if (_playerData.spins == -1) { _playerData.spins = 0; }
+
         if (_playerData.spins >= _playerData.maxSpins) { return; }
 
         _playerData.moreSpinsTimer -= Time.deltaTime;
@@ -38,17 +40,15 @@ public class SpinLogic : MonoBehaviour
 
     public void Spin()
     {
-        if (_playerData.spins > 0)
-        {
-            _playerData.spins -= _playerData.bet;
+        if (_playerData.spins <= -1) { return; }
 
-            spinBar_Updater.Raise();
+        _playerData.spins -= _playerData.bet;
 
-            RanomizeSpin(_slotMachineData.slot1, out _slotMachineData.slotResults[0]);
-            RanomizeSpin(_slotMachineData.slot2, out _slotMachineData.slotResults[1]);
-            RanomizeSpin(_slotMachineData.slot3, out _slotMachineData.slotResults[2]);
-        }
+        spinBar_Updater.Raise();
 
+        RanomizeSpin(_slotMachineData.slot1, out _slotMachineData.slotResults[0]);
+        RanomizeSpin(_slotMachineData.slot2, out _slotMachineData.slotResults[1]);
+        RanomizeSpin(_slotMachineData.slot3, out _slotMachineData.slotResults[2]);
     }
 
     // Randomize the slot machine reel symbol number

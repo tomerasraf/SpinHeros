@@ -30,9 +30,7 @@ public class ReelMovement : MonoBehaviour
 
     public void StartRollReelCoroutine()
     {
-        if (_playerData.spins < 0) { return; }
-
-        if (_playerData.spins >= 0)
+        if (_playerData.spins > -1)
         {
             isRolling = true;
             spinButton.enabled = false;
