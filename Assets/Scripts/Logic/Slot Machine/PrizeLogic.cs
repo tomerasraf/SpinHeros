@@ -44,12 +44,13 @@ public class PrizeLogic : MonoBehaviour
          && _slotMachineData.slotResults[2] == 4)
         {
             // Hearts Prize
-            _playerData.hearts += 3 * _playerData.bet;
+            _playerData.hearts += 1 * _playerData.bet;
+            heartIsEarned.Raise();
+
             if (_playerData.hearts > 3)
             {
                 _playerData.hearts = 3;
             }
-            heartIsEarned.Raise();
         }
 
         // Spins Check
