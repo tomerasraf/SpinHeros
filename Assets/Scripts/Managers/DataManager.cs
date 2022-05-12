@@ -24,8 +24,6 @@ public class DataManager : MonoBehaviour
         {
             Debug.Log("Iteration: " + i);
 
-
-
             if (counter <= _slotMachineData.odds[symbolIndex])
             {
                 counter++;
@@ -97,6 +95,7 @@ public class DataManager : MonoBehaviour
             _playerData[i].playerProgress = 0;
             _playerData[i].score = 0;
             _playerData[i].crowns = 0;
+            _playerData[i].miniGameTicket = 0;
         }
     }
 }

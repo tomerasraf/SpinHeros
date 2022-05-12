@@ -78,7 +78,7 @@ public class PrizeLogic : MonoBehaviour
             && _slotMachineData.slotResults[2] == 2)
         {
             // Mini Game Prize
-            Debug.Log("Mini Game");
+            _playerData.miniGameTicket++;
             prizeIsEarned.Raise();
         }
 

@@ -2135,8 +2135,9 @@ GameObject:
   - component: {fileID: 366701557}
   - component: {fileID: 366701559}
   - component: {fileID: 366701558}
+  - component: {fileID: 366701560}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MiniGameTicket_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2259,6 +2260,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366701556}
   m_CullTransparentMesh: 1
+--- !u!114 &366701560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366701556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb5ed2fb55a33847a39cf3cf1145961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  miniGameTicketText: {fileID: 366701558}
 --- !u!1 &380062704
 GameObject:
   m_ObjectHideFlags: 0

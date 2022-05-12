@@ -13,6 +13,7 @@ public class PlayerData : ScriptableObject
     public int extraSpins = 0;
     public float moreSpinsTimer = 60;
     public int bet = 1;
+    public int miniGameTicket = 0;
 
     // Mini Game Player Data
     public int hearts;
