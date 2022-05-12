@@ -30,6 +30,10 @@ public class CameraMove : MonoBehaviour
     private Vector3 EndTouchPosition;
 
 
+    private void Start()
+    {
+        worldCamera.SetActive(true);
+    }
 
     private void LateUpdate()
     {

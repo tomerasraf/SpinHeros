@@ -28,6 +28,8 @@ public class CoinsUI : MonoBehaviour
         while (displayCoins < _playerData.coins)
         {
             displayCoins = displayCoins + smoothVelocity * smoothSpeed;
+            displayCoins = Mathf.Clamp(displayCoins, displayCoins, _playerData.coins);
+
             coinText.text = displayCoins.ToString();
             yield return null;
         }
@@ -39,6 +41,7 @@ public class CoinsUI : MonoBehaviour
         while (displayCoins > _playerData.coins)
         {
             displayCoins = displayCoins - smoothVelocity * smoothSpeed;
+            displayCoins = Mathf.Clamp(displayCoins, _playerData.coins, displayCoins);
             coinText.text = displayCoins.ToString();
             yield return null;
         }
