@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8929924662871021998}
   - component: {fileID: 8929924662871021999}
   - component: {fileID: 8929924662871021997}
-  - component: {fileID: 8929924662871021994}
   m_Layer: 0
   m_Name: ReelLogic
   m_TagString: Untagged
@@ -29,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.17603421, y: 1.7588999, z: 14.431229}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reelSpeed: 20
+  SymbolOffset: -70
   reels:
   - {fileID: 0}
   - {fileID: 0}
@@ -82,16 +83,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8929924662871021994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8929924662871022000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73f74a2ce06e8e4aa9fee08589add02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpinButtonPressed: {fileID: 11400000, guid: d7c16d124dc6c464d9844160f602d2f3, type: 2}

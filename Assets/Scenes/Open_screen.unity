@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.76409817, g: 3.8539224, b: 12.0249195, a: 1}
+  m_IndirectSpecularColor: {r: 0.7640267, g: 3.8533766, b: 12.024814, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -830,7 +830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 118827885}
   m_Layer: 0
-  m_Name: --------------Animation--------------
+  m_Name: --------------SceneLoader--------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8499,28 +8499,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1521389306}
-  - component: {fileID: 1521389305}
+  - component: {fileID: 1521389308}
   - component: {fileID: 1521389307}
   m_Layer: 0
-  m_Name: LoaderAnimation
+  m_Name: SceneLoader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1521389305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521389304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc2eb48997fdc8548b3728ee0c10d350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  background_Image: {fileID: 1491044223}
 --- !u!4 &1521389306
 Transform:
   m_ObjectHideFlags: 0
@@ -8552,8 +8539,8 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1521389305}
-        m_TargetAssemblyTypeName: OpenScreenTransition, Assembly-CSharp
+      - m_Target: {fileID: 1521389308}
+        m_TargetAssemblyTypeName: OpenScreenLoader, Assembly-CSharp
         m_MethodName: WorldSceneTransition
         m_Mode: 1
         m_Arguments:
@@ -8564,6 +8551,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1521389308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521389304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec669c4972f8b954a9ebec9d54401999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background_Image: {fileID: 1491044223}
 --- !u!1 &1570097533
 GameObject:
   m_ObjectHideFlags: 0

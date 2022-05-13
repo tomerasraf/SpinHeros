@@ -11,15 +11,24 @@ public class SpinLogic : MonoBehaviour
     [SerializeField] VoidEvent reciveSpins;
     [SerializeField] VoidEvent spinBar_Updater;
 
-    private void Start()
+    private void Update()
     {
-        _playerData.bet = 1;
-        _playerData.spins = 50;
-        _playerData.coins = 0;
-        _playerData.moreSpinsTimer = 60f;
+        SpinRefillLogic();
+    }
+    public void Spin()
+    {
+        if (_playerData.spins <= -1) { return; }
+
+        _playerData.spins -= _playerData.bet;
+
+        spinBar_Updater.Raise();
+
+        RanomizeSpin(_slotMachineData.slot1, out _slotMachineData.slotResults[0]);
+        RanomizeSpin(_slotMachineData.slot2, out _slotMachineData.slotResults[1]);
+        RanomizeSpin(_slotMachineData.slot3, out _slotMachineData.slotResults[2]);
     }
 
-    private void Update()
+    private void SpinRefillLogic()
     {
         if (_playerData.spins == -1) { _playerData.spins = 0; }
 
@@ -36,19 +45,6 @@ public class SpinLogic : MonoBehaviour
             }
             reciveSpins.Raise();
         }
-    }
-
-    public void Spin()
-    {
-        if (_playerData.spins <= -1) { return; }
-
-        _playerData.spins -= _playerData.bet;
-
-        spinBar_Updater.Raise();
-
-        RanomizeSpin(_slotMachineData.slot1, out _slotMachineData.slotResults[0]);
-        RanomizeSpin(_slotMachineData.slot2, out _slotMachineData.slotResults[1]);
-        RanomizeSpin(_slotMachineData.slot3, out _slotMachineData.slotResults[2]);
     }
 
     // Randomize the slot machine reel symbol number

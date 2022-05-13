@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class DisplayUI : MonoBehaviour
 {
-    [SerializeField] Canvas canvas;
+    [SerializeField] GameObject wheel;
+    [SerializeField] GameObject footer;
+    [SerializeField] GameObject spinButton;
+
 
     public void DisplayUI_On()
     {
-        canvas.gameObject.SetActive(enabled);
+        wheel.SetActive(true);
+        footer.SetActive(true);
+        spinButton.SetActive(true);
     }
 }

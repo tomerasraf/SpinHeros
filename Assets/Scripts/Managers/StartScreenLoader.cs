@@ -3,7 +3,7 @@ using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartScreenTransition : MonoBehaviour
+public class StartScreenLoader : MonoBehaviour
 {
     [SerializeField] Image playtopiaBackground_Image;
 

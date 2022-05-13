@@ -21,12 +21,18 @@ public class ReelMovement : MonoBehaviour
     [SerializeField] private VoidEvent SpinIsEnded;
     public Button spinButton;
 
-
     private float elapsedTime = 0;
     private bool isRolling = false;
 
     #region eventListeners 
 
+    public void EnterMiniGame_Listener()
+    {
+        for (int i = 0; i < reels.Length; i++)
+        {
+            reels[i].DOMoveY(-2f, 3f);
+        }
+    }
 
     public void StartRollReelCoroutine()
     {

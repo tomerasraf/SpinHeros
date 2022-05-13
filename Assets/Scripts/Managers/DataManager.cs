@@ -14,15 +14,15 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
         ResetWorldData();
-        ResetMiniGameData();
-        ResetslotMachineData();
+        ResetPlayerGameData();
+        ResetslotMachineOddsData();
     }
 
-    private void ResetslotMachineData()
+    private void ResetslotMachineOddsData()
     {
         for (int i = 0; i < _slotMachineData.slot1.Length; i++)
         {
-            Debug.Log("Iteration: " + i);
+            //Debug.Log("Iteration: " + i);
 
             if (counter <= _slotMachineData.odds[symbolIndex])
             {
@@ -32,37 +32,37 @@ public class DataManager : MonoBehaviour
             if (counter == _slotMachineData.odds[symbolIndex])
             {
                 counter = 0;
-                Debug.Log("Counter: " + counter);
+                // Debug.Log("Counter: " + counter);
                 symbolIndex++;
-                Debug.Log("SymbolI: " + symbolIndex);
+                // Debug.Log("SymbolI: " + symbolIndex);
             }
 
             switch (symbolIndex)
             {
                 case 0:
-                    FillTheOdds(i, counter);
+                    FillTheOddsData(i, counter);
                     break;
 
                 case 1:
-                    FillTheOdds(i, counter);
+                    FillTheOddsData(i, counter);
                     break;
 
                 case 2:
-                    FillTheOdds(i, counter);
+                    FillTheOddsData(i, counter);
                     break;
 
                 case 3:
-                    FillTheOdds(i, counter);
+                    FillTheOddsData(i, counter);
                     break;
 
                 case 4:
-                    FillTheOdds(i, counter);
+                    FillTheOddsData(i, counter);
                     break;
             }
         }
     }
 
-    private void FillTheOdds(int i, int counter)
+    private void FillTheOddsData(int i, int counter)
     {
         _slotMachineData.slot1[i] = symbolIndex;
         _slotMachineData.slot2[i] = symbolIndex;
@@ -86,10 +86,13 @@ public class DataManager : MonoBehaviour
 
     }
 
-    private void ResetMiniGameData()
+    private void ResetPlayerGameData()
     {
         for (int i = 0; i < _playerData.Length; i++)
         {
+            _playerData[i].spins = 50;
+            _playerData[i].moreSpinsTimer = 60f;
+            _playerData[i].bet = 1;
             _playerData[i].hearts = 0;
             _playerData[i].playerPlace = 4;
             _playerData[i].playerProgress = 0;

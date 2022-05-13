@@ -3,7 +3,7 @@ using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class OpenScreenTransition : MonoBehaviour
+public class OpenScreenLoader : MonoBehaviour
 {
     [SerializeField] Image background_Image;
     private void Start()
