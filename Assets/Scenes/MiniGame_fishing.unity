@@ -1188,6 +1188,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206977306}
   m_CullTransparentMesh: 1
+--- !u!1 &209251887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7878260743834290159, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+  m_PrefabInstance: {fileID: 6352411031021043729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &209251889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209251887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397925a2315b57a4f84b2542723058d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCountDown_Image: {fileID: 1710266289}
+  countDownText: {fileID: 2115251746}
+--- !u!114 &209251890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209251887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: b6703ec39fa74a14fa978fb4990061fe, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 209251889}
+        m_TargetAssemblyTypeName: StartCountDownUI, Assembly-CSharp
+        m_MethodName: StartCountDown_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &214424120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1678,7 @@ GameObject:
   - component: {fileID: 266646412}
   - component: {fileID: 266646411}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CoinPrize_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2447,6 +2494,11 @@ Transform:
   m_Father: {fileID: 1929898250}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -125.764, y: 0.42599487, z: 0.0019989014}
+--- !u!4 &333005420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6352411031172338555, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+  m_PrefabInstance: {fileID: 6352411031021043729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &334413965
 GameObject:
   m_ObjectHideFlags: 0
@@ -9009,6 +9061,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &555428098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1973812423815988189, guid: 7663e07d661a1e940aa9dc10b32b4183, type: 3}
+  m_PrefabInstance: {fileID: 2091716032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &563856024
 GameObject:
   m_ObjectHideFlags: 0
@@ -9162,6 +9219,7 @@ GameObject:
   - component: {fileID: 599197966}
   - component: {fileID: 599197965}
   - component: {fileID: 599197964}
+  - component: {fileID: 599197967}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -9233,7 +9291,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 599197965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 599197967}
+        m_TargetAssemblyTypeName: CollectInput, Assembly-CSharp
+        m_MethodName: CollectButton_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &599197965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9272,6 +9342,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599197962}
   m_CullTransparentMesh: 1
+--- !u!114 &599197967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599197962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba503a686250fc543b831034e0213e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectButtonPress_Event: {fileID: 11400000, guid: 64e615e2d4ca5fb4bb9234f9c44c92a2, type: 2}
 --- !u!1 &599397472
 GameObject:
   m_ObjectHideFlags: 0
@@ -9568,6 +9651,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1890f458b18d8542b0d51bae6a02ab9, type: 3}
+--- !u!1 &623846451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1973812423815988189, guid: 7663e07d661a1e940aa9dc10b32b4183, type: 3}
+  m_PrefabInstance: {fileID: 1567581035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &633229389
 GameObject:
   m_ObjectHideFlags: 0
@@ -9698,6 +9786,83 @@ Transform:
   m_Father: {fileID: 145200771}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &645776254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645776255}
+  - component: {fileID: 645776256}
+  - component: {fileID: 645776257}
+  m_Layer: 0
+  m_Name: CollectScreen_Updater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &645776255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645776254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 333005420}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &645776256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645776254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005f811ae7d56b349bfaf334766c85f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectScreen_UI: {fileID: 1105251040}
+  coinPrize_Text: {fileID: 266646411}
+  spinPrize_Text: {fileID: 661517326}
+  bonusPrize_Text: {fileID: 1360580904}
+--- !u!114 &645776257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645776254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f85612e01dc6e8a44bb456418bb7ea75, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 645776256}
+        m_TargetAssemblyTypeName: CollectScreenUI, Assembly-CSharp
+        m_MethodName: DisplayCollectScreen_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &651485519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d1dae5324e10ff84b8c99852c778bb59, type: 3}
@@ -9715,7 +9880,7 @@ GameObject:
   - component: {fileID: 661517327}
   - component: {fileID: 661517326}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: SpinPrize_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10304,7 +10469,7 @@ GameObject:
   - component: {fileID: 758303632}
   - component: {fileID: 758303631}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Place_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13535,6 +13700,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079843573}
   m_CullTransparentMesh: 1
+--- !u!1 &1081862319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1973812423815988189, guid: 7663e07d661a1e940aa9dc10b32b4183, type: 3}
+  m_PrefabInstance: {fileID: 1778244447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1082317094
 GameObject:
   m_ObjectHideFlags: 0
@@ -13894,7 +14064,7 @@ GameObject:
   - component: {fileID: 1105251043}
   - component: {fileID: 1105251042}
   m_Layer: 5
-  m_Name: Done_screen
+  m_Name: Collect_screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15287,6 +15457,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!1 &1225453130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1973812423815988189, guid: 7663e07d661a1e940aa9dc10b32b4183, type: 3}
+  m_PrefabInstance: {fileID: 997635450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229533589
 GameObject:
   m_ObjectHideFlags: 0
@@ -16900,7 +17075,7 @@ GameObject:
   - component: {fileID: 1360580905}
   - component: {fileID: 1360580904}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: BonusPrize_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26007,7 +26182,7 @@ GameObject:
   - component: {fileID: 1710266292}
   - component: {fileID: 1710266291}
   m_Layer: 5
-  m_Name: Start_screen
+  m_Name: Start_CountDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26444,6 +26619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760162658}
   - component: {fileID: 1760162657}
+  - component: {fileID: 1760162659}
   m_Layer: 0
   m_Name: SceneLoader
   m_TagString: Untagged
@@ -26463,7 +26639,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bc629f553c3ae4ebbe3126849ab6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Background_Image: {fileID: 1173471048}
+  background_Image: {fileID: 1173471048}
+  startCountDown: {fileID: 11400000, guid: b6703ec39fa74a14fa978fb4990061fe, type: 2}
+  portals:
+  - {fileID: 1081862319}
+  - {fileID: 623846451}
+  - {fileID: 1225453130}
+  - {fileID: 555428098}
 --- !u!4 &1760162658
 Transform:
   m_ObjectHideFlags: 0
@@ -26479,6 +26661,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760162659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760162656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 64e615e2d4ca5fb4bb9234f9c44c92a2, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1760162657}
+        m_TargetAssemblyTypeName: MiniGameScreenLoader, Assembly-CSharp
+        m_MethodName: MiniGameHasEnded_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1760453432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26843,7 +27053,7 @@ GameObject:
   - component: {fileID: 1806845159}
   - component: {fileID: 1806845158}
   m_Layer: 5
-  m_Name: Image
+  m_Name: CollectTab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29650,7 +29860,7 @@ GameObject:
   - component: {fileID: 2115251747}
   - component: {fileID: 2115251746}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CountDown_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30168,6 +30378,10 @@ PrefabInstance:
       propertyPath: PlayerWonEvent
       value: 
       objectReference: {fileID: 11400000, guid: 9e7ede2f06ebf124d9f657956e16477a, type: 2}
+    - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
+      propertyPath: miniGameIsOver
+      value: 
+      objectReference: {fileID: 11400000, guid: f85612e01dc6e8a44bb456418bb7ea75, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
 --- !u!1001 &4645804196656901638
@@ -30243,10 +30457,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1695391963}
     - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 740965217}
-    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
       propertyPath: footer
       value: 
       objectReference: {fileID: 121430812}
@@ -30318,10 +30528,6 @@ PrefabInstance:
       propertyPath: scoreUI
       value: 
       objectReference: {fileID: 220162155}
-    - target: {fileID: 6352411031479509452, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
-      propertyPath: _miniGameData
-      value: 
-      objectReference: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
     - target: {fileID: 6352411031479509452, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
       propertyPath: progressBars.Array.data[0]
       value: 

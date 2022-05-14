@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92608a5323b31c244a9aeff81954515d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  wheel: {fileID: 0}
+  footer: {fileID: 0}
+  spinButton: {fileID: 0}
 --- !u!114 &1166477955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +110,7 @@ Transform:
   - {fileID: 6352411031859191531}
   - {fileID: 6352411031821349479}
   - {fileID: 1166477953}
+  - {fileID: 1754675383405001778}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -342,6 +345,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2f511fb07a29974e890b64e3e5f4782, type: 2}
   - {fileID: 11400000, guid: 21fb31fba8dc2df4cb8b572e6c6ccf93, type: 2}
   - {fileID: 11400000, guid: a0bd69e78bfa0074d89599f2550b9762, type: 2}
+  _miniGameData: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
   progressBars:
   - {fileID: 0}
   - {fileID: 0}
@@ -570,3 +574,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &7878260743834290159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1754675383405001778}
+  m_Layer: 0
+  m_Name: StartCountDown_Updater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1754675383405001778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878260743834290159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6352411031172338555}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
