@@ -52,20 +52,20 @@ public class BuildingWorldUI : MonoBehaviour
 
     public void BuildModeUIAnimation_Listener()
     {
-        spinButtonUI.transform.DOMoveY(spinButtonStartPos.y - offsetUI, 1);
-        buildModeButtonUI.transform.DOMoveX(buildModeButtonStartPos.x + offsetUI, 1);
-        miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x - offsetUI, 1);
+        spinButtonUI.transform.DOMoveY(spinButtonStartPos.y - offsetUI, 1).SetEase(Ease.InBack);
+        buildModeButtonUI.transform.DOMoveX(buildModeButtonStartPos.x + offsetUI, 1).SetEase(Ease.InBack);
+        miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x - offsetUI, 1).SetEase(Ease.InBack);
 
         builderUI.transform.DOMoveY(builderUIStartPos.y - offsetUI, 0);
-        builderUI.transform.DOMoveY(builderUIStartPos.y, 1);
+        builderUI.transform.DOMoveY(builderUIStartPos.y, 1).SetEase(Ease.InBack);
     }
 
     public void ExitBuildModeUIAnimation_Listener()
     {
-        builderUI.transform.DOMoveY(builderUIStartPos.y - offsetUI, 1);
+        builderUI.transform.DOMoveY(builderUIStartPos.y - offsetUI, 1).SetEase(Ease.OutBack);
 
-        spinButtonUI.transform.DOMoveY(spinButtonStartPos.y, 1);
-        buildModeButtonUI.transform.DOMoveX(buildModeButtonStartPos.x, 1);
-        miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x, 1);
+        spinButtonUI.transform.DOMoveY(spinButtonStartPos.y, 1).SetEase(Ease.OutBack);
+        buildModeButtonUI.transform.DOMoveX(buildModeButtonStartPos.x, 1).SetEase(Ease.OutBack);
+        miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x, 1).SetEase(Ease.OutBack);
     }
 }
