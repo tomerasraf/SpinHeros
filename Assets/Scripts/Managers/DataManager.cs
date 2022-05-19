@@ -90,6 +90,7 @@ public class DataManager : MonoBehaviour
     {
         for (int i = 0; i < _playerData.Length; i++)
         {
+            _playerData[i].coins = 0;
             _playerData[i].spins = 50;
             _playerData[i].moreSpinsTimer = 60f;
             _playerData[i].bet = 1;
