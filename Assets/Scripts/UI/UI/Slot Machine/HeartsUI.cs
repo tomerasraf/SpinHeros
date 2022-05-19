@@ -9,6 +9,11 @@ public class HeartsUI : MonoBehaviour
     [Header("Images")]
     [SerializeField] private Image[] heartImages;
 
+    private void Start()
+    {
+        HeartUI_Updater();
+    }
+
     public void HeartUI_Updater()
     {
         switch (_playerData.hearts)

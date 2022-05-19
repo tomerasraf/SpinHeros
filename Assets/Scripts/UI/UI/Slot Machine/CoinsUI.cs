@@ -11,6 +11,11 @@ public class CoinsUI : MonoBehaviour
     [SerializeField] float smoothSpeed;
     private float displayCoins = 0;
 
+    private void Start()
+    {
+        displayCoins = _playerData.coins;
+        coinText.text = displayCoins.ToString();
+    }
 
     public void GainCoinUI_Updater()
     {

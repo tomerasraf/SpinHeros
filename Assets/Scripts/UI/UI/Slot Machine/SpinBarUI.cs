@@ -8,6 +8,11 @@ public class SpinBarUI : MonoBehaviour
     [SerializeField] PlayerData _playerData;
     [SerializeField] TextMeshProUGUI spinsText;
 
+    private void Start()
+    {
+        SpinBarUI_Updater();
+    }
+
     public void SpinBarUI_Updater()
     {
         if (_playerData.spins > 0)
