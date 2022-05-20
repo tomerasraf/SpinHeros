@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &121430813
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15272,7 +15272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1222374112
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18240,7 +18240,7 @@ MonoBehaviour:
   camera1: {fileID: 433045}
   camera2: {fileID: 1348819551}
   dealyStart: 0.6
-  dealyEnableUI: 2.2
+  dealyEnableUI: 3
   DisplayUI_On: {fileID: 11400000, guid: 65244cdcfb6330e4997edf9b7ffc9ed8, type: 2}
 --- !u!4 &1456338195
 Transform:
@@ -26034,7 +26034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1695391964
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30464,6 +30464,42 @@ PrefabInstance:
       propertyPath: spinButton
       value: 
       objectReference: {fileID: 1222374111}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo_1
+      value: 
+      objectReference: {fileID: 633229389}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo_2
+      value: 
+      objectReference: {fileID: 2110024718}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo_3
+      value: 
+      objectReference: {fileID: 1153537171}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo_4
+      value: 
+      objectReference: {fileID: 1874870816}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo.Array.data[0]
+      value: 
+      objectReference: {fileID: 633229389}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo.Array.data[1]
+      value: 
+      objectReference: {fileID: 2110024718}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo.Array.data[2]
+      value: 
+      objectReference: {fileID: 1153537171}
+    - target: {fileID: 1166477954, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
+      propertyPath: playersInfo.Array.data[3]
+      value: 
+      objectReference: {fileID: 1874870816}
     - target: {fileID: 6352411031172338552, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
       propertyPath: m_Name
       value: UI_EventManager

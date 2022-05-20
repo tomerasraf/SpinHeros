@@ -14,8 +14,9 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
         ResetWorldData();
-        ResetPlayerGameData();
+        //ResetPlayerGameData();
         ResetslotMachineOddsData();
+        ResetMiniGameData();
     }
 
     private void ResetslotMachineOddsData()
@@ -79,10 +80,10 @@ public class DataManager : MonoBehaviour
         _worldData.priceToBuild[3] = _worldData.house_4_Price;
         _worldData.priceToBuild[4] = _worldData.house_5_Price;
 
-        for (int i = 0; i < _worldData.isBuilded.Length; i++)
-        {
-            _worldData.isBuilded[i] = false;
-        }
+        // for (int i = 0; i < _worldData.isBuilded.Length; i++)
+        // {
+        //     _worldData.isBuilded[i] = false;
+        // }
 
     }
 
@@ -100,6 +101,16 @@ public class DataManager : MonoBehaviour
             _playerData[i].score = 0;
             _playerData[i].crowns = 0;
             _playerData[i].miniGameTicket = 0;
+        }
+    }
+
+    private void ResetMiniGameData()
+    {
+        for (int i = 0; i < _playerData.Length; i++)
+        {
+            _playerData[i].hearts = 3;
+            _playerData[i].score = 0;
+            _playerData[i].playerPlace = 4;
         }
     }
 }

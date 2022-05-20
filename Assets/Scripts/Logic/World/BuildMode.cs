@@ -30,6 +30,22 @@ public class BuildMode : MonoBehaviour
 
     private Vector3 endTouchPosition;
 
+    private void Start()
+    {
+        LoadBuildingsData();
+    }
+
+    private void LoadBuildingsData()
+    {
+        for (int i = 0; i < _worldData.isBuilded.Length; i++)
+        {
+            if (_worldData.isBuilded[i])
+            {
+                buildingGameobjects[i].SetActive(true);
+            }
+        }
+    }
+
     public void BuildingModeIsOn()
     {
         _worldData.buldingModeIsOn = true;

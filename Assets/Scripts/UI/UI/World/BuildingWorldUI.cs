@@ -20,11 +20,30 @@ public class BuildingWorldUI : MonoBehaviour
 
     private void Start()
     {
+        LoadBuildButtonData();
+        InitializeStartPositions();
+    }
+
+    private void InitializeStartPositions()
+    {
         spinButtonStartPos = spinButtonUI.transform.position;
         builderUIStartPos = builderUI.transform.position;
         miniGameButtonStartPos = miniGameButtonUI.transform.position;
         buildModeButtonStartPos = buildModeButtonUI.transform.position;
     }
+
+    private void LoadBuildButtonData()
+    {
+        for (int i = 0; i < _worldData.isBuilded.Length; i++)
+        {
+            if (_worldData.isBuilded[i])
+            {
+                buildButtonsUI[i].SetActive(false);
+                successUI[i].SetActive(true);
+            }
+        }
+    }
+
     public void DisplayBuilderUI()
     {
         builderUI.SetActive(true);
