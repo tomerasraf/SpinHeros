@@ -15,8 +15,11 @@ public class SlotMachineData : ScriptableObject
 
     public int coinJackpotPrize = 1000;
     public int twoCoinsPrize = 300;
+    public int oneCoinPrize = 120;
+
     public int StashJackpotPrize = 10000;
     public int twoStashPrize = 5000;
+    public int oneStashPrize = 500;
 
     [Header("Machine Odds")]
     public int[] odds;
