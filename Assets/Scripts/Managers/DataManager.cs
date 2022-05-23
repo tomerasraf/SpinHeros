@@ -23,19 +23,25 @@ public class DataManager : MonoBehaviour
     {
         for (int i = 0; i < _slotMachineData.slot1.Length; i++)
         {
-            //Debug.Log("Iteration: " + i);
+            Debug.Log("Iteration: " + i);
 
             if (counter <= _slotMachineData.odds[symbolIndex])
             {
+
+
                 counter++;
+
+
             }
 
             if (counter == _slotMachineData.odds[symbolIndex])
             {
                 counter = 0;
-                // Debug.Log("Counter: " + counter);
-                symbolIndex++;
-                // Debug.Log("SymbolI: " + symbolIndex);
+                Debug.Log("Counter: " + counter);
+
+                if (symbolIndex < 4) { symbolIndex++; }
+
+                Debug.Log("SymbolI: " + symbolIndex);
             }
 
             switch (symbolIndex)

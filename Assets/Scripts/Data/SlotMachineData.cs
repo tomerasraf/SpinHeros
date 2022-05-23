@@ -12,6 +12,7 @@ public class SlotMachineData : ScriptableObject
     public int[] slotResults;
 
     [Header("Mechine Prizes")]
+    public int CurrentPrize = 0;
 
     public int coinJackpotPrize = 1000;
     public int twoCoinsPrize = 300;
