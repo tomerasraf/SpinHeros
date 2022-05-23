@@ -2,10 +2,19 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    [Header("Sounds")]
-    [SerializeField] AudioClip buildSFX; 
-    public void PlayBuildSound()
-    {
+    [Header("Wheel Machine Sounds")]
+    [SerializeField] AudioClip spiningWheelSFX;
 
+    private AudioSource audio;
+
+    private void Start()
+    {
+        audio = transform.GetComponent<AudioSource>();
+    }
+
+    public void PlaySpin_SFX()
+    {
+        audio.clip = spiningWheelSFX;
+        audio.Play();
     }
 }

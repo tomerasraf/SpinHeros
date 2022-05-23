@@ -21,6 +21,7 @@ public class BuildMode : MonoBehaviour
 
     [Header("Buildings Gameobjects")]
     [SerializeField] GameObject[] buildingGameobjects;
+    [SerializeField] GameObject campfire;
 
     [Header("Events")]
     [SerializeField] VoidEvent playerSpentCoins;

@@ -25,6 +25,7 @@ public class PrizeLogic : MonoBehaviour
         {
             // Coin Prize
             _playerData.coins += _slotMachineData.coinJackpotPrize * _playerData.bet;
+            _slotMachineData.CurrentPrize = _slotMachineData.coinJackpotPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
 
@@ -35,6 +36,7 @@ public class PrizeLogic : MonoBehaviour
         {
             // Stash Of Coins Prize
             _playerData.coins += _slotMachineData.StashJackpotPrize * _playerData.bet;
+            _slotMachineData.CurrentPrize = _slotMachineData.StashJackpotPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
 
@@ -88,10 +90,14 @@ public class PrizeLogic : MonoBehaviour
           && _slotMachineData.slotResults[2] != 1
            || _slotMachineData.slotResults[1] == 1
             && _slotMachineData.slotResults[2] == 1
-             && _slotMachineData.slotResults[0] != 1)
+             && _slotMachineData.slotResults[0] != 1 ||
+             _slotMachineData.slotResults[0] == 1
+             && _slotMachineData.slotResults[1] != 1
+              && _slotMachineData.slotResults[2] == 1)
         {
             // 2 Coins Prize
             _playerData.coins += _slotMachineData.twoCoinsPrize * _playerData.bet;
+            _slotMachineData.CurrentPrize = _slotMachineData.twoCoinsPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
 
@@ -101,6 +107,7 @@ public class PrizeLogic : MonoBehaviour
           _slotMachineData.slotResults[2] == 1 && _slotMachineData.slotResults[1] != 1 && _slotMachineData.slotResults[0] != 1)
         {
             _playerData.coins += _slotMachineData.oneCoinPrize * _playerData.bet;
+            _slotMachineData.CurrentPrize = _slotMachineData.oneCoinPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
 
@@ -110,18 +117,24 @@ public class PrizeLogic : MonoBehaviour
           && _slotMachineData.slotResults[2] != 0
            || _slotMachineData.slotResults[1] == 0
             && _slotMachineData.slotResults[2] == 0
-             && _slotMachineData.slotResults[0] != 0)
+             && _slotMachineData.slotResults[0] != 0
+              || _slotMachineData.slotResults[0] == 0
+             && _slotMachineData.slotResults[1] != 0
+              && _slotMachineData.slotResults[2] == 0)
         {
             // 2 Stash Prize
             _playerData.coins += _slotMachineData.twoStashPrize * _playerData.bet;
+            _slotMachineData.CurrentPrize = _slotMachineData.twoStashPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
 
+        // One Stash Prize
         if (_slotMachineData.slotResults[0] == 0 && _slotMachineData.slotResults[1] != 0 && _slotMachineData.slotResults[2] != 0 ||
          _slotMachineData.slotResults[1] == 0 && _slotMachineData.slotResults[0] != 0 && _slotMachineData.slotResults[2] != 0 ||
           _slotMachineData.slotResults[2] == 0 && _slotMachineData.slotResults[1] != 0 && _slotMachineData.slotResults[0] != 0)
         {
             _playerData.coins += _slotMachineData.oneStashPrize * _playerData.bet;
+            _slotMachineData.CurrentPrize = _slotMachineData.oneStashPrize * _playerData.bet;
             prizeIsEarned.Raise();
         }
     }
