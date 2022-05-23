@@ -13,6 +13,7 @@ public class CoinPopupUI : MonoBehaviour
     private void Start()
     {
         popupTextStartPosition = coinPrizePopup.transform.position;
+        coinPrizePopup.transform.DOMoveY(popupTextStartPosition.y - 400, 0f);
     }
 
     public void PopupPrizeText_Listener()
