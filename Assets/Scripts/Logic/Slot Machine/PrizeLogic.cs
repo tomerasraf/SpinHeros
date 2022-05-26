@@ -6,9 +6,10 @@ public class PrizeLogic : MonoBehaviour
 {
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] PlayerData _playerData;
-    [SerializeField] VoidEvent prizeIsEarned;
+    [SerializeField] VoidEvent miniGameTicketIsEarned;
     [SerializeField] VoidEvent spinIsEarned;
     [SerializeField] VoidEvent heartIsEarned;
+    [SerializeField] VoidEvent coinIsEarned;
 
 
     public void CheckResultsCaller()
@@ -26,7 +27,7 @@ public class PrizeLogic : MonoBehaviour
             // Coin Prize
             _playerData.coins += _slotMachineData.coinJackpotPrize * _playerData.bet;
             _slotMachineData.CurrentPrize = _slotMachineData.coinJackpotPrize * _playerData.bet;
-            prizeIsEarned.Raise();
+            coinIsEarned.Raise();
         }
 
         // Stash Of Coins Jackpot Check
@@ -37,7 +38,7 @@ public class PrizeLogic : MonoBehaviour
             // Stash Of Coins Prize
             _playerData.coins += _slotMachineData.StashJackpotPrize * _playerData.bet;
             _slotMachineData.CurrentPrize = _slotMachineData.StashJackpotPrize * _playerData.bet;
-            prizeIsEarned.Raise();
+            coinIsEarned.Raise();
         }
 
         // Hearts Check
@@ -81,7 +82,7 @@ public class PrizeLogic : MonoBehaviour
         {
             // Mini Game Prize
             _playerData.miniGameTicket++;
-            prizeIsEarned.Raise();
+            miniGameTicketIsEarned.Raise();
         }
 
         // 2 Coins Check
@@ -98,7 +99,7 @@ public class PrizeLogic : MonoBehaviour
             // 2 Coins Prize
             _playerData.coins += _slotMachineData.twoCoinsPrize * _playerData.bet;
             _slotMachineData.CurrentPrize = _slotMachineData.twoCoinsPrize * _playerData.bet;
-            prizeIsEarned.Raise();
+            coinIsEarned.Raise();
         }
 
         // One Coin Prize
@@ -108,7 +109,7 @@ public class PrizeLogic : MonoBehaviour
         {
             _playerData.coins += _slotMachineData.oneCoinPrize * _playerData.bet;
             _slotMachineData.CurrentPrize = _slotMachineData.oneCoinPrize * _playerData.bet;
-            prizeIsEarned.Raise();
+            coinIsEarned.Raise();
         }
 
         // 2 Stash Of Coins Check
@@ -125,7 +126,7 @@ public class PrizeLogic : MonoBehaviour
             // 2 Stash Prize
             _playerData.coins += _slotMachineData.twoStashPrize * _playerData.bet;
             _slotMachineData.CurrentPrize = _slotMachineData.twoStashPrize * _playerData.bet;
-            prizeIsEarned.Raise();
+            coinIsEarned.Raise();
         }
 
         // One Stash Prize
@@ -135,7 +136,7 @@ public class PrizeLogic : MonoBehaviour
         {
             _playerData.coins += _slotMachineData.oneStashPrize * _playerData.bet;
             _slotMachineData.CurrentPrize = _slotMachineData.oneStashPrize * _playerData.bet;
-            prizeIsEarned.Raise();
+            coinIsEarned.Raise();
         }
     }
 }

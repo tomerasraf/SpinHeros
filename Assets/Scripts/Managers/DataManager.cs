@@ -14,6 +14,7 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
         ResetWorldData();
+        _playerData[0].bet = 1;
         //ResetPlayerGameData();
         ResetslotMachineOddsData();
         ResetMiniGameData();
@@ -23,7 +24,7 @@ public class DataManager : MonoBehaviour
     {
         for (int i = 0; i < _slotMachineData.slot1.Length; i++)
         {
-            Debug.Log("Iteration: " + i);
+            //Debug.Log("Iteration: " + i);
 
             if (counter <= _slotMachineData.odds[symbolIndex])
             {
@@ -37,11 +38,11 @@ public class DataManager : MonoBehaviour
             if (counter == _slotMachineData.odds[symbolIndex])
             {
                 counter = 0;
-                Debug.Log("Counter: " + counter);
+                // Debug.Log("Counter: " + counter);
 
                 if (symbolIndex < 4) { symbolIndex++; }
 
-                Debug.Log("SymbolI: " + symbolIndex);
+                //  Debug.Log("SymbolI: " + symbolIndex);
             }
 
             switch (symbolIndex)

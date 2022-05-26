@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.7664896, g: 3.8551445, b: 12.024385, a: 1}
+  m_IndirectSpecularColor: {r: 0.81301963, g: 3.6922872, b: 11.959027, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2396,6 +2396,7 @@ GameObject:
   - component: {fileID: 366701559}
   - component: {fileID: 366701558}
   - component: {fileID: 366701560}
+  - component: {fileID: 366701561}
   m_Layer: 5
   m_Name: MiniGameTicket_Text
   m_TagString: Untagged
@@ -2534,6 +2535,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   miniGameTicketText: {fileID: 366701558}
+--- !u!114 &366701561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366701556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 80545e0179804a34c9de0a580a48cce6, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 366701560}
+        m_TargetAssemblyTypeName: MiniGameTicketUI, Assembly-CSharp
+        m_MethodName: miniGameTicketUI_Updater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &380062704
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,7 +3646,7 @@ GameObject:
   - component: {fileID: 571531440}
   - component: {fileID: 571531438}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Coins_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3768,7 +3797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 80545e0179804a34c9de0a580a48cce6, type: 2}
+  gameEvent: {fileID: 11400000, guid: 081227cbf8831a2458249c40b6ddeae1, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -6913,7 +6942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 80545e0179804a34c9de0a580a48cce6, type: 2}
+  gameEvent: {fileID: 11400000, guid: 081227cbf8831a2458249c40b6ddeae1, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -7292,7 +7321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 80545e0179804a34c9de0a580a48cce6, type: 2}
+  gameEvent: {fileID: 11400000, guid: 081227cbf8831a2458249c40b6ddeae1, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -41098,6 +41127,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5886693519128164461, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
+      propertyPath: coinIsEarned
+      value: 
+      objectReference: {fileID: 11400000, guid: 081227cbf8831a2458249c40b6ddeae1, type: 2}
+    - target: {fileID: 5886693519128164461, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
       propertyPath: spinIsEarned
       value: 
       objectReference: {fileID: 11400000, guid: 66d56a12d56311e478fd26d0924299c2, type: 2}
@@ -41105,6 +41138,10 @@ PrefabInstance:
       propertyPath: heartIsEarned
       value: 
       objectReference: {fileID: 11400000, guid: f7a71a088b33b354b802715be0411fbf, type: 2}
+    - target: {fileID: 5886693519128164461, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
+      propertyPath: miniGameTicketIsEarned
+      value: 
+      objectReference: {fileID: 11400000, guid: 80545e0179804a34c9de0a580a48cce6, type: 2}
     - target: {fileID: 5886693519128164462, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
       propertyPath: m_RootOrder
       value: 20
