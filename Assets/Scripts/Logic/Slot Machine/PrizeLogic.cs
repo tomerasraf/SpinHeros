@@ -62,16 +62,8 @@ public class PrizeLogic : MonoBehaviour
          && _slotMachineData.slotResults[2] == 3)
         {
             // Spin Prize 
-            if (_playerData.spins < _playerData.maxSpins)
-            {
-                _playerData.spins += 3 * _playerData.bet;
-            }
-            else
-            {
-                _playerData.spins = _playerData.maxSpins;
-                _playerData.extraSpins += 3;
-            }
-
+            _playerData.spins += 3 * _playerData.bet;
+          
             spinIsEarned.Raise();
         }
 
