@@ -7,7 +7,7 @@ public class HeartsUI : MonoBehaviour
     [SerializeField] private PlayerData _playerData;
 
     [Header("Images")]
-    [SerializeField] private Image[] heartImages;
+    [SerializeField] private GameObject[] heartImages;
 
     private void Start()
     {
@@ -19,25 +19,25 @@ public class HeartsUI : MonoBehaviour
         switch (_playerData.hearts)
         {
             case 0:
-                heartImages[0].enabled = false;
-                heartImages[1].enabled = false;
-                heartImages[2].enabled = false;
+                heartImages[0].SetActive(false);
+                heartImages[1].SetActive(false);
+                heartImages[2].SetActive(false);
                 break;
 
             case 1:
-                heartImages[0].enabled = true;
-                heartImages[1].enabled = false;
-                heartImages[2].enabled = false;
+                heartImages[0].SetActive(true);
+                heartImages[1].SetActive(false);
+                heartImages[2].SetActive(false);
                 break;
             case 2:
-                heartImages[0].enabled = true;
-                heartImages[1].enabled = true;
-                heartImages[2].enabled = false;
+                heartImages[0].SetActive(true);
+                heartImages[1].SetActive(true);
+                heartImages[2].SetActive(false);
                 break;
             case 3:
-                heartImages[0].enabled = true;
-                heartImages[1].enabled = true;
-                heartImages[2].enabled = true;
+                heartImages[0].SetActive(true);
+                heartImages[1].SetActive(true);
+                heartImages[2].SetActive(true);
                 break;
         }
     }
