@@ -1,21 +1,18 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace Assets.Scripts.Simulation.Wheel_Machine
 {
     public class MiniGameEffect : MonoBehaviour
     {
+        private int ID = 1;
+        [SerializeField] GameObject MiniGameEffectObject;
+        [SerializeField] Transform startPosition;
+        [SerializeField] RectTransform[] miniGameUI_Transform;
+        [SerializeField] VoidEvent MiniGameUI_Updater;
 
-        // Use this for initialization
-        void Start()
+        public void MiniGameEffect_Listener()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            EffectAnimationUtil.WheelEffectAnimation(ID, MiniGameEffectObject, startPosition, miniGameUI_Transform, MiniGameUI_Updater);
         }
     }
 }

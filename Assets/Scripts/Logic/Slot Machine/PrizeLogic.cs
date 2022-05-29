@@ -48,12 +48,13 @@ public class PrizeLogic : MonoBehaviour
         {
             // Hearts Prize
             _playerData.hearts += 1 * _playerData.bet;
-            heartIsEarned.Raise();
 
             if (_playerData.hearts > 3)
             {
                 _playerData.hearts = 3;
             }
+
+            heartIsEarned.Raise();
         }
 
         // Spins Check
@@ -62,7 +63,7 @@ public class PrizeLogic : MonoBehaviour
          && _slotMachineData.slotResults[2] == 3)
         {
             // Spin Prize 
-            _playerData.spins += 3 * _playerData.bet;
+            _playerData.spins += 1 * _playerData.bet;
           
             spinIsEarned.Raise();
         }
