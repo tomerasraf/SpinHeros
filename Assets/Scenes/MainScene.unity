@@ -5637,7 +5637,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 1671784628}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 2.36
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -9071,7 +9071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -5, y: 434.00003}
+  m_AnchoredPosition: {x: -5, y: 434}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222374113
@@ -10609,8 +10609,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5b5515631d2634299aaefa81fe7694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartModel_Prefab: {fileID: 6716410149507292508, guid: f70e43381d70b06418c22bd3a61a154d, type: 3}
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  heartModel_Prefab: {fileID: 7116217908365108315, guid: 0b8dde44503b0f0438cfb81cdc7c450b, type: 3}
   startPosition: {fileID: 876472559}
+  heartUI_Transform:
+  - {fileID: 1269802230}
+  - {fileID: 392689174}
+  - {fileID: 643219645}
+  heartUI_Updater: {fileID: 11400000, guid: 95966bd519bc38e4aa31863a75280506, type: 2}
 --- !u!1 &1394485349
 GameObject:
   m_ObjectHideFlags: 0
@@ -12211,7 +12217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: f7a71a088b33b354b802715be0411fbf, type: 2}
+  gameEvent: {fileID: 11400000, guid: 95966bd519bc38e4aa31863a75280506, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -12736,7 +12742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.7}
+  m_AnchoredPosition: {x: 0, y: 0.6999998}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671354312
