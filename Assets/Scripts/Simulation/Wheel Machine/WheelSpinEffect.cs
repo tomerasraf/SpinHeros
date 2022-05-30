@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
-
 public class WheelSpinEffect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] PlayerData _playerData;
+    [SerializeField] GameObject wheelSpinEffect_Object;
 
-    // Update is called once per frame
-    void Update()
+    public void wheelSpinEffect_Listiner()
     {
-        
+        if (_playerData.spins == 0)
+        {
+            return;
+        }
+        wheelSpinEffect_Object.transform.DOScale(0, 0);
+
+        wheelSpinEffect_Object.SetActive(true);
+
+        wheelSpinEffect_Object.transform.DOScale(3.69f, 0.2f).OnComplete(() =>
+        {
+
+            wheelSpinEffect_Object.transform.DOScale(0, 3f).OnComplete(() =>
+            {
+                wheelSpinEffect_Object.SetActive(false);
+            });
+        });
+
     }
 }

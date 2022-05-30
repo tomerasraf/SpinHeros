@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Simulation.Wheel_Machine
 {
+  
     public class HeartEffect : MonoBehaviour
     {
         [SerializeField] PlayerData _playerData;
@@ -10,8 +11,6 @@ namespace Assets.Scripts.Simulation.Wheel_Machine
         [SerializeField] Transform startPosition;
         [SerializeField] RectTransform[] heartUI_Transform;
         [SerializeField] VoidEvent heartUI_Updater;
-
-
 
         private GameObject heartEffectClone;
         public void HeartEffectAnimation_Listener()

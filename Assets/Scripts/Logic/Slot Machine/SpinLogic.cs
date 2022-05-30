@@ -10,10 +10,6 @@ public class SpinLogic : MonoBehaviour
     private PlayerData _playerData;
 
     [Header("Events")]
-    [SerializeField]
-    VoidEvent reciveSpins;
-    [SerializeField]
-    VoidEvent extraSpinsUI_Updater;
 
     [SerializeField]
     VoidEvent spinBar_Updater;
@@ -61,7 +57,7 @@ public class SpinLogic : MonoBehaviour
         {
             _playerData.spins += 5;
             _playerData.moreSpinsTimer = 60f;
-            reciveSpins.Raise();
+            spinBar_Updater.Raise();
         }
     }
 
@@ -70,7 +66,7 @@ public class SpinLogic : MonoBehaviour
         if (_playerData.spins > _playerData.maxSpins)
         {
             _playerData.extraSpins = _playerData.spins % _playerData.maxSpins;
-            reciveSpins.Raise();
+            spinBar_Updater.Raise();
         }
     }
 
