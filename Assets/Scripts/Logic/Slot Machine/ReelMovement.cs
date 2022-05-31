@@ -7,7 +7,7 @@ public class ReelMovement : MonoBehaviour
 {
     [Header("Variables")]
     [SerializeField] private float reelSpeed = 3f;
-    [SerializeField] float SymbolOffset = -45f;
+    [SerializeField] float SymbolOffset = 45f;
 
     [Header("Transform")]
     [SerializeField] Transform[] reels;
@@ -47,7 +47,7 @@ public class ReelMovement : MonoBehaviour
     IEnumerator ReelRoll(Transform[] reels)
     {
         elapsedTime = 0;
-        float rand = Random.Range(0.6f, 1.5f);
+        float rand = Random.Range(1.2f, 1.5f);
         while (isRolling)
         {
             elapsedTime += Time.deltaTime;
@@ -62,7 +62,6 @@ public class ReelMovement : MonoBehaviour
                 ReelRotation(reels[2], 0.4f);
             }
 
-
             if (elapsedTime >= rand)
             {
                 isRolling = false;
@@ -73,7 +72,7 @@ public class ReelMovement : MonoBehaviour
 
         ReelStop();
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.1f);
         spinButton.enabled = true;
         SpinIsEnded.Raise();
 
@@ -96,16 +95,17 @@ public class ReelMovement : MonoBehaviour
 
     void ReelStop()
     {
-        float deltaStopSpeed = 0.5f;
+        float deltaStopSpeed = 0f;
         for (int i = 0; i <= reels.Length - 1; i++)
         {
             Vector3 rotationVector = new Vector3(
             reels[i].transform.eulerAngles.x,
-            slotMachineData.slotResults[i] * SymbolOffset - 3.245f,
+            slotMachineData.slotResults[i] * SymbolOffset + 360 - 3.245f,
             reels[i].transform.eulerAngles.z
             );
 
-            reels[i].DORotate(rotationVector, deltaStopSpeed++, RotateMode.FastBeyond360).SetEase(Ease.OutBack);
+            deltaStopSpeed += 0.7f;
+            reels[i].DORotate(rotationVector, deltaStopSpeed, RotateMode.FastBeyond360).SetEase(Ease.OutBack);
         }
     }
 }
