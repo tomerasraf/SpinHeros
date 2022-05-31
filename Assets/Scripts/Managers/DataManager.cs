@@ -17,7 +17,7 @@ public class DataManager : MonoBehaviour
         _playerData[0].bet = 1;
         //ResetPlayerGameData();
         ResetslotMachineOddsData();
-        //ResetMiniGameData();
+        ResetMiniGameData();
     }
 
     private void ResetslotMachineOddsData()

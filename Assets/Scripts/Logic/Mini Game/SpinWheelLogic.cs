@@ -1,5 +1,5 @@
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
 public class SpinWheelLogic : MonoBehaviour
 {
@@ -32,11 +32,11 @@ public class SpinWheelLogic : MonoBehaviour
     {
         Vector3 endValue = new Vector3(
                         wheel.rotation.x,
-                        wheel.rotation.y,
-                        symbolOffset * wheelSpeed
+                        symbolOffset * wheelSpeed,
+                        wheel.rotation.z
                       );
 
-        wheel.DORotate(endValue, timeOfWheelSpin, RotateMode.FastBeyond360).SetEase(Ease.Flash).OnComplete(() =>
+        wheel.DOLocalRotate(endValue, timeOfWheelSpin, RotateMode.FastBeyond360).SetEase(Ease.Flash).OnComplete(() =>
         {
             StopWheel();
         });
@@ -46,11 +46,10 @@ public class SpinWheelLogic : MonoBehaviour
     {
         Vector3 endValue = new Vector3(
                         wheel.rotation.x,
-                        wheel.rotation.y,
-                        _spiningWheelData.results[0] * symbolOffset
+                        _spiningWheelData.results[0] * symbolOffset,
+                        wheel.rotation.z
                       );
-        // NEED TO FIX THE ROTATION GOING TO THE LEFT SOME TIMES.
-        wheel.DORotate(endValue, stopSpinTime, RotateMode.FastBeyond360).SetEase(Ease.OutBack).OnComplete(() =>
+        wheel.DOLocalRotate(endValue, stopSpinTime, RotateMode.FastBeyond360).SetEase(Ease.OutBack).OnComplete(() =>
         {
             spinIsEnded.Raise();
             wheelIsSpining = false;

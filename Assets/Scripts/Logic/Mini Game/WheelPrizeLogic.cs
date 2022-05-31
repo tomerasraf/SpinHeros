@@ -43,7 +43,7 @@ public class WheelPrizeLogic : MonoBehaviour
                 Replace(id);
                 break;
             case 2:
-                _playersData[id].score = _miniGameData.playersGoal;
+              //  _playersData[id].score = _miniGameData.playersGoal;
                 Score_Update.Raise();
                 break;
             case 3:
