@@ -14,7 +14,7 @@ public class CoinsUI : MonoBehaviour
     private void Start()
     {
         displayCoins = _playerData.coins;
-        coinText.text = displayCoins.ToString();
+        coinText.text = displayCoins.ToString("n0");
     }
 
     public void GainCoinUI_Updater()
@@ -32,10 +32,10 @@ public class CoinsUI : MonoBehaviour
     {
         while (displayCoins < _playerData.coins)
         {
-            displayCoins = displayCoins + smoothVelocity * smoothSpeed;
+            displayCoins += smoothVelocity * Time.deltaTime * smoothSpeed;
             displayCoins = Mathf.Clamp(displayCoins, displayCoins, _playerData.coins);
 
-            coinText.text = displayCoins.ToString();
+            coinText.text = displayCoins.ToString("n0");
             yield return null;
         }
         yield return null;
@@ -45,9 +45,9 @@ public class CoinsUI : MonoBehaviour
     {
         while (displayCoins > _playerData.coins)
         {
-            displayCoins = displayCoins - smoothVelocity * smoothSpeed;
+            displayCoins -= smoothVelocity * Time.deltaTime * smoothSpeed;
             displayCoins = Mathf.Clamp(displayCoins, _playerData.coins, displayCoins);
-            coinText.text = displayCoins.ToString();
+            coinText.text = displayCoins.ToString("n0");
             yield return null;
         }
         yield return null;
