@@ -48,6 +48,7 @@ public class Fish : MonoBehaviour
         {
             path.DORewind();
             Destroy(fishClone);
+            Destroy(shoeClone);
         }
 
         players[playerID].SetBool("isSpining", false);
