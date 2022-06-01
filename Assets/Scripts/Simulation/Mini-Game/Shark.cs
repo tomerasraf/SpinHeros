@@ -58,10 +58,12 @@ public class Shark : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
 
+        playersAnimator[_spiningWheelData.choosenPlayer].SetBool("gotHit", false);
+
         stunEffects[_spiningWheelData.choosenPlayer - 1].transform.DOScale(0, 1f).OnComplete(() =>
         {
             stunEffects[_spiningWheelData.choosenPlayer - 1].SetActive(false);
-            playersAnimator[_spiningWheelData.choosenPlayer ].SetBool("gotHit", false);
+           
         });
 
 
