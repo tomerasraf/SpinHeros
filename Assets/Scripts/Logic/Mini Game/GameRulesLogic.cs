@@ -6,7 +6,7 @@ public class GameRulesLogic : MonoBehaviour
     [SerializeField] MiniGameData _miniGameData;
     [SerializeField] PlayerData[] _playersData;
     [Header("Events")]
-    [SerializeField] VoidEvent miniGameIsOver;
+    [SerializeField] IntEvent playerWon;
 
     private void Update()
     {
@@ -19,8 +19,9 @@ public class GameRulesLogic : MonoBehaviour
         {
             if (_playersData[i].score >= _miniGameData.playersGoal)
             {
+                playerWon.Raise(i);
                 _miniGameData.gameIsOver = true;
-                miniGameIsOver.Raise();
+            
             }
         }
     }

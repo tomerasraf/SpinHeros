@@ -9,6 +9,9 @@ namespace Assets.Scripts.UI.UI.Mini_Game
         [SerializeField] PlayerData[] _playerData;
         [SerializeField] GameObject[] scoreText;
 
+        [Header("Events")]
+        [SerializeField] VoidEvent miniGameIsOver;
+
         private Vector3 popoutStartPosition;
 
         private void Start()
