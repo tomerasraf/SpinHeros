@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DataManager : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] SpiningWheelData _miniGameMachine;
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] WorldData _worldData;
     public PlayerData[] _playerData;
@@ -16,7 +18,16 @@ public class DataManager : MonoBehaviour
         ResetWorldData();
         _playerData[0].bet = 1;
         //ResetPlayerGameData();
-        ResetslotMachineOddsData();
+
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            ResetMiniGameMachineOddsData();
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 2) {
+            ResetslotMachineOddsData();
+        }
+       
         ResetMiniGameData();
     }
 
@@ -44,34 +55,87 @@ public class DataManager : MonoBehaviour
             switch (symbolIndex)
             {
                 case 0:
-                    FillTheOddsData(i, counter);
+                    FillSlotMachineOddsData(i, counter);
                     break;
 
                 case 1:
-                    FillTheOddsData(i, counter);
+                    FillSlotMachineOddsData(i, counter);
                     break;
 
                 case 2:
-                    FillTheOddsData(i, counter);
+                    FillSlotMachineOddsData(i, counter);
                     break;
 
                 case 3:
-                    FillTheOddsData(i, counter);
+                    FillSlotMachineOddsData(i, counter);
                     break;
 
                 case 4:
-                    FillTheOddsData(i, counter);
+                    FillSlotMachineOddsData(i, counter);
                     break;
             }
         }
     }
 
-    private void FillTheOddsData(int i, int counter)
+    private void FillSlotMachineOddsData(int i, int counter)
     {
         _slotMachineData.slot1[i] = symbolIndex;
         _slotMachineData.slot2[i] = symbolIndex;
         _slotMachineData.slot3[i] = symbolIndex;
     }
+
+
+    private void ResetMiniGameMachineOddsData()
+    {
+        for (int i = 0; i < _miniGameMachine.wheelsSlots.Length; i++)
+        {
+            //Debug.Log("Iteration: " + i);
+
+            if (counter <= _miniGameMachine.odds[symbolIndex])
+            {
+                counter++;
+            }
+
+            if (counter == _miniGameMachine.odds[symbolIndex])
+            {
+                counter = 0;
+                // Debug.Log("Counter: " + counter);
+
+                if (symbolIndex < 4) { symbolIndex++; }
+
+                //  Debug.Log("SymbolI: " + symbolIndex);
+            }
+
+            switch (symbolIndex)
+            {
+                case 0:
+                    FillMiniGameMachineOddsData(i, counter);
+                    break;
+
+                case 1:
+                    FillMiniGameMachineOddsData(i, counter);
+                    break;
+
+                case 2:
+                    FillMiniGameMachineOddsData(i, counter);
+                    break;
+
+                case 3:
+                    FillMiniGameMachineOddsData(i, counter);
+                    break;
+
+                case 4:
+                    FillMiniGameMachineOddsData(i, counter);
+                    break;
+            }
+        }
+    }
+
+    private void FillMiniGameMachineOddsData(int i, int counter)
+    {
+        _miniGameMachine.wheelsSlots[i] = symbolIndex;
+    }
+
 
     private void ResetWorldData()
     {
