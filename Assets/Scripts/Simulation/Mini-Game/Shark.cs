@@ -1,6 +1,6 @@
-using UnityEngine;
-using System.Collections;
 using DG.Tweening;
+using System.Collections;
+using UnityEngine;
 public class Shark : MonoBehaviour
 {
     [Header("Data")]
@@ -41,17 +41,29 @@ public class Shark : MonoBehaviour
 
         paths[_spiningWheelData.choosenPlayer - 1].DORewind();
         Destroy(cloneShark);
-        playerGotHitEffect();
+        StartCoroutine(playerGotHitEffect());
 
         players[0].SetBool("isSpining", false);
         yield return null;
     }
 
 
-    private void playerGotHitEffect() {
+    IEnumerator playerGotHitEffect()
+    {
 
+        stunEffects[_spiningWheelData.choosenPlayer - 1].transform.DOScale(0, 0f);
         stunEffects[_spiningWheelData.choosenPlayer - 1].SetActive(true);
+        stunEffects[_spiningWheelData.choosenPlayer - 1].transform.DOScale(1, 1f);
 
+        yield return new WaitForSeconds(3f);
+
+        stunEffects[_spiningWheelData.choosenPlayer - 1].transform.DOScale(0, 1f).OnComplete(() =>
+        {
+            stunEffects[_spiningWheelData.choosenPlayer - 1].SetActive(false);
+        });
+
+
+        yield return null;
     }
 
 
