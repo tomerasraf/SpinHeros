@@ -12,15 +12,19 @@ public class Fish : MonoBehaviour
     [SerializeField] GameObject fishPrefab;
     [SerializeField] GameObject rareFish;
     [SerializeField] GameObject leganderyFish;
+    [SerializeField] GameObject shoe_Prefab;
 
     [Header("Players Animators")]
     [SerializeField] Animator[] players;
 
     [Header("DOTweenPath")]
     [SerializeField] DOTweenPath path;
-    private GameObject fishClone;
 
-    enum Prizes { Fish = 0, GoldenFish = 4, DreamFish = 3 }
+    private GameObject fishClone;
+    private GameObject shoeClone;
+    
+
+    enum Prizes { Fish = 0, GoldenFish = 4, DreamFish = 3 , shoe = 2}
     private float animDuration = 1.5f;
 
     public void startCatchFish_Coroutine(int playerID)
@@ -55,6 +59,7 @@ public class Fish : MonoBehaviour
         int fishPrize = (int)Prizes.Fish;
         int goldFishPrize = (int)Prizes.GoldenFish;
         int dreamFishPrize = (int)Prizes.DreamFish;
+        int shoePrize = (int)Prizes.shoe;
 
         if (_spiningWheelData.results[playerID] == fishPrize)
         {
@@ -70,6 +75,10 @@ public class Fish : MonoBehaviour
         {
             fishClone = Instantiate(leganderyFish, path.transform.position, Quaternion.identity);
             fishClone.transform.parent = path.transform;
+        }
+        else if (_spiningWheelData.results[playerID] == shoePrize) {
+            shoeClone = Instantiate(shoe_Prefab, path.transform.position, Quaternion.identity);
+            shoeClone.transform.parent = path.transform;
         }
 
     }

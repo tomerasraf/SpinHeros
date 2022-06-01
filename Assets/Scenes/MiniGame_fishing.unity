@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.76473033, g: 3.8538733, b: 12.024936, a: 1}
+  m_IndirectSpecularColor: {r: 0.8092439, g: 3.9015903, b: 11.991903, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -787,6 +787,7 @@ MonoBehaviour:
   fishPrefab: {fileID: 9052457214578818655, guid: 8217964f6e2e8034e90b9794c6563804, type: 3}
   rareFish: {fileID: 4864916804337920949, guid: e53f52380678662488ecf563c5afe40d, type: 3}
   leganderyFish: {fileID: 6829764942375059603, guid: ab285ff7b705bb845aef988514d9e044, type: 3}
+  shoe_Prefab: {fileID: 1934688979275250, guid: 3646c7ea28501f7439c5b961e925da7d, type: 3}
   players:
   - {fileID: 968405388}
   - {fileID: 1296863885}
@@ -1962,6 +1963,7 @@ MonoBehaviour:
   fishPrefab: {fileID: 9052457214578818655, guid: 8217964f6e2e8034e90b9794c6563804, type: 3}
   rareFish: {fileID: 4864916804337920949, guid: e53f52380678662488ecf563c5afe40d, type: 3}
   leganderyFish: {fileID: 6829764942375059603, guid: ab285ff7b705bb845aef988514d9e044, type: 3}
+  shoe_Prefab: {fileID: 1934688979275250, guid: 3646c7ea28501f7439c5b961e925da7d, type: 3}
   players:
   - {fileID: 968405388}
   - {fileID: 1296863885}
@@ -10231,8 +10233,11 @@ MonoBehaviour:
   - {fileID: 1588591885}
   - {fileID: 1044016128}
   - {fileID: 1478136628}
-  players:
+  playersAnimator:
   - {fileID: 968405388}
+  - {fileID: 1296863885}
+  - {fileID: 1265397789}
+  - {fileID: 972396773}
 --- !u!114 &699940444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12553,6 +12558,7 @@ MonoBehaviour:
   fishPrefab: {fileID: 9052457214578818655, guid: 8217964f6e2e8034e90b9794c6563804, type: 3}
   rareFish: {fileID: 4864916804337920949, guid: e53f52380678662488ecf563c5afe40d, type: 3}
   leganderyFish: {fileID: 6829764942375059603, guid: ab285ff7b705bb845aef988514d9e044, type: 3}
+  shoe_Prefab: {fileID: 1934688979275250, guid: 3646c7ea28501f7439c5b961e925da7d, type: 3}
   players:
   - {fileID: 968405388}
   - {fileID: 1296863885}
@@ -12994,6 +13000,7 @@ MonoBehaviour:
   fishPrefab: {fileID: 9052457214578818655, guid: 8217964f6e2e8034e90b9794c6563804, type: 3}
   rareFish: {fileID: 4864916804337920949, guid: e53f52380678662488ecf563c5afe40d, type: 3}
   leganderyFish: {fileID: 6829764942375059603, guid: ab285ff7b705bb845aef988514d9e044, type: 3}
+  shoe_Prefab: {fileID: 1934688979275250, guid: 3646c7ea28501f7439c5b961e925da7d, type: 3}
   players:
   - {fileID: 968405388}
   - {fileID: 1296863885}

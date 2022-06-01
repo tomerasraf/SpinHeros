@@ -14,7 +14,7 @@ public class Shark : MonoBehaviour
     [SerializeField] DOTweenPath[] paths;
 
     [Header("Players Animators")]
-    [SerializeField] Animator[] players;
+    [SerializeField] Animator[] playersAnimator;
 
     private GameObject cloneShark;
 
@@ -33,7 +33,7 @@ public class Shark : MonoBehaviour
 
     IEnumerator SimoulationCoroutine()
     {
-        players[0].SetBool("isSpining", true);
+        playersAnimator[0].SetBool("isSpining", true);
         SpawnShark();
         paths[_spiningWheelData.choosenPlayer - 1].DOPlay();
 
@@ -42,8 +42,9 @@ public class Shark : MonoBehaviour
         paths[_spiningWheelData.choosenPlayer - 1].DORewind();
         Destroy(cloneShark);
         StartCoroutine(playerGotHitEffect());
+        playersAnimator[_spiningWheelData.choosenPlayer ].SetBool("gotHit", true);
 
-        players[0].SetBool("isSpining", false);
+        playersAnimator[0].SetBool("isSpining", false);
         yield return null;
     }
 
@@ -60,6 +61,7 @@ public class Shark : MonoBehaviour
         stunEffects[_spiningWheelData.choosenPlayer - 1].transform.DOScale(0, 1f).OnComplete(() =>
         {
             stunEffects[_spiningWheelData.choosenPlayer - 1].SetActive(false);
+            playersAnimator[_spiningWheelData.choosenPlayer ].SetBool("gotHit", false);
         });
 
 
