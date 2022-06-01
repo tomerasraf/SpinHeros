@@ -20,7 +20,7 @@ public class Fish : MonoBehaviour
     [SerializeField] DOTweenPath path;
     private GameObject fishClone;
 
-    enum Prizes { Fish = 4, GoldenFish = 7, DreamFish = 3 }
+    enum Prizes { Fish = 0, GoldenFish = 4, DreamFish = 3 }
     private float animDuration = 1.5f;
 
     public void startCatchFish_Coroutine(int playerID)
