@@ -17,6 +17,7 @@ public class DataManager : MonoBehaviour
     {
         ResetWorldData();
         _playerData[0].bet = 1;
+        _playerData[0].hearts = 0;
         //ResetPlayerGameData();
 
         if (SceneManager.GetActiveScene().buildIndex == 3)
@@ -27,8 +28,11 @@ public class DataManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 2) {
             ResetslotMachineOddsData();
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 3) {
+            ResetMiniGameData();
+        }
        
-        ResetMiniGameData();
     }
 
     private void ResetslotMachineOddsData()
