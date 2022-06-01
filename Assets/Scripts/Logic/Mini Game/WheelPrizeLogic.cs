@@ -56,7 +56,7 @@ public class WheelPrizeLogic : MonoBehaviour
 
                 break;
       
-            case 7:
+            case 4:
                 _playersData[id].score += _spiningWheelData.rareFishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);
                 Score_Update.Raise();

@@ -9915,9 +9915,7 @@ MonoBehaviour:
   - {fileID: 1044016128}
   - {fileID: 1478136628}
   players:
-  - {fileID: 1296863885}
-  - {fileID: 1265397789}
-  - {fileID: 972396773}
+  - {fileID: 968405388}
 --- !u!114 &699940444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25495,6 +25493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a98c79fd35ad7149aea1b7ef7aa40db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _miniGameMachine: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
   _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
   _playerData:
