@@ -38,6 +38,7 @@ public class WheelPrizeLogic : MonoBehaviour
             
             case 0  :
                 _playersData[id].score += _spiningWheelData.fishPrize;
+                _playersData[id].currentPrize = _spiningWheelData.fishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);
                 Score_Update.Raise();
 
@@ -45,13 +46,14 @@ public class WheelPrizeLogic : MonoBehaviour
 
             case 2:
                 _playersData[id].score += _spiningWheelData.shoePrize;
+                _playersData[id].currentPrize = _spiningWheelData.shoePrize;
                 PlayerID_Anim_FishPrize.Raise(id);
                 Score_Update.Raise();
                 break;
 
             case 3:
                 _playersData[id].score += _spiningWheelData.legnderyFishPrize;
-
+                _playersData[id].currentPrize = _spiningWheelData.legnderyFishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);
                 Score_Update.Raise();
 
@@ -59,6 +61,7 @@ public class WheelPrizeLogic : MonoBehaviour
       
             case 4:
                 _playersData[id].score += _spiningWheelData.rareFishPrize;
+                _playersData[id].currentPrize = _spiningWheelData.rareFishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);
                 Score_Update.Raise();
                 break;

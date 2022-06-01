@@ -20,4 +20,5 @@ public class PlayerData : ScriptableObject
     public int playerPlace = 4;
     public float playerProgress = 0;
     public int score = 0;
+    public int currentPrize = 0;
 }
