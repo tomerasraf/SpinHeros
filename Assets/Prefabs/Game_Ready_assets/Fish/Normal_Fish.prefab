@@ -312,7 +312,6 @@ Transform:
   m_Children:
   - {fileID: 6063857639061316928}
   - {fileID: 8015549950568152230}
-  - {fileID: 1773039040884743079}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -307.884, z: 0}
@@ -336,65 +335,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &1771146838557673441
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8568970699624162533}
-    m_Modifications:
-    - target: {fileID: 1922285782511704, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_Name
-      value: WaterSplashTinySoft
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.188
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.354
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
---- !u!4 &1773039040884743079 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4355403686927430, guid: a312715abb227c246acf4ae4abbc1501, type: 3}
-  m_PrefabInstance: {fileID: 1771146838557673441}
-  m_PrefabAsset: {fileID: 0}
