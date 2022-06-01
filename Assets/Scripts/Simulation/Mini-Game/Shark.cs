@@ -8,6 +8,7 @@ public class Shark : MonoBehaviour
 
     [Header("Prefabs")]
     [SerializeField] GameObject sharkPrefab;
+    [SerializeField] GameObject[] stunEffects;
 
     [Header("DOTweenPhats")]
     [SerializeField] DOTweenPath[] paths;
@@ -40,9 +41,17 @@ public class Shark : MonoBehaviour
 
         paths[_spiningWheelData.choosenPlayer - 1].DORewind();
         Destroy(cloneShark);
+        playerGotHitEffect();
 
         players[0].SetBool("isSpining", false);
         yield return null;
+    }
+
+
+    private void playerGotHitEffect() {
+
+        stunEffects[_spiningWheelData.choosenPlayer - 1].SetActive(true);
+
     }
 
 

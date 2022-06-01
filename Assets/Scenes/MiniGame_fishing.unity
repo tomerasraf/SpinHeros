@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.76473033, g: 3.8538733, b: 12.024936, a: 1}
+  m_IndirectSpecularColor: {r: 0.8092439, g: 3.9015903, b: 11.991903, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2117,7 +2117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 109542, guid: 2ed06ab528b7c474eb9246421cd7c791, type: 3}
       propertyPath: m_Name
-      value: StunnedCirclingStars
+      value: StunEffect_2
       objectReference: {fileID: 0}
     - target: {fileID: 109542, guid: 2ed06ab528b7c474eb9246421cd7c791, type: 3}
       propertyPath: m_IsActive
@@ -10058,6 +10058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   sharkPrefab: {fileID: 1670974493637204, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
+  stunEffects: []
   paths:
   - {fileID: 1588591885}
   - {fileID: 1044016128}
@@ -12571,7 +12572,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 109542, guid: 2ed06ab528b7c474eb9246421cd7c791, type: 3}
       propertyPath: m_Name
-      value: StunnedCirclingStars (2)
+      value: StunEffect_4
       objectReference: {fileID: 0}
     - target: {fileID: 109542, guid: 2ed06ab528b7c474eb9246421cd7c791, type: 3}
       propertyPath: m_IsActive
@@ -26262,7 +26263,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 109542, guid: 2ed06ab528b7c474eb9246421cd7c791, type: 3}
       propertyPath: m_Name
-      value: StunnedCirclingStars (1)
+      value: StunEffect_3
       objectReference: {fileID: 0}
     - target: {fileID: 109542, guid: 2ed06ab528b7c474eb9246421cd7c791, type: 3}
       propertyPath: m_IsActive
