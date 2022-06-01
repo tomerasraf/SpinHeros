@@ -3,13 +3,13 @@ using UnityEngine.UI;
 
 public class TargetUI : MonoBehaviour
 {
-    [SerializeField] Image[] targetsImg;
+    [SerializeField] GameObject[] targetsImg;
 
     private void Start()
     {
         for (int i = 0; i < targetsImg.Length; i++)
         {
-            targetsImg[i].enabled = false;
+            targetsImg[i].SetActive(false);
         }
     }
 
@@ -17,7 +17,7 @@ public class TargetUI : MonoBehaviour
     {
         for (int i = 0; i < targetsImg.Length; i++)
         {
-            targetsImg[i].enabled = true;
+            targetsImg[i].SetActive(true);
         }
 
     }
@@ -25,7 +25,7 @@ public class TargetUI : MonoBehaviour
     {
         for (int i = 0; i < targetsImg.Length; i++)
         {
-            targetsImg[i].enabled = false;
+            targetsImg[i].SetActive(false);
         }
     }
 }

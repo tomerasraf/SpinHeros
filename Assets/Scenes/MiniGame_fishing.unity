@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.76473033, g: 3.8538733, b: 12.024936, a: 1}
+  m_IndirectSpecularColor: {r: 0.8092439, g: 3.9015903, b: 11.991903, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2651,7 +2651,7 @@ GameObject:
   - component: {fileID: 372810878}
   - component: {fileID: 372810877}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Target_Player4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12280,7 +12280,7 @@ GameObject:
   - component: {fileID: 998266209}
   - component: {fileID: 998266208}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Target_Player3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13955,7 +13955,6 @@ RectTransform:
   - {fileID: 428438693}
   - {fileID: 548233909}
   - {fileID: 797182884}
-  - {fileID: 1598235169}
   m_Father: {fileID: 740965218}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19472,82 +19471,6 @@ Transform:
   m_Father: {fileID: 465288710}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1598235168
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1598235169}
-  - component: {fileID: 1598235171}
-  - component: {fileID: 1598235170}
-  m_Layer: 5
-  m_Name: Target_img
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1598235169
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598235168}
-  m_LocalRotation: {x: -0, y: -0, z: -0.33550125, w: 0.9420398}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.185819, y: 2.185819, z: 2.185819}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1153537172}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -39.206}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 266, y: -677}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1598235170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598235168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b1412ba73776fb94a94ef373e9c4cfac, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1598235171
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598235168}
-  m_CullTransparentMesh: 1
 --- !u!1 &1601717353
 GameObject:
   m_ObjectHideFlags: 0
@@ -28088,7 +28011,7 @@ GameObject:
   - component: {fileID: 1989454259}
   - component: {fileID: 1989454258}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Target_Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30015,15 +29938,15 @@ PrefabInstance:
     - target: {fileID: 6352411031204707371, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
       propertyPath: targetsImg.Array.data[0]
       value: 
-      objectReference: {fileID: 1598235170}
+      objectReference: {fileID: 1989454256}
     - target: {fileID: 6352411031204707371, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
       propertyPath: targetsImg.Array.data[1]
       value: 
-      objectReference: {fileID: 1394410015}
+      objectReference: {fileID: 998266206}
     - target: {fileID: 6352411031204707371, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
       propertyPath: targetsImg.Array.data[2]
       value: 
-      objectReference: {fileID: 1083908883}
+      objectReference: {fileID: 372810875}
     - target: {fileID: 6352411031446906074, guid: 7b0fa4fd12835944c9910e29a3487528, type: 3}
       propertyPath: scoreUI
       value: 
