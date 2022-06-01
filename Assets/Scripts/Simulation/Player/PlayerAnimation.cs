@@ -1,14 +1,22 @@
-using UnityEngine;
-using System.Collections;
 using DG.Tweening;
+using System.Collections;
+using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    [SerializeField] PlayerData _playerData;
     [SerializeField] Animator _playerAnimator;
 
     public void PlayJump_Listener()
     {
-        StartCoroutine(PlayJumpAnimation_Corotine());
+        if (_playerData.miniGameTicket > 0)
+        {
+            StartCoroutine(PlayJumpAnimation_Corotine());
+        }
+        else
+        {
+            return;
+        }
     }
 
     IEnumerator PlayJumpAnimation_Corotine()

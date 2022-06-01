@@ -5607,6 +5607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0a6f7a63c8b04184a66233e70b254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   _playerAnimator: {fileID: 702715822}
 --- !u!1 &720433699 stripped
 GameObject:
@@ -9675,6 +9676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73f74a2ce06e8e4aa9fee08589add02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   SpinButtonPressed: {fileID: 11400000, guid: d7c16d124dc6c464d9844160f602d2f3, type: 2}
 --- !u!1 &1230669914
 GameObject:
@@ -12914,6 +12916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   enterMiniGame_Event: {fileID: 11400000, guid: 72e3da45965a6d84682610b5e165b49c, type: 2}
+  minigameUIText_Updater: {fileID: 11400000, guid: ea315ddf7ba654342af619cc0fa3741d, type: 2}
 --- !u!1 &1629170064
 GameObject:
   m_ObjectHideFlags: 0
@@ -14041,6 +14044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a98c79fd35ad7149aea1b7ef7aa40db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _miniGameMachine: {fileID: 0}
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
   _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
   _playerData:
@@ -16164,6 +16168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23d8a6cf60f1ce40ab8880ec080b90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   background_Object: {fileID: 1570899681}
 --- !u!1 &2123662210
 GameObject:

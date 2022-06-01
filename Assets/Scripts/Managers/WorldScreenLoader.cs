@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class WorldScreenLoader : MonoBehaviour
 {
+    [SerializeField] PlayerData _playerData;
     [SerializeField] GameObject background_Object;
 
     private void Start()
@@ -21,7 +22,14 @@ public class WorldScreenLoader : MonoBehaviour
 
     public void MiniGameTransition_Listener()
     {
-        StartCoroutine(SceneTransitionToMiniGame_Coroutine());
+        if (_playerData.miniGameTicket > 0) {
+            StartCoroutine(SceneTransitionToMiniGame_Coroutine());
+        }
+        else
+        {
+            return;
+        }
+        
     }
 
     IEnumerator SceneTransitionToMiniGame_Coroutine()

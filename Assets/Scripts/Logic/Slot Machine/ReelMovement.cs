@@ -27,10 +27,17 @@ public class ReelMovement : MonoBehaviour
 
     public void EnterMiniGame_Listener()
     {
-        for (int i = 0; i < reels.Length; i++)
-        {
-            reels[i].DOMoveY(-2f, 3f);
+        if (_playerData.miniGameTicket > 0) {
+            for (int i = 0; i < reels.Length; i++)
+            {
+                reels[i].DOMoveY(-2f, 3f);
+            }
         }
+        else
+        {
+            return;
+        }
+        
     }
 
     public void StartRollReelCoroutine()
@@ -47,7 +54,7 @@ public class ReelMovement : MonoBehaviour
     IEnumerator ReelRoll(Transform[] reels)
     {
         elapsedTime = 0;
-        float rand = Random.Range(1.2f, 1.5f);
+        float rand = 1.5f;
         while (isRolling)
         {
             elapsedTime += Time.deltaTime;
@@ -72,7 +79,7 @@ public class ReelMovement : MonoBehaviour
 
         ReelStop();
 
-        yield return new WaitForSeconds(2.1f);
+        yield return new WaitForSeconds(1.5f);
         spinButton.enabled = true;
         SpinIsEnded.Raise();
 
@@ -95,7 +102,7 @@ public class ReelMovement : MonoBehaviour
 
     void ReelStop()
     {
-        float deltaStopSpeed = 0f;
+        float deltaStopSpeed = 0.8f;
         for (int i = 0; i <= reels.Length - 1; i++)
         {
             Vector3 rotationVector = new Vector3(
@@ -104,8 +111,8 @@ public class ReelMovement : MonoBehaviour
             reels[i].transform.eulerAngles.z
             );
 
-            deltaStopSpeed += 0.7f;
-            reels[i].DORotate(rotationVector, deltaStopSpeed, RotateMode.FastBeyond360).SetEase(Ease.OutBack);
+            deltaStopSpeed += 0.35f;
+            reels[i].DORotate(rotationVector, deltaStopSpeed, RotateMode.FastBeyond360).SetEase(Ease.InSine).SetEase(Ease.OutBack);
         }
     }
 }

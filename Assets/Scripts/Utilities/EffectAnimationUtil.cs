@@ -11,7 +11,7 @@ public static class EffectAnimationUtil
         effectModel.transform.DOMoveY(startPosition.position.y + 0.2f, 1f).OnComplete(() =>
         {
 
-            effectModel.transform.DOMoveY(startPosition.position.y + 0.7f, 1f * 0.5f).SetEase(Ease.InOutSine).SetLoops(1, LoopType.Yoyo).OnComplete(() =>
+            effectModel.transform.DOMoveY(startPosition.position.y + 0.7f, 1f * 0.5f).SetEase(Ease.InOutSine).SetLoops(3, LoopType.Yoyo).OnComplete(() =>
             {
                 effectModel.transform.DOScale(0.05f, 0.7f);
                 Vector2 screenPoint = UITransform[ID - 1 ].position;

@@ -1,12 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameRulesLogic : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] MiniGameData _miniGameData;
-    [SerializeField] PlayerData[] _playersData;
+    [SerializeField]
+    PlayerData[] _playersData;
+
     [Header("Events")]
     [SerializeField] IntEvent playerWon;
+
+    [Header("Spin Button")]
+    [SerializeField] Button spinButton;
+
 
     private void Update()
     {
@@ -21,7 +28,7 @@ public class GameRulesLogic : MonoBehaviour
             {
                 playerWon.Raise(i);
                 _miniGameData.gameIsOver = true;
-            
+                spinButton.enabled = false;
             }
         }
     }
