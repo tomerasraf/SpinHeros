@@ -4,8 +4,8 @@ using System.Collections;
 public class MiniGameCameraManager : MonoBehaviour
 {
     [Header("Cameras")]
-    [SerializeField] GameObject camera1;
-    [SerializeField] GameObject camera2;
+    [SerializeField] GameObject[] Players_Cam;
+    [SerializeField] GameObject Game_Cam;
 
     [Header("Vars")]
 
@@ -25,12 +25,17 @@ public class MiniGameCameraManager : MonoBehaviour
     {
         yield return new WaitForSeconds(dealyStart);
 
-        camera2.SetActive(enabled);
+        Game_Cam.SetActive(enabled);
 
         yield return new WaitForSeconds(dealyEnableUI);
+        Players_Cam[0].SetActive(false);
         DisplayUI_On.Raise();
 
         yield return null;
+    }
+
+    public void FocusOnTheWinner(int PlayerID) {
+        Players_Cam[PlayerID].SetActive(true);        
     }
 
 }

@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpinWheelLogic : MonoBehaviour
 {
@@ -18,12 +19,16 @@ public class SpinWheelLogic : MonoBehaviour
     [SerializeField] float wheelSpeed = 20;
     [SerializeField] float timeOfWheelSpin;
 
+    [Header("Button")]
+    [SerializeField] Button spinButton;
+    
     private bool wheelIsSpining;
 
     public void WheelSpinLogic()
     {
         if (wheelIsSpining) { return; }
         wheelIsSpining = true;
+        spinButton.enabled = false;
         RamdomSpin();
         SpinWheel();
     }
@@ -46,13 +51,14 @@ public class SpinWheelLogic : MonoBehaviour
     {
         Vector3 endValue = new Vector3(
                         wheel.rotation.x,
-                        _spiningWheelData.results[0] * symbolOffset,
+                        _spiningWheelData.results[0] * symbolOffset + 360,
                         wheel.rotation.z
                       );
-        wheel.DOLocalRotate(endValue, stopSpinTime, RotateMode.FastBeyond360).SetEase(Ease.OutBack).OnComplete(() =>
+        wheel.DOLocalRotate(endValue, stopSpinTime, RotateMode.FastBeyond360).SetEase(Ease.InSine).SetEase(Ease.OutBack).OnComplete(() =>
         {
             spinIsEnded.Raise();
             wheelIsSpining = false;
+            spinButton.enabled = true;
         });
     }
 

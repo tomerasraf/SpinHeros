@@ -17,16 +17,18 @@ public class StartCountDownUI : MonoBehaviour
     IEnumerator StratCountDown_Coroutine()
     {
         startCountDown_Image.SetActive(true);
-        while (counter > 0)
-        {
-            counter -= Time.deltaTime;
-            int counterInt = (int)counter;
-            countDownText.text = counterInt.ToString();
+      
+        countDownText.text = "Ready!";
 
-            yield return null;
-        }
+        yield return new WaitForSeconds(1);
+           
+        countDownText.text = "Set!";
+
+        yield return new WaitForSeconds(1);
 
         countDownText.text = "Go!";
+
+        yield return new WaitForSeconds(1);
 
         startCountDown_Image.SetActive(false);
 

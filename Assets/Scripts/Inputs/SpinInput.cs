@@ -8,7 +8,7 @@ public class SpinInput : MonoBehaviour
 
     public void SpinInputEventCall()
     {
-        if (_playerData.spins > -1) { 
+        if (_playerData.spins > 0) { 
             SpinButtonPressed.Raise();
         }
 

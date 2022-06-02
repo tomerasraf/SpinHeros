@@ -17,11 +17,6 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySpin_SFX()
     {
-        if (_playerData.spins == 0)
-        {
-            return;
-        }
-
         audio.clip = spiningWheelSFX;
         audio.Play();
     }

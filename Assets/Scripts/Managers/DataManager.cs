@@ -15,6 +15,9 @@ public class DataManager : MonoBehaviour
 
     private void Awake()
     {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 120;
+
         ResetWorldData();
         _playerData[0].bet = 1;
         _playerData[0].hearts = 0;

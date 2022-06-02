@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ChoosePlayerLogic : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class ChoosePlayerLogic : MonoBehaviour
     [Header("Events")]
     [SerializeField] VoidEvent shark;
     [SerializeField] VoidEvent endOfChoice;
+
+    [Header("Button")]
+    [SerializeField] Button spinButton; 
 
     private bool playerIsChoosing = true;
 
@@ -25,6 +29,7 @@ public class ChoosePlayerLogic : MonoBehaviour
 
         while (playerIsChoosing)
         {
+            spinButton.enabled = false;
             ChoosePlayer();
             yield return null;
         }
@@ -64,6 +69,7 @@ public class ChoosePlayerLogic : MonoBehaviour
             attackChoosenPlayer();
             playerIsChoosing = false;
             endOfChoice.Raise();
+            spinButton.enabled = true;
         }
         if (hit.transform.name == "Player_3")
         {
@@ -72,6 +78,7 @@ public class ChoosePlayerLogic : MonoBehaviour
             attackChoosenPlayer();
             playerIsChoosing = false;
             endOfChoice.Raise();
+            spinButton.enabled = true;
         }
         if (hit.transform.name == "Player_4")
         {
@@ -80,6 +87,7 @@ public class ChoosePlayerLogic : MonoBehaviour
             attackChoosenPlayer();
             playerIsChoosing = false;
             endOfChoice.Raise();
+            spinButton.enabled = true;
         }
     }
 

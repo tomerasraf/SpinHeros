@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class ReelMovement : MonoBehaviour
 {
-    [Header("Variables")]
+    [Header("Wheel Control")]
     [SerializeField] private float reelSpeed = 3f;
-    [SerializeField] float SymbolOffset = 45f;
+    [SerializeField] float symbolOffset = 45f;
+    [SerializeField] float wheelSpiningTime = 0.9f;
+    [SerializeField] float firstReelstopTime = 0.8f;
+    [SerializeField] float nextReelIncrementTime = 0.35f;
 
     [Header("Transform")]
     [SerializeField] Transform[] reels;
@@ -22,6 +25,13 @@ public class ReelMovement : MonoBehaviour
 
     private float elapsedTime = 0;
     private bool isRolling = false;
+    private float tempStopTime;
+
+
+    private void Start()
+    {
+        tempStopTime = firstReelstopTime;
+    }
 
     #region eventListeners 
 
@@ -54,7 +64,6 @@ public class ReelMovement : MonoBehaviour
     IEnumerator ReelRoll(Transform[] reels)
     {
         elapsedTime = 0;
-        float rand = 1.5f;
         while (isRolling)
         {
             elapsedTime += Time.deltaTime;
@@ -69,7 +78,7 @@ public class ReelMovement : MonoBehaviour
                 ReelRotation(reels[2], 0.4f);
             }
 
-            if (elapsedTime >= rand)
+            if (elapsedTime >= wheelSpiningTime)
             {
                 isRolling = false;
             }
@@ -90,7 +99,7 @@ public class ReelMovement : MonoBehaviour
     {
         Vector3 rotationVector = new Vector3(
             reel.transform.eulerAngles.x,
-            reel.transform.eulerAngles.y + SymbolOffset * Time.deltaTime * reelSpeed,
+            reel.transform.eulerAngles.y + symbolOffset * Time.deltaTime * reelSpeed,
             reel.transform.eulerAngles.z
          );
 
@@ -102,17 +111,17 @@ public class ReelMovement : MonoBehaviour
 
     void ReelStop()
     {
-        float deltaStopSpeed = 0.8f;
+        firstReelstopTime = tempStopTime;
         for (int i = 0; i <= reels.Length - 1; i++)
         {
             Vector3 rotationVector = new Vector3(
             reels[i].transform.eulerAngles.x,
-            slotMachineData.slotResults[i] * SymbolOffset + 360 - 3.245f,
+            slotMachineData.slotResults[i] * symbolOffset + 360 - 3.245f,
             reels[i].transform.eulerAngles.z
             );
 
-            deltaStopSpeed += 0.35f;
-            reels[i].DORotate(rotationVector, deltaStopSpeed, RotateMode.FastBeyond360).SetEase(Ease.InSine).SetEase(Ease.OutBack);
+            firstReelstopTime += nextReelIncrementTime;
+            reels[i].DORotate(rotationVector, firstReelstopTime, RotateMode.FastBeyond360).SetEase(Ease.InSine).SetEase(Ease.OutBack);
         }
     }
 }

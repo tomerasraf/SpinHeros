@@ -12,7 +12,7 @@ public class BuildingWorldUI : MonoBehaviour
     [SerializeField] GameObject[] successUI;
     [SerializeField] GameObject[] buildButtonsUI;
 
-    private float offsetUI = 760;
+    private float offsetUI = 1500;
     private Vector3 spinButtonStartPos;
     private Vector3 builderUIStartPos;
     private Vector3 miniGameButtonStartPos;

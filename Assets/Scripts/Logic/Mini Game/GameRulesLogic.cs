@@ -10,7 +10,8 @@ public class GameRulesLogic : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] IntEvent playerWon;
-
+    [SerializeField] VoidEvent miniGameDisplayUI_Off;
+ 
     [Header("Spin Button")]
     [SerializeField] Button spinButton;
 
@@ -29,6 +30,7 @@ public class GameRulesLogic : MonoBehaviour
                 playerWon.Raise(i);
                 _miniGameData.gameIsOver = true;
                 spinButton.enabled = false;
+                miniGameDisplayUI_Off.Raise();
             }
         }
     }
