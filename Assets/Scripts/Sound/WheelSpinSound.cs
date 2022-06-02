@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class WheelSpinSound : MonoBehaviour
 {
     [Header("Wheel Machine Sounds")]
     [SerializeField] AudioClip spiningWheelSFX;
@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
         audio = transform.GetComponent<AudioSource>();
     }
 
-    public void PlaySpin_SFX()
+    public void PlaySpinSFX_Listener()
     {
         audio.clip = spiningWheelSFX;
         audio.Play();
