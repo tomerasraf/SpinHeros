@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.81301963, g: 3.6922872, b: 11.959027, a: 1}
+  m_IndirectSpecularColor: {r: 0.76576906, g: 3.8548846, b: 12.024496, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1272,7 +1272,7 @@ GameObject:
   - component: {fileID: 214538592}
   - component: {fileID: 214538591}
   m_Layer: 0
-  m_Name: Sound_Manager
+  m_Name: OverWorld Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1288,7 +1288,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1215953784602718936, guid: 4b50eb2d90c6b9e45b0a12f360dc33b9, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b64bb81069c181442bc0c92630ec890a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0f092d21e2747d742b3f64ff791ab161, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -2683,7 +2683,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -694758987171020359, guid: 4b50eb2d90c6b9e45b0a12f360dc33b9, type: 2}
   m_audioClip: {fileID: 8300000, guid: e84cab589208ed043927862a525fd37c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.017
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3888,11 +3888,11 @@ AudioSource:
   m_GameObject: {fileID: 559824369}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  OutputAudioMixerGroup: {fileID: 3775037473350690782, guid: 4b50eb2d90c6b9e45b0a12f360dc33b9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 02d218be1d4d6f64f9767d42d7c95e9d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
+  m_Pitch: 1.23
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4736,8 +4736,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -694758987171020359, guid: 4b50eb2d90c6b9e45b0a12f360dc33b9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 33dd713dd4427704a84ba567e7f999b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.097
-  m_Pitch: 1
+  m_Volume: 0.23
+  m_Pitch: 0.7
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -9266,10 +9266,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3775037473350690782, guid: 4b50eb2d90c6b9e45b0a12f360dc33b9, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7db99c45ddc10dc4a9b79b2e8ded35ab, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.25
+  m_Pitch: 1.16
   Loop: 0
   Mute: 0
   Spatialize: 0
