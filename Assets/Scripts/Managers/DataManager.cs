@@ -17,6 +17,7 @@ public class DataManager : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 120;
+        Screen.fullScreen = true;
 
         ResetWorldData();
         _playerData[0].bet = 1;
