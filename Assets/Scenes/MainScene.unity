@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.76576906, g: 3.8548846, b: 12.024496, a: 1}
+  m_IndirectSpecularColor: {r: 0.81301963, g: 3.6922872, b: 11.959027, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4204,7 +4204,7 @@ MonoBehaviour:
   coinText: {fileID: 571531436}
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   smoothVelocity: 200
-  smoothSpeed: 15
+  smoothSpeed: 200
 --- !u!114 &571531439
 MonoBehaviour:
   m_ObjectHideFlags: 0
