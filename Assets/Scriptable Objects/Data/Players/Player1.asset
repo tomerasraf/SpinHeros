@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6593dd04253f9844984b965e5e56d09, type: 3}
   m_Name: Player1
   m_EditorClassIdentifier: 
-  coins: 30420
-  crowns: 57
-  spins: 27
+  coins: 97740
+  crowns: 62
+  spins: 49
   maxSpins: 50
   extraSpins: 1
-  moreSpinsTimer: 26.294626
+  moreSpinsTimer: 51.055687
   bet: 1
-  miniGameTicket: 3
-  hearts: 3
+  miniGameTicket: 2
+  hearts: 0
   playerPlace: 4
   playerProgress: 0
   score: 0
