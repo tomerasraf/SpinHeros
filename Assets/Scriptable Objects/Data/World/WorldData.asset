@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28c10d83ce3fb54aa362c4289ce10e5, type: 3}
   m_Name: WorldData
   m_EditorClassIdentifier: 
-  buldingModeIsOn: 0
+  buldingModeIsOn: 1
   satisfactionBar: 0
   house_1_Price: 25000
   house_2_Price: 10000
   house_3_Price: 40000
   house_4_Price: 75000
   house_5_Price: 100000
-  ids: 0000000001000000020000000300000004000000
   priceToBuild: a861000010270000409c0000f8240100a0860100
-  isBuilded: 0101000000
+  isBuilded: 0101010101
