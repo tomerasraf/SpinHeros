@@ -12,7 +12,7 @@ namespace Assets.Scripts.Simulation.Wheel_Machine
 
         public void MiniGameEffect_Listener()
         {
-            EffectAnimationUtil.WheelEffectAnimation(ID, MiniGameEffectObject, startPosition, miniGameUI_Transform, MiniGameUI_Updater);
+            EffectAnimationUtils.WheelEffectAnimation(ID, MiniGameEffectObject, startPosition, miniGameUI_Transform, MiniGameUI_Updater);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Assets.Scripts.Sound
             audio = GetComponent<AudioSource>();
         }
 
-        public void PlayBuyingBuildingSFX_Listener()
+        public void PlayExitBuildModeSFX_Listener()
         {
             audio.clip = exitBuildingModeSound;
             audio.Play();

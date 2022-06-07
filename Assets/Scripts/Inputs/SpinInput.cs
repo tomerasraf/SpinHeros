@@ -8,9 +8,14 @@ public class SpinInput : MonoBehaviour
 
     public void SpinInputEventCall()
     {
-        if (_playerData.spins > 0) { 
-            SpinButtonPressed.Raise();
+        if (SceneManager.GetActiveScene().buildIndex == 2) {
+
+            if (_playerData.spins >= 0)
+            {
+                SpinButtonPressed.Raise();
+            }
         }
+
 
         if (SceneManager.GetActiveScene().buildIndex == 3) {
             SpinButtonPressed.Raise();
