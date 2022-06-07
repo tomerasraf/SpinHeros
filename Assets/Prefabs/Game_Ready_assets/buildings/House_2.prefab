@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1279920723661933748
 Transform:
   m_ObjectHideFlags: 0
@@ -184,10 +184,10 @@ AudioSource:
   m_GameObject: {fileID: 1912026194026927630}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 133b8e77f8cf22f4ea71e1f362899aa7, type: 3}
+  OutputAudioMixerGroup: {fileID: -6865318476007035718, guid: 4b50eb2d90c6b9e45b0a12f360dc33b9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 068f73b0d21ea9c4bab038f2133feb9f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -744,6 +744,14 @@ PrefabInstance:
     - target: {fileID: 443696, guid: fe394d041df1a0547990f49cf653249f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19948540, guid: fe394d041df1a0547990f49cf653249f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19948540, guid: fe394d041df1a0547990f49cf653249f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1366757653
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe394d041df1a0547990f49cf653249f, type: 3}
