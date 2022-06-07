@@ -15,7 +15,7 @@ namespace Assets.Scripts.Simulation.Wheel_Machine
         private GameObject heartEffectClone;
         public void HeartEffectAnimation_Listener()
         {
-            EffectAnimationUtil.WheelEffectAnimation(_playerData.hearts, effectObject, startPosition, heartUI_Transform, heartUI_Updater);
+            EffectAnimationUtils.WheelEffectAnimation(_playerData.hearts, effectObject, startPosition, heartUI_Transform, heartUI_Updater);
         }
 
     }

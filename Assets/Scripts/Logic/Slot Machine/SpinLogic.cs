@@ -41,9 +41,9 @@ public class SpinLogic : MonoBehaviour
 
     private void SpinRefillLogic()
     {
-        if (_playerData.spins < 0)
+        if (_playerData.spins <= 0)
         {
-            _playerData.spins = 0;
+            _playerData.spins = -1;
         }
 
         if (_playerData.spins >= _playerData.maxSpins)
@@ -55,9 +55,14 @@ public class SpinLogic : MonoBehaviour
 
         if (_playerData.moreSpinsTimer <= 0)
         {
+            if (_playerData.spins < 0)
+            {
+                _playerData.spins = 0;
+            }
+
             _playerData.spins += 5;
-            _playerData.moreSpinsTimer = 60f;
             spinBar_Updater.Raise();
+            _playerData.moreSpinsTimer = 60f;
         }
     }
 
