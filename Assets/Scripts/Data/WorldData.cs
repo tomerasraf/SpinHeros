@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 
 [CreateAssetMenu(fileName = "WorldData", menuName = "RaceGambling3D/WorldData", order = 0)]
 public class WorldData : ScriptableObject
@@ -16,9 +17,14 @@ public class WorldData : ScriptableObject
     public int house_5_Price = 100000;
 
     [Header("BuildingData")]
-    public int[] ids;
     public int[] priceToBuild;
     public bool[] isBuilded;
 
+    public void ResetWorldData() {
+        for (int i = 0; i < isBuilded.Length; i++)
+        {
+            isBuilded[i] = false;
+        }
+    }
 
 }

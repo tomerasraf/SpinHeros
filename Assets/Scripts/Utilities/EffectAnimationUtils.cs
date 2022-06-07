@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-public static class EffectAnimationUtil
+public static class EffectAnimationUtils
 {
     public static void WheelEffectAnimation(int ID, GameObject effectModel, Transform startPosition, RectTransform[] UITransform, VoidEvent UIEventUpdater)
     {
