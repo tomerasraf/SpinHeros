@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WheelPrizeLogic : MonoBehaviour
@@ -13,7 +11,7 @@ public class WheelPrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent ChooseCharacter;
     [SerializeField] VoidEvent Score_Update;
     [SerializeField] IntEvent PlayerID_Anim_FishPrize;
-    [SerializeField] IntEvent CreateFish_Prefab;
+   
 
 
     public void CheckWheelResult()
@@ -25,18 +23,16 @@ public class WheelPrizeLogic : MonoBehaviour
                 break;
         }
 
-        for (int id = 0; id < _spiningWheelData.results.Length; id++)
-        {
-            CheckPrize(id);
-        }
+        CheckPrize(0);
+
     }
 
-    private void CheckPrize(int id)
+    public void CheckPrize(int id)
     {
         switch (_spiningWheelData.results[id])
         {
-            
-            case 0  :
+
+            case 0:
                 _playersData[id].score += _spiningWheelData.fishPrize;
                 _playersData[id].currentPrize = _spiningWheelData.fishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);
@@ -58,7 +54,7 @@ public class WheelPrizeLogic : MonoBehaviour
                 Score_Update.Raise();
 
                 break;
-      
+
             case 4:
                 _playersData[id].score += _spiningWheelData.rareFishPrize;
                 _playersData[id].currentPrize = _spiningWheelData.rareFishPrize;
@@ -66,5 +62,5 @@ public class WheelPrizeLogic : MonoBehaviour
                 Score_Update.Raise();
                 break;
         }
-    } 
+    }
 }

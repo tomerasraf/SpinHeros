@@ -7,6 +7,9 @@ public class StartCountDownUI : MonoBehaviour
     [SerializeField] GameObject startCountDown_Image;
     [SerializeField] TextMeshProUGUI countDownText;
 
+    [Header("Events")]
+    [SerializeField] VoidEvent miniGameIsStarted;
+
     private float counter = 3.5f;
 
     private void Start()
@@ -31,6 +34,7 @@ public class StartCountDownUI : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         startCountDown_Image.SetActive(false);
+        miniGameIsStarted.Raise();
 
         yield return null;
     }

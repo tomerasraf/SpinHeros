@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.76473033, g: 3.8538733, b: 12.024936, a: 1}
+  m_IndirectSpecularColor: {r: 0.8301126, g: 4.164562, b: 12.021038, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1343,34 +1343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startCountDown_Image: {fileID: 1710266289}
   countDownText: {fileID: 2115251746}
---- !u!114 &209251890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209251887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: b6703ec39fa74a14fa978fb4990061fe, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 209251889}
-        m_TargetAssemblyTypeName: StartCountDownUI, Assembly-CSharp
-        m_MethodName: StartCountDown_Listener
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  miniGameIsStarted: {fileID: 11400000, guid: 4448acd297d11374d8b401ac9b804633, type: 2}
 --- !u!1 &214424120
 GameObject:
   m_ObjectHideFlags: 0
@@ -20075,6 +20048,7 @@ Transform:
   - {fileID: 2134511389}
   - {fileID: 1641424365}
   - {fileID: 552977261}
+  - {fileID: 2137506698}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29463,6 +29437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a98c79fd35ad7149aea1b7ef7aa40db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _miniGameData: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
   _miniGameMachine: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
   _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
@@ -33652,6 +33627,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 785955080700744974, guid: 9cf041f863767644bb8770de1e01d2b6, type: 3}
   m_PrefabInstance: {fileID: 785955081379131856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2137506697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137506698}
+  - component: {fileID: 2137506700}
+  - component: {fileID: 2137506699}
+  m_Layer: 0
+  m_Name: AI_Logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2137506698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137506697}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1408319167}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2137506699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137506697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 4448acd297d11374d8b401ac9b804633, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2137506700}
+        m_TargetAssemblyTypeName: MiniGameAI, Assembly-CSharp
+        m_MethodName: MiniGameStart_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2137506700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137506697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9e4df8280ba7b44b53ceadce94f7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _miniGameData: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
+  _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
+  AIAutoSpin_ID: {fileID: 11400000, guid: c38f4634d7329db4abbd914cceffa37c, type: 2}
+  minCounter: 1.9
+  maxCounter: 1.9
 --- !u!1 &2141770027
 GameObject:
   m_ObjectHideFlags: 3
@@ -34510,3 +34563,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbb156961b4401428f8e39437a8772a, type: 3}
+--- !u!1 &9184043880619565081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9184043881078324200, guid: 4fbb156961b4401428f8e39437a8772a, type: 3}
+  m_PrefabInstance: {fileID: 9184043880619565080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9184043880619565082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9184043881078324202, guid: 4fbb156961b4401428f8e39437a8772a, type: 3}
+  m_PrefabInstance: {fileID: 9184043880619565080}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9184043880619565081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9626d0b19cd628468108a745fa5bcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9184043880619565083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9184043880619565081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e12c709089252a468b47547a39f4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: c38f4634d7329db4abbd914cceffa37c, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9184043880619565082}
+        m_TargetAssemblyTypeName: WheelPrizeLogic, Assembly-CSharp
+        m_MethodName: CheckPrize
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

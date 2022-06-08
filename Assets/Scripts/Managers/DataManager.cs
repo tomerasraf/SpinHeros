@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DataManager : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] MiniGameData _miniGameData;
     [SerializeField] SpiningWheelData _miniGameMachine;
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] WorldData _worldData;
@@ -181,6 +182,8 @@ public class DataManager : MonoBehaviour
 
     private void ResetMiniGameData()
     {
+        _miniGameData.gameIsOver = false;
+
         for (int i = 0; i < _playerData.Length; i++)
         {
             _playerData[i].hearts = 3;
