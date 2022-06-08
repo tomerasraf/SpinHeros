@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01811243416343944aa90a77f4250a16, type: 3}
   m_Name: MiniGameData
   m_EditorClassIdentifier: 
-  gameIsOver: 0
-  playersGoal: 200
+  gameIsOver: 1
+  playersGoal: 250
   winnerPrize: 50000

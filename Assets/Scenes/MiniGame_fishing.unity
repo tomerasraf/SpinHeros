@@ -185,7 +185,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433045}
-  m_LocalRotation: {x: 0.1650869, y: -0.07068627, z: 0.0118630845, w: 0.98367125}
+  m_LocalRotation: {x: 0.16508691, y: -0.070686236, z: 0.01186308, w: 0.98367125}
   m_LocalPosition: {x: 15.28, y: 2.82, z: -62.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -28928,7 +28928,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671784625}
-  m_LocalRotation: {x: 0.1650869, y: -0.07068627, z: 0.0118630845, w: 0.98367125}
+  m_LocalRotation: {x: 0.16508691, y: -0.070686236, z: 0.01186308, w: 0.98367125}
   m_LocalPosition: {x: 15.28, y: 2.82, z: -62.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33703,8 +33703,8 @@ MonoBehaviour:
   _miniGameData: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
   _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   AIAutoSpin_ID: {fileID: 11400000, guid: c38f4634d7329db4abbd914cceffa37c, type: 2}
-  minCounter: 1.9
-  maxCounter: 1.9
+  minCounter: 1.4
+  maxCounter: 1.4
 --- !u!1 &2141770027
 GameObject:
   m_ObjectHideFlags: 3
