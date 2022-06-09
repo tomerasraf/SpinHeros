@@ -35,15 +35,20 @@ public class MiniGameAI : MonoBehaviour
 
             yield return new WaitForSeconds(randCounter);
 
-                int rand = 0;
-                rand = Random.Range(0, 100);
+                int randSymbol = 0;
+                randSymbol = Random.Range(0, 100);
       
                 float IDRand = Random.Range(1, 4);
-                _spiningWheelData.results[(int)IDRand] = _spiningWheelData.wheelsSlots[rand];
-                AIAutoSpin_ID.Raise((int)IDRand);
+                _spiningWheelData.results[(int)IDRand] = _spiningWheelData.wheelsSlots[randSymbol];
 
-       /*         float randDealyCounter = Random.Range(0.3f, 0.5f);
-                yield return new WaitForSeconds(randDealyCounter);*/
+            if (_spiningWheelData.choosenPlayer == IDRand || _spiningWheelData.AIChoosenPlayer == IDRand)
+            {
+               yield return null;
+            }
+            else {
+                AIAutoSpin_ID.Raise((int)IDRand);
+            }
+            
 
             yield return null;
         }

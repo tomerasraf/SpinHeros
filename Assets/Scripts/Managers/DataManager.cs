@@ -182,6 +182,8 @@ public class DataManager : MonoBehaviour
     private void ResetMiniGameData()
     {
         _miniGameData.gameIsOver = false;
+        _miniGameMachine.choosenPlayer = 0;
+        _miniGameMachine.AIChoosenPlayer = 0;
 
         for (int i = 0; i < _playerData.Length; i++)
         {

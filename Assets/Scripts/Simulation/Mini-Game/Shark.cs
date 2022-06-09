@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 public class Shark : MonoBehaviour
 {
     [Header("Data")]
@@ -15,6 +16,9 @@ public class Shark : MonoBehaviour
 
     [Header("Players Animators")]
     [SerializeField] Animator[] playersAnimator;
+
+    [Header("Spin Button")]
+    [SerializeField] Button spinButton;
 
     private GameObject cloneShark;
     private GameObject AIcloneShark;
@@ -88,6 +92,7 @@ public class Shark : MonoBehaviour
         stunEffects[_spiningWheelData.choosenPlayer].transform.DOScale(0, 1f).OnComplete(() =>
         {
             stunEffects[_spiningWheelData.choosenPlayer].SetActive(false);
+            _spiningWheelData.choosenPlayer = 0;
         });
 
         yield return null;
@@ -95,16 +100,30 @@ public class Shark : MonoBehaviour
     
     IEnumerator AIGotHitEffect()
     {
+        if(_spiningWheelData.AIChoosenPlayer == 0)
+        {
+            spinButton.enabled = false;
+        }
+
         stunEffects[_spiningWheelData.AIChoosenPlayer].transform.DOScale(0, 0f);
         stunEffects[_spiningWheelData.AIChoosenPlayer].SetActive(true);
         stunEffects[_spiningWheelData.AIChoosenPlayer].transform.DOScale(1, 1f);
 
         yield return new WaitForSeconds(3f);
 
+
         playersAnimator[_spiningWheelData.AIChoosenPlayer].SetBool("gotHit", false);
         stunEffects[_spiningWheelData.AIChoosenPlayer].transform.DOScale(0, 1f).OnComplete(() =>
         {
             stunEffects[_spiningWheelData.AIChoosenPlayer].SetActive(false);
+
+
+            if (_spiningWheelData.AIChoosenPlayer == 0)
+            {
+                spinButton.enabled = true;
+            }
+
+            _spiningWheelData.AIChoosenPlayer = 0;
         });
 
         yield return null;
