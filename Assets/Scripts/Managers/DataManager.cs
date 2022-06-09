@@ -172,7 +172,6 @@ public class DataManager : MonoBehaviour
             _playerData[i].moreSpinsTimer = 60f;
             _playerData[i].bet = 1;
             _playerData[i].hearts = 0;
-            _playerData[i].playerPlace = 4;
             _playerData[i].playerProgress = 0;
             _playerData[i].score = 0;
             _playerData[i].crowns = 0;
@@ -188,7 +187,6 @@ public class DataManager : MonoBehaviour
         {
             _playerData[i].hearts = 3;
             _playerData[i].score = 0;
-            _playerData[i].playerPlace = 4;
         }
     }
 }

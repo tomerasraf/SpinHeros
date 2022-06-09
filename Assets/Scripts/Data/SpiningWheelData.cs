@@ -12,7 +12,8 @@ public class SpiningWheelData : ScriptableObject
     public int rareFishPrize = 20;
     public int legnderyFishPrize = 50;
     public int shoePrize = -10;
-    public int choosenPlayer;
+    public int choosenPlayer = 0;
+    public int AIChoosenPlayer = 0;
 
     [Header("Wheel Ods")]
     public int[] odds;

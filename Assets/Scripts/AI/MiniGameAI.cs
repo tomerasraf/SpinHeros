@@ -5,16 +5,15 @@ using UnityEngine;
 public class MiniGameAI : MonoBehaviour
 {
 
-
-    // 1. Create a random counter bettween 1.9 to 2.5 with Enumerator. 
-    // 2. Every time the counter reach 0 AI should spin his wheel.
-
     [Header("Data")]
+    [SerializeField] PlayerData[] _playersData;
     [SerializeField] MiniGameData _miniGameData;
     [SerializeField] SpiningWheelData _spiningWheelData;
 
     [Header("Events")]
     [SerializeField] IntEvent AIAutoSpin_ID;
+    [SerializeField] IntEvent AISharkAnimation_ID;
+    [SerializeField] VoidEvent ScoreUI_Updater;
 
     [Header("Counter Max & Min values")]
     [SerializeField] float minCounter;
@@ -23,6 +22,10 @@ public class MiniGameAI : MonoBehaviour
     public void MiniGameStart_Listener() {
 
         StartCoroutine(AIAutoSpin());
+    }
+
+    public void AIAutoAttackCoroutine_Listener(int id) {
+        StartCoroutine(AIAutoAttack(id));
     }
 
     IEnumerator AIAutoSpin() {
@@ -48,8 +51,23 @@ public class MiniGameAI : MonoBehaviour
         yield return null;
     }
 
-    private void RamdomSpin()
-    {
-      
+    IEnumerator AIAutoAttack(int id) {
+
+        // prevent the AI from attacking itself.
+        int rand = Random.Range(0, 4);
+        while (rand == id) {
+            rand = Random.Range(0, 4);
+        }
+
+        _spiningWheelData.AIChoosenPlayer = rand;
+        AISharkAnimation_ID.Raise(id);
+        AIAttackChoosenPlayer();
+        yield return null;
     }
+
+    private void AIAttackChoosenPlayer() {
+        _playersData[_spiningWheelData.AIChoosenPlayer].hearts--;
+        ScoreUI_Updater.Raise();
+    }
+ 
 }

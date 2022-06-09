@@ -17,7 +17,6 @@ public class PlayerData : ScriptableObject
 
     // Mini Game Player Data
     public int hearts;
-    public int playerPlace = 4;
     public float playerProgress = 0;
     public int score = 0;
     public int currentPrize = 0;

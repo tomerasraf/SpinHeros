@@ -11,20 +11,13 @@ public class WheelPrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent ChooseCharacter;
     [SerializeField] VoidEvent Score_Update;
     [SerializeField] IntEvent PlayerID_Anim_FishPrize;
+    [SerializeField] IntEvent AIAutoAttack_ID;
    
 
 
     public void CheckWheelResult()
     {
-        switch (_spiningWheelData.results[0])
-        {
-            case 1:
-                ChooseCharacter.Raise();
-                break;
-        }
-
         CheckPrize(0);
-
     }
 
     public void CheckPrize(int id)
@@ -37,6 +30,17 @@ public class WheelPrizeLogic : MonoBehaviour
                 _playersData[id].currentPrize = _spiningWheelData.fishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);
                 Score_Update.Raise();
+
+                break;
+
+            case 1:
+                if (id == 0) {
+                    ChooseCharacter.Raise();
+                }
+                else
+                {
+                    AIAutoAttack_ID.Raise(id);
+                }    
 
                 break;
 
