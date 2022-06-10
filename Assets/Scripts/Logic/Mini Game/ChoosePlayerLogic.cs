@@ -17,6 +17,7 @@ public class ChoosePlayerLogic : MonoBehaviour
     [SerializeField] Button spinButton; 
 
     private bool playerIsChoosing = true;
+    private float counter = 5;
 
     public void StartPlayerChoiceCourotine()
     {
@@ -26,7 +27,6 @@ public class ChoosePlayerLogic : MonoBehaviour
 
     IEnumerator ChoosePlayerCourotine()
     {
-
         while (playerIsChoosing)
         {
             spinButton.enabled = false;
@@ -38,6 +38,17 @@ public class ChoosePlayerLogic : MonoBehaviour
 
     private void ChoosePlayer()
     {
+        
+        counter -= Time.deltaTime;
+
+        if (counter <= 0) {
+            spinButton.enabled = true;
+            endOfChoice.Raise();
+            playerIsChoosing = false;
+            counter = 5;
+        }
+
+
         if (Input.touchCount > 0)
         {
 
@@ -70,6 +81,7 @@ public class ChoosePlayerLogic : MonoBehaviour
             playerIsChoosing = false;
             endOfChoice.Raise();
             spinButton.enabled = true;
+            counter = 5;
         }
         if (hit.transform.name == "Player_3")
         {
@@ -79,6 +91,7 @@ public class ChoosePlayerLogic : MonoBehaviour
             playerIsChoosing = false;
             endOfChoice.Raise();
             spinButton.enabled = true;
+            counter = 5;
         }
         if (hit.transform.name == "Player_4")
         {
@@ -88,6 +101,7 @@ public class ChoosePlayerLogic : MonoBehaviour
             playerIsChoosing = false;
             endOfChoice.Raise();
             spinButton.enabled = true;
+            counter = 5;
         }
     }
 

@@ -19,6 +19,7 @@ public class GameRulesLogic : MonoBehaviour
     private void Update()
     {
         GameOverRule();
+        PlayerIsDead();
     }
 
     private void GameOverRule()
@@ -31,6 +32,16 @@ public class GameRulesLogic : MonoBehaviour
                 _miniGameData.gameIsOver = true;
                 spinButton.enabled = false;
                 miniGameDisplayUI_Off.Raise();
+            }
+        }
+    }
+
+    private void PlayerIsDead() {
+        for (int i = 0; i < _playersData.Length; i++)
+        {
+            if(_playersData[i].hearts <= 0)
+            {
+                _playersData[i].playerIsDead = true;
             }
         }
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.8304987, g: 4.1653576, b: 12.021142, a: 1}
+  m_IndirectSpecularColor: {r: 0.8301126, g: 4.164562, b: 12.021038, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9633,6 +9633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d97d8b4220f73f45baca2fc5a5bb5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData:
+  - {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  - {fileID: 11400000, guid: a2f511fb07a29974e890b64e3e5f4782, type: 2}
+  - {fileID: 11400000, guid: 21fb31fba8dc2df4cb8b572e6c6ccf93, type: 2}
+  - {fileID: 11400000, guid: a0bd69e78bfa0074d89599f2550b9762, type: 2}
   _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   sharkPrefab: {fileID: 1670974493637204, guid: 06af1881775791342a6bbe78ab61ebfe, type: 3}
   stunEffects:
@@ -27717,9 +27722,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0bd69e78bfa0074d89599f2550b9762, type: 2}
   _miniGameData: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
   _spiningWheelData: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
-  AIAutoSpin_ID: {fileID: 11400000, guid: c38f4634d7329db4abbd914cceffa37c, type: 2}
+  CheckPrizeAI_ID: {fileID: 11400000, guid: c38f4634d7329db4abbd914cceffa37c, type: 2}
   AISharkAnimation_ID: {fileID: 11400000, guid: a2bf9507cbae01b41a55350be631a9ab, type: 2}
   ScoreUI_Updater: {fileID: 11400000, guid: ef218766fc92d734bb4bbc8e89c9e94c, type: 2}
+  PlayerIsDead_ID: {fileID: 11400000, guid: ce11b4bc6b285b9449402513f26c366d, type: 2}
   minCounter: 1.9
   maxCounter: 1.9
 --- !u!114 &2137506701

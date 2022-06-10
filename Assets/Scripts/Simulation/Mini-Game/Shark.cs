@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Shark : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] PlayerData[] _playerData;
     [SerializeField] SpiningWheelData _spiningWheelData;
 
     [Header("Prefabs")]
@@ -30,7 +31,8 @@ public class Shark : MonoBehaviour
         StartCoroutine(PlayerSharkAnimation());
     }
 
-    public void AISharkAnimation_Listener(int id) {
+    public void AISharkAnimation_Listener(int id)
+    {
         StartCoroutine(AISharkAnimation(id));
     }
 
@@ -51,7 +53,8 @@ public class Shark : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator AISharkAnimation(int id) {
+    IEnumerator AISharkAnimation(int id)
+    {
 
         playersAnimator[id].SetBool("isSpining", true);
         AISpawnShark();
@@ -74,7 +77,8 @@ public class Shark : MonoBehaviour
         cloneShark.transform.parent = paths[_spiningWheelData.choosenPlayer].transform;
     }
 
-    private void AISpawnShark() {
+    private void AISpawnShark()
+    {
         AIcloneShark = Instantiate(sharkPrefab, paths[_spiningWheelData.AIChoosenPlayer].transform.position, Quaternion.identity);
         AIcloneShark.transform.parent = paths[_spiningWheelData.AIChoosenPlayer].transform;
     }
@@ -86,7 +90,13 @@ public class Shark : MonoBehaviour
         stunEffects[_spiningWheelData.choosenPlayer].SetActive(true);
         stunEffects[_spiningWheelData.choosenPlayer].transform.DOScale(1, 1f);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+
+        if (_playerData[_spiningWheelData.choosenPlayer].playerIsDead)
+        {
+            _spiningWheelData.choosenPlayer = 0;
+            yield return null;
+        }
 
         playersAnimator[_spiningWheelData.choosenPlayer].SetBool("gotHit", false);
         stunEffects[_spiningWheelData.choosenPlayer].transform.DOScale(0, 1f).OnComplete(() =>
@@ -97,10 +107,10 @@ public class Shark : MonoBehaviour
 
         yield return null;
     }
-    
+
     IEnumerator AIGotHitEffect()
     {
-        if(_spiningWheelData.AIChoosenPlayer == 0)
+        if (_spiningWheelData.AIChoosenPlayer == 0)
         {
             spinButton.enabled = false;
         }
@@ -109,14 +119,21 @@ public class Shark : MonoBehaviour
         stunEffects[_spiningWheelData.AIChoosenPlayer].SetActive(true);
         stunEffects[_spiningWheelData.AIChoosenPlayer].transform.DOScale(1, 1f);
 
-        yield return new WaitForSeconds(3f);
+        
 
+        yield return new WaitForSeconds(2f);
+
+
+        if (_playerData[_spiningWheelData.AIChoosenPlayer].playerIsDead)
+        {
+            _spiningWheelData.AIChoosenPlayer = 0;
+            yield return null;
+        }
 
         playersAnimator[_spiningWheelData.AIChoosenPlayer].SetBool("gotHit", false);
         stunEffects[_spiningWheelData.AIChoosenPlayer].transform.DOScale(0, 1f).OnComplete(() =>
         {
             stunEffects[_spiningWheelData.AIChoosenPlayer].SetActive(false);
-
 
             if (_spiningWheelData.AIChoosenPlayer == 0)
             {
@@ -128,8 +145,4 @@ public class Shark : MonoBehaviour
 
         yield return null;
     }
-
-
-
-
 }

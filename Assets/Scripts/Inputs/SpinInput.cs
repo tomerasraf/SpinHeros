@@ -1,5 +1,5 @@
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpinInput : MonoBehaviour
 {
@@ -8,7 +8,8 @@ public class SpinInput : MonoBehaviour
 
     public void SpinInputEventCall()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2) {
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
 
             if (_playerData.spins >= 0)
             {
@@ -17,7 +18,13 @@ public class SpinInput : MonoBehaviour
         }
 
 
-        if (SceneManager.GetActiveScene().buildIndex == 3) {
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+
+            if (_playerData.playerIsDead)
+            {
+                return;
+            }
             SpinButtonPressed.Raise();
         }
     }

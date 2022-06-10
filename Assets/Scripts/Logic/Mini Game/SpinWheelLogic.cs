@@ -21,7 +21,7 @@ public class SpinWheelLogic : MonoBehaviour
 
     [Header("Button")]
     [SerializeField] Button spinButton;
-    
+
     private bool wheelIsSpining;
 
     public void WheelSpinLogic()

@@ -12,8 +12,6 @@ public class WheelPrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent Score_Update;
     [SerializeField] IntEvent PlayerID_Anim_FishPrize;
     [SerializeField] IntEvent AIAutoAttack_ID;
-   
-
 
     public void CheckWheelResult()
     {
@@ -34,13 +32,22 @@ public class WheelPrizeLogic : MonoBehaviour
                 break;
 
             case 1:
-                if (id == 0) {
+                if (id == 0)
+                {
                     ChooseCharacter.Raise();
                 }
                 else
                 {
-                    AIAutoAttack_ID.Raise(id);
-                }    
+
+                    if (_miniGameData.playerAlive != 1)
+                    {
+                        AIAutoAttack_ID.Raise(id);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
 
                 break;
 

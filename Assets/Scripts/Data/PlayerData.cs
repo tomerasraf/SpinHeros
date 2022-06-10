@@ -20,4 +20,5 @@ public class PlayerData : ScriptableObject
     public float playerProgress = 0;
     public int score = 0;
     public int currentPrize = 0;
+    public bool playerIsDead = false;
 }

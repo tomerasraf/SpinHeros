@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,14 +28,16 @@ public class DataManager : MonoBehaviour
             ResetMiniGameMachineOddsData();
         }
 
-        if (SceneManager.GetActiveScene().buildIndex == 2) {
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
             ResetslotMachineOddsData();
         }
 
-        if (SceneManager.GetActiveScene().buildIndex == 3) {
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
             ResetMiniGameData();
         }
-       
+
     }
 
     private void ResetslotMachineOddsData()
@@ -184,9 +184,11 @@ public class DataManager : MonoBehaviour
         _miniGameData.gameIsOver = false;
         _miniGameMachine.choosenPlayer = 0;
         _miniGameMachine.AIChoosenPlayer = 0;
+        _miniGameData.playerAlive = 4;
 
         for (int i = 0; i < _playerData.Length; i++)
         {
+            _playerData[i].playerIsDead = false;
             _playerData[i].hearts = 3;
             _playerData[i].score = 0;
         }
