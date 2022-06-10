@@ -45,6 +45,10 @@ public class MiniGameAI : MonoBehaviour
             float IDRand = Random.Range(1, 4);
             while (_playersData[(int)IDRand].playerIsDead)
             {
+                if(_miniGameData.playerAlive == 1)
+                {
+                    break;
+                }
                 IDRand = Random.Range(1, 4);
             }
 
@@ -74,18 +78,9 @@ public class MiniGameAI : MonoBehaviour
 
     IEnumerator AIAutoAttack(int id)
     {
-        _miniGameData.playerAlive = 4;
+        
 
-        for (int i = 0; i < _playersData.Length; i++)
-        {
-            if (_playersData[i].playerIsDead)
-            {
-                _miniGameData.playerAlive--;
-            }
-            yield return null;
-        }
-
-            
+         
             // prevent the AI from attacking itself and dead players.
             int randPlayerToAttack = Random.Range(0, 4);
         while (randPlayerToAttack == id || _playersData[randPlayerToAttack].playerIsDead)

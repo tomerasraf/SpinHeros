@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Player 4
   m_EditorClassIdentifier: 
   coins: 0
+  crowns: 0
   spins: 50
   maxSpins: 50
   extraSpins: 0
   moreSpinsTimer: 60
   bet: 1
-  hearts: 2
-  playerPlace: 2
+  miniGameTicket: 0
+  hearts: 0
   playerProgress: 0
-  score: 480
-  maxScore: 300
+  score: 100
+  currentPrize: 50
+  playerIsDead: 1

@@ -38,10 +38,11 @@ public class ChoosePlayerLogic : MonoBehaviour
 
     private void ChoosePlayer()
     {
-        
+
         counter -= Time.deltaTime;
 
-        if (counter <= 0) {
+        if (counter <= 0)
+        {
             spinButton.enabled = true;
             endOfChoice.Raise();
             playerIsChoosing = false;

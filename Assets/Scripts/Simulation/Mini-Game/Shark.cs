@@ -38,6 +38,7 @@ public class Shark : MonoBehaviour
 
     IEnumerator PlayerSharkAnimation()
     {
+        paths[_spiningWheelData.choosenPlayer].DORewind();
         playersAnimator[0].SetBool("isSpining", true);
         PlayerSpawnShark();
         paths[_spiningWheelData.choosenPlayer].DOPlay();
@@ -55,7 +56,7 @@ public class Shark : MonoBehaviour
 
     IEnumerator AISharkAnimation(int id)
     {
-
+        paths[_spiningWheelData.AIChoosenPlayer].DORewind();
         playersAnimator[id].SetBool("isSpining", true);
         AISpawnShark();
         paths[_spiningWheelData.AIChoosenPlayer].DOPlay();

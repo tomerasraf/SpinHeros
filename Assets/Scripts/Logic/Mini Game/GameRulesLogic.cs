@@ -20,6 +20,7 @@ public class GameRulesLogic : MonoBehaviour
     {
         GameOverRule();
         PlayerIsDead();
+        PlayerWonByAttacking();
     }
 
     private void GameOverRule()
@@ -42,6 +43,33 @@ public class GameRulesLogic : MonoBehaviour
             if(_playersData[i].hearts <= 0)
             {
                 _playersData[i].playerIsDead = true;
+            }
+        }
+    }
+
+    private void PlayerWonByAttacking() {
+
+        _miniGameData.playerAlive = 4;
+
+        for (int i = 0; i < _playersData.Length; i++)
+        {
+            if (_playersData[i].playerIsDead)
+            {
+                _miniGameData.playerAlive--;
+            }
+        }
+
+
+
+        for (int i = 0; i < _playersData.Length; i++)
+        {
+            if (_miniGameData.playerAlive == 1)
+            {
+                if (!_playersData[i].playerIsDead) {
+
+                   playerWon.Raise(i);
+                   _miniGameData.gameIsOver = true;
+                }
             }
         }
     }

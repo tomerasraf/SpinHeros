@@ -39,7 +39,7 @@ public class WheelPrizeLogic : MonoBehaviour
                 else
                 {
 
-                    if (_miniGameData.playerAlive != 1)
+                    if (_miniGameData.playerAlive > 1)
                     {
                         AIAutoAttack_ID.Raise(id);
                     }
