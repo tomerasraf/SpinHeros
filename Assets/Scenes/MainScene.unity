@@ -67479,25 +67479,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2141693515}
     m_Modifications:
-    - target: {fileID: 6369001770922431229, guid: f2e1e1fc6b58fb24c95bd0cf1c977532, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6369001770922431229, guid: f2e1e1fc6b58fb24c95bd0cf1c977532, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 068f73b0d21ea9c4bab038f2133feb9f, type: 3}
-    - target: {fileID: 6369001770922431229, guid: f2e1e1fc6b58fb24c95bd0cf1c977532, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -6865318476007035718, guid: 4b50eb2d90c6b9e45b0a12f360dc33b9, type: 2}
     - target: {fileID: 6920066255974667091, guid: f2e1e1fc6b58fb24c95bd0cf1c977532, type: 3}
       propertyPath: m_Name
       value: Fire_Camp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6920066255974667091, guid: f2e1e1fc6b58fb24c95bd0cf1c977532, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7728972131269724649, guid: f2e1e1fc6b58fb24c95bd0cf1c977532, type: 3}
       propertyPath: m_RootOrder
@@ -67545,31 +67529,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e1e1fc6b58fb24c95bd0cf1c977532, type: 3}
---- !u!1 &7838632015243673991 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7839852487973602614, guid: f2e1e1fc6b58fb24c95bd0cf1c977532, type: 3}
-  m_PrefabInstance: {fileID: 7838632015243673990}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7838632015243673992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7838632015243673991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &7838797900769408045
 GameObject:
   m_ObjectHideFlags: 0
