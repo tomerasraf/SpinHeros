@@ -16991,10 +16991,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a98c79fd35ad7149aea1b7ef7aa40db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _miniGameData: {fileID: 0}
+  _miniGameData: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
   _miniGameMachine: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
   _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
+  _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
   _playerData:
   - {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
 --- !u!4 &1736225326
@@ -46326,6 +46327,10 @@ PrefabInstance:
       propertyPath: _slotMachineData
       value: 
       objectReference: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
+    - target: {fileID: 5576304913028467293, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
+      propertyPath: _gameSettingsData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
     - target: {fileID: 5576304913028467293, guid: 5af22c711a67c4740b4ecb5c572ae408, type: 3}
       propertyPath: extraSpinsUI_Updater
       value: 

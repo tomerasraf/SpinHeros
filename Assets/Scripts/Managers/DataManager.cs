@@ -8,6 +8,10 @@ public class DataManager : MonoBehaviour
     [SerializeField] SpiningWheelData _miniGameMachine;
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] WorldData _worldData;
+    [SerializeField] GameSettingsData _gameSettingsData;
+    
+   
+    
     public PlayerData[] _playerData;
     private int symbolIndex = 0;
     private int counter = 0;
@@ -18,26 +22,24 @@ public class DataManager : MonoBehaviour
         Application.targetFrameRate = 120;
         Screen.fullScreen = true;
 
-        ResetWorldData();
-        _playerData[0].bet = 1;
-        _playerData[0].hearts = 0;
-        //ResetPlayerGameData();
+      
 
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             ResetMiniGameMachineOddsData();
+            ResetMiniGameData();
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
+            if (_gameSettingsData.TutorialMode)
+            {
+                TutorialPlayerGameData();
+            }
+
+            ResetWorldData();
             ResetslotMachineOddsData();
         }
-
-        if (SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            ResetMiniGameData();
-        }
-
     }
 
     private void ResetslotMachineOddsData()
@@ -156,10 +158,10 @@ public class DataManager : MonoBehaviour
         _worldData.priceToBuild[3] = _worldData.house_4_Price;
         _worldData.priceToBuild[4] = _worldData.house_5_Price;
 
-        // for (int i = 0; i < _worldData.isBuilded.Length; i++)
-        // {
-        //     _worldData.isBuilded[i] = false;
-        // }
+        for (int i = 0; i < _worldData.isBuilded.Length; i++)
+            {
+             _worldData.isBuilded[i] = false;
+            }
 
     }
 
@@ -169,6 +171,21 @@ public class DataManager : MonoBehaviour
         {
             _playerData[i].coins = 0;
             _playerData[i].spins = 50;
+            _playerData[i].moreSpinsTimer = 60f;
+            _playerData[i].bet = 1;
+            _playerData[i].hearts = 0;
+            _playerData[i].playerProgress = 0;
+            _playerData[i].score = 0;
+            _playerData[i].crowns = 0;
+            _playerData[i].miniGameTicket = 0;
+        }
+    }
+
+    private void TutorialPlayerGameData() {
+        for (int i = 0; i < _playerData.Length; i++)
+        {
+            _playerData[i].coins = 75000;
+            _playerData[i].spins = 8;
             _playerData[i].moreSpinsTimer = 60f;
             _playerData[i].bet = 1;
             _playerData[i].hearts = 0;

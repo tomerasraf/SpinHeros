@@ -3,16 +3,16 @@ using UnityEngine;
 public class SpinLogic : MonoBehaviour
 {
     [Header("Data")]
-    [SerializeField]
-    private SlotMachineData _slotMachineData;
-
-    [SerializeField]
-    private PlayerData _playerData;
+    [SerializeField] SlotMachineData _slotMachineData;
+    [SerializeField] PlayerData _playerData;
+    [SerializeField] GameSettingsData _gameSettingsData;
 
     [Header("Events")]
 
     [SerializeField]
     VoidEvent spinBar_Updater;
+
+    private int sequenceStage = 0;
 
     private void Update()
     {
@@ -31,13 +31,49 @@ public class SpinLogic : MonoBehaviour
 
         spinBar_Updater.Raise();
 
-        RanomizeSpin(_slotMachineData.slot1,
-        out _slotMachineData.slotResults[0]);
-        RanomizeSpin(_slotMachineData.slot2,
-        out _slotMachineData.slotResults[1]);
-        RanomizeSpin(_slotMachineData.slot3,
-        out _slotMachineData.slotResults[2]);
+        if (_gameSettingsData.TutorialMode)
+        {
+
+            if (sequenceStage == 0 || sequenceStage == 1)
+            {
+                TutorialSpin(1);
+            }
+            else if (sequenceStage == 2 || sequenceStage == 4 || sequenceStage == 5)
+            {
+                TutorialSpin(0);
+            }
+            else if (sequenceStage == 3)
+            {
+                TutorialSpin(4);
+            }
+            else if (sequenceStage == 6)
+            {
+                TutorialSpin(2);
+            }
+        }
+        else
+        {
+            RanomizeSpin(_slotMachineData.slot1,
+            out _slotMachineData.slotResults[0]);
+            RanomizeSpin(_slotMachineData.slot2,
+            out _slotMachineData.slotResults[1]);
+            RanomizeSpin(_slotMachineData.slot3,
+            out _slotMachineData.slotResults[2]);
+        }
+
+
     }
+
+    private void TutorialSpin(int symbolID)
+    {
+        for (int i = 0; i < _slotMachineData.slotResults.Length; i++)
+        {
+            _slotMachineData.slotResults[i] = symbolID;
+        }
+        sequenceStage++;
+        Debug.Log(sequenceStage);
+    }
+
 
     private void SpinRefillLogic()
     {

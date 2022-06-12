@@ -42,8 +42,8 @@ public class MiniGameAI : MonoBehaviour
             int randSymbol = 0;
             randSymbol = Random.Range(0, 100);
 
-            float IDRand = Random.Range(1, 4);
-            while (_playersData[(int)IDRand].playerIsDead)
+            int IDRand = Random.Range(1, 4);
+            while (_playersData[IDRand].playerIsDead)
             {
                 if(_miniGameData.playerAlive == 1)
                 {
@@ -52,21 +52,21 @@ public class MiniGameAI : MonoBehaviour
                 IDRand = Random.Range(1, 4);
             }
 
-            _spiningWheelData.results[(int)IDRand] = _spiningWheelData.wheelsSlots[randSymbol];
+            _spiningWheelData.results[IDRand] = _spiningWheelData.wheelsSlots[randSymbol];
 
             if (_spiningWheelData.choosenPlayer == IDRand || _spiningWheelData.AIChoosenPlayer == IDRand)
             {
                 yield return null;
             }
-            else if (_playersData[(int)IDRand].playerIsDead)
+            else if (_playersData[IDRand].playerIsDead)
             {
 
-                PlayerIsDead_ID.Raise((int)IDRand);
+                PlayerIsDead_ID.Raise(IDRand);
                 yield return null;
             }
             else
             {
-                CheckPrizeAI_ID.Raise((int)IDRand);
+                CheckPrizeAI_ID.Raise(IDRand);
             }
 
 
