@@ -37,6 +37,7 @@ public class DataManager : MonoBehaviour
                 TutorialPlayerGameData();
             }
 
+            _playerData[0].bet = 1;
             ResetWorldData();
             ResetslotMachineOddsData();
         }
