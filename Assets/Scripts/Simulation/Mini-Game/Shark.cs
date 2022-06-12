@@ -24,7 +24,7 @@ public class Shark : MonoBehaviour
     private GameObject cloneShark;
     private GameObject AIcloneShark;
 
-    private float animDuration = 1.5f;
+    private float animDuration = 0.6f;
 
     public void PlayerSharkAnimation_Listener()
     {
@@ -44,9 +44,7 @@ public class Shark : MonoBehaviour
         paths[_spiningWheelData.choosenPlayer].DOPlay();
 
         yield return new WaitForSeconds(animDuration);
-
-        paths[_spiningWheelData.choosenPlayer].DORewind();
-        Destroy(cloneShark);
+        Destroy(cloneShark, 2);
         StartCoroutine(playerGotHitEffect());
         playersAnimator[_spiningWheelData.choosenPlayer].SetBool("gotHit", true);
 
@@ -63,8 +61,7 @@ public class Shark : MonoBehaviour
 
         yield return new WaitForSeconds(animDuration);
 
-        paths[_spiningWheelData.AIChoosenPlayer].DORewind();
-        Destroy(AIcloneShark);
+        Destroy(AIcloneShark, 2);
         StartCoroutine(AIGotHitEffect());
         playersAnimator[_spiningWheelData.AIChoosenPlayer].SetBool("gotHit", true);
 
