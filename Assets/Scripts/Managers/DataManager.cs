@@ -10,8 +10,6 @@ public class DataManager : MonoBehaviour
     [SerializeField] WorldData _worldData;
     [SerializeField] GameSettingsData _gameSettingsData;
     
-   
-    
     public PlayerData[] _playerData;
     private int symbolIndex = 0;
     private int counter = 0;
@@ -185,8 +183,8 @@ public class DataManager : MonoBehaviour
     private void TutorialPlayerGameData() {
         for (int i = 0; i < _playerData.Length; i++)
         {
-            _playerData[i].coins = 75000;
-            _playerData[i].spins = 8;
+            _playerData[i].coins = 10000;
+            _playerData[i].spins = 7;
             _playerData[i].moreSpinsTimer = 60f;
             _playerData[i].bet = 1;
             _playerData[i].hearts = 0;

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buldingModeIsOn: 1
   satisfactionBar: 0
-  house_1_Price: 25000
-  house_2_Price: 10000
+  house_1_Price: 10000
+  house_2_Price: 25000
   house_3_Price: 40000
   house_4_Price: 75000
   house_5_Price: 100000
-  priceToBuild: a861000010270000409c0000f8240100a0860100
-  isBuilded: 0101010101
+  priceToBuild: 10270000a8610000409c0000f8240100a0860100
+  isBuilded: 0100000000

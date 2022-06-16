@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Assets.Scripts.Sound
-{
     public class ExitBuildingModeSound : MonoBehaviour
     {
         [SerializeField] AudioClip exitBuildingModeSound;
@@ -19,4 +17,3 @@ namespace Assets.Scripts.Sound
             audio.Play();
         }
     }
-}

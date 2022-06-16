@@ -268,9 +268,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 18087137}
-  - component: {fileID: 18087139}
   - component: {fileID: 18087140}
   - component: {fileID: 18087138}
+  - component: {fileID: 18087141}
   m_Layer: 0
   m_Name: ExitBuildingMode
   m_TagString: Untagged
@@ -309,8 +309,8 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 18087139}
-        m_TargetAssemblyTypeName: Assets.Scripts.Sound.ExitBuildingModeSound, Assembly-CSharp
+      - m_Target: {fileID: 18087141}
+        m_TargetAssemblyTypeName: ExitBuildingModeSound, Assembly-CSharp
         m_MethodName: PlayExitBuildModeSFX_Listener
         m_Mode: 1
         m_Arguments:
@@ -321,19 +321,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &18087139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18087136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2abf6ed0cffd2594494dfdf68c049f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exitBuildingModeSound: {fileID: 8300000, guid: fa75f8aca82d8ab45a62fbb2b2995281, type: 3}
 --- !u!82 &18087140
 AudioSource:
   m_ObjectHideFlags: 0
@@ -430,6 +417,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &18087141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18087136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979bd39772fec97479a140aa17b768ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitBuildingModeSound: {fileID: 8300000, guid: fa75f8aca82d8ab45a62fbb2b2995281, type: 3}
 --- !u!1001 &20899459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4430,8 +4430,8 @@ GameObject:
   m_Component:
   - component: {fileID: 559824370}
   - component: {fileID: 559824371}
-  - component: {fileID: 559824373}
   - component: {fileID: 559824372}
+  - component: {fileID: 559824373}
   m_Layer: 0
   m_Name: WooshSound
   m_TagString: Untagged
@@ -4587,7 +4587,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 559824369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 569254cf15640514697390e52c9f4783, type: 3}
+  m_Script: {fileID: 11500000, guid: 61ae6324ed1337e4493e0993d3bc143f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wooshSound: {fileID: 8300000, guid: 02d218be1d4d6f64f9767d42d7c95e9d, type: 3}
@@ -6543,9 +6543,9 @@ GameObject:
   - component: {fileID: 678031007}
   - component: {fileID: 678031010}
   - component: {fileID: 678031009}
-  - component: {fileID: 678031008}
+  - component: {fileID: 678031011}
   m_Layer: 0
-  m_Name: Click
+  m_Name: SpinButtonClick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6566,20 +6566,6 @@ Transform:
   m_Father: {fileID: 68519511}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &678031008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678031006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e4723b3cb89aa439a760036cd0032a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spiningWheelSFX: {fileID: 8300000, guid: 49a151c085b730b41b6d47ebcc020afe, type: 3}
-  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
 --- !u!114 &678031009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6596,9 +6582,9 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 678031008}
-        m_TargetAssemblyTypeName: WheelSpinSound, Assembly-CSharp
-        m_MethodName: PlaySpinSFX_Listener
+      - m_Target: {fileID: 678031011}
+        m_TargetAssemblyTypeName: SpinClickSound, Assembly-CSharp
+        m_MethodName: PlayButtonClickSFX_Listener
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6704,6 +6690,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &678031011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678031006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b8e5fb30d30c648b277c08d8aa8e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonClickSFX: {fileID: 8300000, guid: b37aec03b80ef494ea54ffe6d19734da, type: 3}
 --- !u!1 &679026744
 GameObject:
   m_ObjectHideFlags: 0
@@ -6713,9 +6712,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 679026745}
-  - component: {fileID: 679026747}
   - component: {fileID: 679026748}
   - component: {fileID: 679026746}
+  - component: {fileID: 679026749}
   m_Layer: 0
   m_Name: BuyingBuilding
   m_TagString: Untagged
@@ -6754,7 +6753,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679026747}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Assets.Scripts.Sound.BuyingBuildingSound, Assembly-CSharp
         m_MethodName: PlayBuyingBuildingSFX_Listener
         m_Mode: 1
@@ -6766,19 +6765,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &679026747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679026744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd056df2c74f89147a6686e017942976, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyingBuildingClip: {fileID: 8300000, guid: f5720356ac879504284836b988297c03, type: 3}
 --- !u!82 &679026748
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6875,6 +6861,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &679026749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679026744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115cb5d5984f7524ea67115d35266306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyingBuildingClip: {fileID: 8300000, guid: f5720356ac879504284836b988297c03, type: 3}
 --- !u!1 &705197798
 GameObject:
   m_ObjectHideFlags: 0
@@ -8570,7 +8569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10,000
+  m_text: 25,000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
   m_sharedMaterial: {fileID: 2830636965969884548, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
@@ -9179,9 +9178,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935415463}
-  - component: {fileID: 935415465}
   - component: {fileID: 935415466}
   - component: {fileID: 935415464}
+  - component: {fileID: 935415467}
   m_Layer: 0
   m_Name: EnterBuildingMode
   m_TagString: Untagged
@@ -9220,8 +9219,8 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 935415465}
-        m_TargetAssemblyTypeName: Assets.Scripts.Sound.EnterBuildingModeSound, Assembly-CSharp
+      - m_Target: {fileID: 935415467}
+        m_TargetAssemblyTypeName: EnterBuildingModeSound, Assembly-CSharp
         m_MethodName: PlayBuyingBuildingSFX_Listener
         m_Mode: 1
         m_Arguments:
@@ -9232,19 +9231,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &935415465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935415462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3829b97f00725ab4189f50176afffef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterBuildingModeSound: {fileID: 8300000, guid: 71f7e26d182d3754ea18f2359bc7e360, type: 3}
 --- !u!82 &935415466
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9341,6 +9327,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &935415467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935415462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88785d6dfd3b4424eba07430546ccef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterBuildingModeSound: {fileID: 8300000, guid: 71f7e26d182d3754ea18f2359bc7e360, type: 3}
 --- !u!4 &935643690
 Transform:
   m_ObjectHideFlags: 0
@@ -11429,11 +11428,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1206522097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e4723b3cb89aa439a760036cd0032a, type: 3}
+  m_Script: {fileID: 11500000, guid: d91191858e9ab0c418c628463e3d07a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spiningWheelSFX: {fileID: 8300000, guid: c6efbdb6af27ee74e80c7615ab440a91, type: 3}
-  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  spiningWheelSFX: {fileID: 8300000, guid: 9cefbd80e5b416141a9dfa86bb03be38, type: 3}
 --- !u!95 &1212150746
 Animator:
   serializedVersion: 4
@@ -13091,7 +13089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1316668414
 RectTransform:
   m_ObjectHideFlags: 0
@@ -69121,7 +69119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25,000
+  m_text: 10,000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
   m_sharedMaterial: {fileID: 2830636965969884548, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
