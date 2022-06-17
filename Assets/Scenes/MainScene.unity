@@ -2327,7 +2327,7 @@ RectTransform:
   - {fileID: 320389457}
   - {fileID: 1389671063}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2563,7 +2563,7 @@ RectTransform:
   m_Children:
   - {fileID: 1020467620}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3186,13 +3186,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383361038}
+  - component: {fileID: 383361039}
   m_Layer: 0
   m_Name: TutoriaUlManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &383361038
 Transform:
   m_ObjectHideFlags: 0
@@ -3210,6 +3211,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383361039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383361037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351ac2e38f5a090469ab47a29cc1441d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
+--- !u!1 &388958026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388958027}
+  - component: {fileID: 388958029}
+  - component: {fileID: 388958028}
+  m_Layer: 5
+  m_Name: BuildingModeFloatingPointer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &388958027
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388958026}
+  m_LocalRotation: {x: -0, y: -0, z: -0.99836016, w: -0.05724511}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9818244, y: 0.9818244, z: 0.9818243}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1316668414}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -186.563}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -355.48358, y: -813.3053}
+  m_SizeDelta: {x: 254.6842, y: 254.6842}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &388958028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388958026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: cc1ffa58850ce4d49b8b88aa08201aac, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &388958029
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388958026}
+  m_CullTransparentMesh: 1
 --- !u!1 &392689173
 GameObject:
   m_ObjectHideFlags: 0
@@ -6753,8 +6843,8 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets.Scripts.Sound.BuyingBuildingSound, Assembly-CSharp
+      - m_Target: {fileID: 679026749}
+        m_TargetAssemblyTypeName: BuyingBuildingSound, Assembly-CSharp
         m_MethodName: PlayBuyingBuildingSFX_Listener
         m_Mode: 1
         m_Arguments:
@@ -12084,7 +12174,7 @@ GameObject:
   - component: {fileID: 1250488510}
   - component: {fileID: 1250488509}
   m_Layer: 5
-  m_Name: Buildings
+  m_Name: BuildingsMassage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12104,7 +12194,7 @@ RectTransform:
   m_Children:
   - {fileID: 601759073}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13104,8 +13194,9 @@ RectTransform:
   m_Children:
   - {fileID: 1254282290}
   - {fileID: 664794600}
-  - {fileID: 1761681686}
   - {fileID: 1250488508}
+  - {fileID: 388958027}
+  - {fileID: 1761681686}
   - {fileID: 1619256726}
   - {fileID: 319427216}
   - {fileID: 2111598345}
@@ -15238,7 +15329,7 @@ RectTransform:
   - {fileID: 1153036961}
   - {fileID: 705197799}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16431,9 +16522,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1ff258a62f898489d7bfa515f537c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointer: {fileID: 1761681685}
+  popupMassage: {fileID: 1250488507}
+  sliderPointer: {fileID: 1761681685}
+  floatingPointer: {fileID: 388958026}
   animationSpeed: 1
-  pointerOffset: 800
+  sliderPointerOffset: 800
+  floatingPointerOffset: 50
+  pointerSwitchCounter: 3
 --- !u!114 &1679329887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16480,7 +16575,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1679329886}
         m_TargetAssemblyTypeName: Assets.Scripts.Tutorial.BuildModeTutorial, Assembly-CSharp
-        m_MethodName: DisplayOffBuildModePointer_Listener
+        m_MethodName: RemoveBuildModePointer_Listener
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17239,7 +17334,7 @@ GameObject:
   - component: {fileID: 1761681688}
   - component: {fileID: 1761681687}
   m_Layer: 5
-  m_Name: BuildingModePointer
+  m_Name: BuildingModeSliderPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17258,7 +17353,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -186.563}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17279,7 +17374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -17770,7 +17865,7 @@ RectTransform:
   m_Children:
   - {fileID: 811192872}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17888,7 +17983,6 @@ MonoBehaviour:
   - {fileID: 819237229}
   - {fileID: 1008775239}
   - {fileID: 2061083033}
-  campfire: {fileID: 0}
   playerSpentCoins: {fileID: 11400000, guid: e579152a5580a98439a10577e7b4b753, type: 2}
   exitBuildModeButton: {fileID: 1200792612}
 --- !u!4 &1888672839
@@ -19854,7 +19948,7 @@ RectTransform:
   - {fileID: 4326740}
   - {fileID: 1560034956}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -39,7 +39,9 @@ public static class TutorialAnimationUtils
             pointer.transform.DOScale(pointerStartSize, animationSpeed).SetEase(Ease.OutBounce);
         });
 
-        pointer.transform.DOMoveX(startPosition.x + pointerOffset, animationSpeed).SetLoops(-1, LoopType.Yoyo);
+        pointer.transform.DOMoveX(startPosition.x + pointerOffset, animationSpeed).SetLoops(2, LoopType.Yoyo).OnComplete(() => {
+            RemovePointerAnimation(pointer, 0.5f);
+        });
     }
 
     public static void RemovePointerAnimation(GameObject poiner, float speedOfRemove)
