@@ -12,7 +12,8 @@ public class ChoosePlayerLogic : MonoBehaviour
     [Header("Events")]
     [SerializeField] VoidEvent shark;
     [SerializeField] VoidEvent endOfChoice;
-
+    [SerializeField] VoidEvent SharkCatch;
+ 
     [Header("Button")]
     [SerializeField] Button spinButton; 
 
@@ -76,6 +77,7 @@ public class ChoosePlayerLogic : MonoBehaviour
 
         if (hit.transform.name == "Player_2")
         {
+            SharkCatch.Raise();
             _spiningWheelData.choosenPlayer = 1;
             shark.Raise();
             attackChoosenPlayer();
@@ -86,6 +88,7 @@ public class ChoosePlayerLogic : MonoBehaviour
         }
         if (hit.transform.name == "Player_3")
         {
+            SharkCatch.Raise();
             _spiningWheelData.choosenPlayer = 2;
             shark.Raise();
             attackChoosenPlayer();
@@ -96,6 +99,7 @@ public class ChoosePlayerLogic : MonoBehaviour
         }
         if (hit.transform.name == "Player_4")
         {
+            SharkCatch.Raise();
             _spiningWheelData.choosenPlayer = 3;
             shark.Raise();
             attackChoosenPlayer();

@@ -6,6 +6,9 @@ public class PrizeLogic : MonoBehaviour
 {
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] PlayerData _playerData;
+
+    [Header("Events")]
+    [SerializeField] VoidEvent JackpotSound;
     [SerializeField] VoidEvent miniGameTicketIsEarned;
     [SerializeField] VoidEvent spinIsEarned;
     [SerializeField] VoidEvent heartIsEarned;
@@ -25,6 +28,7 @@ public class PrizeLogic : MonoBehaviour
           && _slotMachineData.slotResults[2] == 1)
         {
             // Coin Prize
+            JackpotSound.Raise();
             _playerData.coins += _slotMachineData.coinJackpotPrize * _playerData.bet;
             _slotMachineData.CurrentPrize = _slotMachineData.coinJackpotPrize * _playerData.bet;
             coinIsEarned.Raise();
@@ -36,6 +40,7 @@ public class PrizeLogic : MonoBehaviour
           && _slotMachineData.slotResults[2] == 0)
         {
             // Stash Of Coins Prize
+            JackpotSound.Raise();
             _playerData.coins += _slotMachineData.StashJackpotPrize * _playerData.bet;
             _slotMachineData.CurrentPrize = _slotMachineData.StashJackpotPrize * _playerData.bet;
             coinIsEarned.Raise();

@@ -12,6 +12,11 @@ public class WheelPrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent Score_Update;
     [SerializeField] IntEvent PlayerID_Anim_FishPrize;
     [SerializeField] IntEvent AIAutoAttack_ID;
+    [SerializeField] VoidEvent CommonFishCatch;
+    [SerializeField] VoidEvent RareFishCatch;
+    [SerializeField] VoidEvent DreamFishCatch;
+    [SerializeField] VoidEvent SharkCatch;
+    [SerializeField] VoidEvent BootCatch;
 
     public void CheckWheelResult()
     {
@@ -22,13 +27,12 @@ public class WheelPrizeLogic : MonoBehaviour
     {
         switch (_spiningWheelData.results[id])
         {
-
             case 0:
+                CommonFishCatch.Raise();
                 _playersData[id].score += _spiningWheelData.fishPrize;
                 _playersData[id].currentPrize = _spiningWheelData.fishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);
                 Score_Update.Raise();
-
                 break;
 
             case 1:
@@ -41,6 +45,7 @@ public class WheelPrizeLogic : MonoBehaviour
 
                     if (_miniGameData.playerAlive > 1)
                     {
+                        SharkCatch.Raise();
                         AIAutoAttack_ID.Raise(id);
                     }
                     else
@@ -52,6 +57,7 @@ public class WheelPrizeLogic : MonoBehaviour
                 break;
 
             case 2:
+                BootCatch.Raise();
                 _playersData[id].score += _spiningWheelData.shoePrize;
                 _playersData[id].currentPrize = _spiningWheelData.shoePrize;
                 PlayerID_Anim_FishPrize.Raise(id);
@@ -59,6 +65,7 @@ public class WheelPrizeLogic : MonoBehaviour
                 break;
 
             case 3:
+                DreamFishCatch.Raise();
                 _playersData[id].score += _spiningWheelData.legnderyFishPrize;
                 _playersData[id].currentPrize = _spiningWheelData.legnderyFishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);
@@ -67,6 +74,7 @@ public class WheelPrizeLogic : MonoBehaviour
                 break;
 
             case 4:
+                RareFishCatch.Raise();
                 _playersData[id].score += _spiningWheelData.rareFishPrize;
                 _playersData[id].currentPrize = _spiningWheelData.rareFishPrize;
                 PlayerID_Anim_FishPrize.Raise(id);

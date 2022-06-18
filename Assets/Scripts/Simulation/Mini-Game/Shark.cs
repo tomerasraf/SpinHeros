@@ -21,6 +21,9 @@ public class Shark : MonoBehaviour
     [Header("Spin Button")]
     [SerializeField] Button spinButton;
 
+    [Header("Events")]
+    [SerializeField] VoidEvent PlayerGotHit;
+
     private GameObject cloneShark;
     private GameObject AIcloneShark;
 
@@ -86,6 +89,7 @@ public class Shark : MonoBehaviour
     {
         stunEffects[_spiningWheelData.choosenPlayer].transform.DOScale(0, 0f);
         stunEffects[_spiningWheelData.choosenPlayer].SetActive(true);
+        PlayerGotHit.Raise();
         stunEffects[_spiningWheelData.choosenPlayer].transform.DOScale(1, 1f);
 
         yield return new WaitForSeconds(2f);
@@ -115,6 +119,7 @@ public class Shark : MonoBehaviour
 
         stunEffects[_spiningWheelData.AIChoosenPlayer].transform.DOScale(0, 0f);
         stunEffects[_spiningWheelData.AIChoosenPlayer].SetActive(true);
+        PlayerGotHit.Raise();
         stunEffects[_spiningWheelData.AIChoosenPlayer].transform.DOScale(1, 1f);
 
         
