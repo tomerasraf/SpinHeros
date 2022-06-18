@@ -8,7 +8,11 @@ using UnityEngine.SceneManagement;
 public class MiniGameScreenLoader : MonoBehaviour
 {
     [SerializeField] GameObject background_Image;
+
+    [Header("Events")]
     [SerializeField] VoidEvent startCountDown;
+
+    [Header("GameObjects")]
     [SerializeField] GameObject[] portals;
 
     IEnumerator Start()

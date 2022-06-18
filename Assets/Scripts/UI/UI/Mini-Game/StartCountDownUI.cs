@@ -9,7 +9,7 @@ public class StartCountDownUI : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] VoidEvent miniGameIsStarted;
-
+ 
     private float counter = 3.5f;
 
     private void Start()
@@ -20,7 +20,6 @@ public class StartCountDownUI : MonoBehaviour
     IEnumerator StratCountDown_Coroutine()
     {
         startCountDown_Image.SetActive(true);
-      
         countDownText.text = "Ready!";
 
         yield return new WaitForSeconds(1);
@@ -34,6 +33,8 @@ public class StartCountDownUI : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         startCountDown_Image.SetActive(false);
+        
+        yield return new WaitForSeconds(0.6f);
         miniGameIsStarted.Raise();
 
         yield return null;
