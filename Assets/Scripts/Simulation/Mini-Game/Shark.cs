@@ -52,6 +52,8 @@ public class Shark : MonoBehaviour
         playersAnimator[_spiningWheelData.choosenPlayer].SetBool("gotHit", true);
 
         playersAnimator[0].SetBool("isSpining", false);
+        yield return new WaitForSeconds(1f);
+        paths[_spiningWheelData.choosenPlayer].DORewind();
         yield return null;
     }
 
@@ -69,6 +71,8 @@ public class Shark : MonoBehaviour
         playersAnimator[_spiningWheelData.AIChoosenPlayer].SetBool("gotHit", true);
 
         playersAnimator[id].SetBool("isSpining", false);
+        yield return new WaitForSeconds(1f);
+        paths[_spiningWheelData.AIChoosenPlayer].DORewind();
         yield return null;
     }
 
