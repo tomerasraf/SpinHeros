@@ -759,7 +759,10 @@ AudioMixerController:
   - guids:
     - b0c3ec1134afabf43b7d8eef3986224e
     - 8a6b7636d2dd48d4f9a6e26431867c97
+    - c33b2a995ea5e7f47ba1f53699156020
+    - e954884d76eec6e48b7e61f0b0f2d322
     - 6e5257b9635026f49a5ed637fe52bfab
+    - 3ceb399fd67ce0e478300d366ce41bb9
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -782,7 +785,7 @@ AudioMixerGroupController:
   - {fileID: 1582441389132461777}
   - {fileID: -5278638817668076323}
   m_UserColorIndex: 0
-  m_Mute: 1
+  m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!244 &24400004
