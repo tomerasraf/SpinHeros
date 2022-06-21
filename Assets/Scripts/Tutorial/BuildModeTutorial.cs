@@ -52,6 +52,7 @@ namespace Assets.Scripts.Tutorial
 
         public void RemoveBuildModePointer_Listener() {
             TutorialAnimationUtils.RemovePointerAnimation(floatingPointer, 0.5f);
+            TutorialAnimationUtils.RemoveMassageAnimation(popupMassage, 0.5f);
         }
 
 
