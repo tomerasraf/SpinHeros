@@ -320,9 +320,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a98c79fd35ad7149aea1b7ef7aa40db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _miniGameData: {fileID: 0}
   _miniGameMachine: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
   _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
+  _gameSettingsData: {fileID: 0}
   _playerData:
   - {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   - {fileID: 11400000, guid: a2f511fb07a29974e890b64e3e5f4782, type: 2}
@@ -446,7 +448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 30574211d4a698f499ca56f0445f122d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1db9f56800c1bb1418ab6ff3abec5384, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
