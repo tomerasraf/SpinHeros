@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class DataManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class DataManager : MonoBehaviour
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] WorldData _worldData;
     [SerializeField] GameSettingsData _gameSettingsData;
+
+    [SerializeField] GameObject exitMassage;
     
     public PlayerData[] _playerData;
     private int symbolIndex = 0;
@@ -208,6 +211,23 @@ public class DataManager : MonoBehaviour
             _playerData[i].playerIsDead = false;
             _playerData[i].hearts = 3;
             _playerData[i].score = 0;
+        }
+    }
+
+    void Update()
+    {
+        // Make sure user is on Android platform
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            // Check if Back was pressed this frame
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                exitMassage.transform.DOScale(0, 0).OnComplete(() =>
+                {
+                    exitMassage.SetActive(true);
+                    exitMassage.transform.DOScale(1, 0);
+                });
+            }
         }
     }
 }
