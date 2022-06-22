@@ -1,7 +1,7 @@
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using DG.Tweening;
 
 public class BuildingWorldUI : MonoBehaviour
 {
@@ -78,12 +78,22 @@ public class BuildingWorldUI : MonoBehaviour
 
     public void BuildModeUIAnimation_Listener()
     {
+        spinButtonUI.GetComponent<Button>().enabled = false;
+        miniGameButtonUI.GetComponent<Button>().enabled = false;
+        buildModeButtonUI.GetComponent<Button>().enabled = false;
+
+
         spinButtonUI.transform.DOMoveY(spinButtonStartPos.y - offsetUI, 1).SetEase(Ease.InBack);
         buildModeButtonUI.transform.DOMoveX(buildModeButtonStartPos.x + offsetUI, 1).SetEase(Ease.InBack);
         miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x - offsetUI, 1).SetEase(Ease.InBack);
 
         builderUI.transform.DOMoveY(builderUIStartPos.y - offsetUI, 0);
-        builderUI.transform.DOMoveY(builderUIStartPos.y, 1).SetEase(Ease.InBack);
+        builderUI.transform.DOMoveY(builderUIStartPos.y, 1).SetEase(Ease.InBack).OnComplete(() =>
+        {
+            spinButtonUI.GetComponent<Button>().enabled = enabled;
+            miniGameButtonUI.GetComponent<Button>().enabled = enabled;
+            buildModeButtonUI.GetComponent<Button>().enabled = enabled;
+        });
     }
 
     public void ExitBuildModeUIAnimation_Listener()
@@ -95,8 +105,9 @@ public class BuildingWorldUI : MonoBehaviour
         miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x, 1).SetEase(Ease.OutBack);
     }
 
-    public void CantAfford_Listener(int buttonID) {
-        
+    public void CantAfford_Listener(int buttonID)
+    {
+
         Vector3 massageStartPosition = buildButtonsUI[buttonID].transform.position;
 
         if (cantAffordClone == null)
@@ -107,10 +118,10 @@ public class BuildingWorldUI : MonoBehaviour
 
             cantAffordText.DOFade(0, 0).OnComplete(() =>
             {
-                cantAffordClone.transform.DOMoveY(massageStartPosition.y + 45, 1.5f);
-                cantAffordText.DOFade(1, 1f).OnComplete(() =>
+                cantAffordClone.transform.DOScale(1.3f, 0);
+                cantAffordClone.transform.DOMoveY(massageStartPosition.y + 70, 1.5f);
+                cantAffordText.DOFade(1, 1.5f).OnComplete(() =>
                 {
-
                     cantAffordText.DOFade(0, 1.5f).OnComplete(() =>
                     {
                         Destroy(cantAffordClone);
