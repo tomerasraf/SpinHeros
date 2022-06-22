@@ -10,6 +10,7 @@ public class CameraMove : MonoBehaviour
     //4. calculate the diffrence bettwen the origin to the curent postion of the touch.
     //5. move the position of the camera to diffrence.
     [Header("Data")]
+    [SerializeField] MiniGameData _miniGameData;
     [SerializeField] WorldData _worldData;
 
     [Header("Cameras")]
@@ -32,7 +33,14 @@ public class CameraMove : MonoBehaviour
 
     private void Start()
     {
-        worldCamera.SetActive(true);
+        if (_miniGameData.wasInMiniGame) {
+            wheelCamera.SetActive(true);
+            _miniGameData.wasInMiniGame = false;
+        }
+        else
+        {
+            worldCamera.SetActive(true);
+        }
     }
 
     private void LateUpdate()

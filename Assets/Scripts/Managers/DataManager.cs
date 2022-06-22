@@ -24,6 +24,7 @@ public class DataManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
+            _miniGameData.wasInMiniGame = true;
             ResetMiniGameMachineOddsData();
             ResetMiniGameData();
         }
