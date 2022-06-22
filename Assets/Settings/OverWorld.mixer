@@ -215,6 +215,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: e954884d76eec6e48b7e61f0b0f2d322
   m_Children:
+  - {fileID: 6667454040329393193}
   - {fileID: 8847308941857605611}
   - {fileID: 4768847370211226920}
   - {fileID: 3775037473350690782}
@@ -745,7 +746,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OverWorld 1
+  m_Name: OverWorld
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -760,9 +761,9 @@ AudioMixerController:
     - b0c3ec1134afabf43b7d8eef3986224e
     - 8a6b7636d2dd48d4f9a6e26431867c97
     - c33b2a995ea5e7f47ba1f53699156020
-    - e954884d76eec6e48b7e61f0b0f2d322
     - 6e5257b9635026f49a5ed637fe52bfab
     - 3ceb399fd67ce0e478300d366ce41bb9
+    - 8b74393cd09a16c4c984a117bd92f2aa
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -1049,6 +1050,20 @@ AudioMixerEffectController:
     m_GUID: 7e3b0ed0ca78dc247a455d62b85495ac
   - m_ParameterName: Frequency gain
     m_GUID: 712ac105ad7b4854b867c4c88971eb94
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &442969382203972956
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: b9f98878653f8494fa82460d86cb42ff
+  m_EffectName: Attenuation
+  m_MixLevel: 027909dc66437c54c8237f9b45981516
+  m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
@@ -1513,6 +1528,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -7609325143721382816}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &6667454040329393193
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Menu click
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 8b74393cd09a16c4c984a117bd92f2aa
+  m_Children: []
+  m_Volume: b3ca2922f16512447960364611bd383a
+  m_Pitch: c682f6736ccbf87489ac43fc802e9871
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 442969382203972956}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
