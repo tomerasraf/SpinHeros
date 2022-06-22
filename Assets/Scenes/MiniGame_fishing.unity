@@ -30138,6 +30138,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f85612e01dc6e8a44bb456418bb7ea75, type: 2}
     - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
+      propertyPath: playerWonSound
+      value: 
+      objectReference: {fileID: 11400000, guid: f76da4ba1be55104b91e2741c97a02e1, type: 2}
+    - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
       propertyPath: miniGameDisplayUI_Off
       value: 
       objectReference: {fileID: 11400000, guid: 42b0d66549a147c4ca5162b64c030a0f, type: 2}
