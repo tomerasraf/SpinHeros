@@ -12414,6 +12414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   SpinButtonPressed: {fileID: 11400000, guid: d7c16d124dc6c464d9844160f602d2f3, type: 2}
+  focuseOnWheel: {fileID: 11400000, guid: 2ba38b38c3ad31448a46b35849b79221, type: 2}
 --- !u!1 &1230669914
 GameObject:
   m_ObjectHideFlags: 0
@@ -15746,6 +15747,7 @@ GameObject:
   - component: {fileID: 1621236402}
   - component: {fileID: 1621236403}
   - component: {fileID: 1621236404}
+  - component: {fileID: 1621236405}
   m_Layer: 0
   m_Name: Camera_Manager
   m_TagString: Untagged
@@ -15865,6 +15867,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1621236400}
         m_TargetAssemblyTypeName: CameraMove, Assembly-CSharp
         m_MethodName: CameraFocus_ToWorld
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1621236405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621236399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2ba38b38c3ad31448a46b35849b79221, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1621236400}
+        m_TargetAssemblyTypeName: CameraMove, Assembly-CSharp
+        m_MethodName: CameraFocus_ToWheel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16131,6 +16161,7 @@ MonoBehaviour:
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   enterMiniGame_Event: {fileID: 11400000, guid: 72e3da45965a6d84682610b5e165b49c, type: 2}
   minigameUIText_Updater: {fileID: 11400000, guid: ea315ddf7ba654342af619cc0fa3741d, type: 2}
+  focuseOnWheel: {fileID: 11400000, guid: 2ba38b38c3ad31448a46b35849b79221, type: 2}
 --- !u!1 &1629170064
 GameObject:
   m_ObjectHideFlags: 0
