@@ -8238,9 +8238,10 @@ GameObject:
   - component: {fileID: 842744993}
   - component: {fileID: 842744992}
   - component: {fileID: 842744994}
-  - component: {fileID: 842744995}
   - component: {fileID: 842744996}
   - component: {fileID: 842744997}
+  - component: {fileID: 842744995}
+  - component: {fileID: 842744998}
   m_Layer: 5
   m_Name: Bilding_UI
   m_TagString: Untagged
@@ -8327,6 +8328,7 @@ MonoBehaviour:
   - {fileID: 2038201589}
   - {fileID: 1154620552}
   - {fileID: 1219809820}
+  CantAfford: {fileID: 1102209260}
 --- !u!114 &842744994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8431,6 +8433,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BuildingWorldUI, Assembly-CSharp
         m_MethodName: ExitBuildModeUIAnimation_Listener
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &842744998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842744990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e12c709089252a468b47547a39f4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: eaa54b3d660f0d445bcaef826b659ef6, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 842744993}
+        m_TargetAssemblyTypeName: BuildingWorldUI, Assembly-CSharp
+        m_MethodName: CantAfford_Listener
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18236,6 +18266,7 @@ MonoBehaviour:
   - {fileID: 1008775239}
   - {fileID: 2061083033}
   playerSpentCoins: {fileID: 11400000, guid: e579152a5580a98439a10577e7b4b753, type: 2}
+  notEnoughCoins: {fileID: 11400000, guid: eaa54b3d660f0d445bcaef826b659ef6, type: 2}
   exitBuildModeButton: {fileID: 1200792612}
 --- !u!4 &1888672839
 Transform:

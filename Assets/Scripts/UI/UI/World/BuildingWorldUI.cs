@@ -1,16 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using DG.Tweening;
 
 public class BuildingWorldUI : MonoBehaviour
 {
+    [Header("Data")]
     [SerializeField] WorldData _worldData;
+
+    [Header("UI")]
     [SerializeField] GameObject builderUI;
     [SerializeField] GameObject spinButtonUI;
     [SerializeField] GameObject miniGameButtonUI;
     [SerializeField] GameObject buildModeButtonUI;
     [SerializeField] GameObject[] successUI;
     [SerializeField] GameObject[] buildButtonsUI;
+    [SerializeField] GameObject CantAfford;
 
     private float offsetUI = 1500;
     private Vector3 spinButtonStartPos;
@@ -86,5 +91,19 @@ public class BuildingWorldUI : MonoBehaviour
         spinButtonUI.transform.DOMoveY(spinButtonStartPos.y, 1).SetEase(Ease.OutBack);
         buildModeButtonUI.transform.DOMoveX(buildModeButtonStartPos.x, 1).SetEase(Ease.OutBack);
         miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x, 1).SetEase(Ease.OutBack);
+    }
+
+    public void CantAfford_Listener(int buttonID) {
+        Vector3 massageStartPosition = buildButtonsUI[buttonID].transform.position;
+
+        GameObject cantAffordClone = Instantiate(CantAfford, massageStartPosition, Quaternion.identity);
+       TextMeshProUGUI cantAffordText = cantAffordClone.GetComponent<TextMeshProUGUI>();
+
+
+        cantAffordText.DOFade(0, 0).OnComplete(() => {
+            cantAffordText.DOFade(1, 0.2f);
+            cantAffordText.DOFade(0, 1.5f);
+            CantAfford.transform.DOMove(massageStartPosition + Vector3.up * 3, 1.5f);
+        });
     }
 }

@@ -24,9 +24,11 @@ public class BuildMode : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] VoidEvent playerSpentCoins;
+    [SerializeField] IntEvent notEnoughCoins;
 
     [Header("Triggers")]
     [SerializeField] GameObject exitBuildModeButton;
+
 
     private Vector3 endTouchPosition;
 
@@ -80,7 +82,7 @@ public class BuildMode : MonoBehaviour
         }
         else
         {
-            Debug.Log("You are poor as fuck");
+            notEnoughCoins.Raise(buttonID);
         }
     }
 
