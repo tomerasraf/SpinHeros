@@ -17,6 +17,8 @@ public class BuildingWorldUI : MonoBehaviour
     [SerializeField] GameObject[] buildButtonsUI;
     [SerializeField] GameObject CantAfford;
 
+    private GameObject cantAffordClone;
+
     private float offsetUI = 1500;
     private Vector3 spinButtonStartPos;
     private Vector3 builderUIStartPos;
@@ -94,16 +96,27 @@ public class BuildingWorldUI : MonoBehaviour
     }
 
     public void CantAfford_Listener(int buttonID) {
+        
         Vector3 massageStartPosition = buildButtonsUI[buttonID].transform.position;
 
-        GameObject cantAffordClone = Instantiate(CantAfford, massageStartPosition, Quaternion.identity);
-       TextMeshProUGUI cantAffordText = cantAffordClone.GetComponent<TextMeshProUGUI>();
+        if (cantAffordClone == null)
+        {
+            cantAffordClone = Instantiate(CantAfford, massageStartPosition, Quaternion.identity, buildButtonsUI[buttonID].transform);
 
+            TextMeshProUGUI cantAffordText = cantAffordClone.GetComponent<TextMeshProUGUI>();
 
-        cantAffordText.DOFade(0, 0).OnComplete(() => {
-            cantAffordText.DOFade(1, 0.2f);
-            cantAffordText.DOFade(0, 1.5f);
-            CantAfford.transform.DOMove(massageStartPosition + Vector3.up * 3, 1.5f);
-        });
+            cantAffordText.DOFade(0, 0).OnComplete(() =>
+            {
+                cantAffordClone.transform.DOMoveY(massageStartPosition.y + 45, 1.5f);
+                cantAffordText.DOFade(1, 1f).OnComplete(() =>
+                {
+
+                    cantAffordText.DOFade(0, 1.5f).OnComplete(() =>
+                    {
+                        Destroy(cantAffordClone);
+                    });
+                });
+            });
+        }
     }
 }
