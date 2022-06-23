@@ -34,8 +34,6 @@ public class GameRulesLogic : MonoBehaviour
                 _miniGameData.gameIsOver = true;
                 spinButton.enabled = false;
                 miniGameDisplayUI_Off.Raise();
-                playerWonSound.Raise();
-
             }
         }
     }
@@ -70,7 +68,6 @@ public class GameRulesLogic : MonoBehaviour
             {
                 if (!_playersData[i].playerIsDead) {
 
-                    playerWonSound.Raise();
                     playerWon.Raise(i);
                    _miniGameData.gameIsOver = true;
                 }

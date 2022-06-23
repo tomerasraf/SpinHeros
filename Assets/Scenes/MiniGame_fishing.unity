@@ -8025,7 +8025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: e579152a5580a98439a10577e7b4b753, type: 2}
+  gameEvent: {fileID: 11400000, guid: f76da4ba1be55104b91e2741c97a02e1, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -14259,7 +14259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1105251041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15168,6 +15168,7 @@ MonoBehaviour:
   - {fileID: 1367484817}
   - {fileID: 1996628337}
   miniGameIsOver: {fileID: 11400000, guid: f85612e01dc6e8a44bb456418bb7ea75, type: 2}
+  playerWonSound: {fileID: 11400000, guid: f76da4ba1be55104b91e2741c97a02e1, type: 2}
 --- !u!114 &1206892536
 MonoBehaviour:
   m_ObjectHideFlags: 0

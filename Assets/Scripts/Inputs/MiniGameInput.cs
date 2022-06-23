@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class MiniGameInput : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] SystemData _systemData;
     [SerializeField] PlayerData _playerData;
 
     [Header("Events")]
@@ -13,6 +15,32 @@ public class MiniGameInput : MonoBehaviour
     {
         focuseOnWheel.Raise();
 
+        if (!_systemData.cameraIsFocusedOnWheel)
+        {
+            StartCoroutine(DelayAction());
+        }
+        else
+        {
+            if (_playerData.miniGameTicket > 0)
+            {
+                enterMiniGame_Event.Raise();
+                _playerData.miniGameTicket--;
+                minigameUIText_Updater.Raise();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        
+    }
+
+    IEnumerator DelayAction()
+    {
+
+        yield return new WaitForSeconds(2f);
+
         if (_playerData.miniGameTicket > 0)
         {
             enterMiniGame_Event.Raise();
@@ -21,8 +49,10 @@ public class MiniGameInput : MonoBehaviour
         }
         else
         {
-            return;
+            yield return null;
         }
+
+        yield return null;
     }
 
 }
