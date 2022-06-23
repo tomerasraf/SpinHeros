@@ -130,7 +130,7 @@ public class CameraMove : MonoBehaviour
 
         heroLiftOff.Raise();
         hero.transform.DOMoveY(hero.transform.position.y - 1, 1f).OnComplete(() => {
-             hero.transform.DOMoveY(hero.transform.position.y + 10, 1f).OnComplete(() => {
+             hero.transform.DOMoveY(hero.transform.position.y + 30, 1f).OnComplete(() => {
                
                 hero.SetActive(false);
             });
