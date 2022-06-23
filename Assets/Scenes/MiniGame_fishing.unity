@@ -29742,8 +29742,8 @@ MonoBehaviour:
   AISharkAnimation_ID: {fileID: 11400000, guid: a2bf9507cbae01b41a55350be631a9ab, type: 2}
   ScoreUI_Updater: {fileID: 11400000, guid: ef218766fc92d734bb4bbc8e89c9e94c, type: 2}
   PlayerIsDead_ID: {fileID: 11400000, guid: ce11b4bc6b285b9449402513f26c366d, type: 2}
-  minCounter: 1.9
-  maxCounter: 1.9
+  minCounter: 1.5
+  maxCounter: 1.5
 --- !u!114 &2137506701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30471,7 +30471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4645804196460410403, guid: e1749bac223485d40a29c39c5b7e3d67, type: 3}
       propertyPath: timeOfWheelSpin
-      value: 0.9
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 4645804196460410405, guid: e1749bac223485d40a29c39c5b7e3d67, type: 3}
       propertyPath: m_Name
