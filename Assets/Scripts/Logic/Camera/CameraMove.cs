@@ -122,7 +122,6 @@ public class CameraMove : MonoBehaviour
             yield return null;
         }
 
-
         removeClickMe.Raise();
         burnedHouse.SetActive(true);
         cutsceneHouse.SetActive(false);
@@ -130,8 +129,9 @@ public class CameraMove : MonoBehaviour
         yield return new WaitForSeconds(2.1f);
 
         hero.transform.DOMoveY(hero.transform.position.y - 1, 1f).OnComplete(() => {
-            heroLiftOff.Raise();
+           
             hero.transform.DOMoveY(hero.transform.position.y + 10, 1f).OnComplete(() => {
+                heroLiftOff.Raise();
                 hero.SetActive(false);
             });
         });
