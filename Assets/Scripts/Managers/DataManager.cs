@@ -38,7 +38,7 @@ public class DataManager : MonoBehaviour
             {
                 TutorialPlayerGameData();
             }
-
+            _playerData[0].extraSpins = 0;
             _playerData[0].bet = 1;
             ResetWorldData();
             ResetslotMachineOddsData();
