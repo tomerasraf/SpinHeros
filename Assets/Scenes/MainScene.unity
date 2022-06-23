@@ -1420,7 +1420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 48db421e4134dd94fbc079686bfd67be, type: 2}
+  gameEvent: {fileID: 11400000, guid: 4b8c1cb1113c22a4d9d76a5311fc8807, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -1450,7 +1450,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.506
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -14746,7 +14746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 48db421e4134dd94fbc079686bfd67be, type: 2}
+  gameEvent: {fileID: 11400000, guid: 3ff50a9d0733f4040a3a030db5c18284, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
