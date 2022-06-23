@@ -128,10 +128,10 @@ public class CameraMove : MonoBehaviour
 
         yield return new WaitForSeconds(2.1f);
 
+        heroLiftOff.Raise();
         hero.transform.DOMoveY(hero.transform.position.y - 1, 1f).OnComplete(() => {
-           
-            hero.transform.DOMoveY(hero.transform.position.y + 10, 1f).OnComplete(() => {
-                heroLiftOff.Raise();
+             hero.transform.DOMoveY(hero.transform.position.y + 10, 1f).OnComplete(() => {
+               
                 hero.SetActive(false);
             });
         });
