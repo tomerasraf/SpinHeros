@@ -14262,6 +14262,7 @@ MonoBehaviour:
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   SpinButtonPressed: {fileID: 11400000, guid: d7c16d124dc6c464d9844160f602d2f3, type: 2}
   focuseOnWheel: {fileID: 11400000, guid: 2ba38b38c3ad31448a46b35849b79221, type: 2}
+  spinButton: {fileID: 1222374113}
 --- !u!1 &1230669914
 GameObject:
   m_ObjectHideFlags: 0
