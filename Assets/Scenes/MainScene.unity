@@ -3227,6 +3227,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274631294}
   m_CullTransparentMesh: 1
+--- !u!1 &284438164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 185918, guid: e83fb83871ed1ac4d978b22b0f2a4d71, type: 3}
+  m_PrefabInstance: {fileID: 1912710937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &299629297
 GameObject:
   m_ObjectHideFlags: 0
@@ -20694,8 +20699,10 @@ MonoBehaviour:
   minLimitedValue: -500
   maxLimitedValue: 500
   lightningEffect: {fileID: 1633606778}
+  whirlWind: {fileID: 284438164}
   hero: {fileID: 7047027019791652748}
   lightningHit: {fileID: 11400000, guid: 9f6cefb00d4061f4899e3bc7f9a168f5, type: 2}
+  heroIsLowering: {fileID: 11400000, guid: 48db421e4134dd94fbc079686bfd67be, type: 2}
 --- !u!4 &1621236401
 Transform:
   m_ObjectHideFlags: 0
@@ -24627,6 +24634,10 @@ PrefabInstance:
     - target: {fileID: 185918, guid: e83fb83871ed1ac4d978b22b0f2a4d71, type: 3}
       propertyPath: m_Name
       value: Whirlwind
+      objectReference: {fileID: 0}
+    - target: {fileID: 185918, guid: e83fb83871ed1ac4d978b22b0f2a4d71, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 406048, guid: e83fb83871ed1ac4d978b22b0f2a4d71, type: 3}
       propertyPath: m_RootOrder

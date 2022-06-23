@@ -20,6 +20,10 @@ public class WorldData : ScriptableObject
     public int[] priceToBuild;
     public bool[] isBuilded;
 
+    [Header("Building Is Destroyed")]
+    public bool buildingIsSaved;
+
+
     public void ResetWorldData() {
         for (int i = 0; i < isBuilded.Length; i++)
         {

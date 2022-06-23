@@ -33,12 +33,15 @@ public class CameraMove : MonoBehaviour
 
     [Header("Effects")]
     [SerializeField] GameObject lightningEffect;
+    [SerializeField] GameObject whirlWind;
 
     [Header("Hero")]
     [SerializeField] GameObject hero;
 
     [Header("Events")]
     [SerializeField] VoidEvent lightningHit;
+    [SerializeField] VoidEvent heroIsLowering;
+   
 
     private Vector3 EndTouchPosition;
 
@@ -58,7 +61,6 @@ public class CameraMove : MonoBehaviour
 
         if (_gameSettingsData.TutorialMode)
         {
-
             worldCamera.SetActive(true);
             StartCoroutine(firstCutScene());
         }
@@ -70,6 +72,7 @@ public class CameraMove : MonoBehaviour
 
     IEnumerator firstCutScene()
     {
+        _worldData.buildingIsSaved = false;
 
         worldCamera.SetActive(true);
 
@@ -84,9 +87,21 @@ public class CameraMove : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
+        heroIsLowering.Raise();
+
         hero.transform.DOMoveY(hero.transform.position.y - 11, 2.3f).OnComplete(() => {
             hero.transform.DOMoveY(hero.transform.position.y + 0.5f, 2f).SetLoops(-1,LoopType.Yoyo).SetEase(Ease.OutSine);
         });
+
+        while (!_worldData.buildingIsSaved) {
+
+            if (TouchInput.TouchScreenDetector()) {
+                whirlWind.SetActive(true);
+                yield return new WaitForSeconds(1);
+                whirlWind.SetActive(false);
+            }
+            yield return null;
+        }
 
         yield return null;
     }

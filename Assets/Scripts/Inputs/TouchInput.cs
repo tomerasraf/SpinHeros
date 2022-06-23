@@ -40,11 +40,6 @@ public class TouchInput
 
     public static bool TouchScreenDetector() {
 
-        if (Input.touchCount > 0) {
-
-            Touch finger = Input.GetTouch(0);
-        }
-        return true;
-
+        return Input.touchCount > 0; 
     }
 }
