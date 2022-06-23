@@ -21,4 +21,5 @@ public class PlayerData : ScriptableObject
     public int score = 0;
     public int currentPrize = 0;
     public bool playerIsDead = false;
+    public int amountPlayersAttacked = 0;
 }

@@ -9,6 +9,9 @@ namespace Assets.Scripts.Simulation.Mini_Game
         [Header("Events")]
         [SerializeField] VoidEvent miniGameIsOver;
 
+        [Header("Effects")]
+        [SerializeField] GameObject fireWorksEffect;
+
         public void PlayWinnerAnimation(int playerID) {
 
             StartCoroutine(playerWon_Coroutine(playerID));
@@ -18,6 +21,8 @@ namespace Assets.Scripts.Simulation.Mini_Game
         IEnumerator playerWon_Coroutine(int playerID) {
 
             playersAnimators[playerID].SetBool("PlayerWon", true);
+
+            Instantiate(fireWorksEffect, playersAnimators[playerID].transform.position + Vector3.up * 2, Quaternion.identity);  
 
             yield return new WaitForSeconds(5f);
 

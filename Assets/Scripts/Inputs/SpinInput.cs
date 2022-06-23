@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SpinInput : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class SpinInput : MonoBehaviour
     [SerializeField] PlayerData _playerData;
     [SerializeField] private VoidEvent SpinButtonPressed;
     [SerializeField] VoidEvent focuseOnWheel;
+    [SerializeField] Button spinButton;
 
     public void SpinInputEventCall()
     {
@@ -42,7 +44,11 @@ public class SpinInput : MonoBehaviour
 
     IEnumerator DealyAction() {
 
+        spinButton.enabled = false;
+
         yield return new WaitForSeconds(2f);
+
+        spinButton.enabled = true;
 
         if (_playerData.spins >= 0)
         {
