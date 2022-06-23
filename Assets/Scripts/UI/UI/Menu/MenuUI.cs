@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections;
 
 class MenuUI : MonoBehaviour
 {
@@ -29,7 +30,16 @@ class MenuUI : MonoBehaviour
     }
 
     public void BackButton_Listener() {
-        menuUI.transform.DOMoveX(menuStartPosition.x, 1.2f).OnComplete(()=> {
+
+        StartCoroutine(EventDelay());
+      
+    }
+
+    IEnumerator EventDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        menuUI.transform.DOMoveX(menuStartPosition.x, 1f).OnComplete(() => {
             menuUI.SetActive(false);
             systemData.inMenu = false;
         });
@@ -37,7 +47,10 @@ class MenuUI : MonoBehaviour
         backgroundUI.GetComponent<Image>().DOFade(0, 1f).OnComplete(() => {
             backgroundUI.SetActive(false);
         });
+        
+        yield return null;
     }
 }
+
 
 
