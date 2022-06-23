@@ -15720,7 +15720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1254282290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20739,6 +20739,7 @@ MonoBehaviour:
   turnOnUI: {fileID: 11400000, guid: 1aa9f2c8c71ee9649806b3b9473bd82a, type: 2}
   clickMeEvent: {fileID: 11400000, guid: e9be5706f367d7347a9e79032f533372, type: 2}
   removeClickMe: {fileID: 11400000, guid: a9316c2390015294384b8e4f03dd4e4f, type: 2}
+  buildUIButtonAnimation: {fileID: 0}
 --- !u!4 &1621236401
 Transform:
   m_ObjectHideFlags: 0
@@ -26473,7 +26474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5724478, y: -49.499588}
+  m_AnchoredPosition: {x: 0.5724478, y: -5.411434}
   m_SizeDelta: {x: 896.2609, y: 411.8685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065597607
