@@ -34,6 +34,8 @@ public class CameraMove : MonoBehaviour
     [Header("Effects")]
     [SerializeField] GameObject lightningEffect;
     [SerializeField] GameObject whirlWind;
+    [SerializeField] GameObject burnedHouse;
+    [SerializeField] GameObject cutsceneHouse;
 
     [Header("Hero")]
     [SerializeField] GameObject hero;
@@ -41,7 +43,10 @@ public class CameraMove : MonoBehaviour
     [Header("Events")]
     [SerializeField] VoidEvent lightningHit;
     [SerializeField] VoidEvent heroIsLowering;
-   
+    [SerializeField] VoidEvent turnOffUI;
+    [SerializeField] VoidEvent turnOnUI;
+
+   private int whirlWindCounter = 0;
 
     private Vector3 EndTouchPosition;
 
@@ -61,6 +66,8 @@ public class CameraMove : MonoBehaviour
 
         if (_gameSettingsData.TutorialMode)
         {
+            turnOffUI.Raise();
+            cutsceneHouse.SetActive(true);
             worldCamera.SetActive(true);
             StartCoroutine(firstCutScene());
         }
@@ -97,12 +104,28 @@ public class CameraMove : MonoBehaviour
 
             if (TouchInput.TouchScreenDetector()) {
                 whirlWind.SetActive(true);
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(1.5f);
                 whirlWind.SetActive(false);
+                whirlWindCounter++;
+
+                if (whirlWindCounter >= 3) {
+                    _worldData.buildingIsSaved = true;
+                }
             }
             yield return null;
         }
 
+        burnedHouse.SetActive(true);
+        cutsceneHouse.SetActive(false);
+
+        yield return new WaitForSeconds(2.1f);
+
+        hero.transform.DOMoveY(hero.transform.position.y - 1, 1f).OnComplete(() => {
+            hero.transform.DOMoveY(hero.transform.position.y + 10, 1f).OnComplete(() => {
+                hero.SetActive(false);
+            });
+        });
+        
         yield return null;
     }
 
