@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraMove : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class CameraMove : MonoBehaviour
     //4. calculate the diffrence bettwen the origin to the curent postion of the touch.
     //5. move the position of the camera to diffrence.
     [Header("Data")]
+    [SerializeField] GameSettingsData _gameSettingsData;
     [SerializeField] SystemData _systemData;
     [SerializeField] MiniGameData _miniGameData;
     [SerializeField] WorldData _worldData;
@@ -17,6 +20,7 @@ public class CameraMove : MonoBehaviour
     [SerializeField] GameObject worldCamera;
     [SerializeField] GameObject cinemachine;
     [SerializeField] GameObject buildCamera;
+    [SerializeField] GameObject heroCamera;
 
     [Header("Camera Look at Target")]
     [SerializeField] GameObject cameraTarget;
@@ -27,6 +31,12 @@ public class CameraMove : MonoBehaviour
     [SerializeField] float minLimitedValue = -22.875f;
     [SerializeField] float maxLimitedValue = 17.875f;
 
+    [Header("Effects")]
+    [SerializeField] GameObject lightningEffect;
+
+    [Header("Hero")]
+    [SerializeField] GameObject hero;
+
     private Vector3 EndTouchPosition;
 
 
@@ -36,11 +46,45 @@ public class CameraMove : MonoBehaviour
         {
             wheelCamera.SetActive(true);
             _miniGameData.wasInMiniGame = false;
+            _gameSettingsData.TutorialMode = false;
         }
         else
         {
             worldCamera.SetActive(true);
         }
+
+        if (_gameSettingsData.TutorialMode)
+        {
+
+            worldCamera.SetActive(true);
+            StartCoroutine(firstCutScene());
+        }
+        else
+        {
+
+        }
+    }
+
+    IEnumerator firstCutScene()
+    {
+
+        worldCamera.SetActive(true);
+
+        yield return new WaitForSeconds(1.5f);
+
+        heroCamera.SetActive(true);
+
+        yield return new WaitForSeconds(3.5f);
+
+        lightningEffect.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        hero.transform.DOMoveY(hero.transform.position.y - 11, 2.3f).OnComplete(() => {
+            hero.transform.DOMoveY(hero.transform.position.y + 0.5f, 2f).SetLoops(-1,LoopType.Yoyo).SetEase(Ease.OutSine);
+        });
+
+        yield return null;
     }
 
     private void LateUpdate()
@@ -50,7 +94,8 @@ public class CameraMove : MonoBehaviour
         worldCamera.transform.LookAt(cameraTarget.transform);
         MoveCamera();
 
-        if (cinemachine.transform.position == wheelCamera.transform.position) {
+        if (cinemachine.transform.position == wheelCamera.transform.position)
+        {
             _systemData.cameraIsFocusedOnWheel = true;
         }
         else
