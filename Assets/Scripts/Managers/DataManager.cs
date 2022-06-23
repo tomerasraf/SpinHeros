@@ -201,6 +201,7 @@ public class DataManager : MonoBehaviour
 
     private void ResetMiniGameData()
     {
+        _playerData[0].amountPlayersAttacked = 0;
         _miniGameData.gameIsOver = false;
         _miniGameMachine.choosenPlayer = 0;
         _miniGameMachine.AIChoosenPlayer = 0;

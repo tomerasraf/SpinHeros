@@ -5,8 +5,7 @@ public class GameRulesLogic : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] MiniGameData _miniGameData;
-    [SerializeField]
-    PlayerData[] _playersData;
+    [SerializeField] PlayerData[] _playersData;
 
     [Header("Events")]
     [SerializeField] IntEvent playerWon;
@@ -16,6 +15,12 @@ public class GameRulesLogic : MonoBehaviour
     [Header("Spin Button")]
     [SerializeField] Button spinButton;
 
+    private float counter = 0;
+
+    private void Start()
+    {
+        counter = 0;
+    }
 
     private void Update()
     {
@@ -30,16 +35,31 @@ public class GameRulesLogic : MonoBehaviour
         {
             if (_playersData[i].score >= _miniGameData.playersGoal)
             {
-                playerWon.Raise(i);
-                _miniGameData.gameIsOver = true;
-                spinButton.enabled = false;
-                miniGameDisplayUI_Off.Raise();
-                playerWonSound.Raise();
+                counter++;
+                if (counter == 1) {
+                    playerWonSound.Raise();
+                    playerWon.Raise(i);
+                    CalculateMiniGameResults(i);
+                    _miniGameData.gameIsOver = true;
+                    spinButton.enabled = false;
+                    miniGameDisplayUI_Off.Raise();
+                }
 
             }
         }
     }
 
+    private void CalculateMiniGameResults(int id) {
+        if (id == 0) {
+            _playersData[0].coins += _miniGameData.winnerPrize + (_playersData[0].amountPlayersAttacked * _miniGameData.attackBonus);
+            _playersData[0].spins += _miniGameData.winnerSpinPrize;
+        }
+        else
+        {
+            _playersData[0].coins += _miniGameData.loserPrize + (_playersData[0].amountPlayersAttacked * _miniGameData.attackBonus);
+            _playersData[0].spins += _miniGameData.loserSpinPrize;
+        }
+    }
     private void PlayerIsDead() {
         for (int i = 0; i < _playersData.Length; i++)
         {
@@ -70,7 +90,6 @@ public class GameRulesLogic : MonoBehaviour
             {
                 if (!_playersData[i].playerIsDead) {
 
-                    playerWonSound.Raise();
                     playerWon.Raise(i);
                    _miniGameData.gameIsOver = true;
                 }

@@ -1,6 +1,4 @@
 using UnityEngine;
-using Cinemachine;
-using System.Collections;
 
 public class CameraMove : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class CameraMove : MonoBehaviour
     //4. calculate the diffrence bettwen the origin to the curent postion of the touch.
     //5. move the position of the camera to diffrence.
     [Header("Data")]
+    [SerializeField] SystemData _systemData;
     [SerializeField] MiniGameData _miniGameData;
     [SerializeField] WorldData _worldData;
 
@@ -33,7 +32,8 @@ public class CameraMove : MonoBehaviour
 
     private void Start()
     {
-        if (_miniGameData.wasInMiniGame) {
+        if (_miniGameData.wasInMiniGame)
+        {
             wheelCamera.SetActive(true);
             _miniGameData.wasInMiniGame = false;
         }
@@ -45,11 +45,18 @@ public class CameraMove : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (_worldData.buldingModeIsOn || _systemData.inMenu) { return; }
         EndTouchPosition = TouchInput.DetectTouchInput(minLimitedValue, maxLimitedValue);
         worldCamera.transform.LookAt(cameraTarget.transform);
-
-        if (_worldData.buldingModeIsOn) { return; }
         MoveCamera();
+
+        if (cinemachine.transform.position == wheelCamera.transform.position) {
+            _systemData.cameraIsFocusedOnWheel = true;
+        }
+        else
+        {
+            _systemData.cameraIsFocusedOnWheel = false;
+        }
     }
 
     public void CameraFocus_ToWheel()

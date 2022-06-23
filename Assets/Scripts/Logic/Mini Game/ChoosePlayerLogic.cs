@@ -77,6 +77,7 @@ public class ChoosePlayerLogic : MonoBehaviour
 
         if (hit.transform.name == "Player_2")
         {
+            _playersData[0].amountPlayersAttacked++;
             SharkCatch.Raise();
             _spiningWheelData.choosenPlayer = 1;
             shark.Raise();
@@ -88,6 +89,7 @@ public class ChoosePlayerLogic : MonoBehaviour
         }
         if (hit.transform.name == "Player_3")
         {
+            _playersData[0].amountPlayersAttacked++;
             SharkCatch.Raise();
             _spiningWheelData.choosenPlayer = 2;
             shark.Raise();
@@ -99,6 +101,7 @@ public class ChoosePlayerLogic : MonoBehaviour
         }
         if (hit.transform.name == "Player_4")
         {
+            _playersData[0].amountPlayersAttacked++;
             SharkCatch.Raise();
             _spiningWheelData.choosenPlayer = 3;
             shark.Raise();

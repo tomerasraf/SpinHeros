@@ -68,7 +68,7 @@ public class PrizeLogic : MonoBehaviour
          && _slotMachineData.slotResults[2] == 3)
         {
             // Spin Prize 
-            _playerData.spins += 1 * _playerData.bet;
+            _playerData.spins += 15 * _playerData.bet;
           
             spinIsEarned.Raise();
         }

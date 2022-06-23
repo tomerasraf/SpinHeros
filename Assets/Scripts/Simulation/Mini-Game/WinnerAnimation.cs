@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace Assets.Scripts.Simulation.Mini_Game
 {
@@ -9,15 +9,25 @@ namespace Assets.Scripts.Simulation.Mini_Game
         [Header("Events")]
         [SerializeField] VoidEvent miniGameIsOver;
 
-        public void PlayWinnerAnimation(int playerID) {
+        [Header("Effects")]
+        [SerializeField] GameObject fireWorksEffect;
 
+        private GameObject fireWorksClone;
+        public void PlayWinnerAnimation(int playerID)
+        {
             StartCoroutine(playerWon_Coroutine(playerID));
         }
 
 
-        IEnumerator playerWon_Coroutine(int playerID) {
-
+        IEnumerator playerWon_Coroutine(int playerID)
+        { 
             playersAnimators[playerID].SetBool("PlayerWon", true);
+
+
+            if (fireWorksClone == null)
+            {
+                fireWorksClone = Instantiate(fireWorksEffect, playersAnimators[playerID].transform.position + Vector3.up * 2, Quaternion.identity);
+            }
 
             yield return new WaitForSeconds(5f);
 
