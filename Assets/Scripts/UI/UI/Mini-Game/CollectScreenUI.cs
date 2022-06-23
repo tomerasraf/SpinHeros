@@ -13,6 +13,7 @@ public class CollectScreenUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI coinPrize_Text;
     [SerializeField] TextMeshProUGUI spinPrize_Text;
     [SerializeField] TextMeshProUGUI bonusPrize_Text;
+    [SerializeField] TextMeshProUGUI overAllPrize_Text;
 
 
     private void Start()
@@ -25,9 +26,17 @@ public class CollectScreenUI : MonoBehaviour
         collectScreen_UI.SetActive(true);
         collectScreen_UI.transform.DOScale(1, 1).OnComplete(() => {
 
-            coinPrize_Text.text = $"Coin Prize: {_miniGameData.winnerPrize}";
-            spinPrize_Text.text = $"Spin Prize: {_miniGameData.winnerSpinPrize}";
-            bonusPrize_Text.text = $"With Bonus: {(_playerData.amountPlayersAttacked * _miniGameData.attackBonus) + _miniGameData.winnerPrize}";
+            coinPrize_Text.text = _miniGameData.winnerPrize.ToString("n0");
+            spinPrize_Text.text = _miniGameData.winnerSpinPrize.ToString("n0");
+
+            int bonus =_playerData.amountPlayersAttacked * _miniGameData.attackBonus;
+
+            bonusPrize_Text.text = bonus.ToString("n0");
+
+            int overAllPrize = (_playerData.amountPlayersAttacked * _miniGameData.attackBonus) + _miniGameData.winnerPrize;
+
+            overAllPrize_Text.text = overAllPrize.ToString("n0");
+            
         });
     }
 
