@@ -20351,6 +20351,7 @@ MonoBehaviour:
   maxLimitedValue: 500
   lightningEffect: {fileID: 1633606778}
   hero: {fileID: 7047027019791652748}
+  lightningHit: {fileID: 11400000, guid: 9f6cefb00d4061f4899e3bc7f9a168f5, type: 2}
 --- !u!4 &1621236401
 Transform:
   m_ObjectHideFlags: 0

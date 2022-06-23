@@ -37,6 +37,9 @@ public class CameraMove : MonoBehaviour
     [Header("Hero")]
     [SerializeField] GameObject hero;
 
+    [Header("Events")]
+    [SerializeField] VoidEvent lightningHit;
+
     private Vector3 EndTouchPosition;
 
 
@@ -77,6 +80,7 @@ public class CameraMove : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
 
         lightningEffect.SetActive(true);
+        lightningHit.Raise();
 
         yield return new WaitForSeconds(1);
 
