@@ -37,4 +37,14 @@ public class TouchInput
         }
         return difference;
     }
+
+    public static bool TouchScreenDetector() {
+
+        if (Input.touchCount > 0) {
+
+            Touch finger = Input.GetTouch(0);
+        }
+        return true;
+
+    }
 }

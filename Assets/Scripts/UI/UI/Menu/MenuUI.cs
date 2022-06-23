@@ -29,7 +29,7 @@ class MenuUI : MonoBehaviour
     }
 
     public void BackButton_Listener() {
-        menuUI.transform.DOMoveX(menuStartPosition.x, 1f).OnComplete(()=> {
+        menuUI.transform.DOMoveX(menuStartPosition.x, 1.2f).OnComplete(()=> {
             menuUI.SetActive(false);
             systemData.inMenu = false;
         });
