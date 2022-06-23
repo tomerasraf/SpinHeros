@@ -17,8 +17,8 @@ public class WelcomeTutorial : MonoBehaviour
         pointerStartSize = pointer.transform.localScale;
         pointerStartPosition = pointer.transform.position;
 
-        TutorialAnimationUtils.MassagePopoutAnimation(massageStartSize, massage, animationSpeed);
-        TutorialAnimationUtils.PointerPopoutAnimation(pointerStartPosition, pointerStartSize, -pointerOffset, pointer, animationSpeed);
+       // TutorialAnimationUtils.MassagePopoutAnimation(massageStartSize, massage, animationSpeed);
+       // TutorialAnimationUtils.PointerPopoutAnimation(pointerStartPosition, pointerStartSize, -pointerOffset, pointer, animationSpeed);
     }
 
     public void DisplayWelcome_Listener()

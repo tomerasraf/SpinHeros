@@ -43,8 +43,12 @@ public class CameraMove : MonoBehaviour
     [Header("Events")]
     [SerializeField] VoidEvent lightningHit;
     [SerializeField] VoidEvent heroIsLowering;
+    [SerializeField] VoidEvent heroblowingAir;
+    [SerializeField] VoidEvent heroLiftOff;
     [SerializeField] VoidEvent turnOffUI;
     [SerializeField] VoidEvent turnOnUI;
+    [SerializeField] VoidEvent clickMeEvent;
+    [SerializeField] VoidEvent removeClickMe;
 
    private int whirlWindCounter = 0;
 
@@ -98,11 +102,14 @@ public class CameraMove : MonoBehaviour
 
         hero.transform.DOMoveY(hero.transform.position.y - 11, 2.3f).OnComplete(() => {
             hero.transform.DOMoveY(hero.transform.position.y + 0.5f, 2f).SetLoops(-1,LoopType.Yoyo).SetEase(Ease.OutSine);
+            turnOnUI.Raise();
+            clickMeEvent.Raise();
         });
 
         while (!_worldData.buildingIsSaved) {
 
             if (TouchInput.TouchScreenDetector()) {
+                heroblowingAir.Raise();
                 whirlWind.SetActive(true);
                 yield return new WaitForSeconds(1.5f);
                 whirlWind.SetActive(false);
@@ -115,17 +122,22 @@ public class CameraMove : MonoBehaviour
             yield return null;
         }
 
+
+        removeClickMe.Raise();
         burnedHouse.SetActive(true);
         cutsceneHouse.SetActive(false);
 
         yield return new WaitForSeconds(2.1f);
 
         hero.transform.DOMoveY(hero.transform.position.y - 1, 1f).OnComplete(() => {
+            heroLiftOff.Raise();
             hero.transform.DOMoveY(hero.transform.position.y + 10, 1f).OnComplete(() => {
                 hero.SetActive(false);
             });
         });
-        
+
+        turnOnUI.Raise();
+
         yield return null;
     }
 
