@@ -8,13 +8,18 @@ class TutorialManager : MonoBehaviour
     [Header("Scenario")]
     [SerializeField] GameObject scenario;
 
+    [Header("Event")]
+    [SerializeField] VoidEvent tutorialModeIsOff;
+
     private void Start()
     {
         if (_gameSettingsData.TutorialMode) {
             gameObject.SetActive(true);
+           
         }
         else
         {
+            tutorialModeIsOff.Raise();
             scenario.SetActive(false);
             gameObject.SetActive(false);
         }

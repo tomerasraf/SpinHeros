@@ -2629,8 +2629,9 @@ GameObject:
   m_Component:
   - component: {fileID: 214538592}
   - component: {fileID: 214538591}
-  - component: {fileID: 214538594}
   - component: {fileID: 214538593}
+  - component: {fileID: 214538594}
+  - component: {fileID: 214538595}
   m_Layer: 0
   m_Name: OverWorld Music
   m_TagString: Untagged
@@ -2775,6 +2776,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 3ff50a9d0733f4040a3a030db5c18284, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 214538593}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySFX_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &214538595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214538590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 7c2364eb86026644b9036549fb313399, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -5141,6 +5170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
   scenario: {fileID: 1757415922}
+  tutorialModeIsOff: {fileID: 11400000, guid: 7c2364eb86026644b9036549fb313399, type: 2}
 --- !u!1 &388958026
 GameObject:
   m_ObjectHideFlags: 0
