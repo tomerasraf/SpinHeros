@@ -250,9 +250,9 @@ AudioMixerGroupController:
   m_GroupID: 27660479cd4d9644ebba50c8105374ac
   m_Children:
   - {fileID: 7401168934792434006}
+  - {fileID: -4651629082603668046}
   - {fileID: -5091598608633054421}
   - {fileID: -8280348761939587619}
-  - {fileID: -4651629082603668046}
   m_Volume: fbb142862f5519e499e5ca9ef4579403
   m_Pitch: a6a0f018bac4b8348aab28e24ad42ed2
   m_Send: 00000000000000000000000000000000
@@ -750,7 +750,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mini game
+  m_Name: 4 Mini game
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -763,15 +763,9 @@ AudioMixerController:
   m_AudioMixerGroupViews:
   - guids:
     - 51336a787398a694a8632565dcad219c
-    - 77f85bf684337694ebdefa552a0b1e74
-    - a72c06a29898502438a43bc4d70aba9c
-    - daeb4d29c61aef0469dcb066d4cbd060
     - ab2040a96e46dc145948c3ba4406fe2a
     - 27660479cd4d9644ebba50c8105374ac
-    - 6589fc2767970404a87741fb4e604938
     - 8ac30fc3cbc5f8c4fbe963e6282df3a6
-    - 792e595097b8d2f4885406fcda316466
-    - 056430314fcf5c84d9f22327859febe0
     - 90c5c2d3229d5ed4082b95837a4f67cd
     name: View
   m_CurrentViewIndex: 0

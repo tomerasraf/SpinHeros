@@ -107,7 +107,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Opening screen
+  m_Name: 2 Opening screen
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -121,9 +121,6 @@ AudioMixerController:
   - guids:
     - 06b73b0ce6f637e42b49cbf7ff6d8a5d
     - 8531457f74ea46b4094fe315ac404021
-    - 9b351dc2ba8ef644b8ac5954d0b4a716
-    - 2ddda02b1e1097c4dacbb70bf07f4892
-    - fbebdd4662d17f44f9df3b26c2eb2af6
     - ae9d0b59106d14b4187709b9f8e6a89a
     name: View
   m_CurrentViewIndex: 0
