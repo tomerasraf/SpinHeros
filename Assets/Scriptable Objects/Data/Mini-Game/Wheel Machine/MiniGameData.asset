@@ -16,7 +16,7 @@ MonoBehaviour:
   gameIsOver: 1
   wasInMiniGame: 0
   playerAlive: 4
-  winnerPrize: 50000
+  winnerPrize: 20000
   loserPrize: 10000
   winnerSpinPrize: 20
   loserSpinPrize: 5

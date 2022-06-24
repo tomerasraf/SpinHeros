@@ -16,9 +16,9 @@ MonoBehaviour:
   satisfactionBar: 0
   house_1_Price: 10000
   house_2_Price: 25000
-  house_3_Price: 40000
-  house_4_Price: 75000
-  house_5_Price: 100000
-  priceToBuild: 10270000a8610000409c0000f8240100a0860100
+  house_3_Price: 75000
+  house_4_Price: 100000
+  house_5_Price: 200000
+  priceToBuild: 10270000a8610000f8240100a0860100400d0300
   isBuilded: 0100000000
   buildingIsSaved: 1
