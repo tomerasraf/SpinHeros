@@ -7826,7 +7826,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "start your epic journey by rebuilding your village\n\r\nOnce the village
+  m_text: "Start your epic journey by rebuilding your village\n\r\nOnce the village
     is complete \n\ryou will embark on your next\r\nadventure\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
