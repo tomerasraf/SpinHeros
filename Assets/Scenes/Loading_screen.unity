@@ -493,6 +493,7 @@ MonoBehaviour:
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
   _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
   _gameSettingsData: {fileID: 0}
+  exitMassage: {fileID: 0}
   _playerData:
   - {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   - {fileID: 11400000, guid: a2f511fb07a29974e890b64e3e5f4782, type: 2}
