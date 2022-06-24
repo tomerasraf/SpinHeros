@@ -4,7 +4,34 @@ using UnityEngine;
 
 public class MainUI : MonoBehaviour
 {
+    [Header("Data")]
+    [SerializeField] GameSettingsData _gameSettingsData;
+
+    [Header("UI")]
     [SerializeField] GameObject canvas;
+    [SerializeField] GameObject spinButton;
+    [SerializeField] GameObject coinBar;
+    [SerializeField] GameObject hearts;
+    [SerializeField] GameObject rating;
+    [SerializeField] GameObject buildModeButton;
+    [SerializeField] GameObject miniGameButton;
+    [SerializeField] GameObject menuButton;
+    [SerializeField] GameObject menuUI;
+ 
+    private void Start()
+    {
+        if (!_gameSettingsData.TutorialMode) {
+            canvas.SetActive(true);
+            spinButton.SetActive(true);
+            coinBar.SetActive(true);
+            hearts.SetActive(true);
+            rating.SetActive(true);
+            buildModeButton.SetActive(true);
+            miniGameButton.SetActive(true);
+            menuButton.SetActive(true);
+            menuUI.SetActive(true);
+        }
+    }
 
     public void TurnOffUI_Listener() {
         canvas.SetActive(false);

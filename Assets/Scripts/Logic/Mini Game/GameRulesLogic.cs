@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class GameRulesLogic : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] GameSettingsData _gameSettingData;
     [SerializeField] MiniGameData _miniGameData;
     [SerializeField] PlayerData[] _playersData;
 
@@ -14,6 +15,13 @@ public class GameRulesLogic : MonoBehaviour
  
     [Header("Spin Button")]
     [SerializeField] Button spinButton;
+
+    [Header("UI")]
+    [SerializeField] Image statusImage;
+
+    [Header("Sprites")]
+    [SerializeField] Sprite winner;
+    [SerializeField] Sprite loser;
 
     private float counter = 0;
 
@@ -37,25 +45,27 @@ public class GameRulesLogic : MonoBehaviour
             {
                 counter++;
                 if (counter == 1) {
+                    _gameSettingData.TutorialMode = false;
+                    CalculateMiniGameResults(i);
                     playerWonSound.Raise();
                     playerWon.Raise(i);
-                    CalculateMiniGameResults(i);
                     _miniGameData.gameIsOver = true;
                     spinButton.enabled = false;
                     miniGameDisplayUI_Off.Raise();
                 }
-
             }
         }
     }
 
     private void CalculateMiniGameResults(int id) {
         if (id == 0) {
+            statusImage.sprite = winner;
             _playersData[0].coins += _miniGameData.winnerPrize + (_playersData[0].amountPlayersAttacked * _miniGameData.attackBonus);
             _playersData[0].spins += _miniGameData.winnerSpinPrize;
         }
         else
         {
+            statusImage.sprite = loser;
             _playersData[0].coins += _miniGameData.loserPrize + (_playersData[0].amountPlayersAttacked * _miniGameData.attackBonus);
             _playersData[0].spins += _miniGameData.loserSpinPrize;
         }

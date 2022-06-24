@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 
@@ -14,6 +15,7 @@ public class CollectScreenUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI spinPrize_Text;
     [SerializeField] TextMeshProUGUI bonusPrize_Text;
     [SerializeField] TextMeshProUGUI overAllPrize_Text;
+    
 
 
     private void Start()

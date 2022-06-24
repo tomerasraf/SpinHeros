@@ -3,6 +3,15 @@ using UnityEngine;
 
 public static class TutorialAnimationUtils
 {
+    public static void ButtonPopoutAnimation(Vector3 buttonSize, GameObject button, float animationTime) {
+        button.transform.DOScale(0, 0).OnComplete(() =>
+        {
+            button.SetActive(true);
+        });
+
+        button.transform.DOScale(buttonSize, animationTime);
+    }
+
     public static void MassagePopoutAnimation(Vector3 massageStartSize, GameObject massageUI, float speedOfPopout)
     {
         massageUI.transform.DOScale(0, 0).OnComplete(() =>

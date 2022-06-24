@@ -10509,7 +10509,7 @@ GameObject:
   - component: {fileID: 758303632}
   - component: {fileID: 758303631}
   m_Layer: 5
-  m_Name: Place_Image
+  m_Name: StatusTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14347,7 +14347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50,000
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bdbbd43a253d47f99f853e49dce8edc, type: 2}
   m_sharedMaterial: {fileID: -6360588970910393389, guid: 1bdbbd43a253d47f99f853e49dce8edc, type: 2}
@@ -30786,6 +30786,14 @@ PrefabInstance:
       value: Game_Rules_Logic
       objectReference: {fileID: 0}
     - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
+      propertyPath: loser
+      value: 
+      objectReference: {fileID: 21300000, guid: f78f6049abb282f4691636ca9c992023, type: 3}
+    - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
+      propertyPath: winner
+      value: 
+      objectReference: {fileID: 21300000, guid: f6d2be1dc3474b24e813d857f3be3d59, type: 3}
+    - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
       propertyPath: playerWon
       value: 
       objectReference: {fileID: 11400000, guid: 9e7ede2f06ebf124d9f657956e16477a, type: 2}
@@ -30793,6 +30801,10 @@ PrefabInstance:
       propertyPath: spinButton
       value: 
       objectReference: {fileID: 1222374113}
+    - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
+      propertyPath: statusImage
+      value: 
+      objectReference: {fileID: 758303631}
     - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
       propertyPath: PlayerWonEvent
       value: 
@@ -30805,6 +30817,10 @@ PrefabInstance:
       propertyPath: playerWonSound
       value: 
       objectReference: {fileID: 11400000, guid: f76da4ba1be55104b91e2741c97a02e1, type: 2}
+    - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
+      propertyPath: _gameSettingData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
     - target: {fileID: 1638347636308735549, guid: e2298f750e0cf32459775c4cafc9cca8, type: 3}
       propertyPath: miniGameDisplayUI_Off
       value: 

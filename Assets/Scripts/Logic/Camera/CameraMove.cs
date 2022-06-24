@@ -49,7 +49,7 @@ public class CameraMove : MonoBehaviour
     [SerializeField] VoidEvent turnOnUI;
     [SerializeField] VoidEvent clickMeEvent;
     [SerializeField] VoidEvent removeClickMe;
-    [SerializeField] VoidEvent buildUIButtonAnimation;
+    [SerializeField] VoidEvent buildUITutorial;
 
    private int whirlWindCounter = 0;
 
@@ -62,7 +62,6 @@ public class CameraMove : MonoBehaviour
         {
             wheelCamera.SetActive(true);
             _miniGameData.wasInMiniGame = false;
-            _gameSettingsData.TutorialMode = false;
         }
         else
         {
@@ -134,12 +133,13 @@ public class CameraMove : MonoBehaviour
              hero.transform.DOMoveY(hero.transform.position.y + 30, 1f).OnComplete(() => {
                
                 hero.SetActive(false);
-            });
+                buildUITutorial.Raise();
+             });
         });
 
         turnOnUI.Raise();
 
-        buildUIButtonAnimation.Raise();
+        
 
         yield return null;
     }
