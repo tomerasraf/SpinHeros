@@ -100,7 +100,7 @@ public class CameraMove : MonoBehaviour
 
         heroIsLowering.Raise();
 
-        hero.transform.DOMoveY(hero.transform.position.y - 11, 2.3f).OnComplete(() => {
+        hero.transform.DOMoveY(hero.transform.position.y - 18, 2.3f).OnComplete(() => {
             hero.transform.DOMoveY(hero.transform.position.y + 0.5f, 2f).SetLoops(-1,LoopType.Yoyo).SetEase(Ease.OutSine);
             turnOnUI.Raise();
             clickMeEvent.Raise();
@@ -138,8 +138,6 @@ public class CameraMove : MonoBehaviour
         });
 
         turnOnUI.Raise();
-
-        
 
         yield return null;
     }
