@@ -7,6 +7,7 @@ public class BuildingWorldUI : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] WorldData _worldData;
+    [SerializeField] PlayerData _playerData;
 
     [Header("UI")]
     [SerializeField] GameObject builderUI;
@@ -69,6 +70,10 @@ public class BuildingWorldUI : MonoBehaviour
 
     public void BuildIsDone(int id)
     {
+        if (_playerData.coins >= _worldData.priceToBuild[id]) {
+            _worldData.isBuilded[id] = true;
+        }
+
         if (!_worldData.isBuilded[id]) { return; }
 
         buildButtonsUI[id].SetActive(false);

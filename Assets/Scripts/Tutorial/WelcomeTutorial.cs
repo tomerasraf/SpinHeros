@@ -3,6 +3,7 @@ using UnityEngine;
 public class WelcomeTutorial : MonoBehaviour
 {
     [SerializeField] GameObject massage;
+    [SerializeField] GameObject buildButton;
     [SerializeField] GameObject pointer;
     [SerializeField] float animationSpeed;
     [SerializeField] float pointerOffset;
@@ -25,6 +26,7 @@ public class WelcomeTutorial : MonoBehaviour
     {
         TutorialAnimationUtils.MassagePopoutAnimation(massageStartSize, massage, animationSpeed);
         TutorialAnimationUtils.PointerPopoutAnimation(pointerStartPosition, pointerStartSize, -pointerOffset, pointer, animationSpeed);
+        TutorialAnimationUtils.ButtonPopoutAnimation(buildButton.transform.localScale, buildButton, 1);
     }
 
     public void DisplayOffWelcome_Listener() {

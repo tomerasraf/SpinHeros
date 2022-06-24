@@ -8,9 +8,10 @@ public class SpinLogic : MonoBehaviour
     [SerializeField] GameSettingsData _gameSettingsData;
 
     [Header("Events")]
-
-    [SerializeField]
-    VoidEvent spinBar_Updater;
+    [SerializeField] VoidEvent spinBar_Updater;
+    [SerializeField] VoidEvent coinTutorialMassage;
+    [SerializeField] VoidEvent heartTutorialMassage;
+    [SerializeField] VoidEvent miniGameTutorialMassage;
 
     private int sequenceStage = 0;
 
@@ -34,21 +35,24 @@ public class SpinLogic : MonoBehaviour
         if (_gameSettingsData.TutorialMode)
         {
 
-            if (sequenceStage == 0 || sequenceStage == 1)
+            if (sequenceStage == 0 )
             {
                 TutorialSpin(1);
+                coinTutorialMassage.Raise();
             }
-            else if (sequenceStage == 2 || sequenceStage == 4 || sequenceStage == 5)
+            else if (sequenceStage == 1 || sequenceStage == 2 || sequenceStage == 4 || sequenceStage == 5)
             {
                 TutorialSpin(0);
             }
             else if (sequenceStage == 3)
             {
                 TutorialSpin(4);
+                heartTutorialMassage.Raise();
             }
             else if (sequenceStage == 6)
             {
                 TutorialSpin(2);
+                miniGameTutorialMassage.Raise();
             }
         }
         else

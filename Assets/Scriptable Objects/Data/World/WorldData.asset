@@ -21,3 +21,4 @@ MonoBehaviour:
   house_5_Price: 100000
   priceToBuild: 10270000a8610000409c0000f8240100a0860100
   isBuilded: 0100000000
+  buildingIsSaved: 1

@@ -11,6 +11,7 @@ public class DataManager : MonoBehaviour
     [SerializeField] WorldData _worldData;
     [SerializeField] GameSettingsData _gameSettingsData;
 
+    [Header("UI")]
     [SerializeField] GameObject exitMassage;
     
     public PlayerData[] _playerData;
@@ -161,10 +162,6 @@ public class DataManager : MonoBehaviour
         _worldData.priceToBuild[3] = _worldData.house_4_Price;
         _worldData.priceToBuild[4] = _worldData.house_5_Price;
 
-        for (int i = 0; i < _worldData.isBuilded.Length; i++)
-            {
-             _worldData.isBuilded[i] = false;
-            }
 
     }
 
@@ -197,6 +194,11 @@ public class DataManager : MonoBehaviour
             _playerData[i].crowns = 0;
             _playerData[i].miniGameTicket = 0;
         }
+
+        for (int i = 0; i < _worldData.isBuilded.Length; i++)
+            {
+             _worldData.isBuilded[i] = false;
+            }
     }
 
     private void ResetMiniGameData()
