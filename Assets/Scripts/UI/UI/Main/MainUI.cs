@@ -18,6 +18,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject menuButton;
     [SerializeField] GameObject menuUI;
     [SerializeField] GameObject coinPopupText;
+    [SerializeField] GameObject betButton;
   
     private void Start()
     {
@@ -32,9 +33,11 @@ public class MainUI : MonoBehaviour
             menuButton.SetActive(true);
             menuUI.SetActive(true);
             coinPopupText.SetActive(true);
+            betButton.SetActive(true);
         }
         else
         {
+            betButton.SetActive(false);
             coinPopupText.SetActive(true);
         }
     }

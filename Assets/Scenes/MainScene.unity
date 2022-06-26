@@ -31270,6 +31270,7 @@ MonoBehaviour:
   menuButton: {fileID: 586328764}
   menuUI: {fileID: 743622973}
   coinPopupText: {fileID: 977936530}
+  betButton: {fileID: 673508464}
 --- !u!114 &2039440984
 MonoBehaviour:
   m_ObjectHideFlags: 0
