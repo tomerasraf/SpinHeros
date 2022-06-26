@@ -71,6 +71,7 @@ public class CameraMove : MonoBehaviour
         if (_gameSettingsData.tutorialMode)
         {
             turnOffUI.Raise();
+            wheelCamera.SetActive(false);
             cutsceneHouse.SetActive(true);
             worldCamera.SetActive(true);
             StartCoroutine(firstCutScene());
