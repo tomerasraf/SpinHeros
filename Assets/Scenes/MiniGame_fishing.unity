@@ -19841,8 +19841,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Collect as many fish as possible, get the highest score and win the game!\n\n      
-    -  +10 Points\n\n       -  +20 Points\n\n       -  +50 Points\n\n       -  (-)10
-    Points\n\n       -  Attack your opponents \n\n\n\n\n"
+    =  +10 Points\n\n       =  +20 Points\n\n       =  +50 Points\n\n       =  -
+    10 Points  \n\n       =  Attack your opponents \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
   m_sharedMaterial: {fileID: 2517202264660172603, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
