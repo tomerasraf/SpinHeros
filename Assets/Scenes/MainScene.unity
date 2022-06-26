@@ -2892,7 +2892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &210859990
 Transform:
   m_ObjectHideFlags: 0
@@ -26808,6 +26808,7 @@ MonoBehaviour:
   slideTime: 2
   clickOnScreenButton: {fileID: 1200792615}
   buildingSliderUI: {fileID: 729693727}
+  ruinedBuilding: {fileID: 818045549}
 --- !u!114 &1679329887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27903,7 +27904,7 @@ MonoBehaviour:
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
   _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
   _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
-  exitMassage: {fileID: 0}
+  exitMassage: {fileID: 1996487125}
   _playerData:
   - {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
 --- !u!4 &1736225326
@@ -31268,6 +31269,7 @@ MonoBehaviour:
   miniGameButton: {fileID: 1628984821}
   menuButton: {fileID: 586328764}
   menuUI: {fileID: 743622973}
+  coinPopupText: {fileID: 977936530}
 --- !u!114 &2039440984
 MonoBehaviour:
   m_ObjectHideFlags: 0

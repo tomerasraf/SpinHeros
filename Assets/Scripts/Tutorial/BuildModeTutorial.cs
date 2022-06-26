@@ -30,6 +30,9 @@ namespace Assets.Scripts.Tutorial
         [Header("UI")]
         [SerializeField] GameObject buildingSliderUI;
 
+        [Header("Ruined Building")]
+        [SerializeField] GameObject ruinedBuilding;
+
         private Vector3 buildingSliderStartPosition;
         private Vector3 popupMassageStartSize;
         private Vector3 sliderPointerStartSize;
@@ -83,6 +86,7 @@ namespace Assets.Scripts.Tutorial
 
         public void RemoveBuildModePointer_Listener()
         {
+            ruinedBuilding.SetActive(false);
             clickOnScreenButton.enabled = true;
             TutorialAnimationUtils.RemovePointerAnimation(floatingPointer, 0.5f);
             TutorialAnimationUtils.PointerPopoutAnimation(clickOnScreenPointer.transform.position, clickOnScreenPointer.transform.localScale, 70, clickOnScreenPointer, 1);

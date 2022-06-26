@@ -144,11 +144,6 @@ public class CameraMove : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (_worldData.buldingModeIsOn || _systemData.inMenu || _gameSettingsData.tutorialMode) { return; }
-        EndTouchPosition = TouchInput.DetectTouchInput(minLimitedValue, maxLimitedValue);
-        worldCamera.transform.LookAt(cameraTarget.transform);
-        MoveCamera();
-
         if (cinemachine.transform.position == wheelCamera.transform.position)
         {
             _systemData.cameraIsFocusedOnWheel = true;
@@ -157,6 +152,11 @@ public class CameraMove : MonoBehaviour
         {
             _systemData.cameraIsFocusedOnWheel = false;
         }
+
+        if (_worldData.buldingModeIsOn || _systemData.inMenu || _gameSettingsData.tutorialMode) { return; }
+        EndTouchPosition = TouchInput.DetectTouchInput(minLimitedValue, maxLimitedValue);
+        worldCamera.transform.LookAt(cameraTarget.transform);
+        MoveCamera();
     }
 
     public void CameraFocus_ToWheel()

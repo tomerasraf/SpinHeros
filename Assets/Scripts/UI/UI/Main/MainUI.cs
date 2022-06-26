@@ -17,7 +17,8 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject miniGameButton;
     [SerializeField] GameObject menuButton;
     [SerializeField] GameObject menuUI;
- 
+    [SerializeField] GameObject coinPopupText;
+  
     private void Start()
     {
         if (!_gameSettingsData.tutorialMode) {
@@ -30,6 +31,11 @@ public class MainUI : MonoBehaviour
             miniGameButton.SetActive(true);
             menuButton.SetActive(true);
             menuUI.SetActive(true);
+            coinPopupText.SetActive(true);
+        }
+        else
+        {
+            coinPopupText.SetActive(true);
         }
     }
 

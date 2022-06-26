@@ -83,9 +83,17 @@ class SpiningWheelTutorial : MonoBehaviour {
 
     IEnumerator MiniGameDelay()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(5);
         TutorialAnimationUtils.ButtonPopoutAnimation(coinBarUI.transform.localScale, miniGamePopoutMassage, 1);
         TutorialAnimationUtils.MassagePopoutAnimation(new Vector3(1, 1, 1), miniGamePopoutMassage, 1);
+
+        yield return new WaitForSeconds(2.5f);
+
+        TutorialAnimationUtils.RemoveMassageAnimation(miniGamePopoutMassage, 0.5f);
+
+        TutorialAnimationUtils.MassagePopoutAnimation(coinBarUI.transform.localScale, testYourLuck, 1);
+        TutorialAnimationUtils.PointerPopoutAnimation(miniGamePointer.transform.position, pointerStartSize ,70, miniGamePointer, 1);
+
         yield return null;
     }
 

@@ -12,6 +12,8 @@ public class GameRulesLogic : MonoBehaviour
     [SerializeField] IntEvent playerWon;
     [SerializeField] VoidEvent miniGameDisplayUI_Off;
     [SerializeField] VoidEvent playerWonSound;
+    [SerializeField] VoidEvent winnerScreen;
+    [SerializeField] VoidEvent defeatScreen;
  
     [Header("Spin Button")]
     [SerializeField] Button spinButton;
@@ -32,6 +34,7 @@ public class GameRulesLogic : MonoBehaviour
 
     private void Update()
     {
+        playerScoreLimiter();
         GameOverRule();
         PlayerIsDead();
         PlayerWonByAttacking();
@@ -59,12 +62,14 @@ public class GameRulesLogic : MonoBehaviour
 
     private void CalculateMiniGameResults(int id) {
         if (id == 0) {
+            winnerScreen.Raise();
             statusImage.sprite = winner;
             _playersData[0].coins += _miniGameData.winnerPrize + (_playersData[0].amountPlayersAttacked * _miniGameData.attackBonus);
             _playersData[0].spins += _miniGameData.winnerSpinPrize;
         }
         else
         {
+            defeatScreen.Raise();
             statusImage.sprite = loser;
             _playersData[0].coins += _miniGameData.loserPrize + (_playersData[0].amountPlayersAttacked * _miniGameData.attackBonus);
             _playersData[0].spins += _miniGameData.loserSpinPrize;
@@ -103,6 +108,16 @@ public class GameRulesLogic : MonoBehaviour
                     playerWon.Raise(i);
                    _miniGameData.gameIsOver = true;
                 }
+            }
+        }
+    }
+
+    // checks that player score dosent go below 0
+    private void playerScoreLimiter() {
+        for (int i = 0; i < _playersData.Length; i++)
+        {
+            if (_playersData[i].score < 0) {
+                _playersData[i].score = 0;
             }
         }
     }

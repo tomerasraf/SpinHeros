@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: SystemData
   m_EditorClassIdentifier: 
   inMenu: 0
+  cameraIsFocusedOnWheel: 1
