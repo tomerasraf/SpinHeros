@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 class SpiningWheelTutorial : MonoBehaviour {
@@ -16,6 +17,10 @@ class SpiningWheelTutorial : MonoBehaviour {
     [SerializeField] GameObject coinBarUI;
     [SerializeField] GameObject heartsUI;
 
+    [Header("Buttons")]
+    [SerializeField] Button buildButton;
+    [SerializeField] Button miniGameButton;
+ 
     private Vector3 massageStartSize;
     private Vector3 pointerStartSize;
     private Vector3 pointerStartPosition;
@@ -28,65 +33,65 @@ class SpiningWheelTutorial : MonoBehaviour {
     }
 
     public void ExitBuildMode_Listener() {
+
+        buildButton.enabled = false;
+        miniGameButton.enabled = false;
         TutorialAnimationUtils.MassagePopoutAnimation(massageStartSize, spinPopoutMassage, 1);
         TutorialAnimationUtils.PointerPopoutAnimation(pointerStartPosition, pointerStartSize, 50, spinButtonPointer, 1);
     }
-
+    
     public void SpinButton_Listener() {
         TutorialAnimationUtils.RemoveMassageAnimation(spinPopoutMassage, 0.5f);
-        TutorialAnimationUtils.RemovePointerAnimation(spinButtonPointer, 0.5f);
+
+        TutorialAnimationUtils.RemoveMassageAnimation(coinPopoutMassage, 0.5f);
+        TutorialAnimationUtils.RemoveMassageAnimation(heartPopoutMassage, 0.5f);
     }
 
+    
     public void CoinIsEarned_Listener() {
-        TutorialAnimationUtils.ButtonPopoutAnimation(coinBarUI.transform.localScale, coinBarUI, 1);
-
-        TutorialAnimationUtils.MassagePopoutAnimation(new Vector3(1,1,1) , coinPopoutMassage, 1);
-        StartCoroutine(RemovePopoutCoinTimer());
-    } 
-    public void HeartIsEarned_Listener() {
-        TutorialAnimationUtils.ButtonPopoutAnimation(heartsUI.transform.localScale, heartsUI, 1);
-
-        TutorialAnimationUtils.MassagePopoutAnimation(new Vector3(1, 1, 1), heartPopoutMassage, 1);
-        StartCoroutine(RemovePopoutHeartTimer());
+        StartCoroutine(CoinDelay());
     }
+
+    IEnumerator CoinDelay()
+    {
+        yield return new WaitForSeconds(3);
+        TutorialAnimationUtils.ButtonPopoutAnimation(coinBarUI.transform.localScale, coinPopoutMassage, 1);
+        TutorialAnimationUtils.ButtonPopoutAnimation(coinBarUI.transform.localScale, coinBarUI, 1);
+        yield return null;
+    }
+
+    public void HeartIsEarned_Listener() {
+
+        StartCoroutine(HeartDelay()); 
+    }
+
+    IEnumerator HeartDelay()
+    {
+        yield return new WaitForSeconds(4.5f);
+        TutorialAnimationUtils.ButtonPopoutAnimation(coinBarUI.transform.localScale, heartPopoutMassage, 1);
+        TutorialAnimationUtils.ButtonPopoutAnimation(heartsUI.transform.localScale, heartsUI, 1);
+        yield return null;
+    }
+
     public void MiniGameIsEarned_Listener() {
+
+        miniGameButton.enabled = true;
+        TutorialAnimationUtils.RemovePointerAnimation(spinButtonPointer, 0.5f);
+        StartCoroutine(MiniGameDelay());
+       
+    }
+
+    IEnumerator MiniGameDelay()
+    {
+        yield return new WaitForSeconds(6);
+        TutorialAnimationUtils.ButtonPopoutAnimation(coinBarUI.transform.localScale, miniGamePopoutMassage, 1);
         TutorialAnimationUtils.MassagePopoutAnimation(new Vector3(1, 1, 1), miniGamePopoutMassage, 1);
-        StartCoroutine(RemovePopoutMiniGameTimer());
+        yield return null;
     }
 
     public void MiniGameButtonPressed_Listener() {
+        buildButton.enabled = true;
         TutorialAnimationUtils.RemoveMassageAnimation(testYourLuck, 0.5f);
         TutorialAnimationUtils.RemovePointerAnimation(miniGamePointer, 0.5f);
     }
-
-    IEnumerator RemovePopoutCoinTimer() {
-
-        yield return new WaitForSeconds(3f);
-
-        TutorialAnimationUtils.RemoveMassageAnimation(coinPopoutMassage, 0.5f);
-
-        yield return null;
-    }
-    IEnumerator RemovePopoutHeartTimer() {
-
-        yield return new WaitForSeconds(3f);
-
-        TutorialAnimationUtils.RemoveMassageAnimation(heartPopoutMassage, 0.5f);
-
-        yield return null;
-    }
-    IEnumerator RemovePopoutMiniGameTimer() {
-
-        yield return new WaitForSeconds(3f);
-
-        TutorialAnimationUtils.RemoveMassageAnimation(miniGamePopoutMassage, 0.5f);
-
-        yield return new WaitForSeconds(0.5f);
-
-        TutorialAnimationUtils.MassagePopoutAnimation(new Vector3(1, 1, 1), testYourLuck, 1);
-        TutorialAnimationUtils.PointerPopoutAnimation(miniGamePointer.transform.position, new Vector3(1, 1, 1), 40, miniGamePointer, 1);
-
-        yield return null;
-    }
-
 }

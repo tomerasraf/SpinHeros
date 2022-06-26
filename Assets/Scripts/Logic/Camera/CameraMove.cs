@@ -68,7 +68,7 @@ public class CameraMove : MonoBehaviour
             worldCamera.SetActive(true);
         }
 
-        if (_gameSettingsData.TutorialMode)
+        if (_gameSettingsData.tutorialMode)
         {
             turnOffUI.Raise();
             cutsceneHouse.SetActive(true);
@@ -144,7 +144,7 @@ public class CameraMove : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (_worldData.buldingModeIsOn || _systemData.inMenu) { return; }
+        if (_worldData.buldingModeIsOn || _systemData.inMenu || _gameSettingsData.tutorialMode) { return; }
         EndTouchPosition = TouchInput.DetectTouchInput(minLimitedValue, maxLimitedValue);
         worldCamera.transform.LookAt(cameraTarget.transform);
         MoveCamera();

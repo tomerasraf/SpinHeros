@@ -4,5 +4,6 @@
 [CreateAssetMenu(fileName = "GameSettingsData", menuName = "Data/GameSettingsData", order = 0)]
 class GameSettingsData : ScriptableObject
 {
-    public bool TutorialMode;
+    public bool tutorialMode;
+    public bool buildControlsOff;
 }

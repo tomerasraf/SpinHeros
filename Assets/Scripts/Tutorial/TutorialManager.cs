@@ -13,9 +13,9 @@ class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        if (_gameSettingsData.TutorialMode) {
+        if (_gameSettingsData.tutorialMode)
+        {
             gameObject.SetActive(true);
-           
         }
         else
         {

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af52bf2adfc1fd46884730c77eefd77, type: 3}
   m_Name: GameSettingsData
   m_EditorClassIdentifier: 
-  TutorialMode: 1
+  tutorialMode: 1
+  buildControlsOff: 0

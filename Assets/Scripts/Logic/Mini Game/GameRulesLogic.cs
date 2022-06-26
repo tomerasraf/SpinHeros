@@ -45,7 +45,7 @@ public class GameRulesLogic : MonoBehaviour
             {
                 counter++;
                 if (counter == 1) {
-                    _gameSettingData.TutorialMode = false;
+                    _gameSettingData.tutorialMode = false;
                     CalculateMiniGameResults(i);
                     playerWonSound.Raise();
                     playerWon.Raise(i);

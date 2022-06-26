@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class WelcomeTutorial : MonoBehaviour
 {
@@ -22,16 +23,32 @@ public class WelcomeTutorial : MonoBehaviour
        // TutorialAnimationUtils.PointerPopoutAnimation(pointerStartPosition, pointerStartSize, -pointerOffset, pointer, animationSpeed);
     }
 
+    public void HeroIsLowering_Listener() {
+        StartCoroutine(animationDelay());
+    }
+
+    public void HeroIsBlowingAir() {
+        TutorialAnimationUtils.RemoveMassageAnimation(massage, animationSpeed);
+    }
+
+    IEnumerator animationDelay() {
+
+        yield return new WaitForSeconds(4);
+        TutorialAnimationUtils.MassagePopoutAnimation(massageStartSize, massage, animationSpeed);
+        yield return null;
+    }
+    
+
     public void DisplayWelcome_Listener()
     {
-        TutorialAnimationUtils.MassagePopoutAnimation(massageStartSize, massage, animationSpeed);
+        
         TutorialAnimationUtils.PointerPopoutAnimation(pointerStartPosition, pointerStartSize, -pointerOffset, pointer, animationSpeed);
         TutorialAnimationUtils.ButtonPopoutAnimation(buildButton.transform.localScale, buildButton, 1);
     }
 
     public void DisplayOffWelcome_Listener() {
         TutorialAnimationUtils.RemovePointerAnimation(pointer, animationSpeed);
-        TutorialAnimationUtils.RemoveMassageAnimation(massage, animationSpeed);
+        
     }
 
 }

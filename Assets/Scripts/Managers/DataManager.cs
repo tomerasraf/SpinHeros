@@ -35,7 +35,7 @@ public class DataManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            if (_gameSettingsData.TutorialMode)
+            if (_gameSettingsData.tutorialMode)
             {
                 TutorialPlayerGameData();
             }

@@ -3908,7 +3908,7 @@ RectTransform:
   - {fileID: 1988437672}
   - {fileID: 1389671063}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4279,7 +4279,7 @@ RectTransform:
   m_Children:
   - {fileID: 1020467620}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4363,7 +4363,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -206.226}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4931,6 +4931,8 @@ MonoBehaviour:
   testYourLuck: {fileID: 304733524}
   coinBarUI: {fileID: 2103399704}
   heartsUI: {fileID: 1624982953}
+  buildButton: {fileID: 924693147}
+  miniGameButton: {fileID: 1628984823}
 --- !u!114 &376749860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5733,8 +5735,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418780174}
-  m_LocalRotation: {x: 0.27209032, y: 0.12401084, z: -0.035384286, w: 0.9535912}
-  m_LocalPosition: {x: -11.66, y: 8.22, z: -2.69}
+  m_LocalRotation: {x: 0.28446096, y: 0.14504972, z: -0.043586396, w: 0.9466482}
+  m_LocalPosition: {x: -11.63, y: 8.94, z: -0.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5760,7 +5762,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 9
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1155617213}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 63.48
@@ -7837,8 +7839,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Start your epic journey by rebuilding your village\n\r\nOnce the village
-    is complete \n\ryou will embark on your next\r\nadventure\n"
+  m_text: "Push the hammer button to start\n\nOnce the village is complete \n\ryou
+    will embark on your next\r\nadventure\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
   m_sharedMaterial: {fileID: 2517202264660172603, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
@@ -9731,7 +9733,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -186.563}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14893,6 +14895,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe394d041df1a0547990f49cf653249f, type: 3}
+--- !u!1 &1175757892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175757893}
+  - component: {fileID: 1175757895}
+  - component: {fileID: 1175757894}
+  m_Layer: 5
+  m_Name: ClickOnScreenPointer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1175757893
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175757892}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9711063, w: -0.23864764}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9818244, y: 0.9818244, z: 0.9818243}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1316668414}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -207.613}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 12, y: 143}
+  m_SizeDelta: {x: 254.6842, y: 254.6842}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1175757894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175757892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: cc1ffa58850ce4d49b8b88aa08201aac, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1175757895
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175757892}
+  m_CullTransparentMesh: 1
 --- !u!1 &1200792612
 GameObject:
   m_ObjectHideFlags: 0
@@ -16514,7 +16592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 208}
+  m_AnchoredPosition: {x: 0, y: 500}
   m_SizeDelta: {x: 864, y: 553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250488509
@@ -16675,7 +16753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 208}
+  m_AnchoredPosition: {x: 0, y: 500}
   m_SizeDelta: {x: 864, y: 553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254282291
@@ -17852,6 +17930,7 @@ RectTransform:
   - {fileID: 1250488508}
   - {fileID: 388958027}
   - {fileID: 1761681686}
+  - {fileID: 1175757893}
   - {fileID: 705197799}
   - {fileID: 1619256726}
   - {fileID: 319427216}
@@ -18616,6 +18695,8 @@ GameObject:
   - component: {fileID: 1359242823}
   - component: {fileID: 1359242824}
   - component: {fileID: 1359242825}
+  - component: {fileID: 1359242826}
+  - component: {fileID: 1359242827}
   m_Layer: 0
   m_Name: WelcomeTutorial
   m_TagString: Untagged
@@ -18702,6 +18783,62 @@ MonoBehaviour:
       - m_Target: {fileID: 1359242823}
         m_TargetAssemblyTypeName: WelcomeTutorial, Assembly-CSharp
         m_MethodName: DisplayWelcome_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1359242826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359242821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 48db421e4134dd94fbc079686bfd67be, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1359242823}
+        m_TargetAssemblyTypeName: WelcomeTutorial, Assembly-CSharp
+        m_MethodName: HeroIsLowering_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1359242827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359242821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 4b8c1cb1113c22a4d9d76a5311fc8807, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1359242823}
+        m_TargetAssemblyTypeName: WelcomeTutorial, Assembly-CSharp
+        m_MethodName: HeroIsBlowingAir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21927,7 +22064,7 @@ RectTransform:
   m_Children:
   - {fileID: 1153036961}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23383,10 +23520,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 200
-  field of view: 65.5
+  far clip plane: 500
+  field of view: 63.48
   orthographic: 0
-  orthographic size: 21.5
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -23409,8 +23546,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671784625}
-  m_LocalRotation: {x: 0.1650869, y: -0.07068627, z: 0.0118630845, w: 0.98367125}
-  m_LocalPosition: {x: 15.28, y: 2.82, z: -62.16}
+  m_LocalRotation: {x: 0.28446096, y: 0.14504972, z: -0.043586396, w: 0.9466482}
+  m_LocalPosition: {x: -11.63, y: 8.94, z: -0.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23463,6 +23600,8 @@ GameObject:
   - component: {fileID: 1679329886}
   - component: {fileID: 1679329887}
   - component: {fileID: 1679329888}
+  - component: {fileID: 1679329889}
+  - component: {fileID: 1679329890}
   m_Layer: 0
   m_Name: BuildModeTutorial
   m_TagString: Untagged
@@ -23497,13 +23636,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1ff258a62f898489d7bfa515f537c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
   popupMassage: {fileID: 1250488507}
   sliderPointer: {fileID: 1761681685}
   floatingPointer: {fileID: 388958026}
+  clickOnScreenPointer: {fileID: 1175757892}
   animationSpeed: 1
   sliderPointerOffset: 800
   floatingPointerOffset: 50
   pointerSwitchCounter: 3
+  slideTime: 2
+  clickOnScreenButton: {fileID: 1200792615}
+  buildingSliderUI: {fileID: 729693727}
 --- !u!114 &1679329887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23551,6 +23695,62 @@ MonoBehaviour:
       - m_Target: {fileID: 1679329886}
         m_TargetAssemblyTypeName: Assets.Scripts.Tutorial.BuildModeTutorial, Assembly-CSharp
         m_MethodName: RemoveBuildModePointer_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1679329889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679329884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: fc58c6abcd1686345b607ee9997820b6, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1679329886}
+        m_TargetAssemblyTypeName: Assets.Scripts.Tutorial.BuildModeTutorial, Assembly-CSharp
+        m_MethodName: ClickOnScreen_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1679329890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679329884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 3ff50a9d0733f4040a3a030db5c18284, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1679329886}
+        m_TargetAssemblyTypeName: Assets.Scripts.Tutorial.BuildModeTutorial, Assembly-CSharp
+        m_MethodName: HeroLiftOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24097,17 +24297,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714786279}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99836016, w: -0.05724511}
+  m_LocalRotation: {x: -0, y: -0, z: -0.09503435, w: -0.99547404}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9818244, y: 0.9818244, z: 0.9818243}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1316668414}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -186.563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -349.093}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -49.09123, y: 402.7539}
+  m_AnchoredPosition: {x: 168, y: -183}
   m_SizeDelta: {x: 254.6842, y: 254.6842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714786281
@@ -25670,7 +25870,7 @@ RectTransform:
   m_Children:
   - {fileID: 811192872}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25775,6 +25975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68d0828f30ac5546a5e12a24b6feb2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   _worldData: {fileID: 11400000, guid: 8ba29bc04ae6d0c40be1e30e93c94acf, type: 2}
   minLimitedValue: -500
@@ -27845,7 +28046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5724478, y: -5.411434}
+  m_AnchoredPosition: {x: 0.5724478, y: -31}
   m_SizeDelta: {x: 896.2609, y: 411.8685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065597607
@@ -27868,7 +28069,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Push the hammer button to start
+  m_text: 'Start your epic journey by rebuilding your village
+
+
+    Tap the screen
+    to put out the fire!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
   m_sharedMaterial: {fileID: 2517202264660172603, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
@@ -27895,8 +28100,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 95.1
-  m_fontSizeBase: 95.1
+  m_fontSize: 62.6
+  m_fontSizeBase: 62.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28592,7 +28797,7 @@ RectTransform:
   - {fileID: 4326740}
   - {fileID: 1560034956}
   m_Father: {fileID: 1316668414}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

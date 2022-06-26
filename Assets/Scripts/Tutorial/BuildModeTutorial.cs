@@ -1,31 +1,45 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 namespace Assets.Scripts.Tutorial
 {
     public class BuildModeTutorial : MonoBehaviour
     {
+
+        [Header("Data")]
+        [SerializeField] GameSettingsData _gameSettingsData;
+
         [Header("Pointers")]
         [SerializeField] GameObject popupMassage;
         [SerializeField] GameObject sliderPointer;
         [SerializeField] GameObject floatingPointer;
+        [SerializeField] GameObject clickOnScreenPointer;
 
         [Header("vars")]
         [SerializeField] float animationSpeed;
         [SerializeField] float sliderPointerOffset;
         [SerializeField] float floatingPointerOffset;
         [SerializeField] float pointerSwitchCounter;
+        [SerializeField] float slideTime;
 
+        [Header("Buttons")]
+        [SerializeField] Button clickOnScreenButton;
+
+        [Header("UI")]
+        [SerializeField] GameObject buildingSliderUI;
+
+        private Vector3 buildingSliderStartPosition;
         private Vector3 popupMassageStartSize;
-
         private Vector3 sliderPointerStartSize;
         private Vector3 sliderPointerStartPosition;
-
         private Vector3 floatingPointerStartSize;
         private Vector3 floatingPointerStartPosition;
 
         private void Start()
         {
+            buildingSliderStartPosition = buildingSliderUI.transform.position;
             popupMassageStartSize = popupMassage.transform.localScale;
 
             sliderPointerStartSize = sliderPointer.transform.localScale;
@@ -37,12 +51,17 @@ namespace Assets.Scripts.Tutorial
 
         public void DisplayBuildModePointer_Listener()
         {
-            TutorialAnimationUtils.MassagePopoutAnimation(popupMassageStartSize, popupMassage, 1f);
+            clickOnScreenButton.enabled = false;
+            _gameSettingsData.buildControlsOff = true;
+            TutorialAnimationUtils.RemoveMassageAnimation(popupMassage, 0.5f);
             TutorialAnimationUtils.PointerPopoutSideAnimation(sliderPointerStartPosition, sliderPointerStartSize, -sliderPointerOffset, sliderPointer, animationSpeed);
+            TutorialAnimationUtils.SlideLeft(buildingSliderUI, buildingSliderStartPosition, slideTime);
+
             StartCoroutine(PointerSliderSwitch());
         }
 
-        IEnumerator PointerSliderSwitch() {
+        IEnumerator PointerSliderSwitch()
+        {
 
             yield return new WaitForSeconds(pointerSwitchCounter);
             TutorialAnimationUtils.PointerPopoutAnimation(floatingPointerStartPosition, floatingPointerStartSize, floatingPointerOffset, floatingPointer, animationSpeed);
@@ -50,9 +69,29 @@ namespace Assets.Scripts.Tutorial
             yield return null;
         }
 
-        public void RemoveBuildModePointer_Listener() {
+        public void HeroLiftOff() {
+
+            StartCoroutine(DelayAnimation());
+        }
+
+        IEnumerator DelayAnimation() {
+
+            yield return new WaitForSeconds(2);
+            TutorialAnimationUtils.MassagePopoutAnimation(popupMassageStartSize, popupMassage, 1f);
+            yield return null;
+        }
+
+        public void RemoveBuildModePointer_Listener()
+        {
+            clickOnScreenButton.enabled = true;
             TutorialAnimationUtils.RemovePointerAnimation(floatingPointer, 0.5f);
-            TutorialAnimationUtils.RemoveMassageAnimation(popupMassage, 0.5f);
+            TutorialAnimationUtils.PointerPopoutAnimation(clickOnScreenPointer.transform.position, clickOnScreenPointer.transform.localScale, 70, clickOnScreenPointer, 1);
+        }
+
+        public void ClickOnScreen_Listener()
+        {
+            TutorialAnimationUtils.RemovePointerAnimation(clickOnScreenPointer, 0.5f);
+            _gameSettingsData.buildControlsOff = false;
         }
 
 

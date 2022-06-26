@@ -20,7 +20,7 @@ public class MainUI : MonoBehaviour
  
     private void Start()
     {
-        if (!_gameSettingsData.TutorialMode) {
+        if (!_gameSettingsData.tutorialMode) {
             canvas.SetActive(true);
             spinButton.SetActive(true);
             coinBar.SetActive(true);

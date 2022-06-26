@@ -32,10 +32,10 @@ public class SpinLogic : MonoBehaviour
 
         spinBar_Updater.Raise();
 
-        if (_gameSettingsData.TutorialMode)
+        if (_gameSettingsData.tutorialMode)
         {
 
-            if (sequenceStage == 0 )
+            if (sequenceStage == 0)
             {
                 TutorialSpin(1);
                 coinTutorialMassage.Raise();
@@ -81,6 +81,8 @@ public class SpinLogic : MonoBehaviour
 
     private void SpinRefillLogic()
     {
+        if (_gameSettingsData.tutorialMode) { return; }
+
         if (_playerData.spins <= 0)
         {
             _playerData.spins = -1;

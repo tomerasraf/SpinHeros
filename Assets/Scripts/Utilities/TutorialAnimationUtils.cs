@@ -61,5 +61,13 @@ public static class TutorialAnimationUtils
         });
     }
 
- 
+
+    public static void SlideLeft(GameObject slider , Vector3 startposition , float animationTime) {
+
+        slider.transform.DOMoveX(-717, 0).OnComplete(() => {
+            slider.transform.DOMoveX(startposition.x, animationTime);
+        });
+        
+
+    }
 }

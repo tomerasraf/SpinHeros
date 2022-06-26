@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class BuildMode : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] GameSettingsData _gameSettingsData;
     [SerializeField] PlayerData _playerData;
     [SerializeField] WorldData _worldData;
 
@@ -67,7 +68,7 @@ public class BuildMode : MonoBehaviour
 
     private void Update()
     {
-        if (!_worldData.buldingModeIsOn) { return; }
+        if (!_worldData.buldingModeIsOn || _gameSettingsData.buildControlsOff) { return; }
         UI_TouchMovement();
     }
 
