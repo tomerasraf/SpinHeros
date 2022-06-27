@@ -206,37 +206,39 @@ public class DataManager : MonoBehaviour
         _miniGameMachine.choosenPlayer = 0;
         _miniGameMachine.AIChoosenPlayer = 0;
         _miniGameData.playerAlive = 4;
-        
+
 
         for (int i = 0; i < _playerData.Length; i++)
         {
             _playerData[i].playerIsDead = false;
             _playerData[i].score = 0;
 
-            if (i != 0) {
+            if (i != 0)
+            {
                 _playerData[i].hearts = 3;
 
 
-            if (i != 0) { 
-            _playerData[i].hearts = 3;
-
+                if (i != 0)
+                {
+                    _playerData[i].hearts = 3;
+                }
             }
         }
-    }
 
-    void Update()
-    {
-        // Make sure user is on Android platform
-        if (Application.platform == RuntimePlatform.Android)
+        void Update()
         {
-            // Check if Back was pressed this frame
-            if (Input.GetKeyDown(KeyCode.Escape))
+            // Make sure user is on Android platform
+            if (Application.platform == RuntimePlatform.Android)
             {
-                exitMassage.transform.DOScale(0, 0).OnComplete(() =>
+                // Check if Back was pressed this frame
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    exitMassage.SetActive(true);
-                    exitMassage.transform.DOScale(1, 0);
-                });
+                    exitMassage.transform.DOScale(0, 0).OnComplete(() =>
+                    {
+                        exitMassage.SetActive(true);
+                        exitMassage.transform.DOScale(1, 0);
+                    });
+                }
             }
         }
     }
