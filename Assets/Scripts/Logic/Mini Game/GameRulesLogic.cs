@@ -129,14 +129,7 @@ public class GameRulesLogic : MonoBehaviour
             if (_miniGameData.playerAlive == 1)
             {
                 if (!_playersData[i].playerIsDead) {
-                    if (i == 0) {
-                        winnerScreen.Raise();
-                    }
-                    else
-                    {
-                        defeatScreen.Raise();
-                    }
-
+                    
                     playerWon.Raise(i);
                    _miniGameData.gameIsOver = true;
                 }
