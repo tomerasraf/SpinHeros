@@ -16,9 +16,9 @@ public class StartScreenLoader : MonoBehaviour
     {
         playtopiaBackground_Image.DOColor(Color.black, 0f).OnComplete(() =>
         {
-            playtopiaBackground_Image.DOColor(Color.white, 2f).OnComplete(() =>
+            playtopiaBackground_Image.DOColor(Color.white, 3.5f).OnComplete(() =>
             {
-                playtopiaBackground_Image.DOColor(Color.black, 2f).OnComplete(() =>
+                playtopiaBackground_Image.DOColor(Color.black, 3.5f).OnComplete(() =>
                 {
                     SceneManager.LoadScene(1);
                 });

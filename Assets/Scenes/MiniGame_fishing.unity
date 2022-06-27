@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.07504989, g: 0.37651885, b: 1.0866094, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.07082232, g: 0.3659441, b: 1.0887556, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19841,8 +19841,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Collect as many fish as possible, get the highest score and win the game!\n\n      
-    =  +10 Points\n\n       =  +20 Points\n\n       =  +50 Points\n\n       =  -
-    10 Points  \n\n       =  Attack your opponents \n\n\n\n\n"
+    =  10 Points\n\n       =  20 Points\n\n       =  50 Points\n\n              =
+    (-) 10 Points  \n\n       =  Attack your opponents \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
   m_sharedMaterial: {fileID: 2517202264660172603, guid: 4995422ffdb954b70a642f73eb1442ea, type: 2}
@@ -31342,7 +31342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4645804196460410403, guid: e1749bac223485d40a29c39c5b7e3d67, type: 3}
       propertyPath: timeOfWheelSpin
-      value: 1.9
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4645804196460410405, guid: e1749bac223485d40a29c39c5b7e3d67, type: 3}
       propertyPath: m_Name
