@@ -96,12 +96,5 @@ namespace Assets.Scripts.Tutorial
             _gameSettingsData.buildControlsOff = false;
         }
 
-        public void ClickOnScreen_Listener()
-        {
-            
-            
-        }
-
-
     }
 }

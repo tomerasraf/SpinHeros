@@ -224,21 +224,21 @@ public class DataManager : MonoBehaviour
                 }
             }
         }
+    }
 
-        void Update()
+    void Update()
+    {
+        // Make sure user is on Android platform
+        if (Application.platform == RuntimePlatform.Android)
         {
-            // Make sure user is on Android platform
-            if (Application.platform == RuntimePlatform.Android)
+            // Check if Back was pressed this frame
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.R))
             {
-                // Check if Back was pressed this frame
-                if (Input.GetKeyDown(KeyCode.Escape))
+                exitMassage.transform.DOScale(0, 0).OnComplete(() =>
                 {
-                    exitMassage.transform.DOScale(0, 0).OnComplete(() =>
-                    {
-                        exitMassage.SetActive(true);
-                        exitMassage.transform.DOScale(1, 0);
-                    });
-                }
+                    exitMassage.SetActive(true);
+                    exitMassage.transform.DOScale(1, 0);
+                });
             }
         }
     }
