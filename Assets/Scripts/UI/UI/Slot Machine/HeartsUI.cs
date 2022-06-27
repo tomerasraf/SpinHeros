@@ -4,7 +4,6 @@ using UnityEngine;
 public class HeartsUI : MonoBehaviour
 {
     [Header("Data")]
-    [SerializeField] GameSettingsData _gameSettingsData;
     [SerializeField] private PlayerData _playerData;
 
     [Header("Images")]
@@ -12,7 +11,6 @@ public class HeartsUI : MonoBehaviour
 
     private void Start()
     {
-        if (_gameSettingsData.tutorialMode) { return; }
         DisplayHeartUI_Start();
     }
 
@@ -51,9 +49,5 @@ public class HeartsUI : MonoBehaviour
         heartImages[_playerData.hearts - 1].SetActive(true);
         heartImages[_playerData.hearts - 1].transform.DOScale(0.8f, 0.3f).SetEase(Ease.OutBounce);
 
-    }
-
-    public void HeartAnimationUI() { 
-        
     }
 }
