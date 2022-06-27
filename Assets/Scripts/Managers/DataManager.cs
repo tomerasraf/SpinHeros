@@ -17,7 +17,6 @@ public class DataManager : MonoBehaviour
     public PlayerData[] _playerData;
     private int symbolIndex = 0;
     private int counter = 0;
-    private int tutorialCounter = 0;
 
     private void Awake()
     {
@@ -187,7 +186,7 @@ public class DataManager : MonoBehaviour
             _playerData[i].spins = 7;
             _playerData[i].moreSpinsTimer = 60f;
             _playerData[i].bet = 1;
-            _playerData[i].hearts = 0;
+            _playerData[i].hearts = 2;
             _playerData[i].playerProgress = 0;
             _playerData[i].score = 0;
             _playerData[i].crowns = 0;
@@ -213,8 +212,14 @@ public class DataManager : MonoBehaviour
         {
             _playerData[i].playerIsDead = false;
             _playerData[i].score = 0;
+
             if (i != 0) {
                 _playerData[i].hearts = 3;
+
+
+            if (i != 0) { 
+            _playerData[i].hearts = 3;
+
             }
         }
     }
