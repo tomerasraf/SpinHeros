@@ -6,4 +6,5 @@ class GameSettingsData : ScriptableObject
 {
     public bool tutorialMode;
     public bool buildControlsOff;
+    public bool touchScreenIsEnabled;
 }

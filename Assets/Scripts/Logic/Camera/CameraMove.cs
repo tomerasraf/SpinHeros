@@ -1,6 +1,6 @@
+using DG.Tweening;
 using System.Collections;
 using UnityEngine;
-using DG.Tweening;
 
 public class CameraMove : MonoBehaviour
 {
@@ -51,7 +51,7 @@ public class CameraMove : MonoBehaviour
     [SerializeField] VoidEvent removeClickMe;
     [SerializeField] VoidEvent buildUITutorial;
 
-   private int whirlWindCounter = 0;
+    private int whirlWindCounter = 0;
 
     private Vector3 EndTouchPosition;
 
@@ -101,24 +101,31 @@ public class CameraMove : MonoBehaviour
 
         heroIsLowering.Raise();
 
-        hero.transform.DOMoveY(hero.transform.position.y - 18, 2.3f).OnComplete(() => {
-            hero.transform.DOMoveY(hero.transform.position.y + 0.5f, 2f).SetLoops(-1,LoopType.Yoyo).SetEase(Ease.OutSine);
+        hero.transform.DOMoveY(hero.transform.position.y - 18, 2.3f).OnComplete(() =>
+        {
+            hero.transform.DOMoveY(hero.transform.position.y + 0.5f, 2f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.OutSine);
             turnOnUI.Raise();
             clickMeEvent.Raise();
         });
 
-        while (!_worldData.buildingIsSaved) {
+        while (!_worldData.buildingIsSaved)
+        {
+            if (_gameSettingsData.touchScreenIsEnabled)
+            {
+                if (TouchInput.TouchScreenDetector())
+                {
+                    heroblowingAir.Raise();
+                    whirlWind.SetActive(true);
+                    yield return new WaitForSeconds(1.5f);
+                    whirlWind.SetActive(false);
+                    whirlWindCounter++;
 
-            if (TouchInput.TouchScreenDetector()) {
-                heroblowingAir.Raise();
-                whirlWind.SetActive(true);
-                yield return new WaitForSeconds(1.5f);
-                whirlWind.SetActive(false);
-                whirlWindCounter++;
-
-                if (whirlWindCounter >= 3) {
-                    _worldData.buildingIsSaved = true;
+                    if (whirlWindCounter >= 3)
+                    {
+                        _worldData.buildingIsSaved = true;
+                    }
                 }
+                yield return null;
             }
             yield return null;
         }
@@ -130,12 +137,14 @@ public class CameraMove : MonoBehaviour
         yield return new WaitForSeconds(2.1f);
 
         heroLiftOff.Raise();
-        hero.transform.DOMoveY(hero.transform.position.y - 1, 1f).OnComplete(() => {
-             hero.transform.DOMoveY(hero.transform.position.y + 30, 1f).OnComplete(() => {
-               
+        hero.transform.DOMoveY(hero.transform.position.y - 1, 1f).OnComplete(() =>
+        {
+            hero.transform.DOMoveY(hero.transform.position.y + 30, 1f).OnComplete(() =>
+            {
+
                 hero.SetActive(false);
                 buildUITutorial.Raise();
-             });
+            });
         });
 
         turnOnUI.Raise();

@@ -28,6 +28,7 @@ public class BuildMode : MonoBehaviour
     [SerializeField] IntEvent notEnoughCoins;
     [SerializeField] IntEvent rewardAnimation;
     [SerializeField] VoidEvent miniGameUI_Updater;
+    [SerializeField] VoidEvent allUI_Updater;
 
     [Header("Triggers")]
     [SerializeField] GameObject exitBuildModeButton;
@@ -93,6 +94,7 @@ public class BuildMode : MonoBehaviour
         if (id == 0) { return; }
         rewardAnimation.Raise(id);
         miniGameUI_Updater.Raise();
+        allUI_Updater.Raise();
     }
 
     private void UI_TouchMovement()

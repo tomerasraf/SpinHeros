@@ -20,9 +20,9 @@ MonoBehaviour:
   moreSpinsTimer: 60
   bet: 1
   miniGameTicket: 0
-  hearts: 3
+  hearts: 0
   playerProgress: 0
-  score: 0
-  currentPrize: 10
-  playerIsDead: 0
+  score: 60
+  currentPrize: 20
+  playerIsDead: 1
   amountPlayersAttacked: 0

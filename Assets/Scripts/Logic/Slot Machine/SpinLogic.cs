@@ -118,7 +118,7 @@ public class SpinLogic : MonoBehaviour
 
         _slotMachineData.slotResults[0] = rand;
 
-        if (Random.value > 0.8f)
+        if (Random.value <= 0.35f)
         {
             _slotMachineData.slotResults[1] = rand;
         }
@@ -130,7 +130,7 @@ public class SpinLogic : MonoBehaviour
 
         if (_slotMachineData.slotResults[0] == _slotMachineData.slotResults[1]) {
 
-            if (Random.value > 0.8f) {
+            if (Random.value <= 0.25f) {
                 _slotMachineData.slotResults[2] = rand;
             }
 

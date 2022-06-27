@@ -9510,6 +9510,7 @@ GameObject:
   - component: {fileID: 602958314}
   - component: {fileID: 602958313}
   - component: {fileID: 602958315}
+  - component: {fileID: 602958316}
   m_Layer: 5
   m_Name: BarFill
   m_TagString: Untagged
@@ -9638,6 +9639,34 @@ MonoBehaviour:
       - m_Target: {fileID: 602958314}
         m_TargetAssemblyTypeName: SpinBarUI, Assembly-CSharp
         m_MethodName: SpinBarUIAnimation_Updater
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &602958316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602958309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 042d9bb3961a167438862dd65eae7f2d, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 602958314}
+        m_TargetAssemblyTypeName: SpinBarUI, Assembly-CSharp
+        m_MethodName: SpinBarText_Updater
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21205,6 +21234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b1ef05def3b4e42a653f029e1de5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
   massage: {fileID: 1254282289}
   buildButton: {fileID: 924693145}
   pointer: {fileID: 664794599}
@@ -26129,7 +26159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b1a30b72d575542952fae49d41a1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameSettingsData: {fileID: 0}
+  _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   heartImages:
   - {fileID: 1269802229}
@@ -29871,6 +29901,7 @@ MonoBehaviour:
   notEnoughCoins: {fileID: 11400000, guid: eaa54b3d660f0d445bcaef826b659ef6, type: 2}
   rewardAnimation: {fileID: 11400000, guid: 542a35224ced39c4cae08d69269cc05a, type: 2}
   miniGameUI_Updater: {fileID: 11400000, guid: ea315ddf7ba654342af619cc0fa3741d, type: 2}
+  allUI_Updater: {fileID: 11400000, guid: 042d9bb3961a167438862dd65eae7f2d, type: 2}
   exitBuildModeButton: {fileID: 1200792612}
 --- !u!4 &1888672839
 Transform:
@@ -60432,6 +60463,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5886693519128164461, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
+      propertyPath: _playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
     - target: {fileID: 5886693519128164461, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
       propertyPath: JackpotSound
       value: 

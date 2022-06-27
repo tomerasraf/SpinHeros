@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6593dd04253f9844984b965e5e56d09, type: 3}
-  m_Name: Player 4
+  m_Name: Player1
   m_EditorClassIdentifier: 
-  coins: 0
-  crowns: 0
-  spins: 50
+  coins: 66400
+  crowns: 3
+  spins: -1
   maxSpins: 50
-  extraSpins: 0
-  moreSpinsTimer: 60
+  extraSpins: 2
+  moreSpinsTimer: 18.077774
   bet: 1
   miniGameTicket: 0
   hearts: 0
   playerProgress: 0
-  score: 0
-  currentPrize: 50
+  score: 30
+  currentPrize: 20
   playerIsDead: 1
   amountPlayersAttacked: 0

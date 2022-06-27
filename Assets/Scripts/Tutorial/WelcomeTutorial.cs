@@ -3,6 +3,9 @@ using System.Collections;
 
 public class WelcomeTutorial : MonoBehaviour
 {
+    [Header("Events")]
+    [SerializeField] GameSettingsData _gameSettingsData;
+
     [SerializeField] GameObject massage;
     [SerializeField] GameObject buildButton;
     [SerializeField] GameObject pointer;
@@ -24,6 +27,7 @@ public class WelcomeTutorial : MonoBehaviour
     }
 
     public void HeroIsLowering_Listener() {
+        _gameSettingsData.touchScreenIsEnabled = false;
         StartCoroutine(animationDelay());
     }
 
@@ -34,6 +38,7 @@ public class WelcomeTutorial : MonoBehaviour
     IEnumerator animationDelay() {
 
         yield return new WaitForSeconds(4);
+        _gameSettingsData.touchScreenIsEnabled = true;
         TutorialAnimationUtils.MassagePopoutAnimation(massageStartSize, massage, animationSpeed);
         yield return null;
     }

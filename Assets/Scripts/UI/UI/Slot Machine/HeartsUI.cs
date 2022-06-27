@@ -12,7 +12,6 @@ public class HeartsUI : MonoBehaviour
 
     private void Start()
     {
-        if (_gameSettingsData.tutorialMode) { return; }
         DisplayHeartUI_Start();
     }
 

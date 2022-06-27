@@ -23,5 +23,6 @@ MonoBehaviour:
   hearts: 0
   playerProgress: 0
   score: 0
-  currentPrize: 0
+  currentPrize: -10
   playerIsDead: 1
+  amountPlayersAttacked: 0
