@@ -26,6 +26,7 @@ public class BuildingWorldUI : MonoBehaviour
     private Vector3 builderUIStartPos;
     private Vector3 miniGameButtonStartPos;
     private Vector3 buildModeButtonStartPos;
+    private Vector3 rewardUIStartPos;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class BuildingWorldUI : MonoBehaviour
 
     private void InitializeStartPositions()
     {
+        rewardUIStartPos = rewardUI.transform.position;
         spinButtonStartPos = spinButtonUI.transform.position;
         builderUIStartPos = builderUI.transform.position;
         miniGameButtonStartPos = miniGameButtonUI.transform.position;
@@ -141,12 +143,14 @@ public class BuildingWorldUI : MonoBehaviour
         rewardUI.GetComponent<TextMeshProUGUI>().text = $"+ {_worldData.spinReward[id]} Spins \n" +
             $"+ {_worldData.miniGameTicketsReward[id]} Mini-Game Ticket";
 
+        rewardUI.transform.DOMove(rewardUIStartPos, 0);
         rewardUI.GetComponent<TextMeshProUGUI>().DOFade(0, 0).OnComplete(() =>
         {
             rewardUI.SetActive(true);
             rewardUI.transform.DOMoveY(rewardUI.transform.position.y + 100, 2f);
             rewardUI.GetComponent<TextMeshProUGUI>().DOFade(1, 2f).OnComplete(() => {
                 rewardUI.GetComponent<TextMeshProUGUI>().DOFade(0, 0.3f);
+                
             });
         });
     }

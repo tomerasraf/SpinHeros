@@ -11,6 +11,7 @@ public class MiniGameInput : MonoBehaviour
     [SerializeField] VoidEvent enterMiniGame_Event;
     [SerializeField] VoidEvent minigameUIText_Updater;
     [SerializeField] VoidEvent focuseOnWheel;
+    [SerializeField] VoidEvent notEnenoughHearts;
     public void MiniGameEvent_Trigger()
     {
         focuseOnWheel.Raise();
@@ -21,7 +22,7 @@ public class MiniGameInput : MonoBehaviour
         }
         else
         {
-            if (_playerData.miniGameTicket > 0)
+            if (_playerData.miniGameTicket > 0 && _playerData.hearts > 0)
             {
                 enterMiniGame_Event.Raise();
                 _playerData.miniGameTicket--;
@@ -29,7 +30,7 @@ public class MiniGameInput : MonoBehaviour
             }
             else
             {
-                return;
+                notEnenoughHearts.Raise();
             }
         }
 
@@ -41,7 +42,7 @@ public class MiniGameInput : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        if (_playerData.miniGameTicket > 0)
+        if (_playerData.miniGameTicket > 0 && _playerData.hearts > 0)
         {
             enterMiniGame_Event.Raise();
             _playerData.miniGameTicket--;
@@ -49,6 +50,7 @@ public class MiniGameInput : MonoBehaviour
         }
         else
         {
+            notEnenoughHearts.Raise();
             yield return null;
         }
 
