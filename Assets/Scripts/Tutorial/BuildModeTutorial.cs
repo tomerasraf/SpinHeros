@@ -33,9 +33,6 @@ namespace Assets.Scripts.Tutorial
         [Header("Ruined Building")]
         [SerializeField] GameObject ruinedBuilding;
 
-        [Header("Events")]
-        [SerializeField] VoidEvent swichToWorldMode;
-        
         private Vector3 buildingSliderStartPosition;
         private Vector3 popupMassageStartSize;
         private Vector3 sliderPointerStartSize;
@@ -89,17 +86,16 @@ namespace Assets.Scripts.Tutorial
 
         public void RemoveBuildModePointer_Listener()
         {
-            swichToWorldMode.Raise();
             ruinedBuilding.SetActive(false);
             clickOnScreenButton.enabled = true;
             TutorialAnimationUtils.RemovePointerAnimation(floatingPointer, 0.5f);
-            _gameSettingsData.buildControlsOff = false;
+            TutorialAnimationUtils.PointerPopoutAnimation(clickOnScreenPointer.transform.position, clickOnScreenPointer.transform.localScale, 70, clickOnScreenPointer, 1);
         }
 
         public void ClickOnScreen_Listener()
         {
-            
-            
+            TutorialAnimationUtils.RemovePointerAnimation(clickOnScreenPointer, 0.5f);
+            _gameSettingsData.buildControlsOff = false;
         }
 
 
