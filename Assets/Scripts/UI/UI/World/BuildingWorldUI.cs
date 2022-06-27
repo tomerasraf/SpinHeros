@@ -17,6 +17,7 @@ public class BuildingWorldUI : MonoBehaviour
     [SerializeField] GameObject[] successUI;
     [SerializeField] GameObject[] buildButtonsUI;
     [SerializeField] GameObject CantAfford;
+    [SerializeField] GameObject rewardUI;
 
     private GameObject cantAffordClone;
 
@@ -134,5 +135,19 @@ public class BuildingWorldUI : MonoBehaviour
                 });
             });
         }
+    }
+
+    public void RewardUIPopout_Listener(int id) {
+        rewardUI.GetComponent<TextMeshProUGUI>().text = $"+ {_worldData.spinReward[id]} Spins \n" +
+            $"+ {_worldData.miniGameTicketsReward[id]} Mini-Game Ticket";
+
+        rewardUI.GetComponent<TextMeshProUGUI>().DOFade(0, 0).OnComplete(() =>
+        {
+            rewardUI.SetActive(true);
+            rewardUI.transform.DOMoveY(rewardUI.transform.position.y + 100, 2f);
+            rewardUI.GetComponent<TextMeshProUGUI>().DOFade(1, 2f).OnComplete(() => {
+                rewardUI.GetComponent<TextMeshProUGUI>().DOFade(0, 0.3f);
+            });
+        });
     }
 }

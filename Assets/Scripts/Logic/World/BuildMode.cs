@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;
 
 public class BuildMode : MonoBehaviour
 {
@@ -26,6 +26,8 @@ public class BuildMode : MonoBehaviour
     [Header("Events")]
     [SerializeField] VoidEvent playerSpentCoins;
     [SerializeField] IntEvent notEnoughCoins;
+    [SerializeField] IntEvent rewardAnimation;
+    [SerializeField] VoidEvent miniGameUI_Updater;
 
     [Header("Triggers")]
     [SerializeField] GameObject exitBuildModeButton;
@@ -36,17 +38,6 @@ public class BuildMode : MonoBehaviour
     private void Start()
     {
         LoadBuildingsData();
-    }
-
-    private void LoadBuildingsData()
-    {
-        for (int i = 0; i < _worldData.isBuilded.Length; i++)
-        {
-            if (_worldData.isBuilded[i])
-            {
-                buildingGameobjects[i].SetActive(true);
-            }
-        }
     }
 
     public void BuildingModeIsOn()
@@ -91,6 +82,17 @@ public class BuildMode : MonoBehaviour
     {
         buildingGameobjects[buttonID].SetActive(true);
         _worldData.isBuilded[buttonID] = true;
+
+        buildReward(buttonID);
+    }
+
+    private void buildReward(int id) {
+        _playerData.spins += _worldData.spinReward[id];
+        _playerData.miniGameTicket += _worldData.miniGameTicketsReward[id];
+
+        if (id == 0) { return; }
+        rewardAnimation.Raise(id);
+        miniGameUI_Updater.Raise();
     }
 
     private void UI_TouchMovement()
@@ -101,6 +103,17 @@ public class BuildMode : MonoBehaviour
         Vector3 newUIPosition = new Vector3(-smoothedPosition.x * slideSensitivity * Time.fixedDeltaTime, buildingsUI_Slider.transform.position.y, buildingsUI_Slider.transform.position.z);
 
         buildingsUI_Slider.transform.position = newUIPosition;
+    }
+
+    private void LoadBuildingsData()
+    {
+        for (int i = 0; i < _worldData.isBuilded.Length; i++)
+        {
+            if (_worldData.isBuilded[i])
+            {
+                buildingGameobjects[i].SetActive(true);
+            }
+        }
     }
 
 }

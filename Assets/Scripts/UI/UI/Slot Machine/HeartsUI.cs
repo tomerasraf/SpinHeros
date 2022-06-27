@@ -1,6 +1,5 @@
-using UnityEngine;
-using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine;
 
 public class HeartsUI : MonoBehaviour
 {
@@ -12,7 +11,34 @@ public class HeartsUI : MonoBehaviour
 
     private void Start()
     {
-       // HeartUI_Updater();
+        DisplayHeartUI_Start();
+    }
+
+    private void DisplayHeartUI_Start()
+    {
+        if (_playerData.hearts == 0)
+        {
+            for (int i = 0; i < heartImages.Length; i++)
+            {
+                heartImages[i].SetActive(false);
+            }
+        }
+
+        if (_playerData.hearts == 1) {
+            heartImages[0].SetActive(true);
+        }
+
+        if (_playerData.hearts == 2) {
+            heartImages[0].SetActive(true);
+            heartImages[1].SetActive(true);
+        }
+
+        if (_playerData.hearts == 3) {
+            heartImages[0].SetActive(true);
+            heartImages[1].SetActive(true);
+            heartImages[2].SetActive(true);
+        }
+
     }
 
     public void HeartUI_Updater()

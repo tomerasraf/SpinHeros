@@ -20,6 +20,10 @@ public class WorldData : ScriptableObject
     public int[] priceToBuild;
     public bool[] isBuilded;
 
+    [Header("Reward after building")]
+    public int[] spinReward;
+    public int[] miniGameTicketsReward;
+
     [Header("Building Is Destroyed")]
     public bool buildingIsSaved;
 

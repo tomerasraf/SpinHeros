@@ -17,14 +17,13 @@ public class DataManager : MonoBehaviour
     public PlayerData[] _playerData;
     private int symbolIndex = 0;
     private int counter = 0;
+    private int tutorialCounter = 0;
 
     private void Awake()
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 120;
         Screen.fullScreen = true;
-
-      
 
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {
@@ -39,7 +38,7 @@ public class DataManager : MonoBehaviour
             {
                 TutorialPlayerGameData();
             }
-            _playerData[0].extraSpins = 0;
+            
             _playerData[0].bet = 1;
             ResetWorldData();
             ResetslotMachineOddsData();
@@ -212,8 +211,10 @@ public class DataManager : MonoBehaviour
         for (int i = 0; i < _playerData.Length; i++)
         {
             _playerData[i].playerIsDead = false;
-            _playerData[i].hearts = 3;
             _playerData[i].score = 0;
+
+            if (i == 0) { return; }
+            _playerData[i].hearts = 3;
         }
     }
 

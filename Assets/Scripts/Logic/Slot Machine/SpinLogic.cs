@@ -57,15 +57,8 @@ public class SpinLogic : MonoBehaviour
         }
         else
         {
-            RanomizeSpin(_slotMachineData.slot1,
-            out _slotMachineData.slotResults[0]);
-            RanomizeSpin(_slotMachineData.slot2,
-            out _slotMachineData.slotResults[1]);
-            RanomizeSpin(_slotMachineData.slot3,
-            out _slotMachineData.slotResults[2]);
+            RanomizeSpin();
         }
-
-
     }
 
     private void TutorialSpin(int symbolID)
@@ -118,9 +111,37 @@ public class SpinLogic : MonoBehaviour
     }
 
     // Randomize the slot machine reel symbol number
-    private void RanomizeSpin(int[] slot, out int result)
+    private void RanomizeSpin()
     {
-        int rand = Random.Range(0, slot.Length);
-        result = slot[rand];
+
+        int rand = Random.Range(0, 5);
+
+        _slotMachineData.slotResults[0] = rand;
+
+        if (Random.value > 0.8f)
+        {
+            _slotMachineData.slotResults[1] = rand;
+        }
+        else
+        {
+            rand = Random.Range(0, 5);
+            _slotMachineData.slotResults[1] = rand;
+        }
+
+        if (_slotMachineData.slotResults[0] == _slotMachineData.slotResults[1]) {
+
+            if (Random.value > 0.8f) {
+                _slotMachineData.slotResults[2] = rand;
+            }
+
+        }
+        else
+        {
+            rand = Random.Range(0, 5);
+            _slotMachineData.slotResults[2] = rand;
+        }
+
+       /* int rand = Random.Range(0, slot.Length);
+        result = slot[rand];*/
     }
 }

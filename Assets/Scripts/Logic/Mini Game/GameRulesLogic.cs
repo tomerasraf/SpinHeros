@@ -26,6 +26,8 @@ public class GameRulesLogic : MonoBehaviour
     [SerializeField] Sprite loser;
 
     private float counter = 0;
+    private int previewsLoserSpinReward = 0;
+    private int previewsWinnerSpinReward = 0;
 
     private void Start()
     {
@@ -48,19 +50,35 @@ public class GameRulesLogic : MonoBehaviour
             {
                 counter++;
                 if (counter == 1) {
-                    _gameSettingData.tutorialMode = false;
                     CalculateMiniGameResults(i);
                     playerWonSound.Raise();
                     playerWon.Raise(i);
                     _miniGameData.gameIsOver = true;
                     spinButton.enabled = false;
                     miniGameDisplayUI_Off.Raise();
+                    _gameSettingData.tutorialMode = false;
                 }
             }
         }
     }
 
     private void CalculateMiniGameResults(int id) {
+
+        
+
+        if (_gameSettingData.tutorialMode)
+        {
+            previewsLoserSpinReward = _miniGameData.loserSpinPrize;
+            previewsWinnerSpinReward = _miniGameData.winnerSpinPrize;
+            _miniGameData.winnerSpinPrize = 50;
+            _miniGameData.loserSpinPrize = 50;
+        }
+        else
+        {
+            _miniGameData.winnerSpinPrize = previewsWinnerSpinReward;
+            _miniGameData.loserSpinPrize = previewsLoserSpinReward;
+        }
+
         if (id == 0) {
             winnerScreen.Raise();
             statusImage.sprite = winner;
@@ -74,6 +92,8 @@ public class GameRulesLogic : MonoBehaviour
             _playersData[0].coins += _miniGameData.loserPrize + (_playersData[0].amountPlayersAttacked * _miniGameData.attackBonus);
             _playersData[0].spins += _miniGameData.loserSpinPrize;
         }
+
+        
     }
     private void PlayerIsDead() {
         for (int i = 0; i < _playersData.Length; i++)

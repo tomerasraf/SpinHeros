@@ -1,5 +1,5 @@
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
 public static class EffectAnimationUtils
 {
@@ -7,14 +7,14 @@ public static class EffectAnimationUtils
     {
         effectModel.transform.DOScale(1, 0);
         effectModel.transform.position = startPosition.position + Vector3.up * 15;
-        effectModel.SetActive(true); 
+        effectModel.SetActive(true);
         effectModel.transform.DOMoveY(startPosition.position.y + 0.2f, 1f).OnComplete(() =>
         {
 
             effectModel.transform.DOMoveY(startPosition.position.y + 0.7f, 1f * 0.5f).SetEase(Ease.InOutSine).SetLoops(3, LoopType.Yoyo).OnComplete(() =>
             {
                 effectModel.transform.DOScale(0.05f, 0.7f);
-                Vector2 screenPoint = UITransform[ID - 1 ].position;
+                Vector2 screenPoint = UITransform[ID - 1].position;
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPoint);
 
 
@@ -29,6 +29,5 @@ public static class EffectAnimationUtils
         });
         effectModel.transform.DOLocalRotate(new Vector3(0, 360, 0), 5f * 0.5f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart).SetEase(Ease.Linear);
     }
-
 
 }
