@@ -207,14 +207,15 @@ public class DataManager : MonoBehaviour
         _miniGameMachine.choosenPlayer = 0;
         _miniGameMachine.AIChoosenPlayer = 0;
         _miniGameData.playerAlive = 4;
+        
 
         for (int i = 0; i < _playerData.Length; i++)
         {
             _playerData[i].playerIsDead = false;
             _playerData[i].score = 0;
-
-            if (i == 0) { return; }
-            _playerData[i].hearts = 3;
+            if (i != 0) {
+                _playerData[i].hearts = 3;
+            }
         }
     }
 
