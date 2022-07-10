@@ -2599,19 +2599,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flyAndAvoidData: {fileID: 11400000, guid: d343db7d9090ac140b977c5c668d7b8a, type: 2}
   meteorStartOffset: 10
-  meteorFalingSpeed: 0
+  meteorFalingSpeed: 1
   timeBetweenSpwan: 0.7
   meteorPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8652577592006711715, guid: c8d5e8c5182d2284d9b83a3b2235e986, type: 3}
+  - {fileID: 6220958245865792901, guid: 3570df76a9b36464cbf40bc8d97ba697, type: 3}
+  - {fileID: 5832714868533428276, guid: e81453bc46367e54db55e1c50ca74df0, type: 3}
+  - {fileID: 776938457280573852, guid: 7a8f3be3406fa4e419658711fed04505, type: 3}
+  - {fileID: 6419099072851694314, guid: c6a84552944f1cf4abf65f5d19af9b49, type: 3}
+  - {fileID: 5153099859211187103, guid: d61364fb52aff8641b2374bc8c3695ae, type: 3}
+  - {fileID: 2135314204334981749, guid: acf3aae7b78b7db4d97f525f363c1344, type: 3}
+  - {fileID: 4339419654122471125, guid: 46c6fe39b91945042a9ba49434171abf, type: 3}
+  - {fileID: 8504298199794628381, guid: 5b09ba4be8b28fe48abab9fba591b0aa, type: 3}
+  - {fileID: 5881172956336903705, guid: af11f6ba834ea2742929a9dff6ea116f, type: 3}
   player: {fileID: 360464488}
 --- !u!33 &425871743
 MeshFilter:
