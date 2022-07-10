@@ -2599,8 +2599,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flyAndAvoidData: {fileID: 11400000, guid: d343db7d9090ac140b977c5c668d7b8a, type: 2}
   meteorStartOffset: 10
+  meteorFalingSpeed: 0
   timeBetweenSpwan: 0.7
-  meteorPrefab: {fileID: 8890256990248351964, guid: 657b526da53918f4d80e03e72ad95db1, type: 3}
+  meteorPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   player: {fileID: 360464488}
 --- !u!33 &425871743
 MeshFilter:

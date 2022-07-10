@@ -8,12 +8,15 @@ public class MeteorSpawner : MonoBehaviour
 
     [Header("Vars")]
     [SerializeField] float meteorStartOffset;
-    [SerializeField] float timeBetweenSpwan; 
+    [SerializeField] float meteorFalingSpeed;
+    [SerializeField] float timeBetweenSpwan;
 
     [Header("GameObjects & Transforms")]
-    [SerializeField] GameObject meteorPrefab;
+    [SerializeField] GameObject[] meteorPrefab;
     [SerializeField] Transform player;
-   
+
+    private GameObject meteorClone;
+
     IEnumerator Start()
     {
 
@@ -27,7 +30,21 @@ public class MeteorSpawner : MonoBehaviour
                 player.position.z
                 );
 
-            Instantiate(meteorPrefab, meteorStartPos, Quaternion.identity);
+            int randMeteor = Random.Range(0, meteorPrefab.Length + 1);
+
+            meteorClone = Instantiate(
+                meteorPrefab[randMeteor],
+                meteorStartPos,
+                Quaternion.identity
+                );
+
+            Vector3 meteorFalingDiraction = new Vector3(
+                meteorClone.transform.position.x,
+                meteorClone.transform.position.y - meteorFalingSpeed * Time.deltaTime,
+                meteorClone.transform.position.z
+                );
+
+            meteorClone.transform.position = meteorFalingDiraction;
 
             yield return new WaitForSeconds(timeBetweenSpwan);
 
