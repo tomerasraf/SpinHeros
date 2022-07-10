@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8047528748719203319}
   - component: {fileID: 3080268256557107797}
   - component: {fileID: 3474492370295279567}
-  - component: {fileID: 7535614589334251559}
   - component: {fileID: 7535614589334251558}
   m_Layer: 0
   m_Name: Asteroid_Part_8
@@ -85,22 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &7535614589334251559
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538680567167936219}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &7535614589334251558
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -126,7 +109,6 @@ GameObject:
   - component: {fileID: 9126019611207702668}
   - component: {fileID: 7054053929357929633}
   - component: {fileID: 5243700833332521275}
-  - component: {fileID: 8762688988586349410}
   - component: {fileID: 8762688988586349409}
   m_Layer: 0
   m_Name: Asteroid_Part_5
@@ -200,22 +182,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &8762688988586349410
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558094301947066272}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &8762688988586349409
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -241,7 +207,6 @@ GameObject:
   - component: {fileID: 2528272971686654343}
   - component: {fileID: 6430211314790068038}
   - component: {fileID: 3394150610057588159}
-  - component: {fileID: 6773908989339002008}
   - component: {fileID: 6773908989339002007}
   m_Layer: 0
   m_Name: Asteroid_Part_7
@@ -315,22 +280,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &6773908989339002008
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627389856691145170}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &6773908989339002007
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -356,7 +305,6 @@ GameObject:
   - component: {fileID: 7196408168504736951}
   - component: {fileID: 14622838915155892}
   - component: {fileID: 1529287331629955719}
-  - component: {fileID: 7269854680716654439}
   - component: {fileID: 7269854680716654438}
   m_Layer: 0
   m_Name: Asteroid_Part_4
@@ -430,22 +378,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &7269854680716654439
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2565720996427554826}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &7269854680716654438
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -471,7 +403,6 @@ GameObject:
   - component: {fileID: 5458787806522363542}
   - component: {fileID: 1656066848763860621}
   - component: {fileID: 106107336000032413}
-  - component: {fileID: 5547576983428121928}
   - component: {fileID: 5547576983428121927}
   m_Layer: 0
   m_Name: Asteroid_Part_3
@@ -545,22 +476,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &5547576983428121928
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2614502046263110933}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &5547576983428121927
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -586,8 +501,7 @@ GameObject:
   - component: {fileID: 3264122416567605620}
   - component: {fileID: 3225393654332453066}
   - component: {fileID: 7068381939249782059}
-  - component: {fileID: 7289813381771892475}
-  - component: {fileID: 7289813381771892474}
+  - component: {fileID: 6439338913322148420}
   m_Layer: 0
   m_Name: Asteroid_Part_10
   m_TagString: Untagged
@@ -660,23 +574,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &7289813381771892475
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3694337704771873860}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &7289813381771892474
+--- !u!64 &6439338913322148420
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -701,7 +599,6 @@ GameObject:
   - component: {fileID: 4933974797518549351}
   - component: {fileID: 7268881057457412804}
   - component: {fileID: 8320293143890503919}
-  - component: {fileID: 8379773670462333759}
   - component: {fileID: 8379773670462333758}
   m_Layer: 0
   m_Name: Asteroid_Part_1
@@ -775,22 +672,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &8379773670462333759
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4703768970192768801}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &8379773670462333758
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -857,7 +738,6 @@ GameObject:
   - component: {fileID: 7590864623506482300}
   - component: {fileID: 5700674654245182271}
   - component: {fileID: 6067851428144057651}
-  - component: {fileID: 7954863691165134770}
   - component: {fileID: 7954863691165134769}
   m_Layer: 0
   m_Name: Asteroid_Part_2
@@ -931,22 +811,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &7954863691165134770
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6182699355795211593}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &7954863691165134769
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -972,7 +836,6 @@ GameObject:
   - component: {fileID: 8825127720644541702}
   - component: {fileID: 711546683245690320}
   - component: {fileID: 6672069014954390588}
-  - component: {fileID: 9026435961430111960}
   - component: {fileID: 9026435961430111959}
   m_Layer: 0
   m_Name: Asteroid_Part_9
@@ -1046,22 +909,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &9026435961430111960
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7463050092126704105}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &9026435961430111959
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1087,7 +934,6 @@ GameObject:
   - component: {fileID: 6419569532505967473}
   - component: {fileID: 7730915223671658597}
   - component: {fileID: 4025784564045015890}
-  - component: {fileID: 7815094620772750265}
   - component: {fileID: 7815094620772750264}
   m_Layer: 0
   m_Name: Asteroid_Part_6
@@ -1161,22 +1007,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &7815094620772750265
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7788790160325077177}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &7815094620772750264
 MeshCollider:
   m_ObjectHideFlags: 0
