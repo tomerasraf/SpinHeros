@@ -5,6 +5,7 @@ using DG.Tweening;
 public class DataManager : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] FlyAndAvoidData _flyAndAvoidData;
     [SerializeField] MiniGameData _miniGameData;
     [SerializeField] SpiningWheelData _miniGameMachine;
     [SerializeField] SlotMachineData _slotMachineData;
@@ -41,6 +42,10 @@ public class DataManager : MonoBehaviour
             _playerData[0].bet = 1;
             ResetWorldData();
             ResetslotMachineOddsData();
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 4) {
+            ResetFlyAndAvoidMiniGameData();
         }
     }
 
@@ -224,6 +229,12 @@ public class DataManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void ResetFlyAndAvoidMiniGameData() {
+
+        _flyAndAvoidData.gameIsEnded = false;
+
     }
 
     void Update()

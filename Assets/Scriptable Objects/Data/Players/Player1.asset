@@ -16,7 +16,7 @@ MonoBehaviour:
   crowns: 3
   spins: -1
   maxSpins: 50
-  extraSpins: 2
+  extraSpins: 44
   moreSpinsTimer: 14.833167
   bet: 1
   miniGameTicket: 0

@@ -9,6 +9,7 @@ public class PlayerMovment : MonoBehaviour
 
     [Header("Vars")]
     [SerializeField] float playerSideToSideSpeed;
+    [SerializeField] float playerFlightSpeed;
     [SerializeField] float miniGamePlayTime;
     [SerializeField] float gameStartDelay;
 
@@ -20,15 +21,11 @@ public class PlayerMovment : MonoBehaviour
     [Header("Events call")]
     [SerializeField] VoidEvent gameIsEnded;
 
-    private Vector3 playerStartPos;
-
     private bool playerIsLeftSide = false;
     private bool playerIsRightSide = false;
 
-
     private void Start()
     {
-        playerStartPos = transform.position;
         FlyUpwardsForce();
     }
 
@@ -67,15 +64,26 @@ public class PlayerMovment : MonoBehaviour
 
     IEnumerator Fly()
     {
-
         yield return new WaitForSeconds(gameStartDelay);
 
-        transform.DOMoveY(endGamePoint.position.y, miniGamePlayTime).SetEase(Ease.Linear).OnComplete(() =>
+        while (miniGamePlayTime > 0)
         {
-            gameIsEnded.Raise();
-        });
+            Vector3 playerFlyingDiraction = new Vector3(
+                transform.position.x,
+                transform.position.y + playerFlightSpeed * Time.deltaTime,
+                transform.position.z
+                );
+
+            transform.position = playerFlyingDiraction;
+
+            miniGamePlayTime -= Time.deltaTime;
+
+            yield return null;
+        }
+
+        _flyAndAvoidData.gameIsEnded = true;
+        gameIsEnded.Raise();
 
         yield return null;
-
     }
 }
