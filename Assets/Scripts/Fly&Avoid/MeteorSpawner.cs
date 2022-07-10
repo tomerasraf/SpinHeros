@@ -30,7 +30,7 @@ public class MeteorSpawner : MonoBehaviour
                 player.position.z
                 );
 
-            int randMeteor = Random.Range(0, meteorPrefab.Length + 1);
+            int randMeteor = Random.Range(0, meteorPrefab.Length);
 
             meteorClone = Instantiate(
                 meteorPrefab[randMeteor],

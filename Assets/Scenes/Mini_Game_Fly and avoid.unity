@@ -2598,8 +2598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flyAndAvoidData: {fileID: 11400000, guid: d343db7d9090ac140b977c5c668d7b8a, type: 2}
-  meteorStartOffset: 10
-  meteorFalingSpeed: 1
+  meteorStartOffset: 15
+  meteorFalingSpeed: 10
   timeBetweenSpwan: 0.7
   meteorPrefab:
   - {fileID: 8652577592006711715, guid: c8d5e8c5182d2284d9b83a3b2235e986, type: 3}
