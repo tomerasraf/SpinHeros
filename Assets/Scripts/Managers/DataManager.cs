@@ -233,6 +233,7 @@ public class DataManager : MonoBehaviour
 
     private void ResetFlyAndAvoidMiniGameData() {
 
+        _playerData[0].hearts = 3;
         _flyAndAvoidData.gameIsEnded = false;
 
     }

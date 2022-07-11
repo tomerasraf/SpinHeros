@@ -8,10 +8,14 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] FlyAndAvoidData _flyAndAvoidData;
 
     [Header("Vars")]
-    [SerializeField] float playerSideToSideSpeed;
     [SerializeField] float playerFlightSpeed;
     [SerializeField] float miniGamePlayTime;
     [SerializeField] float gameStartDelay;
+
+    [Header("Animation Vars")]
+    [SerializeField] float playerSideToSideSpeed;
+    [SerializeField] float flipAnimationTime;
+    [SerializeField] float returnIdleFlightTime;
 
     [Header("Transforms")]
     [SerializeField] Transform endGamePoint;
@@ -37,9 +41,9 @@ public class PlayerMovment : MonoBehaviour
         playerIsRightSide = false;
 
         transform.DOMoveX(playerLeftPos.position.x, playerSideToSideSpeed);
-        transform.DORotate(new Vector3(transform.rotation.x, 16, transform.rotation.z), 0.2f).OnComplete(() =>
+        transform.DORotate(new Vector3(transform.rotation.x, 360, transform.rotation.z), flipAnimationTime).OnComplete(() =>
         {
-            transform.DORotate(new Vector3(transform.rotation.x, -15, transform.rotation.z), 0.2f);
+            transform.DORotate(new Vector3(transform.rotation.x, -180, transform.rotation.z), returnIdleFlightTime);
         });
     }
 
@@ -51,9 +55,9 @@ public class PlayerMovment : MonoBehaviour
         playerIsLeftSide = false;
 
         transform.DOMoveX(playerRightPos.position.x, playerSideToSideSpeed);
-        transform.DORotate(new Vector3(transform.rotation.x, -44, transform.rotation.z), 0.2f).OnComplete(() =>
+        transform.DORotate(new Vector3(transform.rotation.x, 360, transform.rotation.z), flipAnimationTime).OnComplete(() =>
         {
-            transform.DORotate(new Vector3(transform.rotation.x, -15, transform.rotation.z), 0.2f);
+            transform.DORotate(new Vector3(transform.rotation.x, -180, transform.rotation.z), returnIdleFlightTime);
         });
     }
 

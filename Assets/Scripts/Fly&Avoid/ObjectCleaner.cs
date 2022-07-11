@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ObjectCleaner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] FlyAndAvoidData _flyAndAvoidData;
+    private Transform player;
+
+    private void Start()
     {
-        
+        player = FindObjectOfType<PlayerMovment>().transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (_flyAndAvoidData.gameIsEnded) { return; }
+        transform.position = new Vector3(transform.position.x, player.position.y - 20, transform.position.z);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
     }
 }

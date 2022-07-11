@@ -52,7 +52,13 @@ public class HeartsUI : MonoBehaviour
 
     }
 
-    public void HeartAnimationUI() { 
-        
+    public void DecreaseHeartUI_Animation() {
+        if (_playerData.hearts < 0) { return; }
+
+        heartImages[_playerData.hearts].transform.DOScale(0, 0.5f).SetEase(Ease.OutBounce).OnComplete(() => {
+            heartImages[_playerData.hearts].SetActive(false);
+        });
+       
     }
+
 }
