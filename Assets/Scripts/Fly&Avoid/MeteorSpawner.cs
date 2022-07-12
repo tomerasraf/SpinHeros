@@ -17,11 +17,13 @@ public class MeteorSpawner : MonoBehaviour
     [SerializeField] GameObject[] meteorPrefab;
     [SerializeField] Transform player;
 
+    [SerializeField] VoidEvent debriesFlaingDownSFX;
 
     IEnumerator Start()
     {
         yield return new WaitForSeconds(3f);
 
+        debriesFlaingDownSFX.Raise();
         while (_flyAndAvoidData.miniGamePlayTime > 3)
         {
             float randXAxisPos = Random.Range(-2, 3);

@@ -6,12 +6,15 @@ public class TapInput : MonoBehaviour
 {
     [SerializeField] VoidEvent RightTap;
     [SerializeField] VoidEvent LeftTap;
+    [SerializeField] VoidEvent SideToSideSound;
 
     public void LeftTapListener() {
-        LeftTap.Raise();     
+        LeftTap.Raise();
+        SideToSideSound.Raise();
     }
 
     public void RightTapListener() {
         RightTap.Raise();
+        SideToSideSound.Raise();
     }
 }
