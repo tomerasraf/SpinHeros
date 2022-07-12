@@ -20,7 +20,9 @@ public class MeteorSpawner : MonoBehaviour
 
     IEnumerator Start()
     {
-        while (!_flyAndAvoidData.gameIsEnded)
+        yield return new WaitForSeconds(3f);
+
+        while (_flyAndAvoidData.miniGamePlayTime > 3)
         {
             float randXAxisPos = Random.Range(-2, 3);
 

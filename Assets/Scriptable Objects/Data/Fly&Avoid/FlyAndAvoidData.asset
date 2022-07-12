@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c5062671fc0774a9c6142794a5a7d4, type: 3}
   m_Name: FlyAndAvoidData
   m_EditorClassIdentifier: 
+  miniGamePlayTime: 1.7727021
   gameIsEnded: 0

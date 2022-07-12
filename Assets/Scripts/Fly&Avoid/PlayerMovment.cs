@@ -9,7 +9,7 @@ public class PlayerMovment : MonoBehaviour
 
     [Header("Vars")]
     [SerializeField] float playerFlightSpeed;
-    [SerializeField] float miniGamePlayTime;
+    
     [SerializeField] float gameStartDelay;
 
     [Header("Animation Vars")]
@@ -69,7 +69,7 @@ public class PlayerMovment : MonoBehaviour
     {
         yield return new WaitForSeconds(gameStartDelay);
 
-        while (miniGamePlayTime > 0)
+        while ( _flyAndAvoidData.miniGamePlayTime > 0)
         {
             Vector3 playerFlyingDiraction = new Vector3(
                 transform.position.x,
@@ -79,7 +79,7 @@ public class PlayerMovment : MonoBehaviour
 
             transform.position = playerFlyingDiraction;
 
-            miniGamePlayTime -= Time.deltaTime;
+            _flyAndAvoidData.miniGamePlayTime -= Time.deltaTime;
 
             yield return null;
         }
