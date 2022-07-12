@@ -18,7 +18,6 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float returnIdleFlightTime;
 
     [Header("Transforms")]
-    [SerializeField] Transform endGamePoint;
     [SerializeField] Transform playerLeftPos;
     [SerializeField] Transform playerRightPos;
 

@@ -8,6 +8,8 @@ TagManager:
   - lb_groundTarget
   - lb_perchTarget
   - Ground
+  - Obstacle
+  - Asteroid
   layers:
   - Default
   - TransparentFX

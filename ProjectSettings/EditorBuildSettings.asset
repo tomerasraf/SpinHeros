@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGame_fishing.unity
     guid: 50ec5de360fac1d41804ca9880b2dbee
+  - enabled: 1
+    path: Assets/Scenes/Mini_Game_Fly and avoid.unity
+    guid: 75a67a12839b3b344ba0c4f1ab77e694
   m_configObjects: {}

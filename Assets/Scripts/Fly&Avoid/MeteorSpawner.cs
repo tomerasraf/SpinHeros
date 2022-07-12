@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour
 {
+   
+
     [Header("Data")]
     [SerializeField] FlyAndAvoidData _flyAndAvoidData;
 

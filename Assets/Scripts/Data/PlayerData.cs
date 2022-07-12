@@ -6,6 +6,9 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     // Slot Machine Player Data
+
+    [Header("Slot Machine Player Data")]
+
     public int coins = 0;
     public int crowns = 0;
     public int spins = 50;
@@ -15,6 +18,8 @@ public class PlayerData : ScriptableObject
     public int bet = 1;
     public int miniGameTicket = 0;
 
+    [Header("Mini Game Player Data")]
+
     // Mini Game Player Data
     public int hearts;
     public float playerProgress = 0;
@@ -22,4 +27,8 @@ public class PlayerData : ScriptableObject
     public int currentPrize = 0;
     public bool playerIsDead = false;
     public int amountPlayersAttacked = 0;
+
+    [Header("Fly&Avoid Mini Game Player Data")]
+    public float playerIsImmuneTime = 0;
+
 }
