@@ -13,6 +13,12 @@ public class AsteroidExplosion : MonoBehaviour
 
     private Vector3 asteroidStartPos;
     private GameObject asteroidClone;
+    private Rigidbody player;
+
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerMovment>().transform.GetComponent<Rigidbody>();
+    }
 
     public void AsteroidExplosion_Listener()
     {
@@ -21,7 +27,7 @@ public class AsteroidExplosion : MonoBehaviour
 
        asteroidClone = Instantiate(asteroidBreakable, asteroidStartPos, Quaternion.identity);
 
-        asteroidClone.GetComponent<Rigidbody>().AddExplosionForce(explostionForce, asteroidClone.transform.position, explostionRadius);
+        player.AddExplosionForce(explostionForce, asteroidClone.transform.position, explostionRadius);
         asteroidClone.GetComponent<Rigidbody>().useGravity = true;
 
         Destroy(Instantiate(explosionEffect, asteroidClone.transform.position, Quaternion.identity), 3); 

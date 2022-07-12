@@ -24,7 +24,6 @@ public class PlayerCollision : MonoBehaviour
         }
         
         if (other.CompareTag("Asteroid")) {
-            Debug.Log("Yo");
             asteroidExplosion.Raise();
         }
     }
