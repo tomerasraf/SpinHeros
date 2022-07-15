@@ -1119,6 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcfcf27c1bb70f44a07486574e80358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   RightTap: {fileID: 11400000, guid: e25130e337c51304d80bc770a033e960, type: 2}
   LeftTap: {fileID: 11400000, guid: 6f1f42213a9398b47b7e82eef127a079, type: 2}
   SideToSideSound: {fileID: 11400000, guid: 6ae30b14b6cf4fa4981f4d9f6a0eee8a, type: 2}
@@ -2136,6 +2137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a674c32bd6a30418d128bcf4dd780c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   _flyAndAvoidData: {fileID: 11400000, guid: d343db7d9090ac140b977c5c668d7b8a, type: 2}
   playerFlightSpeed: 5
   gameStartDelay: 1
@@ -2250,6 +2252,7 @@ MonoBehaviour:
   updateUI: {fileID: 11400000, guid: 042d9bb3961a167438862dd65eae7f2d, type: 2}
   damageBlink: {fileID: 11400000, guid: 87c0d9d918d92874dac697d94b3bc2ad, type: 2}
   asteroidExplosion: {fileID: 11400000, guid: 19c288e9580cf91419353205863dccba, type: 2}
+  playerDie: {fileID: 11400000, guid: e603707cd575f574d8ea707cda93d8bf, type: 2}
 --- !u!114 &360464495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2306,7 +2309,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360464487}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -2778,6 +2781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcfcf27c1bb70f44a07486574e80358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   RightTap: {fileID: 11400000, guid: e25130e337c51304d80bc770a033e960, type: 2}
   LeftTap: {fileID: 11400000, guid: 6f1f42213a9398b47b7e82eef127a079, type: 2}
   SideToSideSound: {fileID: 11400000, guid: 6ae30b14b6cf4fa4981f4d9f6a0eee8a, type: 2}
@@ -3373,7 +3377,7 @@ GameObject:
   - component: {fileID: 584983370}
   - component: {fileID: 584983372}
   m_Layer: 0
-  m_Name: Asteroid Animation
+  m_Name: Asteroid Simulation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9104,7 +9108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1787532695}
   m_Layer: 0
-  m_Name: -----------------Animations
+  m_Name: -----------------Simulations-----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

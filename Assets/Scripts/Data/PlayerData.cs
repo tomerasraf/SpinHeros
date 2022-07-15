@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Player Data", menuName = "Data/Player Data")]
@@ -21,14 +19,16 @@ public class PlayerData : ScriptableObject
     [Header("Mini Game Player Data")]
 
     // Mini Game Player Data
-    public int hearts;
+    
     public float playerProgress = 0;
     public int score = 0;
     public int currentPrize = 0;
-    public bool playerIsDead = false;
     public int amountPlayersAttacked = 0;
 
     [Header("Fly&Avoid Mini Game Player Data")]
     public float playerIsImmuneTime = 0;
 
+    [Header("Global Vars")]
+    public int hearts;
+    public bool playerIsDead = false;
 }

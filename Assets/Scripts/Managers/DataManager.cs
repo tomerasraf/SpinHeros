@@ -237,6 +237,7 @@ public class DataManager : MonoBehaviour
         _playerData[0].hearts = 3;
         _flyAndAvoidData.gameIsEnded = false;
         _flyAndAvoidData.miniGamePlayTime = 31;
+        _playerData[0].playerIsDead = false;
     }
 
     void Update()

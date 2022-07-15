@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovment : MonoBehaviour
 {
     [Header("Data")]
+    [SerializeField] PlayerData _playerData;
     [SerializeField] FlyAndAvoidData _flyAndAvoidData;
 
     [Header("Vars")]
@@ -69,8 +70,10 @@ public class PlayerMovment : MonoBehaviour
     {
         yield return new WaitForSeconds(gameStartDelay);
 
-        while ( _flyAndAvoidData.miniGamePlayTime > 0)
+        while ( _flyAndAvoidData.miniGamePlayTime > 0 )
         {
+            if (_playerData.playerIsDead) { _flyAndAvoidData.miniGamePlayTime = 0; }
+
             Vector3 playerFlyingDiraction = new Vector3(
                 transform.position.x,
                 transform.position.y + playerFlightSpeed * Time.deltaTime,

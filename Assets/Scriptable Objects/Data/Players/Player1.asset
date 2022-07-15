@@ -20,10 +20,10 @@ MonoBehaviour:
   moreSpinsTimer: 14.833167
   bet: 1
   miniGameTicket: 0
-  hearts: 0
   playerProgress: 0
   score: 0
   currentPrize: 10
-  playerIsDead: 0
   amountPlayersAttacked: 0
-  playerIsImmuneTime: 3.5
+  playerIsImmuneTime: 1.5
+  hearts: 0
+  playerIsDead: 1
