@@ -15,14 +15,14 @@ public class TapInput : MonoBehaviour
     {
         if (_playerData.playerIsDead) { return; }
 
-            LeftTap.Raise();
             SideToSideSound.Raise();
+            LeftTap.Raise();
     }
 
     public void RightTapListener()
     {
         if (_playerData.playerIsDead) { return; }
-            RightTap.Raise();
             SideToSideSound.Raise();
+            RightTap.Raise();
     }
 }
