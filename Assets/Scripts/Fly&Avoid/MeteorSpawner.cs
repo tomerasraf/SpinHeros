@@ -22,6 +22,8 @@ public class MeteorSpawner : MonoBehaviour
     IEnumerator Start()
     {
         yield return new WaitForSeconds(3f);
+        
+            debriesFlaingDownSFX.Raise();
 
         while (_flyAndAvoidData.miniGamePlayTime > 3)
         {
