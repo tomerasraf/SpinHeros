@@ -23,7 +23,6 @@ public class MeteorSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
 
-        debriesFlaingDownSFX.Raise();
         while (_flyAndAvoidData.miniGamePlayTime > 3)
         {
             float randXAxisPos = Random.Range(-2, 3);
@@ -42,8 +41,11 @@ public class MeteorSpawner : MonoBehaviour
            Quaternion.identity
            );
 
+          
+
             yield return new WaitForSeconds(timeBetweenSpwan);
 
+            debriesFlaingDownSFX.Raise();
             yield return null;
         }
 
