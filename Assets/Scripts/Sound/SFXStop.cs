@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StopSound : MonoBehaviour
+public class SFXStop : MonoBehaviour
 {
     private AudioSource audio;
 

@@ -2,9 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour
-{
-   
-
+{   
     [Header("Data")]
     [SerializeField] FlyAndAvoidData _flyAndAvoidData;
 
@@ -42,8 +40,6 @@ public class MeteorSpawner : MonoBehaviour
            meteorStartPos,
            Quaternion.identity
            );
-
-          
 
             yield return new WaitForSeconds(timeBetweenSpwan);
 

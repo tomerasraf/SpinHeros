@@ -33,8 +33,6 @@ public class MiniGameInput : MonoBehaviour
                 notEnenoughHearts.Raise();
             }
         }
-
-        
     }
 
     IEnumerator DelayAction()

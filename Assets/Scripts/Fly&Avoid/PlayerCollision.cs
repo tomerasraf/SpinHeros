@@ -17,6 +17,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
+            damageBlink.Raise();
             _playerData.hearts--;
             updateUI.Raise();
 
@@ -27,7 +28,6 @@ public class PlayerCollision : MonoBehaviour
                 return;
             }
 
-            damageBlink.Raise();
             transform.GetComponent<Animator>().SetBool("PlayerGotHit", true);
             StartCoroutine(immuneTimer());
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.07825593, g: 0.3842077, b: 1.0849558, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.07504989, g: 0.37651885, b: 1.0866094, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1122,7 +1122,6 @@ MonoBehaviour:
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   RightTap: {fileID: 11400000, guid: e25130e337c51304d80bc770a033e960, type: 2}
   LeftTap: {fileID: 11400000, guid: 6f1f42213a9398b47b7e82eef127a079, type: 2}
-  SideToSideSound: {fileID: 11400000, guid: 6ae30b14b6cf4fa4981f4d9f6a0eee8a, type: 2}
 --- !u!114 &158809283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2147,6 +2146,8 @@ MonoBehaviour:
   playerLeftPos: {fileID: 884572608}
   playerRightPos: {fileID: 1092716588}
   gameIsEnded: {fileID: 11400000, guid: 0c8f69a549e1c6c459d314fe2dcf92d3, type: 2}
+  windSFX: {fileID: 11400000, guid: 12023d89043981441a8cb10af07b16ed, type: 2}
+  SideToSideSound: {fileID: 11400000, guid: 6ae30b14b6cf4fa4981f4d9f6a0eee8a, type: 2}
 --- !u!114 &360464490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2955,7 +2956,6 @@ MonoBehaviour:
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   RightTap: {fileID: 11400000, guid: e25130e337c51304d80bc770a033e960, type: 2}
   LeftTap: {fileID: 11400000, guid: 6f1f42213a9398b47b7e82eef127a079, type: 2}
-  SideToSideSound: {fileID: 11400000, guid: 6ae30b14b6cf4fa4981f4d9f6a0eee8a, type: 2}
 --- !u!114 &496013812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5040,6 +5040,8 @@ GameObject:
   m_Component:
   - component: {fileID: 866283950}
   - component: {fileID: 866283951}
+  - component: {fileID: 866283953}
+  - component: {fileID: 866283952}
   m_Layer: 0
   m_Name: Wind howling
   m_TagString: Untagged
@@ -5158,6 +5160,46 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &866283952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866283949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 0c8f69a549e1c6c459d314fe2dcf92d3, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 866283953}
+        m_TargetAssemblyTypeName: SFXStop, Assembly-CSharp
+        m_MethodName: StopSFX_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &866283953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866283949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d6e77f7867b8d40818af223021a54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &884572607
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,8 @@ public class PlayerMovment : MonoBehaviour
 
     [Header("Events call")]
     [SerializeField] VoidEvent gameIsEnded;
+    [SerializeField] VoidEvent windSFX;
+    [SerializeField] VoidEvent SideToSideSound;
 
     private bool playerIsLeftSide = false;
     private bool playerIsRightSide = false;
@@ -37,6 +39,7 @@ public class PlayerMovment : MonoBehaviour
     {
         if (playerIsLeftSide) { return; }
 
+        SideToSideSound.Raise();
         playerIsLeftSide = true;
         playerIsRightSide = false;
 
@@ -51,6 +54,7 @@ public class PlayerMovment : MonoBehaviour
     {
         if (playerIsRightSide) { return; }
 
+        SideToSideSound.Raise();
         playerIsRightSide = true;
         playerIsLeftSide = false;
 
@@ -70,6 +74,7 @@ public class PlayerMovment : MonoBehaviour
     {
         yield return new WaitForSeconds(gameStartDelay);
 
+        windSFX.Raise();
         while ( _flyAndAvoidData.miniGamePlayTime > 0 )
         {
             if (_playerData.playerIsDead) { _flyAndAvoidData.miniGamePlayTime = 0; }
