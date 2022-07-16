@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1109254745603394539}
-  m_IndirectSpecularColor: {r: 0.07504989, g: 0.37651885, b: 1.0866094, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.07825593, g: 0.3842077, b: 1.0849558, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1909,7 +1909,7 @@ AudioSource:
   m_GameObject: {fileID: 351318038}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3578828187777004729, guid: 2d56d28013d924c4181952b19e6bc2b3, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2402,7 +2402,7 @@ AudioSource:
   m_GameObject: {fileID: 372194884}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1990630698777972964, guid: 2d56d28013d924c4181952b19e6bc2b3, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4509,7 +4509,7 @@ AudioSource:
   m_GameObject: {fileID: 783166700}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8630254450697268015, guid: 2d56d28013d924c4181952b19e6bc2b3, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4764,7 +4764,7 @@ AudioSource:
   m_GameObject: {fileID: 801594324}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 901050579466100801, guid: 2d56d28013d924c4181952b19e6bc2b3, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -5075,12 +5075,12 @@ AudioSource:
   m_GameObject: {fileID: 866283949}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1594544439021882369, guid: 2d56d28013d924c4181952b19e6bc2b3, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
