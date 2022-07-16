@@ -1,5 +1,5 @@
+using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
@@ -11,27 +11,37 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] VoidEvent updateUI;
     [SerializeField] VoidEvent damageBlink;
     [SerializeField] VoidEvent asteroidExplosion;
+    [SerializeField] VoidEvent playerDie;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Obstacle")) {
-            if (_playerData.hearts < 0) { return; }
+        if (other.CompareTag("Obstacle"))
+        {
             _playerData.hearts--;
             updateUI.Raise();
+
+            if (_playerData.hearts == 0)
+            {
+                _playerData.playerIsDead = true;
+                PlayerDeath();
+                return;
+            }
+
             damageBlink.Raise();
             transform.GetComponent<Animator>().SetBool("PlayerGotHit", true);
             StartCoroutine(immuneTimer());
         }
-        
-        if (other.CompareTag("Asteroid")) {
+
+        if (other.CompareTag("Asteroid"))
+        {
             asteroidExplosion.Raise();
         }
     }
 
-    IEnumerator immuneTimer() {
-
-        while (_playerData.playerIsImmuneTime > 0) {
-
+    IEnumerator immuneTimer()
+    {
+        while (_playerData.playerIsImmuneTime > 0)
+        {
             transform.GetComponent<BoxCollider>().enabled = false;
             _playerData.playerIsImmuneTime -= Time.deltaTime;
             yield return null;
@@ -40,5 +50,12 @@ public class PlayerCollision : MonoBehaviour
         yield return null;
     }
 
-
+    void PlayerDeath()
+    {
+        Vector3 playerDeathRotation = new Vector3(90, transform.position.y, transform.position.z);
+        transform.DORotate(playerDeathRotation, 0.7f);
+        transform.GetComponent<Rigidbody>().useGravity = true;
+        _playerData.playerIsDead = true;
+        playerDie.Raise();
+    }
 }
