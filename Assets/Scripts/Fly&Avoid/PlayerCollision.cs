@@ -12,6 +12,7 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] VoidEvent damageBlink;
     [SerializeField] VoidEvent asteroidExplosion;
     [SerializeField] VoidEvent playerDie;
+    [SerializeField] VoidEvent defeat;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +21,7 @@ public class PlayerCollision : MonoBehaviour
             damageBlink.Raise();
             _playerData.hearts--;
             updateUI.Raise();
+            transform.GetComponent<Animator>().SetBool("PlayerGotHit", true);
 
             if (_playerData.hearts == 0)
             {
@@ -28,13 +30,32 @@ public class PlayerCollision : MonoBehaviour
                 return;
             }
 
-            transform.GetComponent<Animator>().SetBool("PlayerGotHit", true);
+         
             StartCoroutine(immuneTimer());
         }
 
         if (other.CompareTag("Asteroid"))
         {
             asteroidExplosion.Raise();
+        }
+
+
+        if (other.CompareTag("Coin")) {
+
+            Destroy(other.gameObject);
+            _playerData.coinsCollected++;
+        } 
+
+        if (other.CompareTag("Spin")) {
+
+            Destroy(other.gameObject);
+            _playerData.spinsCollected++;
+        } 
+
+        if (other.CompareTag("Gift")) {
+
+            Destroy(other.gameObject);
+            _playerData.giftsCollected++;
         }
     }
 
@@ -57,5 +78,6 @@ public class PlayerCollision : MonoBehaviour
         transform.GetComponent<Rigidbody>().useGravity = true;
         _playerData.playerIsDead = true;
         playerDie.Raise();
+        defeat.Raise();
     }
 }

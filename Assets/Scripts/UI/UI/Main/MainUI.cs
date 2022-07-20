@@ -14,7 +14,6 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject hearts;
     [SerializeField] GameObject rating;
     [SerializeField] GameObject buildModeButton;
-    [SerializeField] GameObject miniGameButton;
     [SerializeField] GameObject menuButton;
     [SerializeField] GameObject menuUI;
     [SerializeField] GameObject coinPopupText;
@@ -29,7 +28,6 @@ public class MainUI : MonoBehaviour
             hearts.SetActive(true);
             rating.SetActive(true);
             buildModeButton.SetActive(true);
-            miniGameButton.SetActive(true);
             menuButton.SetActive(true);
             menuUI.SetActive(true);
             coinPopupText.SetActive(true);

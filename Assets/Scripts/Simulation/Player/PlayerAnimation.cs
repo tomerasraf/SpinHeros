@@ -9,14 +9,7 @@ public class PlayerAnimation : MonoBehaviour
 
     public void PlayJump_Listener()
     {
-        if (_playerData.miniGameTicket > 0)
-        {
             StartCoroutine(PlayJumpAnimation_Corotine());
-        }
-        else
-        {
-            return;
-        }
     }
 
     IEnumerator PlayJumpAnimation_Corotine()

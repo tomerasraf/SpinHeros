@@ -24,6 +24,7 @@ public class PlayerMovment : MonoBehaviour
 
     [Header("Events call")]
     [SerializeField] VoidEvent gameIsEnded;
+    [SerializeField] VoidEvent victory;
     [SerializeField] VoidEvent windSFX;
     [SerializeField] VoidEvent SideToSideSound;
 
@@ -93,7 +94,11 @@ public class PlayerMovment : MonoBehaviour
         }
 
         _flyAndAvoidData.gameIsEnded = true;
-        gameIsEnded.Raise();
+
+        if (_playerData.hearts > 0) {
+            victory.Raise();
+        }
+       
 
         yield return null;
     }

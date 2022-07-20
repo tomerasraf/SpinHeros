@@ -290,7 +290,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 740965218}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -803,7 +803,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 740965218}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3701,7 +3701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 72e3da45965a6d84682610b5e165b49c, type: 2}
+  gameEvent: {fileID: 11400000, guid: 2c9db5f5118d9cf4e88f50b06fb96bd2, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -3824,7 +3824,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 740965218}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5626,216 +5626,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &366701556
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 366701557}
-  - component: {fileID: 366701559}
-  - component: {fileID: 366701558}
-  - component: {fileID: 366701560}
-  - component: {fileID: 366701561}
-  - component: {fileID: 366701562}
-  m_Layer: 5
-  m_Name: MiniGameTicket_Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &366701557
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366701556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3094, y: 1.3094, z: 1.3094}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1628984822}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0004425, y: -150.8}
-  m_SizeDelta: {x: 257.03, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &366701558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366701556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 0
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
-  m_sharedMaterial: {fileID: 2830636965969884548, guid: 605433b68313d491a8ab88bc03a41651, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 43.7
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 30.10012, y: 0, z: 30.100128, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &366701559
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366701556}
-  m_CullTransparentMesh: 1
---- !u!114 &366701560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366701556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb5ed2fb55a33847a39cf3cf1145961, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
-  miniGameButton: {fileID: 1628984821}
-  miniGameTicketText: {fileID: 366701558}
-  notEnoughHeartMassage: {fileID: 241400241}
---- !u!114 &366701561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366701556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: ea315ddf7ba654342af619cc0fa3741d, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 366701560}
-        m_TargetAssemblyTypeName: MiniGameTicketUI, Assembly-CSharp
-        m_MethodName: miniGameButtonAnimation_Listener
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &366701562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366701556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 74177b7696b991146a73b789859c178c, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 366701560}
-        m_TargetAssemblyTypeName: MiniGameTicketUI, Assembly-CSharp
-        m_MethodName: NotEnoughHearts_Listener
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &375373923
 GameObject:
   m_ObjectHideFlags: 0
@@ -5956,7 +5746,7 @@ MonoBehaviour:
   coinBarUI: {fileID: 2103399704}
   heartsUI: {fileID: 1624982953}
   buildButton: {fileID: 924693147}
-  miniGameButton: {fileID: 1628984823}
+  miniGameButton: {fileID: 0}
 --- !u!114 &376749860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9226,7 +9016,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 740965218}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -9753,7 +9543,7 @@ MonoBehaviour:
   MiniGameEffectObject: {fileID: 518802301}
   startPosition: {fileID: 876472559}
   miniGameUI_Transform:
-  - {fileID: 1628984822}
+  - {fileID: 0}
   MiniGameUI_Updater: {fileID: 11400000, guid: ea315ddf7ba654342af619cc0fa3741d, type: 2}
 --- !u!1 &625486864
 GameObject:
@@ -12062,7 +11852,6 @@ RectTransform:
   - {fileID: 1624982954}
   - {fileID: 299629298}
   - {fileID: 924693146}
-  - {fileID: 1628984822}
   - {fileID: 586328765}
   - {fileID: 5399760}
   - {fileID: 743622974}
@@ -12118,7 +11907,7 @@ RectTransform:
   - {fileID: 1277952566}
   - {fileID: 1699903739}
   m_Father: {fileID: 740965218}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12836,7 +12625,7 @@ RectTransform:
   - {fileID: 1200792613}
   - {fileID: 216526811}
   m_Father: {fileID: 740965218}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12887,7 +12676,6 @@ MonoBehaviour:
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
   builderUI: {fileID: 216526810}
   spinButtonUI: {fileID: 1222374111}
-  miniGameButtonUI: {fileID: 1628984821}
   buildModeButtonUI: {fileID: 924693145}
   successUI:
   - {fileID: 1093015798}
@@ -14662,7 +14450,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 740965218}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20442,7 +20230,7 @@ RectTransform:
   - {fileID: 304733525}
   - {fileID: 320389457}
   m_Father: {fileID: 740965218}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25054,7 +24842,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 740965218}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26165,159 +25953,6 @@ MonoBehaviour:
   - {fileID: 1269802229}
   - {fileID: 392689173}
   - {fileID: 643219644}
---- !u!1 &1628984821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1628984822}
-  - component: {fileID: 1628984825}
-  - component: {fileID: 1628984824}
-  - component: {fileID: 1628984823}
-  - component: {fileID: 1628984826}
-  m_Layer: 5
-  m_Name: MiniGame_Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1628984822
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628984821}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.76804006, y: 0.76804006, z: 0.65832007}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 366701557}
-  m_Father: {fileID: 740965218}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 121.285645, y: 179}
-  m_SizeDelta: {x: 257.0281, y: 250}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1628984823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628984821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1628984824}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1628984826}
-        m_TargetAssemblyTypeName: MiniGameInput, Assembly-CSharp
-        m_MethodName: MiniGameEvent_Trigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1628984824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628984821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6efc5e38a8252f5438a48c98cc825a66, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1628984825
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628984821}
-  m_CullTransparentMesh: 1
---- !u!114 &1628984826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628984821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6921f358b83224697be05ac5d59b10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _systemData: {fileID: 11400000, guid: b5bcaba09cb01f94899f2406d682c22a, type: 2}
-  _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
-  enterMiniGame_Event: {fileID: 11400000, guid: 72e3da45965a6d84682610b5e165b49c, type: 2}
-  minigameUIText_Updater: {fileID: 11400000, guid: ea315ddf7ba654342af619cc0fa3741d, type: 2}
-  focuseOnWheel: {fileID: 11400000, guid: 2ba38b38c3ad31448a46b35849b79221, type: 2}
-  notEnenoughHearts: {fileID: 11400000, guid: 74177b7696b991146a73b789859c178c, type: 2}
 --- !u!1 &1629170064
 GameObject:
   m_ObjectHideFlags: 0
@@ -28411,6 +28046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a98c79fd35ad7149aea1b7ef7aa40db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _flyAndAvoidData: {fileID: 0}
   _miniGameData: {fileID: 11400000, guid: d8403653cc5d85446a961265186728ff, type: 2}
   _miniGameMachine: {fileID: 11400000, guid: b056100b9f5b3e54081837dd1aa5a7e6, type: 2}
   _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
@@ -31248,7 +30884,7 @@ RectTransform:
   - {fileID: 1394485350}
   - {fileID: 347284482}
   m_Father: {fileID: 740965218}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -31402,7 +31038,7 @@ RectTransform:
   m_Children:
   - {fileID: 1864574101}
   m_Father: {fileID: 740965218}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31781,7 +31417,6 @@ MonoBehaviour:
   hearts: {fileID: 1624982953}
   rating: {fileID: 299629297}
   buildModeButton: {fileID: 924693145}
-  miniGameButton: {fileID: 1628984821}
   menuButton: {fileID: 586328764}
   menuUI: {fileID: 743622973}
   coinPopupText: {fileID: 977936530}
@@ -32171,6 +31806,10 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3585629656043157685, guid: d53fdb1c0a3edfb4aaf1c4b79fb674f3, type: 3}
+      propertyPath: gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c9db5f5118d9cf4e88f50b06fb96bd2, type: 2}
     - target: {fileID: 3586939538857449066, guid: d53fdb1c0a3edfb4aaf1c4b79fb674f3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -32326,7 +31965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 72e3da45965a6d84682610b5e165b49c, type: 2}
+  gameEvent: {fileID: 11400000, guid: 2c9db5f5118d9cf4e88f50b06fb96bd2, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
@@ -32893,13 +32532,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24693b108d3f6f4e89fd4b05ce96aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 72e3da45965a6d84682610b5e165b49c, type: 2}
+  gameEvent: {fileID: 11400000, guid: 2c9db5f5118d9cf4e88f50b06fb96bd2, type: 2}
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2118448961}
         m_TargetAssemblyTypeName: WorldScreenLoader, Assembly-CSharp
-        m_MethodName: MiniGameTransition_Listener
+        m_MethodName: MiniGame_Listener
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -60483,6 +60122,10 @@ PrefabInstance:
       propertyPath: heartIsEarned
       value: 
       objectReference: {fileID: 11400000, guid: f7a71a088b33b354b802715be0411fbf, type: 2}
+    - target: {fileID: 5886693519128164461, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
+      propertyPath: randomMiniGame
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c9db5f5118d9cf4e88f50b06fb96bd2, type: 2}
     - target: {fileID: 5886693519128164461, guid: 1ad794506f662eb4fb100919631ffbdc, type: 3}
       propertyPath: miniGameTicketIsEarned
       value: 

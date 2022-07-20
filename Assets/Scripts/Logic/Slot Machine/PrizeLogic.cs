@@ -13,6 +13,7 @@ public class PrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent spinIsEarned;
     [SerializeField] VoidEvent heartIsEarned;
     [SerializeField] VoidEvent coinIsEarned;
+    [SerializeField] VoidEvent randomMiniGame;
 
 
     public void CheckResultsCaller()
@@ -79,8 +80,7 @@ public class PrizeLogic : MonoBehaviour
             && _slotMachineData.slotResults[2] == 2)
         {
             // Mini Game Prize
-            _playerData.miniGameTicket++;
-            miniGameTicketIsEarned.Raise();
+            randomMiniGame.Raise();
         }
 
         // 2 Coins Check

@@ -233,11 +233,17 @@ public class DataManager : MonoBehaviour
 
     private void ResetFlyAndAvoidMiniGameData() {
 
+        // resets player data
         _playerData[0].playerIsImmuneTime = 1.5f;
         _playerData[0].hearts = 3;
+        _playerData[0].playerIsDead = false;
+        _playerData[0].spinsCollected = 0;
+        _playerData[0].giftsCollected = 0;
+        _playerData[0].coinsCollected = 0;
+
+  
         _flyAndAvoidData.gameIsEnded = false;
         _flyAndAvoidData.miniGamePlayTime = 31;
-        _playerData[0].playerIsDead = false;
     }
 
     void Update()

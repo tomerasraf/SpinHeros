@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4af52bf2adfc1fd46884730c77eefd77, type: 3}
-  m_Name: GameSettingsData
+  m_Script: {fileID: 11500000, guid: 3a3bcad93970df24a84decc0681997ec, type: 3}
+  m_Name: RandomMiniGame
   m_EditorClassIdentifier: 
-  tutorialMode: 0
-  buildControlsOff: 0
-  touchScreenIsEnabled: 1

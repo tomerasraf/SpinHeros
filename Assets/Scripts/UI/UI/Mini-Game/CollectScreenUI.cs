@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using DG.Tweening;
 using TMPro;
@@ -15,17 +16,16 @@ public class CollectScreenUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI spinPrize_Text;
     [SerializeField] TextMeshProUGUI bonusPrize_Text;
     [SerializeField] TextMeshProUGUI overAllPrize_Text;
-    
+    [SerializeField] Image statusTitle_Image;
+    [SerializeField] Sprite statusDefeat;
+    [SerializeField] Sprite statusVictory;
+
     private void Start()
     {
         collectScreen_UI.transform.DOScale(0, 0);
     }
 
-    public void DisplayCollectScreenWinner_Listener()
-    {
-        StartCoroutine(DelayTimerWinnerScreen());
-    }
-
+ 
     IEnumerator DelayTimerWinnerScreen() {
 
         yield return new WaitForSeconds(5);
@@ -49,12 +49,8 @@ public class CollectScreenUI : MonoBehaviour
         yield return null;
     }
 
-    public void DisplayCollectScreenLoser_Listener()
+    IEnumerator DelayDefeatScreen()
     {
-        StartCoroutine(DelayDefeatScreen());
-    }
-
-    IEnumerator DelayDefeatScreen() {
 
         yield return new WaitForSeconds(5);
 
@@ -77,4 +73,51 @@ public class CollectScreenUI : MonoBehaviour
 
         yield return null;
     }
+
+    IEnumerator FlyAndAvoidVictory() {
+        yield return new WaitForSeconds(5);
+
+        statusTitle_Image.sprite = statusVictory;
+
+        collectScreen_UI.SetActive(true);
+        collectScreen_UI.transform.DOScale(1, 1).OnComplete(() =>
+        {
+
+        });
+
+        yield return null;
+    }
+
+    IEnumerator FlyAndAvoidDefeat()
+    {
+        yield return new WaitForSeconds(5);
+
+        statusTitle_Image.sprite = statusDefeat;
+
+        collectScreen_UI.SetActive(true);
+        collectScreen_UI.transform.DOScale(1, 1).OnComplete(() =>
+        {
+
+        });
+
+        yield return null;
+    }
+
+    public void DisplayCollectScreenLoser_Listener()
+    {
+        StartCoroutine(DelayDefeatScreen());
+    }
+
+      public void DisplayCollectScreenWinner_Listener()
+    {
+        StartCoroutine(DelayTimerWinnerScreen());
+    }
+
+    public void DisplayFlyAndAvoidVictoryScreen() {
+        StartCoroutine(FlyAndAvoidVictory());
+    } 
+    public void DisplayFlyAndAvoidDefeatScreen() {
+        StartCoroutine(FlyAndAvoidDefeat());
+    }
+  
 }

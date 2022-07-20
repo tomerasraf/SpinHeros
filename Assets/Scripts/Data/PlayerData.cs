@@ -27,6 +27,9 @@ public class PlayerData : ScriptableObject
 
     [Header("Fly&Avoid Mini Game Player Data")]
     public float playerIsImmuneTime = 0;
+    public float giftsCollected = 0;
+    public float spinsCollected = 0;
+    public float coinsCollected = 0;
 
     [Header("Global Vars")]
     public int hearts;

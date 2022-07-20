@@ -20,25 +20,20 @@ public class WorldScreenLoader : MonoBehaviour
 
     }
 
-    public void MiniGameTransition_Listener()
+    public void MiniGame_Listener()
     {
-        if (_playerData.miniGameTicket > 0) {
-            StartCoroutine(SceneTransitionToMiniGame_Coroutine());
-        }
-        else
-        {
-            return;
-        }
-        
+        int randomMiniGameIndex = Random.Range(3, 5); 
+        StartCoroutine(SceneTransitionToMiniGame_Coroutine(randomMiniGameIndex));
+
     }
 
-    IEnumerator SceneTransitionToMiniGame_Coroutine()
+    IEnumerator SceneTransitionToMiniGame_Coroutine(int levelIndex)
     {
         background_Object.SetActive(true);
         yield return new WaitForSeconds(2f);
         background_Object.GetComponent<Image>().DOFade(1, 1.5f).OnComplete(() =>
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(levelIndex);
         });
 
         yield return null;

@@ -12,7 +12,6 @@ public class BuildingWorldUI : MonoBehaviour
     [Header("UI")]
     [SerializeField] GameObject builderUI;
     [SerializeField] GameObject spinButtonUI;
-    [SerializeField] GameObject miniGameButtonUI;
     [SerializeField] GameObject buildModeButtonUI;
     [SerializeField] GameObject[] successUI;
     [SerializeField] GameObject[] buildButtonsUI;
@@ -24,7 +23,6 @@ public class BuildingWorldUI : MonoBehaviour
     private float offsetUI = 1500;
     private Vector3 spinButtonStartPos;
     private Vector3 builderUIStartPos;
-    private Vector3 miniGameButtonStartPos;
     private Vector3 buildModeButtonStartPos;
     private Vector3 rewardUIStartPos;
 
@@ -39,7 +37,6 @@ public class BuildingWorldUI : MonoBehaviour
         rewardUIStartPos = rewardUI.transform.position;
         spinButtonStartPos = spinButtonUI.transform.position;
         builderUIStartPos = builderUI.transform.position;
-        miniGameButtonStartPos = miniGameButtonUI.transform.position;
         buildModeButtonStartPos = buildModeButtonUI.transform.position;
     }
 
@@ -67,7 +64,6 @@ public class BuildingWorldUI : MonoBehaviour
     {
         //builderUI.SetActive(false);
         spinButtonUI.SetActive(true);
-        miniGameButtonUI.SetActive(true);
         buildModeButtonUI.SetActive(true);
     }
 
@@ -87,19 +83,16 @@ public class BuildingWorldUI : MonoBehaviour
     public void BuildModeUIAnimation_Listener()
     {
         spinButtonUI.GetComponent<Button>().enabled = false;
-        miniGameButtonUI.GetComponent<Button>().enabled = false;
         buildModeButtonUI.GetComponent<Button>().enabled = false;
 
 
         spinButtonUI.transform.DOMoveY(spinButtonStartPos.y - offsetUI, 1).SetEase(Ease.InBack);
         buildModeButtonUI.transform.DOMoveX(buildModeButtonStartPos.x + offsetUI, 1).SetEase(Ease.InBack);
-        miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x - offsetUI, 1).SetEase(Ease.InBack);
 
         builderUI.transform.DOMoveY(builderUIStartPos.y - offsetUI, 0);
         builderUI.transform.DOMoveY(builderUIStartPos.y, 1).SetEase(Ease.InBack).OnComplete(() =>
         {
             spinButtonUI.GetComponent<Button>().enabled = enabled;
-            miniGameButtonUI.GetComponent<Button>().enabled = enabled;
             buildModeButtonUI.GetComponent<Button>().enabled = enabled;
         });
     }
@@ -110,7 +103,6 @@ public class BuildingWorldUI : MonoBehaviour
 
         spinButtonUI.transform.DOMoveY(spinButtonStartPos.y, 1).SetEase(Ease.OutBack);
         buildModeButtonUI.transform.DOMoveX(buildModeButtonStartPos.x, 1).SetEase(Ease.OutBack);
-        miniGameButtonUI.transform.DOMoveX(miniGameButtonStartPos.x, 1).SetEase(Ease.OutBack);
     }
 
     public void CantAfford_Listener(int buttonID)

@@ -19,7 +19,6 @@ class SpiningWheelTutorial : MonoBehaviour {
 
     [Header("Buttons")]
     [SerializeField] Button buildButton;
-    [SerializeField] Button miniGameButton;
  
     private Vector3 massageStartSize;
     private Vector3 pointerStartSize;
@@ -35,7 +34,6 @@ class SpiningWheelTutorial : MonoBehaviour {
     public void ExitBuildMode_Listener() {
 
         buildButton.enabled = false;
-        miniGameButton.enabled = false;
         TutorialAnimationUtils.MassagePopoutAnimation(massageStartSize, spinPopoutMassage, 1);
         TutorialAnimationUtils.PointerPopoutAnimation(pointerStartPosition, pointerStartSize, 50, spinButtonPointer, 1);
     }
@@ -75,7 +73,6 @@ class SpiningWheelTutorial : MonoBehaviour {
 
     public void MiniGameIsEarned_Listener() {
 
-        miniGameButton.enabled = true;
         TutorialAnimationUtils.RemovePointerAnimation(spinButtonPointer, 0.5f);
         StartCoroutine(MiniGameDelay());
        

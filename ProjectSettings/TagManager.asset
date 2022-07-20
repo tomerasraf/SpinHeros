@@ -10,6 +10,9 @@ TagManager:
   - Ground
   - Obstacle
   - Asteroid
+  - Coin
+  - Gift
+  - Spin
   layers:
   - Default
   - TransparentFX

@@ -37,17 +37,15 @@ public class ReelMovement : MonoBehaviour
 
     public void EnterMiniGame_Listener()
     {
-        if (_playerData.miniGameTicket > 0) {
-            for (int i = 0; i < reels.Length; i++)
-            {
-                reels[i].DOMoveY(-2f, 3f);
-            }
-        }
-        else
+        LowerWheelAnimation();
+    }
+
+    private void LowerWheelAnimation()
+    {
+        for (int i = 0; i < reels.Length; i++)
         {
-            return;
+            reels[i].DOMoveY(-2f, 3f);
         }
-        
     }
 
     public void StartRollReelCoroutine()
