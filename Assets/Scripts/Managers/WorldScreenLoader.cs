@@ -6,8 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class WorldScreenLoader : MonoBehaviour
 {
+    [Header("Data")]
     [SerializeField] PlayerData _playerData;
+    [SerializeField] GameSettingsData _gameSettingsData;
+
     [SerializeField] GameObject background_Object;
+
+    private int previewsMiniGameIndex;
 
     private void Start()
     {
@@ -22,7 +27,22 @@ public class WorldScreenLoader : MonoBehaviour
 
     public void MiniGame_Listener()
     {
-        int randomMiniGameIndex = Random.Range(3, 5); 
+        // Make sure that the first mini game is the fishing mini game.
+        if (_gameSettingsData.tutorialMode) {
+            StartCoroutine(SceneTransitionToMiniGame_Coroutine(3));
+            previewsMiniGameIndex = 3;
+            return;
+        }
+
+        int randomMiniGameIndex = Random.Range(3, 5);
+
+        previewsMiniGameIndex = randomMiniGameIndex;
+        // Make sure that the same mini game does not repeat
+
+        while (randomMiniGameIndex == previewsMiniGameIndex) { 
+            randomMiniGameIndex = Random.Range(3, 5);
+        }
+
         StartCoroutine(SceneTransitionToMiniGame_Coroutine(randomMiniGameIndex));
 
     }

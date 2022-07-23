@@ -5746,7 +5746,6 @@ MonoBehaviour:
   coinBarUI: {fileID: 2103399704}
   heartsUI: {fileID: 1624982953}
   buildButton: {fileID: 924693147}
-  miniGameButton: {fileID: 0}
 --- !u!114 &376749860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32499,7 +32498,7 @@ GameObject:
   - component: {fileID: 2118448961}
   - component: {fileID: 2118448960}
   m_Layer: 0
-  m_Name: SceneLoader
+  m_Name: MiniGameSceneLoader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32561,6 +32560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerData: {fileID: 11400000, guid: e7a529febcfbf8740ab1ee149e089c43, type: 2}
+  _gameSettingsData: {fileID: 11400000, guid: 4e7772643e1208d48b0f1fa81ec14fc6, type: 2}
   background_Object: {fileID: 1570899681}
 --- !u!1 &2123662210
 GameObject:

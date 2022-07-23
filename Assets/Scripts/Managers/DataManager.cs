@@ -45,6 +45,8 @@ public class DataManager : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 4) {
+            _miniGameData.wasInMiniGame = true;
+            _gameSettingsData.tutorialMode = false;
             ResetFlyAndAvoidMiniGameData();
         }
     }
