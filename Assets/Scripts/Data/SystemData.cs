@@ -5,4 +5,5 @@ public class SystemData : ScriptableObject
 {
     public bool inMenu = false;
     public bool cameraIsFocusedOnWheel = false;
+    public bool wasInMiniGame = false;
 }

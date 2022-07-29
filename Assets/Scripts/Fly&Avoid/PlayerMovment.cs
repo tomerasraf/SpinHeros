@@ -98,7 +98,6 @@ public class PlayerMovment : MonoBehaviour
         if (_playerData.hearts > 0) {
             victory.Raise();
         }
-       
 
         yield return null;
     }

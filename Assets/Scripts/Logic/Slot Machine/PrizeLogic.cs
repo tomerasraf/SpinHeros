@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PrizeLogic : MonoBehaviour
 {
+
+    [Header("Data")]
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] PlayerData _playerData;
+    [SerializeField] FlyAndAvoidData _flyAndAvoidData;
 
     [Header("Events")]
     [SerializeField] VoidEvent JackpotSound;
@@ -14,11 +17,16 @@ public class PrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent heartIsEarned;
     [SerializeField] VoidEvent coinIsEarned;
     [SerializeField] VoidEvent randomMiniGame;
+  
 
 
     public void CheckResultsCaller()
     {
         CheckResults(_slotMachineData.slotResults);
+    }
+
+    public void MiniGamePrize_Listener() {
+        _playerData.coins += _flyAndAvoidData.playerCurrentCoinPrize;
     }
 
     void CheckResults(int[] results)

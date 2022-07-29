@@ -13,6 +13,10 @@ public class SpinLogic : MonoBehaviour
     [SerializeField] VoidEvent heartTutorialMassage;
     [SerializeField] VoidEvent miniGameTutorialMassage;
 
+    [Header("Odds Vars")]
+    [SerializeField] float firstChance;
+    [SerializeField] float secondChance;
+
     private int sequenceStage = 0;
 
     private void Update()
@@ -118,7 +122,7 @@ public class SpinLogic : MonoBehaviour
 
         _slotMachineData.slotResults[0] = rand;
 
-        if (Random.value <= 0.35f)
+        if (Random.value <= firstChance)
         {
             _slotMachineData.slotResults[1] = rand;
         }
@@ -130,7 +134,7 @@ public class SpinLogic : MonoBehaviour
 
         if (_slotMachineData.slotResults[0] == _slotMachineData.slotResults[1]) {
 
-            if (Random.value <= 0.25f) {
+            if (Random.value <= secondChance) {
                 _slotMachineData.slotResults[2] = rand;
             }
 
@@ -140,8 +144,6 @@ public class SpinLogic : MonoBehaviour
             rand = Random.Range(0, 5);
             _slotMachineData.slotResults[2] = rand;
         }
-
-       /* int rand = Random.Range(0, slot.Length);
-        result = slot[rand];*/
+            
     }
 }

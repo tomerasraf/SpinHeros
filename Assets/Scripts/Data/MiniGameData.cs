@@ -6,7 +6,6 @@ public class MiniGameData : ScriptableObject
     [Header("Mini Game Status")]
     public int playersGoal = 250;
     public bool gameIsOver = false;
-    public bool wasInMiniGame = false;
     public int playerAlive = 4;
 
     [Header("Mini Game Prizes")]

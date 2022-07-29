@@ -12,10 +12,13 @@ public class WorldScreenLoader : MonoBehaviour
 
     [SerializeField] GameObject background_Object;
 
-    private int previewsMiniGameIndex;
+    private static int randomMiniGameIndex;
+    private static int previewsMiniGameIndex;
+    private int maxAttempts = 10;
 
     private void Start()
     {
+        Debug.Log(previewsMiniGameIndex);
         background_Object.SetActive(true);
         background_Object.GetComponent<Image>().DOFade(1, 0);
         background_Object.GetComponent<Image>().DOFade(0, 1.5f).OnComplete(() =>
@@ -29,20 +32,18 @@ public class WorldScreenLoader : MonoBehaviour
     {
         // Make sure that the first mini game is the fishing mini game.
         if (_gameSettingsData.tutorialMode) {
-            StartCoroutine(SceneTransitionToMiniGame_Coroutine(3));
-            previewsMiniGameIndex = 3;
+            randomMiniGameIndex = 3;
+            StartCoroutine(SceneTransitionToMiniGame_Coroutine(randomMiniGameIndex));
+            previewsMiniGameIndex = randomMiniGameIndex;
             return;
         }
-
-        int randomMiniGameIndex = Random.Range(3, 5);
-
-        previewsMiniGameIndex = randomMiniGameIndex;
+   
         // Make sure that the same mini game does not repeat
-
-        while (randomMiniGameIndex == previewsMiniGameIndex) { 
+        for (int i = 0;  randomMiniGameIndex == previewsMiniGameIndex && i < maxAttempts; i++) { 
             randomMiniGameIndex = Random.Range(3, 5);
         }
 
+        previewsMiniGameIndex = randomMiniGameIndex;
         StartCoroutine(SceneTransitionToMiniGame_Coroutine(randomMiniGameIndex));
 
     }

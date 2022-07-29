@@ -30,7 +30,7 @@ public class PlayerCollision : MonoBehaviour
                 return;
             }
 
-         
+
             StartCoroutine(immuneTimer());
         }
 
@@ -40,19 +40,22 @@ public class PlayerCollision : MonoBehaviour
         }
 
 
-        if (other.CompareTag("Coin")) {
+        if (other.CompareTag("Coin"))
+        {
 
             Destroy(other.gameObject);
             _playerData.coinsCollected++;
-        } 
+        }
 
-        if (other.CompareTag("Spin")) {
+        if (other.CompareTag("Spin"))
+        {
 
             Destroy(other.gameObject);
             _playerData.spinsCollected++;
-        } 
+        }
 
-        if (other.CompareTag("Gift")) {
+        if (other.CompareTag("Gift"))
+        {
 
             Destroy(other.gameObject);
             _playerData.giftsCollected++;

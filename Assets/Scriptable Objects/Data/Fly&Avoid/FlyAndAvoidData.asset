@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c5062671fc0774a9c6142794a5a7d4, type: 3}
   m_Name: FlyAndAvoidData
   m_EditorClassIdentifier: 
-  miniGamePlayTime: 1.7727021
+  miniGamePlayTime: 31
   gameIsEnded: 0
+  defualtWonCoinPrize: 30000
+  defualtLossCoinPrize: 10000
+  pickupCoinPrize: 3000
+  pickupSpinPrize: 1
+  pickupGiftPrize: 1
+  playerCurrentSpinPrize: 0
+  playerCurrentCoinPrize: 0
+  playerCurrentGiftPrize: 0

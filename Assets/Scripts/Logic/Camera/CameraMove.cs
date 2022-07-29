@@ -58,10 +58,10 @@ public class CameraMove : MonoBehaviour
 
     private void Start()
     {
-        if (_miniGameData.wasInMiniGame)
+        if (_systemData.wasInMiniGame)
         {
             wheelCamera.SetActive(true);
-            _miniGameData.wasInMiniGame = false;
+            _systemData.wasInMiniGame = false;
         }
         else
         {
