@@ -122,9 +122,9 @@ public class lb_Bird : MonoBehaviour {
 	
 	IEnumerator FlyToTarget(Vector3 target){
 		if(Random.value < .5){
-			GetComponent<AudioSource>().PlayOneShot (flyAway1,.1f);
+			//GetComponent<AudioSource>().PlayOneShot (flyAway1,.1f);
 		}else{
-			GetComponent<AudioSource>().PlayOneShot (flyAway2,.1f);
+			//GetComponent<AudioSource>().PlayOneShot (flyAway2,.1f);
 		}
 		flying = true;
 		landing = false;

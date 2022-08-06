@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PrizeLogic : MonoBehaviour
 {
-
     [Header("Data")]
     [SerializeField] SlotMachineData _slotMachineData;
     [SerializeField] PlayerData _playerData;
@@ -18,8 +17,6 @@ public class PrizeLogic : MonoBehaviour
     [SerializeField] VoidEvent coinIsEarned;
     [SerializeField] VoidEvent randomMiniGame;
   
-
-
     public void CheckResultsCaller()
     {
         CheckResults(_slotMachineData.slotResults);

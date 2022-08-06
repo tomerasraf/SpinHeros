@@ -10,7 +10,11 @@ public class WorldScreenLoader : MonoBehaviour
     [SerializeField] PlayerData _playerData;
     [SerializeField] GameSettingsData _gameSettingsData;
 
+    [Header("Background")]
     [SerializeField] GameObject background_Object;
+
+    [Header("Events")]
+    [SerializeField] VoidEvent flyAndAvoidIntro;
 
     private static int randomMiniGameIndex;
     private static int previewsMiniGameIndex;
@@ -18,33 +22,36 @@ public class WorldScreenLoader : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(previewsMiniGameIndex);
         background_Object.SetActive(true);
         background_Object.GetComponent<Image>().DOFade(1, 0);
         background_Object.GetComponent<Image>().DOFade(0, 1.5f).OnComplete(() =>
         {
             background_Object.SetActive(false);
         });
-
     }
 
     public void MiniGame_Listener()
     {
-        // Make sure that the first mini game is the fishing mini game.
-        if (_gameSettingsData.tutorialMode) {
-            randomMiniGameIndex = 3;
-            StartCoroutine(SceneTransitionToMiniGame_Coroutine(randomMiniGameIndex));
-            previewsMiniGameIndex = randomMiniGameIndex;
-            return;
-        }
-   
-        // Make sure that the same mini game does not repeat
-        for (int i = 0;  randomMiniGameIndex == previewsMiniGameIndex && i < maxAttempts; i++) { 
-            randomMiniGameIndex = Random.Range(3, 5);
-        }
+        /*   // Make sure that the first mini-game is the fishing mini game.
+           if (_gameSettingsData.tutorialMode) {
+               randomMiniGameIndex = 4;
+               StartCoroutine(SceneTransitionToMiniGame_Coroutine(randomMiniGameIndex));
+               previewsMiniGameIndex = randomMiniGameIndex;
+               return;
+           }
 
-        previewsMiniGameIndex = randomMiniGameIndex;
-        StartCoroutine(SceneTransitionToMiniGame_Coroutine(randomMiniGameIndex));
+           // Make sure that the same mini-game does not repeat
+           for (int i = 0;  randomMiniGameIndex == previewsMiniGameIndex && i < maxAttempts; i++) { 
+               randomMiniGameIndex = Random.Range(3, 5);
+           }
+
+           previewsMiniGameIndex = randomMiniGameIndex;*/
+
+
+        //1. pick a mini game index
+
+        randomMiniGameIndex = 4;
+        flyAndAvoidIntro.Raise();
 
     }
 

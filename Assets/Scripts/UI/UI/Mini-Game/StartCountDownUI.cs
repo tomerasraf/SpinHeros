@@ -10,8 +10,6 @@ public class StartCountDownUI : MonoBehaviour
     [Header("Events")]
     [SerializeField] VoidEvent miniGameIsStarted;
  
-    private float counter = 3.5f;
-
     private void Start()
     {
         StartCoroutine(StratCountDown_Coroutine());

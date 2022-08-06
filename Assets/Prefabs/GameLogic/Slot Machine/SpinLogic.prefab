@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.998699, y: -16.39529, z: 49.092464}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,8 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ffe813e6663bd46ab9095bf915ff90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOfSpin: 1
-  isButtonPressed: 0
+  _slotMachineData: {fileID: 11400000, guid: 55427c3d92f801848b6fc4b727da6c57, type: 2}
+  _playerData: {fileID: 0}
+  _gameSettingsData: {fileID: 0}
+  spinBar_Updater: {fileID: 0}
+  coinTutorialMassage: {fileID: 0}
+  heartTutorialMassage: {fileID: 0}
+  miniGameTutorialMassage: {fileID: 0}
+  firstChance: 0
+  secondChance: 0
 --- !u!114 &5576304913028467292
 MonoBehaviour:
   m_ObjectHideFlags: 0

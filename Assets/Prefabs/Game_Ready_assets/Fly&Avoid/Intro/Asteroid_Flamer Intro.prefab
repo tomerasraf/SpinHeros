@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6416058041403125363}
   m_LocalRotation: {x: -2.992236e-11, y: 0.0000014342362, z: 0.0000000018624046, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.91}
+  m_LocalPosition: {x: 0, y: -0, z: 9.2}
   m_LocalScale: {x: 13.398659, y: 13.398659, z: 13.398659}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9579,7 +9579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6416058041403155209}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 7.05, z: 9.66}
+  m_LocalPosition: {x: -0, y: -2.3, z: 9.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9598,8 +9598,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 10
-  m_Range: 17.32
+  m_Intensity: 3
+  m_Range: 2
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9680,7 +9680,7 @@ GameObject:
   - component: {fileID: 6416058041421168923}
   - component: {fileID: 6416058041420799687}
   m_Layer: 0
-  m_Name: Asteroid_Flamer
+  m_Name: Asteroid_Flamer Intro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9693,9 +9693,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6416058041403173331}
-  m_LocalRotation: {x: 0, y: 0.016065098, z: 0, w: 0.99987096}
+  m_LocalRotation: {x: -0.7070156, y: 0.011359741, z: 0.011359741, w: 0.7070156}
   m_LocalPosition: {x: -0.7, y: -1.6, z: -1.4}
-  m_LocalScale: {x: 0.80155003, y: 0.80155003, z: 0.80155003}
+  m_LocalScale: {x: 0.528279, y: 0.528279, z: 0.528279}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6416058041402881821}
@@ -9704,7 +9704,7 @@ Transform:
   - {fileID: 6416058041402873745}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 1.841, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 1.841, z: 0}
 --- !u!198 &6416058041421168923
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -9788,7 +9788,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.95
+      scalar: 5
       minScalar: 0.3
       maxCurve:
         serializedVersion: 2
@@ -9823,7 +9823,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 18.49
+      scalar: 99.41676
       minScalar: 20
       maxCurve:
         serializedVersion: 2
@@ -10201,7 +10201,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 25
+    maxNumParticles: 30
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -10262,7 +10262,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 4
+    angle: 6.3113503
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -10467,7 +10467,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 80
+      scalar: 500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
