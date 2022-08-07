@@ -76,10 +76,6 @@ public class CameraMove : MonoBehaviour
             worldCamera.SetActive(true);
             StartCoroutine(firstCutScene());
         }
-        else
-        {
-
-        }
     }
 
     IEnumerator firstCutScene()
@@ -141,7 +137,6 @@ public class CameraMove : MonoBehaviour
         {
             hero.transform.DOMoveY(hero.transform.position.y + 30, 1f).OnComplete(() =>
             {
-
                 hero.SetActive(false);
                 buildUITutorial.Raise();
             });

@@ -3,11 +3,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Slot Machine Data", menuName = "Data/Slot Machine Data")]
 public class SlotMachineData : ScriptableObject
 {
-    [Header("Mechine Symbols")]
-    public int[] slot1;
-    public int[] slot2;
-    public int[] slot3;
-
     [Header("Mechine Results")]
     public int[] slotResults;
 
@@ -22,7 +17,7 @@ public class SlotMachineData : ScriptableObject
     public int twoStashPrize = 5000;
     public int oneStashPrize = 500;
 
-    [Header("Machine Odds")]
-    public int[] odds;
+    [Header("Mini Games")]
+    public int currentMiniGame;
 
 }

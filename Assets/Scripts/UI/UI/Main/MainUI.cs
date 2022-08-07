@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MainUI : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject menuUI;
     [SerializeField] GameObject coinPopupText;
     [SerializeField] GameObject betButton;
+
+    [Header("UI Zones")]
+    [SerializeField] GameObject aboveCenterScreenUI;
+    [SerializeField] GameObject belowCenterScreenUI;
   
     private void Start()
     {
@@ -46,5 +51,10 @@ public class MainUI : MonoBehaviour
 
     public void TurnOnUI_Listener() {
         canvas.SetActive(true);
+    }
+
+    public void UIPullbackAnimation() {
+        aboveCenterScreenUI.transform.DOMoveY(aboveCenterScreenUI.transform.position.y + 1000, 1);
+        belowCenterScreenUI.transform.DOMoveY(belowCenterScreenUI.transform.position.y - 1000, 1);
     }
 }

@@ -9,6 +9,7 @@ public class WorldScreenLoader : MonoBehaviour
     [Header("Data")]
     [SerializeField] PlayerData _playerData;
     [SerializeField] GameSettingsData _gameSettingsData;
+    [SerializeField] SlotMachineData _slotMachineData;
 
     [Header("Background")]
     [SerializeField] GameObject background_Object;
@@ -47,12 +48,13 @@ public class WorldScreenLoader : MonoBehaviour
 
            previewsMiniGameIndex = randomMiniGameIndex;*/
 
-
-        //1. pick a mini game index
-
         randomMiniGameIndex = 4;
+        _slotMachineData.currentMiniGame = randomMiniGameIndex;
         flyAndAvoidIntro.Raise();
+    }
 
+    public void LoadMiniGame_Listener(int miniGameIndex) {
+        StartCoroutine(SceneTransitionToMiniGame_Coroutine(miniGameIndex));
     }
 
     IEnumerator SceneTransitionToMiniGame_Coroutine(int levelIndex)

@@ -51,7 +51,6 @@ public class DataManager : MonoBehaviour
             ResetFlyAndAvoidMiniGameData();
             ResetMiniGameData();
             ResetWorldData();
-            ResetslotMachineOddsData();
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 4) {
@@ -59,59 +58,6 @@ public class DataManager : MonoBehaviour
             _gameSettingsData.tutorialMode = false;
             ResetFlyAndAvoidMiniGameData();
         }
-    }
-
-    private void ResetslotMachineOddsData()
-    {
-        for (int i = 0; i < _slotMachineData.slot1.Length; i++)
-        {
-            //Debug.Log("Iteration: " + i);
-
-            if (counter <= _slotMachineData.odds[symbolIndex])
-            {
-                counter++;
-            }
-
-            if (counter == _slotMachineData.odds[symbolIndex])
-            {
-                counter = 0;
-                // Debug.Log("Counter: " + counter);
-
-                if (symbolIndex < 4) { symbolIndex++; }
-
-                //  Debug.Log("SymbolI: " + symbolIndex);
-            }
-
-            switch (symbolIndex)
-            {
-                case 0:
-                    FillSlotMachineOddsData(i, counter);
-                    break;
-
-                case 1:
-                    FillSlotMachineOddsData(i, counter);
-                    break;
-
-                case 2:
-                    FillSlotMachineOddsData(i, counter);
-                    break;
-
-                case 3:
-                    FillSlotMachineOddsData(i, counter);
-                    break;
-
-                case 4:
-                    FillSlotMachineOddsData(i, counter);
-                    break;
-            }
-        }
-    }
-
-    private void FillSlotMachineOddsData(int i, int counter)
-    {
-        _slotMachineData.slot1[i] = symbolIndex;
-        _slotMachineData.slot2[i] = symbolIndex;
-        _slotMachineData.slot3[i] = symbolIndex;
     }
 
 
